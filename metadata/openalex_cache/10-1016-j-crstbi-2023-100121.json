@@ -1,0 +1,63 @@
+{
+  "doi": "10.1016/j.crstbi.2023.100121",
+  "openalex_id": "https://openalex.org/W4390108568",
+  "referenced_works": [
+    "https://openalex.org/W1978496023",
+    "https://openalex.org/W1990823004",
+    "https://openalex.org/W1994536648",
+    "https://openalex.org/W2000448104",
+    "https://openalex.org/W2040654367",
+    "https://openalex.org/W2081781433",
+    "https://openalex.org/W2101655783",
+    "https://openalex.org/W2112961542",
+    "https://openalex.org/W2147085530",
+    "https://openalex.org/W2291468715",
+    "https://openalex.org/W2304674135",
+    "https://openalex.org/W2584813526",
+    "https://openalex.org/W2593043670",
+    "https://openalex.org/W2698669422",
+    "https://openalex.org/W2751857862",
+    "https://openalex.org/W2782837672",
+    "https://openalex.org/W2783742719",
+    "https://openalex.org/W2790578518",
+    "https://openalex.org/W2910514964",
+    "https://openalex.org/W2987259367",
+    "https://openalex.org/W3037971012",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3185854339",
+    "https://openalex.org/W3214093190",
+    "https://openalex.org/W4220752260",
+    "https://openalex.org/W4231020221",
+    "https://openalex.org/W4283370938",
+    "https://openalex.org/W4317104064",
+    "https://openalex.org/W4385708092",
+    "https://openalex.org/W6779888827"
+  ],
+  "abstract": "A lattice-based method is presented for creating 3D models of entire bacterial nucleoids integrating ultrastructural information cryoelectron tomography, genomic and proteomic data, and experimental atomic structures of biomolecules and assemblies. The method is used to generate models of the minimal genome bacterium JCVI-Syn3A, producing a series of models that test hypotheses about transcription, condensation, and overall distribution of the genome. Lattice models are also used to generate atomic models of an entire JCVI-Syn3A cell.",
+  "authors": [
+    "David S. Goodsell",
+    "Ludovic Autin"
+  ],
+  "concepts": [
+    "Nucleoid",
+    "Computational biology",
+    "Modular design",
+    "Genome",
+    "Biomolecule",
+    "Biology",
+    "Biological system",
+    "Computer science",
+    "Genetics",
+    "Gene",
+    "Escherichia coli",
+    "Operating system"
+  ],
+  "cited_by_count": 7,
+  "title": "Integrative modeling of JCVI-Syn3A nucleoids with a modular approach",
+  "year": 2023,
+  "journal": "Current Research in Structural Biology",
+  "landing_page_url": "https://doi.org/10.1016/j.crstbi.2023.100121",
+  "pdf_urls": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10784680/pdf/main.pdf"
+  ]
+}
