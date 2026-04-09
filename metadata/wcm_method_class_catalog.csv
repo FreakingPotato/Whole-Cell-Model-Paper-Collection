@@ -1,4 +1,4 @@
 key,display_name,definition,color,sort_order,active,updated_at
-mechanistic,Mechanistic models,"Rule-based, kinetic, stochastic, physical, or simulation-first studies that represent cellular processes explicitly.",#4E79A7,0,1,2026-04-09T06:56:30Z
-ml,Machine Learning Model,Data-driven or AI-first work where predictive learning is the central modeling strategy.,#F28E2B,1,1,2026-04-09T06:56:30Z
-hybrid,Hybrid architectures,"Workflows that combine mechanistic simulation with data integration, structural constraints, or AI-assisted components.",#E15759,2,1,2026-04-09T06:56:30Z
+mechanistic,Mechanistic models,"Rule-based, kinetic, stochastic, physical, or simulation-first studies that represent cellular processes explicitly.",#4E79A7,0,1,2026-04-09T07:58:02Z
+ml,Machine Learning Model,Data-driven or AI-first work where predictive learning is the central modeling strategy.,#F28E2B,1,1,2026-04-09T07:58:02Z
+hybrid,Hybrid architectures,"Workflows that combine mechanistic simulation with data integration, structural constraints, or AI-assisted components.",#E15759,2,1,2026-04-09T07:58:02Z

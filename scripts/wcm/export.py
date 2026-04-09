@@ -6,11 +6,13 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from .db import fetch_method_classes, fetch_papers, fetch_pdf_assets, fetch_pdf_parse_cache, primary_pdf_asset_for_paper
+from .db import fetch_completeness_levels, fetch_method_classes, fetch_papers, fetch_pdf_assets, fetch_pdf_parse_cache, primary_pdf_asset_for_paper
 from .graph import configure_legacy_method_classes
 from .models import (
     CLASS_CATALOG_TABLE,
     CLASS_TABLE,
+    COMPLETENESS_CATALOG_TABLE,
+    COMPLETENESS_TABLE,
     CORPUS_DIR,
     INVENTORY_TABLE,
     LIVE_INVENTORY_TABLE,
@@ -54,6 +56,7 @@ def remote_status_for(paper: dict[str, Any], asset: dict[str, Any] | None) -> st
 
 def export_tables(conn: sqlite3.Connection) -> tuple[list[dict[str, Any]], dict[str, dict[str, str]], dict[str, dict[str, str]], list[dict[str, Any]]]:
     method_classes = fetch_method_classes(conn)
+    completeness_levels = fetch_completeness_levels(conn)
     papers = fetch_papers(conn)
     profiles_by_path = parsed_profiles_by_path(conn)
     pdf_cache = fetch_pdf_parse_cache(conn)
@@ -67,9 +70,14 @@ def export_tables(conn: sqlite3.Connection) -> tuple[list[dict[str, Any]], dict[
         writer = csv.DictWriter(handle, fieldnames=["key", "display_name", "definition", "color", "sort_order", "active", "updated_at"])
         writer.writeheader()
         writer.writerows(method_classes)
+    with COMPLETENESS_CATALOG_TABLE.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["key", "display_name", "definition", "color", "sort_order", "active", "updated_at"])
+        writer.writeheader()
+        writer.writerows(completeness_levels)
 
     master_rows = []
     class_rows = []
+    completeness_rows = []
     organism_rows = []
     inventory_rows = []
     paper_meta_input_rows = []
@@ -109,6 +117,8 @@ def export_tables(conn: sqlite3.Connection) -> tuple[list[dict[str, Any]], dict[
                 "pdf_status": pdf_status,
                 "pdf_file": pdf_file,
                 "landing_page_url": paper["landing_page_url"] or "",
+                "wcm_completeness_key": paper["wcm_completeness_key"],
+                "wcm_completeness_label": paper["wcm_completeness_label"],
             }
         )
 
@@ -128,6 +138,16 @@ def export_tables(conn: sqlite3.Connection) -> tuple[list[dict[str, Any]], dict[
             "rationale": paper["classification_rationale"] or "",
             "method_class_key": paper["method_class_key"],
         }
+        completeness_rows.append(
+            {
+                "paper_id": paper["paper_id"],
+                "wcm_completeness_key": paper["wcm_completeness_key"],
+                "wcm_completeness_label": paper["wcm_completeness_label"],
+                "wcm_completeness_source": paper["wcm_completeness_source"] or "",
+                "wcm_completeness_confidence": paper["wcm_completeness_confidence"] or "",
+                "rationale": paper["wcm_completeness_rationale"] or "",
+            }
+        )
 
         organism_rows.append(
             {
@@ -150,6 +170,10 @@ def export_tables(conn: sqlite3.Connection) -> tuple[list[dict[str, Any]], dict[
                 "method_class": paper["method_class_label"],
                 "classification_source": paper["classification_source"] or "",
                 "classification_confidence": paper["classification_confidence"] or "",
+                "wcm_completeness_key": paper["wcm_completeness_key"],
+                "wcm_completeness_label": paper["wcm_completeness_label"],
+                "wcm_completeness_source": paper["wcm_completeness_source"] or "",
+                "wcm_completeness_confidence": paper["wcm_completeness_confidence"] or "",
                 "organism": paper["organism"] or "",
                 "organism_group": paper.get("organism_group") or organism_group_for_label(paper["organism"] or ""),
                 "paper_status": paper_status,
@@ -169,6 +193,10 @@ def export_tables(conn: sqlite3.Connection) -> tuple[list[dict[str, Any]], dict[
         writer = csv.DictWriter(handle, fieldnames=list(class_rows[0].keys()))
         writer.writeheader()
         writer.writerows(class_rows)
+    with COMPLETENESS_TABLE.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(completeness_rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(completeness_rows)
 
     with ORGANISM_TABLE.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(organism_rows[0].keys()))
@@ -231,6 +259,11 @@ def export_graph_and_metadata(conn: sqlite3.Connection) -> dict[str, Any]:
         meta["method_class_label"] = paper["method_class_label"]
         meta["classification_source"] = paper["classification_source"] or ""
         meta["classification_confidence"] = paper["classification_confidence"] or ""
+        meta["wcm_completeness_key"] = paper["wcm_completeness_key"]
+        meta["wcm_completeness_label"] = paper["wcm_completeness_label"]
+        meta["wcm_completeness_definition"] = paper["wcm_completeness_definition"]
+        meta["wcm_completeness_source"] = paper["wcm_completeness_source"] or ""
+        meta["wcm_completeness_confidence"] = paper["wcm_completeness_confidence"] or ""
         meta["paper_status"] = paper_status_for(asset)
         meta["remote_status"] = remote_status_for(paper, asset)
 
@@ -264,6 +297,10 @@ def export_graph_and_metadata(conn: sqlite3.Connection) -> dict[str, Any]:
             "method_class_label",
             "classification_source",
             "classification_confidence",
+            "wcm_completeness_key",
+            "wcm_completeness_label",
+            "wcm_completeness_source",
+            "wcm_completeness_confidence",
             "remote_status",
             "zotero_has_pdf",
             "zotero_parent_key",
@@ -298,6 +335,10 @@ def export_graph_and_metadata(conn: sqlite3.Connection) -> dict[str, Any]:
                     "method_class_label": paper["method_class_label"],
                     "classification_source": paper["classification_source"] or "",
                     "classification_confidence": paper["classification_confidence"] or "",
+                    "wcm_completeness_key": paper["wcm_completeness_key"],
+                    "wcm_completeness_label": paper["wcm_completeness_label"],
+                    "wcm_completeness_source": paper["wcm_completeness_source"] or "",
+                    "wcm_completeness_confidence": paper["wcm_completeness_confidence"] or "",
                     "remote_status": remote_status_for(paper, asset),
                     "zotero_has_pdf": "yes" if remote.get("status") == "zotero_present" else "no",
                     "zotero_parent_key": remote.get("remote_key", ""),
@@ -328,4 +369,3 @@ def export_graph_and_metadata(conn: sqlite3.Connection) -> dict[str, Any]:
         "output_dir": str(legacy.GRAPHIFY_OUT),
         "metadata_file": str(PAPER_METADATA_JSON),
     }
-

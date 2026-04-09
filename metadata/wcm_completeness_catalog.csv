@@ -1,0 +1,4 @@
+key,display_name,definition,color,sort_order,active,updated_at
+complete,Complete WCM,A paper that presents a true whole-cell model covering the cell broadly enough to count as a complete WCM in this collection.,#22c55e,0,1,2026-04-09T07:58:02Z
+partial,Partial WCM,"A paper that presents a substantial but still incomplete whole-cell model, such as a half-WCM or an organism-wide model missing major layers.",#eab308,1,1,2026-04-09T07:58:02Z
+related,Related Model,"A related modeling, subsystem, review, or enabling paper that is relevant to WCMs but is not itself a complete WCM.",#64748b,2,1,2026-04-09T07:58:02Z

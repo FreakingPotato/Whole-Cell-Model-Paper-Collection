@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from .models import DEFAULT_CLASS_KEY_TO_LABEL
+from .models import DEFAULT_CLASS_KEY_TO_LABEL, DEFAULT_COMPLETENESS_KEY_TO_LABEL
 
 
 def classify_method_class_key(title: str, abstract: str, journal: str = "") -> tuple[str, float, str]:
@@ -40,3 +40,30 @@ def classify_method_class_key(title: str, abstract: str, journal: str = "") -> t
 def label_for_method_class_key(key: str) -> str:
     return DEFAULT_CLASS_KEY_TO_LABEL.get(key, key)
 
+
+def classify_completeness_key(title: str, abstract: str, journal: str = "") -> tuple[str, float, str]:
+    text = f"{title} {abstract} {journal}".lower()
+    if any(
+        token in text
+        for token in [
+            "predicts phenotype from genotype",
+            "simulations of a living minimal cell",
+            "genetically minimal cell to life on a computer in 4d",
+            "expanded whole-cell model of e. coli",
+        ]
+    ):
+        return ("complete", 0.96, "Matched known complete whole-cell-model title patterns.")
+    if any(
+        token in text
+        for token in [
+            "whole-cell model wm_s288c",
+            "whole-cell modeling in yeast",
+            "compartment-specific proteome constraints",
+        ]
+    ):
+        return ("partial", 0.82, "Matched yeast whole-cell-model phrases treated as partial WCM coverage.")
+    return ("related", 0.84, "Defaulted to related model because only the curated full WCMs are treated as complete, with yeast tracked separately as partial.")
+
+
+def label_for_completeness_key(key: str) -> str:
+    return DEFAULT_COMPLETENESS_KEY_TO_LABEL.get(key, key)

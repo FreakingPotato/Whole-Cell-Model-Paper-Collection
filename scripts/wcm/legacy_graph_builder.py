@@ -1462,6 +1462,11 @@ def build_graph(
             method_class_key=meta.get("method_class_key", ""),
             method_class_label=meta.get("method_class_label", meta["method_class"]),
             method_class=meta["method_class"],
+            wcm_completeness_key=meta.get("wcm_completeness_key", ""),
+            wcm_completeness_label=meta.get("wcm_completeness_label", ""),
+            wcm_completeness_definition=meta.get("wcm_completeness_definition", ""),
+            wcm_completeness_source=meta.get("wcm_completeness_source", ""),
+            wcm_completeness_confidence=meta.get("wcm_completeness_confidence", ""),
             organism=meta["organism"],
             organism_group=meta["organism_group"],
             pdf_status=meta["pdf_status"],
@@ -1881,9 +1886,12 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
   #network-canvas { position: absolute; inset: 0; z-index: 1; }
   #layout-guides { position: absolute; inset: 0; pointer-events: none; z-index: 6; }
   .guide-line { position: absolute; top: 54px; bottom: 10px; width: 0; border-left: 1.5px dashed rgba(148, 163, 184, 0.42); }
+  .guide-line-horizontal { left: 14px; right: 14px; height: 0; width: auto; border-left: none; border-top: 1.5px dashed rgba(148, 163, 184, 0.5); }
   .guide-label { position: absolute; top: 10px; transform: translateX(-50%); color: #e2e8f0; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(15, 23, 42, 0.92); padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(148, 163, 184, 0.28); white-space: nowrap; }
-  #legend { position: absolute; left: 16px; bottom: 16px; display: flex; gap: 8px; background: rgba(15, 23, 42, 0.82); padding: 10px 12px; border-radius: 14px; border: 1px solid rgba(148, 163, 184, 0.2); backdrop-filter: blur(10px); z-index: 7; flex-wrap: wrap; max-width: min(760px, calc(100% - 32px)); }
+  .guide-label-horizontal { transform: none; }
+  #legend { position: absolute; left: 16px; bottom: 92px; display: flex; gap: 8px; background: rgba(15, 23, 42, 0.82); padding: 10px 12px; border-radius: 14px; border: 1px solid rgba(148, 163, 184, 0.2); backdrop-filter: blur(10px); z-index: 7; flex-wrap: wrap; max-width: min(760px, calc(100% - 32px)); }
   #graph .vis-network { z-index: 1; }
+  #graph .vis-navigation { left: 16px !important; bottom: 16px !important; top: auto !important; }
   .legend-item { position: relative; display: flex; align-items: center; gap: 6px; font-size: 12px; color: #cbd5e1; padding: 4px 6px; border-radius: 10px; }
   .legend-item:hover { background: rgba(30, 41, 59, 0.92); }
   .legend-dot { width: 10px; height: 10px; border-radius: 999px; }
@@ -1957,6 +1965,10 @@ const COMMUNITY_DEFINITIONS = __COMMUNITY_DEFINITIONS__;
 const SECTION_ORDER = ['overview', 'abstract', 'methods_summary', 'limitations', 'future_work'];
 const ORGANISM_GROUP_ORDER = __ORGANISM_GROUP_ORDER__;
 const ORGANISM_GROUP_LABELS = __ORGANISM_GROUP_LABELS__;
+const ORGANISM_COMPLETENESS_DIVIDER_Y = -10;
+const ORGANISM_COMPLETE_START_Y = -300;
+const ORGANISM_INCOMPLETE_START_Y = 90;
+const ORGANISM_ROW_STEP = 118;
 
 const nodeById = new Map(GRAPH_DATA.nodes.map(node => [node.id, node]));
 const edgeByPair = new Map();
@@ -2098,21 +2110,56 @@ function yearGuideSpecs(years) {
 function organismGuideSpecs(groups) {
   const totalWidth = Math.max(1500, groups.length * 180);
   const step = groups.length > 1 ? totalWidth / (groups.length - 1) : 0;
-  return groups.map((group, index) => ({
+  const verticals = groups.map((group, index) => ({
     key: `organism-${group.replace(/[^a-z0-9]+/gi, '-')}`,
     label: ORGANISM_GROUP_LABELS[group] || group,
     x: -(totalWidth / 2) + index * step,
+    orientation: 'vertical',
   }));
+  verticals.push({
+    key: 'organism-completeness-divider',
+    label: 'Complete WCMs',
+    y: ORGANISM_COMPLETENESS_DIVIDER_Y,
+    labelX: -(totalWidth / 2) + 24,
+    orientation: 'horizontal',
+  });
+  return verticals;
 }
 
 function updateGuidePositions() {
   if (!network || !currentGuideSpecs.length) return;
   currentGuideSpecs.forEach(spec => {
-    const point = network.canvasToDOM({ x: spec.x, y: 0 });
     document.querySelectorAll(`[data-guide-key="${spec.key}"]`).forEach(el => {
-      el.style.left = `${point.x}px`;
+      if (spec.orientation === 'horizontal') {
+        const point = network.canvasToDOM({ x: 0, y: spec.y || 0 });
+        if (el.classList.contains('guide-line-horizontal')) {
+          el.style.top = `${point.y}px`;
+        } else {
+          const labelPoint = network.canvasToDOM({ x: spec.labelX || 0, y: spec.y || 0 });
+          el.style.left = `${labelPoint.x}px`;
+          el.style.top = `${point.y - 30}px`;
+        }
+      } else {
+        const point = network.canvasToDOM({ x: spec.x, y: 0 });
+        el.style.left = `${point.x}px`;
+      }
     });
   });
+}
+
+function completenessRank(node) {
+  const key = String(node.wcm_completeness_key || 'related');
+  if (key === 'complete') return 0;
+  if (key === 'partial') return 1;
+  return 2;
+}
+
+function compareOrganismNodes(left, right) {
+  return (
+    completenessRank(left) - completenessRank(right) ||
+    ((left.year || 0) - (right.year || 0)) ||
+    String(left.label || '').localeCompare(String(right.label || ''))
+  );
 }
 
 function setIdleBaseFromCurrentView() {
@@ -2354,24 +2401,30 @@ function buildTargets(layoutName) {
     return targets;
   }
   const grouped = {};
-  renderGuides(organismGuideSpecs(ORGANISM_GROUP_ORDER));
   for (const node of GRAPH_DATA.nodes.filter(node => node.file_type === 'paper')) {
     const key = node.organism_group || 'General bacteria';
     grouped[key] = grouped[key] || [];
     grouped[key].push(node);
   }
+  const groupOrder = [
+    ...ORGANISM_GROUP_ORDER,
+    ...Object.keys(grouped).filter(groupName => !ORGANISM_GROUP_ORDER.includes(groupName)).sort(),
+  ];
+  renderGuides(organismGuideSpecs(groupOrder));
   const targets = {};
-  for (const groupName of ORGANISM_GROUP_ORDER) {
-    const nodes = (grouped[groupName] || []).sort((a, b) => (a.year - b.year) || a.label.localeCompare(b.label));
-    nodes.forEach((node, idx) => { targets[node.id] = positionForOrganismLayout(node, ORGANISM_GROUP_ORDER, idx); });
-  }
-  for (const groupName of Object.keys(grouped)) {
-    if (ORGANISM_GROUP_ORDER.includes(groupName)) continue;
-    const nodes = grouped[groupName].sort((a, b) => (a.year - b.year) || a.label.localeCompare(b.label));
-    nodes.forEach((node, idx) => { targets[node.id] = positionForOrganismLayout(node, ORGANISM_GROUP_ORDER, idx); });
+  for (const groupName of groupOrder) {
+    const nodes = (grouped[groupName] || []).sort(compareOrganismNodes);
+    const completeNodes = nodes.filter(node => String(node.wcm_completeness_key || '') === 'complete');
+    const incompleteNodes = nodes.filter(node => String(node.wcm_completeness_key || '') !== 'complete');
+    completeNodes.forEach((node, idx) => {
+      targets[node.id] = positionForOrganismLayout(node, groupOrder, idx, 'complete');
+    });
+    incompleteNodes.forEach((node, idx) => {
+      targets[node.id] = positionForOrganismLayout(node, groupOrder, idx, 'incomplete');
+    });
   }
   for (const node of GRAPH_DATA.nodes.filter(node => node.file_type !== 'paper')) {
-    targets[node.id] = positionForOrganismLayout(node, ORGANISM_GROUP_ORDER, 0);
+    targets[node.id] = positionForOrganismLayout(node, groupOrder, 0, 'incomplete');
   }
   return targets;
 }
@@ -2576,9 +2629,15 @@ function renderPaperNode(node) {
       <div class="meta-card"><span class="label">Year</span><span class="value">${escapeHtml(String(node.year || ''))}</span></div>
       <div class="meta-card"><span class="label">Author + Year</span><span class="value">${escapeHtml(node.display_label || '')}</span></div>
       <div class="meta-card"><span class="label">Method Class</span><span class="value">${escapeHtml(node.method_class || '')}</span></div>
+      <div class="meta-card"><span class="label">WCM Completeness</span><span class="value">${escapeHtml(node.wcm_completeness_label || '')}</span></div>
+      <div class="meta-card"><span class="label">Completeness Source</span><span class="value">${escapeHtml(node.wcm_completeness_source || '')}</span></div>
       <div class="meta-card"><span class="label">Organism</span><span class="value">${escapeHtml(node.organism || '')}</span></div>
       <div class="meta-card"><span class="label">Organism Group</span><span class="value">${escapeHtml(node.organism_group || '')}</span></div>
       <div class="meta-card"><span class="label">PDF Status</span><span class="value">${escapeHtml(node.pdf_status || '')}</span></div>
+    </div>
+    <div class="viewer-note">
+      ${escapeHtml(node.wcm_completeness_definition || 'No WCM completeness note is available yet.')}
+      ${node.wcm_completeness_confidence ? ` Classification confidence: ${escapeHtml(String(node.wcm_completeness_confidence))}.` : ''}
     </div>
     <div class="chip-row">
       ${(node.modeled_objects || []).map(obj => `<span class="chip">${escapeHtml(obj)}</span>`).join('')}
@@ -2638,9 +2697,10 @@ function renderGuides(specs) {
     return;
   }
   guideRoot.innerHTML = currentGuideSpecs.map(spec => {
+    const isHorizontal = spec.orientation === 'horizontal';
     return `
-      <div class="guide-line" data-guide-key="${escapeHtml(spec.key)}"></div>
-      <div class="guide-label" data-guide-key="${escapeHtml(spec.key)}">${escapeHtml(spec.label)}</div>
+      <div class="guide-line${isHorizontal ? ' guide-line-horizontal' : ''}" data-guide-key="${escapeHtml(spec.key)}"></div>
+      <div class="guide-label${isHorizontal ? ' guide-label-horizontal' : ''}" data-guide-key="${escapeHtml(spec.key)}">${escapeHtml(spec.label)}</div>
     `;
   }).join('');
   updateGuidePositions();
@@ -2659,7 +2719,7 @@ function positionForYearLayout(node, groups, indexWithinGroup) {
   };
 }
 
-function positionForOrganismLayout(node, groups, orderInGroup) {
+function positionForOrganismLayout(node, groups, orderInGroup, bucket = 'incomplete') {
   const totalWidth = Math.max(1500, groups.length * 180);
   const step = groups.length > 1 ? totalWidth / (groups.length - 1) : 0;
   if (node.file_type !== 'paper') {
@@ -2669,7 +2729,7 @@ function positionForOrganismLayout(node, groups, orderInGroup) {
   const groupIndex = Math.max(0, groups.indexOf(group));
   return {
     x: -(totalWidth / 2) + groupIndex * step,
-    y: -130 + orderInGroup * 118,
+    y: (bucket === 'complete' ? ORGANISM_COMPLETE_START_Y : ORGANISM_INCOMPLETE_START_Y) + orderInGroup * ORGANISM_ROW_STEP,
   };
 }
 

@@ -7,15 +7,17 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from .classify import classify_method_class_key
+from .classify import classify_completeness_key, classify_method_class_key
 from .models import (
     CLASS_TABLE,
+    COMPLETENESS_TABLE,
     DB_PATH,
     DEFAULT_CLASS_LABEL_TO_KEY,
+    DEFAULT_COMPLETENESS_LEVELS,
     DEFAULT_METHOD_CLASSES,
     MASTER_TABLE,
-    METADATA_DIR,
     ORGANISM_TABLE,
+    CURATED_COMPLETENESS_OVERRIDES,
     ZOTERO_SYNC_STATE,
 )
 
@@ -49,6 +51,16 @@ def init_db(conn: sqlite3.Connection) -> None:
             updated_at TEXT NOT NULL
         );
 
+        CREATE TABLE IF NOT EXISTS completeness_levels (
+            key TEXT PRIMARY KEY,
+            display_name TEXT NOT NULL,
+            definition TEXT NOT NULL,
+            color TEXT NOT NULL,
+            sort_order INTEGER NOT NULL,
+            active INTEGER NOT NULL DEFAULT 1,
+            updated_at TEXT NOT NULL
+        );
+
         CREATE TABLE IF NOT EXISTS papers (
             paper_id TEXT PRIMARY KEY,
             title TEXT NOT NULL,
@@ -66,9 +78,11 @@ def init_db(conn: sqlite3.Connection) -> None:
             organism TEXT,
             organism_group TEXT,
             method_class_key TEXT NOT NULL,
+            wcm_completeness_key TEXT NOT NULL DEFAULT 'related',
             created_at TEXT NOT NULL,
             updated_at TEXT NOT NULL,
-            FOREIGN KEY(method_class_key) REFERENCES method_classes(key)
+            FOREIGN KEY(method_class_key) REFERENCES method_classes(key),
+            FOREIGN KEY(wcm_completeness_key) REFERENCES completeness_levels(key)
         );
         CREATE INDEX IF NOT EXISTS idx_papers_doi ON papers(doi);
         CREATE INDEX IF NOT EXISTS idx_papers_normalized_title ON papers(normalized_title);
@@ -116,6 +130,19 @@ def init_db(conn: sqlite3.Connection) -> None:
         );
         CREATE INDEX IF NOT EXISTS idx_classification_events_paper_id ON classification_events(paper_id, event_id DESC);
 
+        CREATE TABLE IF NOT EXISTS completeness_events (
+            event_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT NOT NULL,
+            proposed_key TEXT NOT NULL,
+            final_key TEXT NOT NULL,
+            source TEXT NOT NULL,
+            confidence REAL NOT NULL,
+            rationale TEXT NOT NULL,
+            created_at TEXT NOT NULL,
+            FOREIGN KEY(paper_id) REFERENCES papers(paper_id)
+        );
+        CREATE INDEX IF NOT EXISTS idx_completeness_events_paper_id ON completeness_events(paper_id, event_id DESC);
+
         CREATE TABLE IF NOT EXISTS remote_links (
             remote_link_id INTEGER PRIMARY KEY AUTOINCREMENT,
             paper_id TEXT NOT NULL,
@@ -143,6 +170,8 @@ def init_db(conn: sqlite3.Connection) -> None:
         """
     )
     seed_method_classes(conn)
+    seed_completeness_levels(conn)
+    ensure_column(conn, "papers", "wcm_completeness_key", "TEXT NOT NULL DEFAULT 'related'")
     conn.commit()
 
 
@@ -162,6 +191,30 @@ def seed_method_classes(conn: sqlite3.Connection) -> None:
             """,
             (seed.key, seed.display_name, seed.definition, seed.color, seed.sort_order, now),
         )
+
+
+def seed_completeness_levels(conn: sqlite3.Connection) -> None:
+    now = utc_now()
+    for seed in DEFAULT_COMPLETENESS_LEVELS:
+        conn.execute(
+            """
+            INSERT INTO completeness_levels (key, display_name, definition, color, sort_order, active, updated_at)
+            VALUES (?, ?, ?, ?, ?, 1, ?)
+            ON CONFLICT(key) DO UPDATE SET
+                display_name = COALESCE(completeness_levels.display_name, excluded.display_name),
+                definition = COALESCE(completeness_levels.definition, excluded.definition),
+                color = COALESCE(completeness_levels.color, excluded.color),
+                sort_order = excluded.sort_order,
+                updated_at = excluded.updated_at
+            """,
+            (seed.key, seed.display_name, seed.definition, seed.color, seed.sort_order, now),
+        )
+
+
+def ensure_column(conn: sqlite3.Connection, table: str, column: str, ddl: str) -> None:
+    columns = {row["name"] for row in conn.execute(f"PRAGMA table_info({table})").fetchall()}
+    if column not in columns:
+        conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {ddl}")
 
 
 def bootstrap_from_legacy_files(conn: sqlite3.Connection) -> None:
@@ -196,14 +249,26 @@ def bootstrap_from_legacy_files(conn: sqlite3.Connection) -> None:
                     row.get("summary", ""),
                     row.get("journal", ""),
                 )
+            if paper_id in CURATED_COMPLETENESS_OVERRIDES:
+                completeness_key = CURATED_COMPLETENESS_OVERRIDES[paper_id]
+                completeness_source = "manual_override"
+                completeness_confidence = 1.0
+                completeness_rationale = "Curated completeness assignment for the existing corpus."
+            else:
+                completeness_key, completeness_confidence, completeness_rationale = classify_completeness_key(
+                    row.get("paper title", ""),
+                    row.get("summary", ""),
+                    row.get("journal", ""),
+                )
+                completeness_source = "heuristic"
             organism = organism_rows.get(paper_id, {}).get("organism", "")
             conn.execute(
                 """
                 INSERT INTO papers (
                     paper_id, title, normalized_title, year, journal, doi, landing_page_url,
                     summary, method_summary, contribution, limitation, future_work,
-                    openalex_id, organism, organism_group, method_class_key, created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '', ?, '', ?, ?, ?)
+                    openalex_id, organism, organism_group, method_class_key, wcm_completeness_key, created_at, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '', ?, '', ?, ?, ?, ?)
                 """,
                 (
                     paper_id,
@@ -220,6 +285,7 @@ def bootstrap_from_legacy_files(conn: sqlite3.Connection) -> None:
                     row.get("future work", ""),
                     organism,
                     method_class_key,
+                    completeness_key,
                     now,
                     now,
                 ),
@@ -232,6 +298,22 @@ def bootstrap_from_legacy_files(conn: sqlite3.Connection) -> None:
                 ) VALUES (?, ?, ?, 'manual_override', ?, ?, ?)
                 """,
                 (paper_id, method_class_key, method_class_key, 1.0, rationale, now),
+            )
+            conn.execute(
+                """
+                INSERT INTO completeness_events (
+                    paper_id, proposed_key, final_key, source, confidence, rationale, created_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    paper_id,
+                    completeness_key,
+                    completeness_key,
+                    completeness_source,
+                    completeness_confidence,
+                    completeness_rationale,
+                    now,
+                ),
             )
 
     import_remote_links_from_legacy_state(conn)
@@ -269,6 +351,13 @@ def fetch_method_classes(conn: sqlite3.Connection) -> list[dict[str, Any]]:
     return [dict(row) for row in rows]
 
 
+def fetch_completeness_levels(conn: sqlite3.Connection) -> list[dict[str, Any]]:
+    rows = conn.execute(
+        "SELECT key, display_name, definition, color, sort_order, active, updated_at FROM completeness_levels ORDER BY sort_order, key"
+    ).fetchall()
+    return [dict(row) for row in rows]
+
+
 def latest_classification_by_paper(conn: sqlite3.Connection) -> dict[str, dict[str, Any]]:
     rows = conn.execute(
         """
@@ -277,6 +366,21 @@ def latest_classification_by_paper(conn: sqlite3.Connection) -> dict[str, dict[s
         JOIN (
             SELECT paper_id, MAX(event_id) AS event_id
             FROM classification_events
+            GROUP BY paper_id
+        ) latest ON latest.event_id = e.event_id
+        """
+    ).fetchall()
+    return {row["paper_id"]: dict(row) for row in rows}
+
+
+def latest_completeness_by_paper(conn: sqlite3.Connection) -> dict[str, dict[str, Any]]:
+    rows = conn.execute(
+        """
+        SELECT e.paper_id, e.proposed_key, e.final_key, e.source, e.confidence, e.rationale, e.created_at
+        FROM completeness_events e
+        JOIN (
+            SELECT paper_id, MAX(event_id) AS event_id
+            FROM completeness_events
             GROUP BY paper_id
         ) latest ON latest.event_id = e.event_id
         """
@@ -343,14 +447,17 @@ def fetch_papers(conn: sqlite3.Connection) -> list[dict[str, Any]]:
         """
         SELECT p.paper_id, p.title, p.normalized_title, p.year, p.journal, p.doi, p.landing_page_url,
                p.summary, p.method_summary, p.contribution, p.limitation, p.future_work,
-               p.openalex_id, p.organism, p.organism_group, p.method_class_key, p.created_at, p.updated_at,
-               mc.display_name AS method_class_label, mc.definition AS method_class_definition, mc.color AS method_class_color
+               p.openalex_id, p.organism, p.organism_group, p.method_class_key, p.wcm_completeness_key, p.created_at, p.updated_at,
+               mc.display_name AS method_class_label, mc.definition AS method_class_definition, mc.color AS method_class_color,
+               cl.display_name AS wcm_completeness_label, cl.definition AS wcm_completeness_definition, cl.color AS wcm_completeness_color
         FROM papers p
         JOIN method_classes mc ON mc.key = p.method_class_key
+        JOIN completeness_levels cl ON cl.key = p.wcm_completeness_key
         ORDER BY p.paper_id
         """
     ).fetchall()
     classifications = latest_classification_by_paper(conn)
+    completeness = latest_completeness_by_paper(conn)
     remote = latest_remote_links_by_paper(conn)
     pdf_assets = fetch_pdf_assets(conn)
     assets_by_paper: dict[str, list[dict[str, Any]]] = {}
@@ -366,6 +473,10 @@ def fetch_papers(conn: sqlite3.Connection) -> list[dict[str, Any]]:
         item["classification_source"] = class_event.get("source", "")
         item["classification_confidence"] = class_event.get("confidence", "")
         item["classification_rationale"] = class_event.get("rationale", "")
+        completeness_event = completeness.get(row["paper_id"], {})
+        item["wcm_completeness_source"] = completeness_event.get("source", "")
+        item["wcm_completeness_confidence"] = completeness_event.get("confidence", "")
+        item["wcm_completeness_rationale"] = completeness_event.get("rationale", "")
         item["remote_link"] = remote.get(f"{row['paper_id']}::zotero")
         result.append(item)
     return result
@@ -450,5 +561,5 @@ def status_summary(conn: sqlite3.Connection) -> dict[str, Any]:
             {"key": row["key"], "display_name": row["display_name"], "color": row["color"]}
             for row in fetch_method_classes(conn)
         ],
+        "complete_wcm_papers": sum(1 for paper in papers if paper.get("wcm_completeness_key") == "complete"),
     }
-

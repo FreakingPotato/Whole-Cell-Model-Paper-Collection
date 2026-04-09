@@ -10,7 +10,7 @@ from pypdf import PdfWriter
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from wcm.classify import classify_method_class_key
+from wcm.classify import classify_completeness_key, classify_method_class_key
 from wcm.db import connect, init_db, utc_now
 from wcm.discovery import discover_local_pdfs
 from wcm.graph import configure_legacy_method_classes
@@ -25,6 +25,27 @@ def make_pdf(path: Path) -> None:
 
 
 class PipelineTests(unittest.TestCase):
+    def test_completeness_classification_matches_curated_policy(self) -> None:
+        complete_key, _, _ = classify_completeness_key(
+            "A Whole-Cell Computational Model Predicts Phenotype from Genotype",
+            "",
+            "Cell",
+        )
+        partial_key, _, _ = classify_completeness_key(
+            "Whole-cell modeling in yeast predicts compartment-specific proteome constraints that drive metabolic strategies",
+            "",
+            "Nature",
+        )
+        related_key, _, _ = classify_completeness_key(
+            "Accelerated discovery via a whole-cell model",
+            "",
+            "Nature Methods",
+        )
+
+        self.assertEqual(complete_key, "complete")
+        self.assertEqual(partial_key, "partial")
+        self.assertEqual(related_key, "related")
+
     def test_classification_override_beats_heuristic(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             tmpdir = Path(tmp)
