@@ -1,12 +1,12 @@
 # WCM Graph Build
 
-- Papers: 43
-- Downloaded PDFs: 15
-- Nodes: 46
-- Edges: 327
-- Mechanistic models: 36
-- Machine Learning Model: 1
-- Hybrid architectures: 6
+- Papers: 56
+- Downloaded PDFs: 26
+- Nodes: 59
+- Edges: 388
+- Mechanistic models: 41
+- Machine Learning Model: 4
+- Hybrid architectures: 11
 
 Outputs:
 - `graphify-out/graph.html` (enhanced WCM viewer)
@@ -17,8 +17,10 @@ Outputs:
 - `graphify-out/GRAPH_REPORT.md`
 - `graphify-out/paper_metadata.json`
 - `metadata/live_paper_inventory.csv`
+- `metadata/pdf_processing_status.csv`
 - `metadata/pdf_sidecar_review_queue.csv`
 - `metadata/pdf_sidecar_rejected.csv`
+- `metadata/zotero_sync_state.json`
 
 Color mapping in the graph:
 - Blue: Mechanistic models
@@ -31,7 +33,10 @@ Viewer layouts:
 - Organism layout (manually curated organism groups)
 
 PDF sync:
-- Rebuilds rescan `pdfs/`, parse any new local PDFs, and try to match them back to papers by DOI/title
+- Rebuilds treat `pdfs/` as the graph source of truth and rescan only top-level PDFs, ignoring `pdfs/_rejected/`
+- Unchanged PDFs reuse cached parse results from `metadata/pdf_parse_cache.json` instead of being reparsed
+- If `ZOTERO_USER_ID` and `ZOTERO_API_KEY` are set, the builder pulls PDFs from the Zotero `Whole Cell Model` collection into `pdfs/` before graph generation
+- If `ZOTERO_UPLOAD_LOCAL=1` is set, local PDFs missing from the Zotero collection are uploaded back to Zotero after local matching
 - Manually added PDFs with resolvable DOI/title can be auto-ingested as new paper nodes
 - Bullet provenance prefers parsed local PDF page anchors and falls back to the curated note + DOI record
 

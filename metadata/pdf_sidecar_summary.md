@@ -1,6 +1,6 @@
 # PDF Sidecar Review
 
-- Papers still needing validated PDFs: 28
+- Papers still needing validated PDFs: 30
 - Rejected/quarantined PDFs: 28
 
 Files:

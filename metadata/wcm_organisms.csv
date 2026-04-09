@@ -1,44 +1,57 @@
-paper_id,organism
-WCM-001,JCVI-syn3A / minimal cell
-WCM-002,Mycoplasma genitalium
-WCM-003,JCVI-syn3A / minimal cell
-WCM-004,General bacteria
-WCM-005,Whole-cell general
-WCM-006,Whole-cell general
-WCM-007,Escherichia coli
-WCM-008,Escherichia coli
-WCM-009,Escherichia coli
-WCM-010,Escherichia coli
-WCM-011,Synthetic Mycoplasma cell
-WCM-012,JCVI minimal genome
-WCM-013,JCVI-syn3A / minimal cell
-WCM-014,JCVI-syn3A / minimal cell
-WCM-015,JCVI-syn3A / minimal cell
-WCM-016,JCVI-syn3A / minimal cell
-WCM-017,JCVI-syn3A / minimal cell
-WCM-018,JCVI-syn3A / minimal cell
-WCM-019,JCVI-syn3A / minimal cell
-WCM-020,JCVI minimal organism
-WCM-021,JCVI minimal organism
-WCM-022,JCVI-syn3B
-WCM-023,JCVI-syn3A / minimal cell
-WCM-024,Mesoplasma florum
-WCM-025,General reaction-diffusion
-WCM-026,General reaction-diffusion
-WCM-027,Whole-cell general
-WCM-028,Mycoplasma whole-cell structure
-WCM-029,Mycoplasma pneumoniae
-WCM-030,Bacterial cell general
-WCM-031,General bacteria
-WCM-032,General bacteria
-WCM-033,General bacteria
-WCM-034,Condensin / chromatin
-WCM-035,Chromatin / multi-system
-WCM-036,Bacillus subtilis
-WCM-037,Escherichia coli
-WCM-038,Bacterial chromosome systems
-WCM-039,Mycoplasma pneumoniae
-WCM-040,Escherichia coli
-WCM-041,Escherichia coli
-WCM-042,Escherichia coli
-WCM-043,Mycoplasma capricolum
+paper_id,organism,organism_group
+WCM-001,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-002,Mycoplasma genitalium,Mycoplasma / Mollicutes
+WCM-003,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-004,General bacteria,General bacteria
+WCM-005,Whole-cell general,Whole-cell general
+WCM-006,Whole-cell general,Whole-cell general
+WCM-007,Escherichia coli,Escherichia coli
+WCM-008,Escherichia coli,Escherichia coli
+WCM-009,Escherichia coli,Escherichia coli
+WCM-010,Escherichia coli,Escherichia coli
+WCM-011,Synthetic Mycoplasma cell,Mycoplasma / Mollicutes
+WCM-012,JCVI minimal genome,JCVI minimal cell
+WCM-013,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-014,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-015,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-016,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-017,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-018,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-019,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-020,JCVI minimal organism,JCVI minimal cell
+WCM-021,JCVI minimal organism,JCVI minimal cell
+WCM-022,JCVI-syn3B,JCVI minimal cell
+WCM-023,JCVI-syn3A / minimal cell,JCVI minimal cell
+WCM-024,Mesoplasma florum,Mycoplasma / Mollicutes
+WCM-025,General reaction-diffusion,Reaction-diffusion methods
+WCM-026,General reaction-diffusion,Reaction-diffusion methods
+WCM-027,Whole-cell general,Whole-cell general
+WCM-028,Mycoplasma whole-cell structure,Mycoplasma / Mollicutes
+WCM-029,Mycoplasma pneumoniae,Mycoplasma / Mollicutes
+WCM-030,Bacterial cell general,General bacteria
+WCM-031,General bacteria,General bacteria
+WCM-032,General bacteria,General bacteria
+WCM-033,General bacteria,General bacteria
+WCM-034,Condensin / chromatin,Chromatin / condensin
+WCM-035,Chromatin / multi-system,Chromatin / condensin
+WCM-036,Bacillus subtilis,General bacteria
+WCM-037,Escherichia coli,Escherichia coli
+WCM-038,Bacterial chromosome systems,General bacteria
+WCM-039,Mycoplasma pneumoniae,Mycoplasma / Mollicutes
+WCM-040,Escherichia coli,Escherichia coli
+WCM-041,Escherichia coli,Escherichia coli
+WCM-042,Escherichia coli,Escherichia coli
+WCM-043,Mycoplasma capricolum,Mycoplasma / Mollicutes
+WCM-044,Escherichia coli,Escherichia coli
+WCM-045,Saccharomyces cerevisiae,Whole-cell general
+WCM-046,Escherichia coli,Escherichia coli
+WCM-047,Human / pan-cancer,Whole-cell general
+WCM-048,Escherichia coli,Escherichia coli
+WCM-049,Human / pan-cancer,Whole-cell general
+WCM-050,Whole-cell general,Whole-cell general
+WCM-051,Whole-cell general,Whole-cell general
+WCM-052,Whole-cell general,Whole-cell general
+WCM-053,Whole-cell general,Whole-cell general
+WCM-054,Saccharomyces cerevisiae,Whole-cell general
+WCM-055,Escherichia coli,Escherichia coli
+WCM-056,Saccharomyces cerevisiae,Whole-cell general

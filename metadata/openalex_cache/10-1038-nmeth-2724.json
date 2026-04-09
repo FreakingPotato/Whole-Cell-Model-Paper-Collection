@@ -1,0 +1,43 @@
+{
+  "doi": "10.1038/nmeth.2724",
+  "openalex_id": "https://openalex.org/W1986366456",
+  "referenced_works": [
+    "https://openalex.org/W70568187",
+    "https://openalex.org/W1970775245",
+    "https://openalex.org/W1971439989",
+    "https://openalex.org/W1980271174",
+    "https://openalex.org/W1982309495",
+    "https://openalex.org/W2003489966",
+    "https://openalex.org/W2010874290",
+    "https://openalex.org/W2016132086",
+    "https://openalex.org/W2072013780",
+    "https://openalex.org/W2073612090",
+    "https://openalex.org/W2078355959",
+    "https://openalex.org/W2081781433",
+    "https://openalex.org/W2097002638",
+    "https://openalex.org/W2123110921",
+    "https://openalex.org/W2131067724",
+    "https://openalex.org/W2132589078"
+  ],
+  "abstract": "",
+  "authors": [
+    "Jayodita C. Sanghvi",
+    "Sergi Regot",
+    "Silvia Carrasco",
+    "Jonathan R. Karr",
+    "Miriam V. Gutschow",
+    "Benjamin Bolival",
+    "Markus W. Covert"
+  ],
+  "concepts": [
+    "Computational biology",
+    "Computer science",
+    "Biology"
+  ],
+  "cited_by_count": 71,
+  "title": "Accelerated discovery via a whole-cell model",
+  "year": 2013,
+  "journal": "Nature Methods",
+  "landing_page_url": "https://doi.org/10.1038/nmeth.2724",
+  "pdf_urls": []
+}

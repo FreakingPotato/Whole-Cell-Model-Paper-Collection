@@ -1,44 +1,57 @@
-paper_id,method_class,rationale
-WCM-001,Mechanistic models,Spatial and kinetic whole-cell simulation of a minimal cell cycle.
-WCM-002,Mechanistic models,Canonical mechanistic whole-cell model built from coupled cellular process modules.
-WCM-003,Mechanistic models,Integrated minimal-cell simulation with emergent behavior from mechanistic submodels.
-WCM-004,Mechanistic models,Physiology review centered on mechanistic coupling of metabolism growth and cell cycle.
-WCM-005,Hybrid architectures,Integrative whole-cell framework that combines structural and dynamical constraints across scales.
-WCM-006,Machine Learning Model,Artificial-intelligence-centered roadmap for building virtual cells.
-WCM-007,Hybrid architectures,Mechanistic simulation used together with heterogeneous dataset cross-evaluation.
-WCM-008,Hybrid architectures,Whole-cell simulation coupled to in silico design-space exploration of operon architectures.
-WCM-009,Mechanistic models,Kinetic ribosome biogenesis subsystem model.
-WCM-010,Mechanistic models,Theory-plus-experiment treatment of ribosome biogenesis in replicating cells.
-WCM-011,Mechanistic models,Synthetic-cell landmark establishing the experimental minimal-cell platform.
-WCM-012,Mechanistic models,Minimal genome design grounded in mechanistic genome reduction logic.
-WCM-013,Mechanistic models,Minimal-cell metabolic network analysis.
-WCM-014,Mechanistic models,Kinetic model of genetic information processing in a minimal cell.
-WCM-015,Hybrid architectures,Geometry generation constrained jointly by cryo-ET and chromosome conformation data.
-WCM-016,Mechanistic models,Chromosome organization study centered on physical and mechanistic interpretation.
-WCM-017,Mechanistic models,Functional characterization of minimal proteome components for mechanistic modeling.
-WCM-018,Mechanistic models,Experimental definition of minimal-cell division machinery.
-WCM-019,Mechanistic models,Mechanistic study of metabolite damage and repair in minimal genomes.
-WCM-020,Mechanistic models,Evolution and adaptation analysis of a minimal organism.
-WCM-021,Mechanistic models,Evolutionary study of minimal-cell trajectories.
-WCM-022,Mechanistic models,Minimal-cell membrane biophysics study.
-WCM-023,Hybrid architectures,Modular integrative nucleoid modeling in JCVI-Syn3A.
-WCM-024,Mechanistic models,Near-minimal-cell systems characterization supporting mechanistic modeling.
-WCM-025,Mechanistic models,Reaction-diffusion stochastic simulation framework.
-WCM-026,Mechanistic models,High-performance reaction-diffusion simulation infrastructure.
-WCM-027,Mechanistic models,Whole-cell molecular dynamics simulation.
-WCM-028,Hybrid architectures,Structural whole-cell reconstruction from multiple data modalities.
-WCM-029,Mechanistic models,Structural characterization of active bacterial transcription-translation organization.
-WCM-030,Mechanistic models,Atomic-detail translation dynamics visualization inside cells.
-WCM-031,Mechanistic models,Polymer-physics explanation of chromosome segregation.
-WCM-032,Mechanistic models,Mechanistic review of ParABS segregation machinery.
-WCM-033,Mechanistic models,Mechanistic review of bacterial chromosome segregation.
-WCM-034,Mechanistic models,Experimental condensin loop extrusion study.
-WCM-035,Mechanistic models,Loop extrusion model of chromosome organization.
-WCM-036,Mechanistic models,Mechanistic SMC traversal model constrained by in vivo data.
-WCM-037,Mechanistic models,Physical chromosome-topology model linking loop extrusion and segregation.
-WCM-038,Mechanistic models,Mechanistic coupling of transcription and loop extrusion.
-WCM-039,Mechanistic models,Genome-reduced chromosome structure study.
-WCM-040,Mechanistic models,Spatial gene-expression organization study.
-WCM-041,Mechanistic models,Imaging-based analysis of ribosome and RNA polymerase organization.
-WCM-042,Mechanistic models,Classical bacterial composition and growth-rate physiology data.
-WCM-043,Mechanistic models,Classical mycoplasma reproduction morphology study.
+paper_id,method_class_key,method_class_label,method_class,classification_source,classification_confidence,rationale
+WCM-001,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Spatial and kinetic whole-cell simulation of a minimal cell cycle.
+WCM-002,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Canonical mechanistic whole-cell model built from coupled cellular process modules.
+WCM-003,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Integrated minimal-cell simulation with emergent behavior from mechanistic submodels.
+WCM-004,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Physiology review centered on mechanistic coupling of metabolism growth and cell cycle.
+WCM-005,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Integrative whole-cell framework that combines structural and dynamical constraints across scales.
+WCM-006,ml,Machine Learning Model,Machine Learning Model,manual_override,1.0,Artificial-intelligence-centered roadmap for building virtual cells.
+WCM-007,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Mechanistic simulation used together with heterogeneous dataset cross-evaluation.
+WCM-008,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Whole-cell simulation coupled to in silico design-space exploration of operon architectures.
+WCM-009,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Kinetic ribosome biogenesis subsystem model.
+WCM-010,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Theory-plus-experiment treatment of ribosome biogenesis in replicating cells.
+WCM-011,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Synthetic-cell landmark establishing the experimental minimal-cell platform.
+WCM-012,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Minimal genome design grounded in mechanistic genome reduction logic.
+WCM-013,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Minimal-cell metabolic network analysis.
+WCM-014,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Kinetic model of genetic information processing in a minimal cell.
+WCM-015,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Geometry generation constrained jointly by cryo-ET and chromosome conformation data.
+WCM-016,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Chromosome organization study centered on physical and mechanistic interpretation.
+WCM-017,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Functional characterization of minimal proteome components for mechanistic modeling.
+WCM-018,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Experimental definition of minimal-cell division machinery.
+WCM-019,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic study of metabolite damage and repair in minimal genomes.
+WCM-020,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Evolution and adaptation analysis of a minimal organism.
+WCM-021,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Evolutionary study of minimal-cell trajectories.
+WCM-022,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Minimal-cell membrane biophysics study.
+WCM-023,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Modular integrative nucleoid modeling in JCVI-Syn3A.
+WCM-024,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Near-minimal-cell systems characterization supporting mechanistic modeling.
+WCM-025,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Reaction-diffusion stochastic simulation framework.
+WCM-026,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,High-performance reaction-diffusion simulation infrastructure.
+WCM-027,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Whole-cell molecular dynamics simulation.
+WCM-028,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Structural whole-cell reconstruction from multiple data modalities.
+WCM-029,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Structural characterization of active bacterial transcription-translation organization.
+WCM-030,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Atomic-detail translation dynamics visualization inside cells.
+WCM-031,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Polymer-physics explanation of chromosome segregation.
+WCM-032,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic review of ParABS segregation machinery.
+WCM-033,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic review of bacterial chromosome segregation.
+WCM-034,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Experimental condensin loop extrusion study.
+WCM-035,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Loop extrusion model of chromosome organization.
+WCM-036,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic SMC traversal model constrained by in vivo data.
+WCM-037,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Physical chromosome-topology model linking loop extrusion and segregation.
+WCM-038,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic coupling of transcription and loop extrusion.
+WCM-039,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Genome-reduced chromosome structure study.
+WCM-040,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Spatial gene-expression organization study.
+WCM-041,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Imaging-based analysis of ribosome and RNA polymerase organization.
+WCM-042,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Classical bacterial composition and growth-rate physiology data.
+WCM-043,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Classical mycoplasma reproduction morphology study.
+WCM-044,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Combines mechanistic structure with data integration or software orchestration.
+WCM-045,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Combines mechanistic structure with data integration or software orchestration.
+WCM-046,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Combines mechanistic structure with data integration or software orchestration.
+WCM-047,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Combines mechanistic structure with data integration or software orchestration.
+WCM-048,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic or simulation-first modeling emphasis.
+WCM-049,ml,Machine Learning Model,Machine Learning Model,manual_override,1.0,AI-centered predictive or foundation-model workflow.
+WCM-050,ml,Machine Learning Model,Machine Learning Model,manual_override,1.0,AI-centered predictive or foundation-model workflow.
+WCM-051,ml,Machine Learning Model,Machine Learning Model,manual_override,1.0,AI-centered predictive or foundation-model workflow.
+WCM-052,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic or simulation-first modeling emphasis.
+WCM-053,hybrid,Hybrid architectures,Hybrid architectures,manual_override,1.0,Combines mechanistic structure with data integration or software orchestration.
+WCM-054,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic or simulation-first modeling emphasis.
+WCM-055,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic or simulation-first modeling emphasis.
+WCM-056,mechanistic,Mechanistic models,Mechanistic models,manual_override,1.0,Mechanistic or simulation-first modeling emphasis.
