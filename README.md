@@ -1,6 +1,6 @@
 # Whole-Cell Model Paper Collection
 
-Live explorer: `https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/`
+[![Open Live Explorer](https://img.shields.io/badge/-Open%20Live%20Explorer-0f172a?style=for-the-badge&logo=githubpages&logoColor=white)](https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/)
 
 This folder now contains a first-pass curated literature collection for classic and closely related whole-cell-model papers.
 
