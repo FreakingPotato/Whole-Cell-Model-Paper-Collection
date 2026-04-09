@@ -1,5 +1,7 @@
 # Whole-Cell Model Paper Collection
 
+Live explorer: `https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/`
+
 This folder now contains a first-pass curated literature collection for classic and closely related whole-cell-model papers.
 
 The collection is anchored on the 2026 Cell paper *Bringing the genetically minimal cell to life on a computer in 4D* and expands outward to landmark whole-cell-model, minimal-cell, chromosome-organization, and spatial/stochastic modeling papers that support the same modeling stack.
