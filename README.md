@@ -1,126 +1,174 @@
 # Whole-Cell Model Paper Collection
 
-[![Open Live Explorer](https://img.shields.io/badge/-Open%20Live%20Explorer-0f172a?style=for-the-badge&logo=githubpages&logoColor=white)](https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/)
+<p align="center">
+  <a href="https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/">
+    <img src="docs/assets/live_explorer.png" alt="Whole-Cell Model Explorer — interactive graph of curated whole-cell-model papers" width="900">
+  </a>
+</p>
 
-This folder now contains a first-pass curated literature collection for classic and closely related whole-cell-model papers.
+<p align="center">
+  <a href="https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/">
+    <img src="https://img.shields.io/badge/%E2%96%B6%20Open%20Live%20Explorer-0f172a?style=for-the-badge&logo=githubpages&logoColor=white" alt="Open Live Explorer">
+  </a>
+</p>
 
-The collection is anchored on the 2026 Cell paper *Bringing the genetically minimal cell to life on a computer in 4D* and expands outward to landmark whole-cell-model, minimal-cell, chromosome-organization, and spatial/stochastic modeling papers that support the same modeling stack.
+<p align="center"><b>👉 <a href="https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/">Click here to open the interactive Whole-Cell Model Explorer</a></b></p>
+
+A curated literature collection for classic and closely related whole-cell-model papers, anchored on the 2026 *Cell* paper *Bringing the genetically minimal cell to life on a computer in 4D* and expanded outward to landmark whole-cell-model, minimal-cell, chromosome-organization, and spatial/stochastic modeling papers that support the same modeling stack.
+
+The **Live Explorer** lets you browse the corpus as an interactive knowledge graph: switch between force, by-year, and by-organism layouts; hover any paper for title, abstract, methods summary, limitations, and future-work bullets; and jump straight to the DOI or the parsed PDF page anchor.
+
+---
+
+## ⭐ Related project — Knowledge Graph Agent
+
+A more **systematic, agentic build** of the same idea — a general-purpose knowledge-graph builder, not limited to whole-cell-model papers — lives in a separate repo:
+
+> **🔗 [FreakingPotato/Knowledge_Graph_Agent](https://github.com/FreakingPotato/Knowledge_Graph_Agent)**
+>
+> If you like what this corpus shows, that repo is where the methodology is being generalised: an agent-driven pipeline for harvesting, parsing, classifying, and graphing scientific literature across arbitrary domains. The Whole-Cell Model collection here was the first concrete dataset that motivated it.
+
+---
+
+## Table of Contents
+
+- [Live Explorer](#live-explorer)
+- [Current Status](#current-status)
+- [Repository Layout](#repository-layout)
+- [Knowledge Graph Outputs](#knowledge-graph-outputs)
+- [Pipeline & Build](#pipeline--build)
+- [Metadata Files](#metadata-files)
+- [Notes & Conventions](#notes--conventions)
+
+---
+
+## Live Explorer
+
+[**▶ Open the Live Explorer →**](https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/)
+
+What you can do in the explorer:
+
+- **Three layouts** — force-directed, by year, by organism (with dashed guide columns and headings in structured layouts).
+- **Cleaner labels** — `Author Year` on the graph, full title on hover and in the side panel.
+- **Rich node details** — title, journal, year, abstract, methods summary, limitations, and future work.
+- **Provenance-aware hovers** — limitation and future-work bullets link to parsed-PDF page anchors when an article PDF is available, plus the curated note section and the DOI / landing page.
+- **Color = method class** — 🔵 Mechanistic models · 🟠 Machine Learning models · 🔴 Hybrid architectures.
+- Subtle idle camera drift when the graph is not being manipulated.
+
+GitHub Pages is published from the repository root; `index.html` redirects to `graphify-out/graph.html`, and `.nojekyll` keeps the viewer's relative links into `graphify_corpus/` working as plain static files.
+
+---
 
 ## Current Status
 
-- Canonical project state now lives in `metadata/wcm_state.sqlite`
-- Live derived inventory currently tracks 56 papers
-- Parsed local PDFs are tracked incrementally and reused by content hash
-- Non-article or mismatched downloads are quarantined under `pdfs/_rejected/` and excluded from graph provenance
+- Canonical project state lives in `metadata/wcm_state.sqlite`.
+- Live derived inventory currently tracks **56 papers**.
+- Parsed local PDFs are tracked incrementally and reused by content hash.
+- Non-article or mismatched downloads are quarantined under `pdfs/_rejected/` and excluded from graph provenance.
 
-## Key Files
+---
 
-- Canonical SQLite state store:
-  - `metadata/wcm_state.sqlite`
-- Master table with the requested annotation columns:
-  - `metadata/whole_cell_model_papers_master_table.csv`
-- Method-class catalog with stable keys, display labels, definitions, and colors:
-  - `metadata/wcm_method_class_catalog.csv`
-- Inventory with PDF status and file names:
-  - `metadata/curated_papers_inventory.csv`
-- Live graph inventory with current method class, organism, and validated PDF bindings:
-  - `metadata/live_paper_inventory.csv`
-- Local PDF processing status and parse cache:
-  - `metadata/pdf_processing_status.csv`
-  - `metadata/pdf_parse_cache.json`
-- Local Zotero sync state:
-  - `metadata/zotero_sync_state.json`
-- Sidecar review queue for blocked or rejected PDFs:
-  - `metadata/pdf_sidecar_review_queue.csv`
-  - `metadata/pdf_sidecar_rejected.csv`
-  - `metadata/pdf_sidecar_summary.md`
-- Annotation-only table:
-  - `metadata/curated_papers_annotations.csv`
-- Raw seed-paper reference harvest:
-  - `metadata/seed_references_raw.json`
-- Candidate pool before final pruning:
-  - `metadata/candidate_papers.csv`
+## Repository Layout
 
-## Folder Layout
+```
+.
+├── pdfs/                # Downloaded PDFs with normalized file names (gitignored on GitHub)
+├── metadata/            # Canonical SQLite state plus derived CSV / JSON exports
+├── scripts/             # Reproducible harvesting/build scripts and the modular `wcm/` pipeline package
+├── graphify-out/        # Generated interactive graph + static exports
+├── graphify_corpus/     # Per-paper assets the explorer links into
+└── index.html           # Redirect to graphify-out/graph.html for GitHub Pages
+```
 
-- `pdfs/`: downloaded PDFs with normalized file names
-- `metadata/`: canonical SQLite state plus derived CSV and JSON exports
-- `scripts/`: reproducible harvesting/build scripts and the modular `wcm/` pipeline package
+---
 
-## Notes
+## Knowledge Graph Outputs
 
-- The `summary`, `method summary`, `contribution`, `limitation`, and `future work` fields are concise synthesis notes for triage and reading prioritization.
+All outputs land in `graphify-out/`:
+
+| File | Purpose |
+| --- | --- |
+| `graph.html` | Main interactive viewer (the Live Explorer) |
+| `graph_base.html` | Raw Graphify export (unenhanced) |
+| `graph.json` | Graph data (nodes + edges) |
+| `graph.graphml` | GraphML for Gephi / yEd |
+| `graph.svg` | Static SVG snapshot |
+| `GRAPH_REPORT.md` | Human-readable audit report |
+| `metadata/wcm_paper_metadata.json` | Rich per-paper metadata used by the viewer |
+
+Method-class colors come from the exported class catalog (`metadata/wcm_method_class_catalog.csv`):
+
+- 🔵 **Blue** — Mechanistic models
+- 🟠 **Orange** — Machine Learning models
+- 🔴 **Red** — Hybrid architectures
+
+Editable per-paper class assignments live in `metadata/wcm_method_classes.csv`.
+
+---
+
+## Pipeline & Build
+
+Regenerate the graph or inspect state:
+
+```bash
+python scripts/build_wcm_graph.py                 # incremental rebuild
+python scripts/build_wcm_graph.py --status        # show pipeline state
+python scripts/build_wcm_graph.py --full-rebuild  # rebuild from scratch
+```
+
+`build_wcm_graph.py` runs an incremental SQLite-backed pipeline:
+
+```
+discover → sync → parse → match → normalize → enrich → classify → export
+```
+
+- Unchanged PDFs are not reparsed. The parser cache is keyed by file hash plus parser version, so canonical renames reuse existing parse state.
+- New PDFs in `pdfs/` are auto-detected, matched to existing papers by `paper_id` prefix, DOI, and title evidence, then normalized to the canonical filename scheme.
+- Auto-ingested papers receive a stable method-class key (`mechanistic`, `ml`, `hybrid`) plus editable display metadata.
+- `scripts/build_wcm_collection.py` is now a bootstrap/import helper rather than the ongoing operational pipeline.
+
+### Optional: Zotero sync
+
+Set environment variables to enable Zotero round-tripping:
+
+| Variable | Effect |
+| --- | --- |
+| `ZOTERO_USER_ID` + `ZOTERO_API_KEY` | Builder checks the `Whole Cell Model` collection and mirrors downloadable PDF attachments into `pdfs/` |
+| `ZOTERO_UPLOAD_LOCAL=1` | Local PDFs missing from the Zotero collection are prepared for upload after local matching |
+| `ZOTERO_DRY_RUN=1` | Show what would happen without changing the remote library |
+
+Zotero items without a downloadable server-side file are recorded in `metadata/zotero_sync_state.json` and stay `landing_page_only` until a binary becomes available locally or remotely.
+
+---
+
+## Metadata Files
+
+| File | Contents |
+| --- | --- |
+| `metadata/wcm_state.sqlite` | Canonical SQLite state store |
+| `metadata/whole_cell_model_papers_master_table.csv` | Master table with the requested annotation columns |
+| `metadata/wcm_method_class_catalog.csv` | Method-class catalog (stable keys, display labels, definitions, colors) |
+| `metadata/wcm_method_classes.csv` | Editable per-paper class assignments |
+| `metadata/curated_papers_inventory.csv` | Inventory with PDF status and file names |
+| `metadata/live_paper_inventory.csv` | Live graph inventory with current method class, organism, and validated PDF bindings |
+| `metadata/pdf_processing_status.csv` | Local PDF processing status |
+| `metadata/pdf_parse_cache.json` | Parse cache (keyed by file hash + parser version) |
+| `metadata/zotero_sync_state.json` | Local Zotero sync state |
+| `metadata/pdf_sidecar_review_queue.csv` | Sidecar review queue |
+| `metadata/pdf_sidecar_rejected.csv` | Rejected sidecars |
+| `metadata/pdf_sidecar_summary.md` | Sidecar summary |
+| `metadata/curated_papers_annotations.csv` | Annotation-only table |
+| `metadata/seed_references_raw.json` | Raw seed-paper reference harvest |
+| `metadata/candidate_papers.csv` | Candidate pool before final pruning |
+
+The inventory is regenerated automatically from the SQLite state store on every build.
+
+---
+
+## Notes & Conventions
+
+- The `summary`, `method summary`, `contribution`, `limitation`, and `future work` fields are concise synthesis notes for triage and reading prioritization — not extracted abstracts.
 - For papers without directly accessible open PDFs, the inventories still record metadata and landing pages so the set remains organized.
 - `pdfs/` is the source of truth for graph generation. The builder only scans top-level PDFs there and ignores `pdfs/_rejected/`.
 - Local PDFs under `pdfs/` are intentionally gitignored for the GitHub repository; the metadata tables and graph still preserve their paper-level provenance.
-- Re-running `python scripts/build_wcm_graph.py` now runs an incremental SQLite-backed pipeline: discover -> sync -> parse -> match -> normalize -> enrich -> classify -> export.
-- Unchanged PDFs are not reparsed. The parser cache is keyed by file hash plus parser version, so canonical renames reuse existing parse state.
-- New PDFs in `pdfs/` are auto-detected, matched to existing papers by `paper_id` prefix, DOI, and title evidence, then normalized to the canonical filename scheme.
-- Auto-ingested papers receive a stable method-class key (`mechanistic`, `ml`, `hybrid`) plus editable display metadata for the graph.
-- If `ZOTERO_USER_ID` and `ZOTERO_API_KEY` are set, the builder also checks the Zotero `Whole Cell Model` collection before graph generation and tries to mirror downloadable PDF attachments into `pdfs/`.
-- If `ZOTERO_UPLOAD_LOCAL=1` is set, local PDFs that are missing from the Zotero collection are prepared for upload back to Zotero after local matching. `ZOTERO_DRY_RUN=1` shows what would happen without changing the remote library.
-- Some Zotero attachments may exist as metadata records without a downloadable server-side file yet. In that case the builder records the Zotero item keys in `metadata/zotero_sync_state.json` and leaves the paper in `landing_page_only` until the binary becomes available or a local PDF is present.
-- `scripts/build_wcm_collection.py` should now be treated as a bootstrap/import helper rather than the ongoing operational pipeline.
-
-## Graphify Knowledge Graph
-
-- Hosted GitHub Pages view: [Whole-Cell Model Explorer](https://freakingpotato.github.io/Whole-Cell-Model-Paper-Collection/)
-- Graph outputs are in `graphify-out/`
-- Main interactive view: `graphify-out/graph.html`
-- Raw Graphify export: `graphify-out/graph_base.html`
-- Graph JSON: `graphify-out/graph.json`
-- GraphML for Gephi/yEd: `graphify-out/graph.graphml`
-- Static SVG: `graphify-out/graph.svg`
-- Human-readable audit report: `graphify-out/GRAPH_REPORT.md`
-- Rich per-paper metadata: `metadata/wcm_paper_metadata.json`
-
-Method classes used for color grouping in the graph now come from the exported class catalog:
-
-- Blue: `Mechanistic models`
-- Orange: `Machine Learning Model`
-- Red: `Hybrid architectures`
-
-The enhanced viewer now supports:
-
-- cleaner paper labels: `Author Year` on the graph, full title on hover and in the side panel
-- richer node details: title, journal, year, abstract, methods summary, limitations, and future work
-- alternate layouts: force, by year, and by organism
-- dashed guide columns and headings in structured layouts
-- subtle idle camera drift when the graph is not being manipulated
-- provenance-aware limitation and future-work bullets via hover cards
-
-GitHub Pages note:
-
-- No file-structure reformat is required for Pages; the site can be published directly from the repository root.
-- `index.html` redirects the site root to `graphify-out/graph.html`.
-- `.nojekyll` is included so the viewer's relative links into `graphify_corpus/` keep working as plain static files.
-
-Current provenance behavior:
-
-- hover cards prefer parsed local PDF page anchors when a validated article PDF is available
-- they also point to the curated note section for that paper
-- they always include the DOI / landing-page link
-- exact in-document section anchors are still approximate page-level anchors rather than perfect section bookmarks for every paper
-
-Editable per-paper class assignments live in:
-
-- `metadata/wcm_method_classes.csv`
-
-Class display labels, definitions, and colors live in:
-
-- `metadata/wcm_method_class_catalog.csv`
-
-Regenerate the graph or inspect state with:
-
-```bash
-python scripts/build_wcm_graph.py
-python scripts/build_wcm_graph.py --status
-python scripts/build_wcm_graph.py --full-rebuild
-```
-
-## Inventory
-
-The live inventory is now generated automatically from the SQLite state store. Use:
-
-- `metadata/live_paper_inventory.csv` for the current graph-facing inventory
-- `metadata/pdf_processing_status.csv` for per-paper parse and remote-sync status
+- Hover-card section anchors are page-level approximations rather than perfect section bookmarks for every paper.
