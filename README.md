@@ -48,9 +48,9 @@ A more **systematic, agentic build** of the same idea — a general-purpose know
 
 What you can do in the explorer:
 
-- **Three layouts** — force-directed, by year, by organism (with dashed guide columns and headings in structured layouts).
+- **Four layouts** — force-directed, by year, by organism, and **Virtual Cells** (groups papers by WCM completeness: Complete WCM · Partial WCM · Related Model — large groups wrap into sub-columns).
 - **Cleaner labels** — `Author Year` on the graph, full title on hover and in the side panel.
-- **Rich node details** — title, journal, year, abstract, methods summary, limitations, and future work.
+- **Rich node details** — title, journal, year, citation count, abstract, methods summary, limitations, and future work.
 - **Provenance-aware hovers** — limitation and future-work bullets link to parsed-PDF page anchors when an article PDF is available, plus the curated note section and the DOI / landing page.
 - **Color = method class** — 🔵 Mechanistic models · 🟠 Machine Learning models · 🔴 Hybrid architectures.
 - Subtle idle camera drift when the graph is not being manipulated.
@@ -126,6 +126,22 @@ discover → sync → parse → match → normalize → enrich → classify → 
 - New PDFs in `pdfs/` are auto-detected, matched to existing papers by `paper_id` prefix, DOI, and title evidence, then normalized to the canonical filename scheme.
 - Auto-ingested papers receive a stable method-class key (`mechanistic`, `ml`, `hybrid`) plus editable display metadata.
 - `scripts/build_wcm_collection.py` is now a bootstrap/import helper rather than the ongoing operational pipeline.
+
+### Optional: refresh citation counts
+
+Citations come from OpenAlex during the normal `enrich` stage. For papers OpenAlex hasn't indexed yet (preprints, brand-new journals), you can run an explicit refresh that falls back to Semantic Scholar:
+
+```bash
+python scripts/build_wcm_graph.py --refresh-citations                  # all papers, persistent cache
+python scripts/build_wcm_graph.py --refresh-citations --citations-only-missing
+python scripts/build_wcm_graph.py --refresh-citations --citations-rate 3.0
+```
+
+Results are persisted in `metadata/citation_counts.json` and layered in at the next graph export, so the side panel shows the count and the source (`openalex` / `semantic_scholar`). Adapted from [`Knowledge_Graph_Agent`'s citations module](https://github.com/FreakingPotato/Knowledge_Graph_Agent/blob/main/scripts/kgbuild/citations.py).
+
+### PDF parsing — content over metadata
+
+`extract_pdf_profile` now extracts heuristic excerpts of the **abstract**, **introduction**, **methods**, and **references** directly from each PDF (cached by file hash + parser version). When OpenAlex has no abstract for a paper, the PDF excerpt fills the side panel automatically. Reference lists land in the parse cache for future cross-paper linking.
 
 ### Optional: Zotero sync
 

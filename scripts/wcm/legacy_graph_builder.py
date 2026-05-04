@@ -280,6 +280,53 @@ def doi_regex() -> re.Pattern[str]:
     return re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
 
 
+# Section-extraction heuristics ported from Knowledge_Graph_Agent/scripts/parse_pdfs.py
+# (https://github.com/FreakingPotato/Knowledge_Graph_Agent). Run on the head of the
+# document for sectioned excerpts and on the full text for references.
+_PDF_ABSTRACT_RE = re.compile(
+    r"\babstract\b\s*[:\-]?\s*(.{50,4000}?)(?:\n\s*\n|\n[A-Z]\w+\s*\n|\n1\s+introduction)",
+    re.DOTALL | re.IGNORECASE,
+)
+_PDF_INTRO_RE = re.compile(
+    r"\b(?:1\.?\s*introduction|introduction)\b\s*\n?(.{50,4000}?)(?:\n\s*\n\s*[2-9]\.|\n\s*[A-Z]{2,})",
+    re.DOTALL | re.IGNORECASE,
+)
+_PDF_METHODS_RE = re.compile(
+    r"\b(?:method(?:s|ology)?|approach)\b\s*\n?(.{50,3000}?)(?:\n\s*\n\s*[A-Z][a-z]|\n\s*\d\.)",
+    re.DOTALL | re.IGNORECASE,
+)
+_PDF_REFS_RE = re.compile(r"\breferences\b\s*\n(.+)$", re.DOTALL | re.IGNORECASE)
+_PDF_DOI_IN_TEXT = re.compile(r"\b10\.\d{4,}/[^\s,;]+", re.IGNORECASE)
+
+
+def _collapse_ws(s: str) -> str:
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def _extract_pdf_excerpt(pattern: re.Pattern[str], text: str, *, cap: int = 2000) -> str:
+    match = pattern.search(text)
+    if not match:
+        return ""
+    return _collapse_ws(match.group(1))[:cap]
+
+
+def _extract_pdf_references(full_text: str, *, max_refs: int = 80) -> list[str]:
+    """Best-effort references list from a PDF's full text."""
+    match = _PDF_REFS_RE.search(full_text)
+    if not match:
+        return []
+    tail = match.group(1)
+    candidates = re.split(r"\n(?:\[\d+\]|\d+\.|\d+\))\s*", tail)
+    if len(candidates) <= 1:
+        candidates = [c for c in tail.split("\n\n") if c.strip()]
+    cleaned = [_collapse_ws(c) for c in candidates if c.strip()]
+    cleaned = [c for c in cleaned if 30 <= len(c) <= 800]
+    if cleaned:
+        return cleaned[:max_refs]
+    dois = list(dict.fromkeys(_PDF_DOI_IN_TEXT.findall(tail)))
+    return dois[:max_refs]
+
+
 def extract_pdf_profile(pdf_path: Path) -> dict:
     reader = PdfReader(str(pdf_path))
     metadata = reader.metadata or {}
@@ -301,6 +348,8 @@ def extract_pdf_profile(pdf_path: Path) -> dict:
             lines = [line.strip() for line in text.splitlines() if line.strip()]
             if lines:
                 title = lines[0][:300]
+    head_text = "\n".join(page_texts[:3])
+    full_text = "\n".join(page_texts)
     return {
         "path": str(pdf_path),
         "file_name": pdf_path.name,
@@ -309,7 +358,11 @@ def extract_pdf_profile(pdf_path: Path) -> dict:
         "metadata_author": author,
         "doi": doi.lower(),
         "page_texts": page_texts,
-        "full_text": "\n".join(page_texts),
+        "full_text": full_text,
+        "abstract_excerpt": _extract_pdf_excerpt(_PDF_ABSTRACT_RE, head_text),
+        "intro_excerpt": _extract_pdf_excerpt(_PDF_INTRO_RE, head_text),
+        "methods_excerpt": _extract_pdf_excerpt(_PDF_METHODS_RE, head_text, cap=2000),
+        "references_excerpt": _extract_pdf_references(full_text[:200_000]),
     }
 
 
@@ -1301,6 +1354,13 @@ def build_paper_metadata(
     summaries = {row["paper_id"]: openalex_work_summary(row["doi"].lower()) for row in rows}
     paper_meta: dict[str, dict] = {}
     profiles_by_file = pdf_profile_map(profiles)
+    # Layer in any explicit citation refreshes (OpenAlex → Semantic Scholar
+    # fallback) persisted by `python scripts/build_wcm_graph.py --refresh-citations`.
+    try:
+        from .citations import counts_by_paper_id
+        refreshed_counts = counts_by_paper_id()
+    except Exception:
+        refreshed_counts = {}
 
     for row in rows:
         summary = summaries[row["paper_id"]]
@@ -1311,7 +1371,8 @@ def build_paper_metadata(
         note_href = graph_relative(note_path)
         pdf_href = graph_relative(ROOT / "pdfs" / row["pdf_file"]) if row["pdf_file"] else ""
         pdf_profile = profiles_by_file.get(row["pdf_file"], None) if row["pdf_file"] else None
-        abstract = summary.get("abstract") or row["summary"]
+        pdf_abstract = (pdf_profile or {}).get("abstract_excerpt") or ""
+        abstract = summary.get("abstract") or pdf_abstract or row["summary"]
         themes = themes_for_text(
             [
                 row["paper_title"],
@@ -1355,9 +1416,14 @@ def build_paper_metadata(
             "source_href": note_href,
             "concepts": summary.get("concepts", []),
             "cited_by_count": summary.get("cited_by_count", 0),
+            "citation_source": "openalex" if summary.get("cited_by_count") else "",
             "openalex_id": summary.get("openalex_id", ""),
             "referenced_works": summary.get("referenced_works", []),
         }
+        refreshed = refreshed_counts.get(row["paper_id"])
+        if refreshed:
+            meta["cited_by_count"] = refreshed["count"]
+            meta["citation_source"] = refreshed["source"]
         paper_meta[row["paper_id"]] = meta
 
     return paper_meta, summaries
@@ -1481,6 +1547,7 @@ def build_graph(
             themes=meta["themes"],
             sections=meta["sections"],
             cited_by_count=meta["cited_by_count"],
+            citation_source=meta.get("citation_source", ""),
             openalex_id=meta["openalex_id"],
             source_href=meta["source_href"],
         )
@@ -1941,6 +2008,7 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
           <button data-layout="force" class="layout-btn active">Force</button>
           <button data-layout="year" class="layout-btn">By Year</button>
           <button data-layout="organism" class="layout-btn">By Organism</button>
+          <button data-layout="virtual" class="layout-btn">Virtual Cells</button>
         </div>
         <input id="search" type="search" placeholder="Search papers, authors, organism, journals..." />
       </div>
@@ -1969,6 +2037,22 @@ const ORGANISM_COMPLETENESS_DIVIDER_Y = -10;
 const ORGANISM_COMPLETE_START_Y = -300;
 const ORGANISM_INCOMPLETE_START_Y = 90;
 const ORGANISM_ROW_STEP = 118;
+const VIRTUAL_GROUP_ORDER = ['complete', 'partial', 'related'];
+const VIRTUAL_GROUP_LABELS = {
+  complete: 'Complete WCM',
+  partial: 'Partial WCM',
+  related: 'Related Model',
+};
+const VIRTUAL_GROUP_DEFINITIONS = {
+  complete: 'A true whole-cell model — covers the cell broadly enough to count as a virtual cell in this collection.',
+  partial: 'A substantial but still incomplete WCM (half-WCM, organism-wide model missing major layers).',
+  related: 'A related modeling, subsystem, review, or enabling paper that supports virtual-cell construction.',
+};
+const VIRTUAL_TOTAL_WIDTH = 1500;
+const VIRTUAL_ROW_START_Y = -340;
+const VIRTUAL_ROW_STEP = 56;
+const VIRTUAL_SUBCOL_WIDTH = 110;
+const VIRTUAL_SUBCOL_THRESHOLD = 20;
 
 const nodeById = new Map(GRAPH_DATA.nodes.map(node => [node.id, node]));
 const edgeByPair = new Map();
@@ -2105,6 +2189,41 @@ function yearGuideSpecs(years) {
     label: year,
     x: -(totalWidth / 2) + index * step,
   }));
+}
+
+function virtualGuideSpecs() {
+  const totalWidth = VIRTUAL_TOTAL_WIDTH;
+  const step = VIRTUAL_GROUP_ORDER.length > 1 ? totalWidth / (VIRTUAL_GROUP_ORDER.length - 1) : 0;
+  return VIRTUAL_GROUP_ORDER.map((key, index) => ({
+    key: `virtual-${key}`,
+    label: VIRTUAL_GROUP_LABELS[key] || key,
+    x: -(totalWidth / 2) + index * step,
+    orientation: 'vertical',
+  }));
+}
+
+function positionForVirtualLayout(node, indexWithinGroup, groupSize) {
+  const totalWidth = VIRTUAL_TOTAL_WIDTH;
+  const step = VIRTUAL_GROUP_ORDER.length > 1 ? totalWidth / (VIRTUAL_GROUP_ORDER.length - 1) : 0;
+  if (node.file_type !== 'paper') {
+    return { x: -(totalWidth / 2) - 200, y: -560 };
+  }
+  const key = String(node.wcm_completeness_key || 'related');
+  const groupIndex = Math.max(0, VIRTUAL_GROUP_ORDER.indexOf(key));
+  const baseX = -(totalWidth / 2) + groupIndex * step;
+  // Wrap large groups (e.g. 'related' with 50 papers) into a 2-column block so
+  // the column doesn't run off the bottom of the canvas.
+  const useSubcols = (groupSize || 0) > VIRTUAL_SUBCOL_THRESHOLD;
+  if (!useSubcols) {
+    return { x: baseX, y: VIRTUAL_ROW_START_Y + indexWithinGroup * VIRTUAL_ROW_STEP };
+  }
+  const rowsPerCol = Math.ceil(groupSize / 2);
+  const subcol = Math.floor(indexWithinGroup / rowsPerCol);
+  const rowInSubcol = indexWithinGroup % rowsPerCol;
+  return {
+    x: baseX + (subcol === 0 ? -VIRTUAL_SUBCOL_WIDTH / 2 : VIRTUAL_SUBCOL_WIDTH / 2),
+    y: VIRTUAL_ROW_START_Y + rowInSubcol * VIRTUAL_ROW_STEP,
+  };
 }
 
 function organismGuideSpecs(groups) {
@@ -2365,7 +2484,7 @@ function baseNetworkOptions(layoutName) {
 
 function requestedLayoutFromHash() {
   const hash = (window.location.hash || '').replace('#', '').toLowerCase();
-  if (hash === 'year' || hash === 'organism' || hash === 'force') {
+  if (hash === 'year' || hash === 'organism' || hash === 'force' || hash === 'virtual') {
     return hash;
   }
   return 'force';
@@ -2381,6 +2500,29 @@ function buildTargets(layoutName) {
   if (layoutName === 'force') {
     renderGuides([]);
     return {};
+  }
+  if (layoutName === 'virtual') {
+    renderGuides(virtualGuideSpecs());
+    const grouped = {};
+    for (const node of GRAPH_DATA.nodes.filter(node => node.file_type === 'paper')) {
+      const key = String(node.wcm_completeness_key || 'related');
+      grouped[key] = grouped[key] || [];
+      grouped[key].push(node);
+    }
+    const targets = {};
+    for (const key of VIRTUAL_GROUP_ORDER) {
+      const nodes = (grouped[key] || []).sort((a, b) =>
+        (a.year || 0) - (b.year || 0) ||
+        String(a.label || '').localeCompare(String(b.label || ''))
+      );
+      nodes.forEach((node, idx) => {
+        targets[node.id] = positionForVirtualLayout(node, idx, nodes.length);
+      });
+    }
+    for (const node of GRAPH_DATA.nodes.filter(node => node.file_type !== 'paper')) {
+      targets[node.id] = positionForVirtualLayout(node, 0, 0);
+    }
+    return targets;
   }
   if (layoutName === 'year') {
     const years = [...new Set(GRAPH_DATA.nodes.filter(node => node.file_type === 'paper').map(node => String(node.year)))].sort();
@@ -2629,6 +2771,7 @@ function renderPaperNode(node) {
       <div class="meta-card"><span class="label">Year</span><span class="value">${escapeHtml(String(node.year || ''))}</span></div>
       <div class="meta-card"><span class="label">Author + Year</span><span class="value">${escapeHtml(node.display_label || '')}</span></div>
       <div class="meta-card"><span class="label">Method Class</span><span class="value">${escapeHtml(node.method_class || '')}</span></div>
+      <div class="meta-card"><span class="label">Citations</span><span class="value">${node.cited_by_count != null ? Number(node.cited_by_count).toLocaleString() : '—'}${node.citation_source ? ` <small style="color:#94a3b8">(${escapeHtml(node.citation_source)})</small>` : ''}</span></div>
       <div class="meta-card"><span class="label">WCM Completeness</span><span class="value">${escapeHtml(node.wcm_completeness_label || '')}</span></div>
       <div class="meta-card"><span class="label">Completeness Source</span><span class="value">${escapeHtml(node.wcm_completeness_source || '')}</span></div>
       <div class="meta-card"><span class="label">Organism</span><span class="value">${escapeHtml(node.organism || '')}</span></div>

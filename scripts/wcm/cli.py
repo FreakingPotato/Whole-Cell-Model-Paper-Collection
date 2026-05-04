@@ -312,6 +312,22 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         choices=["discover", "sync", "match", "normalize", "enrich", "classify", "parse", "export", "report"],
         help="Run only the selected stage(s) in pipeline order.",
     )
+    parser.add_argument(
+        "--refresh-citations",
+        action="store_true",
+        help="Refresh citation counts via OpenAlex with Semantic Scholar fallback, persist to metadata/citation_counts.json, and exit.",
+    )
+    parser.add_argument(
+        "--citations-only-missing",
+        action="store_true",
+        help="With --refresh-citations, skip papers that already have a successful cached lookup.",
+    )
+    parser.add_argument(
+        "--citations-rate",
+        type=float,
+        default=1.0,
+        help="Seconds between requests per host when refreshing citations (default: 1.0).",
+    )
     return parser.parse_args(argv)
 
 
@@ -322,6 +338,15 @@ def main(argv: list[str] | None = None) -> int:
     bootstrap_from_legacy_files(conn)
     if args.status:
         print(json.dumps(status_summary(conn), indent=2))
+        return 0
+    if args.refresh_citations:
+        from . import citations as citations_module
+        result = citations_module.refresh_all(
+            conn,
+            rate_sec=args.citations_rate,
+            only_missing=args.citations_only_missing,
+        )
+        print(json.dumps({"refresh_citations": result, "cache": str(citations_module.CITATION_COUNTS_JSON)}, indent=2))
         return 0
 
     requested = args.stage or ["discover", "sync", "parse", "match", "normalize", "enrich", "classify", "export", "report"]

@@ -181,7 +181,7 @@
       "wcm_completeness_confidence": 1.0,
       "organism": "JCVI-syn3A / minimal cell",
       "organism_group": "JCVI minimal cell",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf",
       "pdf_href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf",
       "landing_page_url": "https://doi.org/10.1016/j.cell.2026.02.009",
@@ -244,13 +244,6 @@
           "content": "We present a whole-cell spatial and kinetic model for the \u223c100 min cell cycle of the genetically minimal bacterium JCVI-syn3A. We simulate the complete cell cycle in 4D (space and time), including all genetic information processes, metabolic networks, growth, and cell division. By integrating hybrid computational methods, we model the dynamics of morphological transformations. Growth is driven by insertion of lipids and membrane proteins and constrained by fluorescence imaging data. Chromosome replication and segregation are controlled by the essential structural maintenance of chromosome proteins, analogous to condensin (SMC) and topoisomerase proteins in Brownian dynamics simulations, with replication rates responding to deoxyribonucleotide triphosphate (dNTP) pools from metabolism. The model captures the origin-to-terminus ratio measured in our DNA sequencing and recovers other experimental measurements, such as doubling time, mRNA half-lives, protein distributions, and ribosome counts. Because of stochasticity, each replicate cell is unique. We predict not only the average behavior of partitioning to daughter cells but also the heterogeneity among them.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=3",
-              "section": "Page 3 \u00b7 models. Flux balance analysis (FBA) methods have been applied",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...g DNA replication and dynamics, ribosome movement, and division in 4D. Here, we present a 4D whole-cell model (4DWCM) that simulates the entire cell cycle of Syn3A, including expression of all 493 genes, kinetics of the entire meta- bolic network, ribosome bio..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1016/j.cell.2026.02.009",
@@ -302,13 +295,6 @@
               "text": "Assumptions",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=13",
-                  "section": "Page 13 \u00b7 Methods. It is known that many genes are transcribed coopera-",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...e cell division, and assembly reac- tions for all macromolecular complexes. The assumptions of the current transcription model have two known inaccuracies: in- dependent transcription for all genes and promoter strengths as- signed based on proteomics counts,..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-001.md",
@@ -335,13 +321,6 @@
               "text": "Parameter availability",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=13",
-                  "section": "Page 13 \u00b7 Methods. It is known that many genes are transcribed coopera-",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...operonal structures in Syn3A\u2019s genome. Our current and previous models have all parameterized the promoter strengths based on the quantitative proteomics data, 1,18,42 limiting the transferability of the tran- scription model to other organisms. A model based..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-001.md",
@@ -367,13 +346,6 @@
             {
               "text": "The scope of experimental calibration",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=11",
-                  "section": "Page 11 \u00b7 0.3 mM but are sometimes fully depleted. Concentrations of",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ions between molecules. 54 Unfortunately, no one organism has a complete set of experimentally deter- mined kinetic parameters, chemical composition, and physical characteristics, so the model we present here, as well as other whole-cell models, has depended o..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -407,13 +379,6 @@
               "text": "Richer spatial detail",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=11",
-                  "section": "Page 11 \u00b7 0.3 mM but are sometimes fully depleted. Concentrations of",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ells are not well-stirred reactor systems. Their intracellular envi- ronment is spatially heterogeneous and consists of many slow- moving, low-population components that need to encounter each other in 3D space for these components to react and perform their b..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-001.md",
@@ -439,13 +404,6 @@
             {
               "text": "Broader validation",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=11",
-                  "section": "Page 11 \u00b7 0.3 mM but are sometimes fully depleted. Concentrations of",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...d on the transferability of quan- tities among related organisms. 1,3,4 Further validation of cell states predicted by whole-cell models will help to inform which parameters are and are not transferable between organisms and may also provide insight into under..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -473,13 +431,6 @@
               "text": "Tighter integration with new measurements",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=11",
-                  "section": "Page 11 \u00b7 0.3 mM but are sometimes fully depleted. Concentrations of",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...fusing ri- bosomes. Overcoming each of these challenges required ad- vances and integration of new computational methods and algo- rithms. With the advances in computational methods that we present here, we hope to illuminate the interwoven nature of the biolo..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-001.md",
@@ -506,6 +457,7 @@
         }
       },
       "cited_by_count": 2,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W7134244049",
       "source_href": "../graphify_corpus/papers/WCM-001.md",
       "id": "WCM-001",
@@ -713,6 +665,7 @@
         }
       },
       "cited_by_count": 1297,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2081781433",
       "source_href": "../graphify_corpus/papers/WCM-002.md",
       "id": "WCM-002",
@@ -887,6 +840,7 @@
         }
       },
       "cited_by_count": 155,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4205569118",
       "source_href": "../graphify_corpus/papers/WCM-003.md",
       "id": "WCM-003",
@@ -1070,6 +1024,7 @@
         }
       },
       "cited_by_count": 353,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2039685044",
       "source_href": "../graphify_corpus/papers/WCM-004.md",
       "id": "WCM-004",
@@ -1233,6 +1188,7 @@
         }
       },
       "cited_by_count": 19,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4281394001",
       "source_href": "../graphify_corpus/papers/WCM-005.md",
       "id": "WCM-005",
@@ -1301,7 +1257,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Whole-cell general",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-006_2024_How_to_build_the_virtual_cell_with_artificial_intelligence_Priorities_and_oppor.pdf",
       "pdf_href": "../pdfs/WCM-006_2024_How_to_build_the_virtual_cell_with_artificial_intelligence_Priorities_and_oppor.pdf",
       "landing_page_url": "https://doi.org/10.1016/j.cell.2024.11.015",
@@ -1513,6 +1469,7 @@
         }
       },
       "cited_by_count": 222,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4403405969",
       "source_href": "../graphify_corpus/papers/WCM-006.md",
       "id": "WCM-006",
@@ -1772,6 +1729,7 @@
         }
       },
       "cited_by_count": 160,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3044339796",
       "source_href": "../graphify_corpus/papers/WCM-007.md",
       "id": "WCM-007",
@@ -1939,6 +1897,7 @@
         }
       },
       "cited_by_count": 9,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4392203312",
       "source_href": "../graphify_corpus/papers/WCM-008.md",
       "id": "WCM-008",
@@ -2162,6 +2121,7 @@
         }
       },
       "cited_by_count": 32,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2067937420",
       "source_href": "../graphify_corpus/papers/WCM-009.md",
       "id": "WCM-009",
@@ -2410,6 +2370,7 @@
         }
       },
       "cited_by_count": 17,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2422442815",
       "source_href": "../graphify_corpus/papers/WCM-010.md",
       "id": "WCM-010",
@@ -2598,6 +2559,7 @@
         }
       },
       "cited_by_count": 2631,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W1984248485",
       "source_href": "../graphify_corpus/papers/WCM-011.md",
       "id": "WCM-011",
@@ -2781,6 +2743,7 @@
         }
       },
       "cited_by_count": 1511,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2304674135",
       "source_href": "../graphify_corpus/papers/WCM-012.md",
       "id": "WCM-012",
@@ -2997,6 +2960,7 @@
         }
       },
       "cited_by_count": 189,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2910514964",
       "source_href": "../graphify_corpus/papers/WCM-013.md",
       "id": "WCM-013",
@@ -3033,7 +2997,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "JCVI-syn3A / minimal cell",
       "organism_group": "JCVI minimal cell",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-014_2019_Kinetic_Modeling_of_the_Genetic_Information_Processes_in_a_Minimal_Cell.pdf",
       "pdf_href": "../pdfs/WCM-014_2019_Kinetic_Modeling_of_the_Genetic_Information_Processes_in_a_Minimal_Cell.pdf",
       "landing_page_url": "https://doi.org/10.3389/fmolb.2019.00130",
@@ -3305,6 +3269,7 @@
         }
       },
       "cited_by_count": 22,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2990341088",
       "source_href": "../graphify_corpus/papers/WCM-014.md",
       "id": "WCM-014",
@@ -3339,7 +3304,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "JCVI-syn3A / minimal cell",
       "organism_group": "JCVI minimal cell",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-015_2021_Generating_Chromosome_Geometries_in_a_Minimal_Cell_From_Cryo-Electron_Tomograms.pdf",
       "pdf_href": "../pdfs/WCM-015_2021_Generating_Chromosome_Geometries_in_a_Minimal_Cell_From_Cryo-Electron_Tomograms.pdf",
       "landing_page_url": "https://doi.org/10.3389/fmolb.2021.644133",
@@ -3613,6 +3578,7 @@
         }
       },
       "cited_by_count": 32,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3185854339",
       "source_href": "../graphify_corpus/papers/WCM-015.md",
       "id": "WCM-015",
@@ -3647,7 +3613,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "JCVI-syn3A / minimal cell",
       "organism_group": "JCVI minimal cell",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-016_2023_Dynamics_of_chromosome_organization_in_a_minimal_bacterial_cell.pdf",
       "pdf_href": "../pdfs/WCM-016_2023_Dynamics_of_chromosome_organization_in_a_minimal_bacterial_cell.pdf",
       "landing_page_url": "https://doi.org/10.3389/fcell.2023.1214962",
@@ -3921,6 +3887,7 @@
         }
       },
       "cited_by_count": 19,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4385708092",
       "source_href": "../graphify_corpus/papers/WCM-016.md",
       "id": "WCM-016",
@@ -4166,6 +4133,7 @@
         }
       },
       "cited_by_count": 22,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4294043777",
       "source_href": "../graphify_corpus/papers/WCM-017.md",
       "id": "WCM-017",
@@ -4378,6 +4346,7 @@
         }
       },
       "cited_by_count": 136,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3146440707",
       "source_href": "../graphify_corpus/papers/WCM-018.md",
       "id": "WCM-018",
@@ -4426,7 +4395,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "JCVI-syn3A / minimal cell",
       "organism_group": "JCVI minimal cell",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-019_2022_Metabolite_Damage_and_Damage_Control_in_a_Minimal_Genome.pdf",
       "pdf_href": "../pdfs/WCM-019_2022_Metabolite_Damage_and_Damage_Control_in_a_Minimal_Genome.pdf",
       "landing_page_url": "https://doi.org/10.1128/mbio.01630-22",
@@ -4642,6 +4611,7 @@
         }
       },
       "cited_by_count": 22,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4285005438",
       "source_href": "../graphify_corpus/papers/WCM-019.md",
       "id": "WCM-019",
@@ -4811,6 +4781,7 @@
         }
       },
       "cited_by_count": 22,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4385323819",
       "source_href": "../graphify_corpus/papers/WCM-020.md",
       "id": "WCM-020",
@@ -4846,7 +4817,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "JCVI minimal organism",
       "organism_group": "JCVI minimal cell",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-021_2023_Evolution_of_a_minimal_cell.pdf",
       "pdf_href": "../pdfs/WCM-021_2023_Evolution_of_a_minimal_cell.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41586-023-06288-x",
@@ -5064,6 +5035,7 @@
         }
       },
       "cited_by_count": 94,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4383198532",
       "source_href": "../graphify_corpus/papers/WCM-021.md",
       "id": "WCM-021",
@@ -5095,7 +5067,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "JCVI-syn3B",
       "organism_group": "JCVI minimal cell",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-022_2024_A_tuneable_minimal_cell_membrane_reveals_that_two_lipid_species_suffice_for_life.pdf",
       "pdf_href": "../pdfs/WCM-022_2024_A_tuneable_minimal_cell_membrane_reveals_that_two_lipid_species_suffice_for_life.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41467-024-53975-y",
@@ -5257,6 +5229,7 @@
         }
       },
       "cited_by_count": 23,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4404164400",
       "source_href": "../graphify_corpus/papers/WCM-022.md",
       "id": "WCM-022",
@@ -5501,6 +5474,7 @@
         }
       },
       "cited_by_count": 7,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4390108568",
       "source_href": "../graphify_corpus/papers/WCM-023.md",
       "id": "WCM-023",
@@ -5537,7 +5511,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Mesoplasma florum",
       "organism_group": "Mycoplasma / Mollicutes",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf",
       "pdf_href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf",
       "landing_page_url": "https://doi.org/10.15252/msb.20209844",
@@ -5592,13 +5566,6 @@
           "content": "The near-minimal bacterium Mesoplasma florum is an interesting model for synthetic genomics and systems biology due to its small genome (~ 800 kb), fast growth rate, and lack of pathogenic potential. However, fundamental aspects of its biology remain largely unexplored. Here, we report a broad yet remarkably detailed characterization of M. florum by combining a wide variety of experimental approaches. We investigated several physical and physiological parameters of this bacterium, including cell size, growth kinetics, and biomass composition of the cell. We also performed the first genome-wide analysis of its transcriptome and proteome, notably revealing a conserved promoter motif, the organization of transcription units, and the transcription and protein expression levels of all protein-coding sequences. We converted gene transcription and expression levels into absolute molecular abundances using biomass quantification results, generating an unprecedented view of the M. florum cellular composition and functions. These characterization efforts provide a strong experimental foundation for the development of a genome-scale model for M. florum and will guide future genome engineering endeavors in this simple organism.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf#page=1",
-              "section": "Page 1 \u00b7 Abstract",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...u 1, Thomas F Knight 3, Pierre-/C19Etienne Jacques1 &S /C19ebastien Rodrigue1,* Abstract The near-minimal bacterium Mesoplasma florum is an interesting model for synthetic genomics and systems biology due to its small genome ( ~ 800 kb), fast growth rate, and..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.15252/msb.20209844",
@@ -5650,13 +5617,6 @@
               "text": "Assumptions",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf#page=12",
-                  "section": "Page 12 \u00b7 3 of cell volume, concentrations in range",
-                  "note": "Approximate page anchor derived from local PDF text parsing."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-024.md",
@@ -5683,13 +5643,6 @@
               "text": "Parameter availability",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf#page=14",
-                  "section": "Page 14 \u00b7 doubling time of Mollicutes is not correlated with their genome size,",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ned to 538 \u2013570 nm using a mathematical approach that integrates other physical parameters such as the buoyant cell density and the cell dry mass (Fig 2E \u2013G). Overall, M. florum cells are slightly bigger than the reported size of M. mycoides subspecies capri,..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-024.md",
@@ -5715,13 +5668,6 @@
             {
               "text": "The scope of experimental calibration",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf#page=23",
-                  "section": "Page 23 \u00b7 Acids Res 44: 7495 \u2013 7508",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: GE ( 2018) Application note, KA 2388300718AN. DeltaVision microscopes \u2013 Sample preparation. 1 \u2013 10. Gibson D, Benders G ( 2008) Complete chemical synthesis, assembly, and cloning of a Mycoplasma genitalium genome. Science 319: 1215 \u2013 1220 Gibs..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -5755,13 +5701,6 @@
               "text": "Richer spatial detail",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf#page=21",
-                  "section": "Page 21 \u00b7 molecular weight and the Avogadro number. Calculation details can",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: molecular weight and the Avogadro number. Calculation details can be found in Datasets EV5 and EV6. The number of ribosomes per cell was estimated using two different approaches: (i) from the aver- age number of protein per cell calcu..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-024.md",
@@ -5787,13 +5726,6 @@
             {
               "text": "Broader validation",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf#page=12",
-                  "section": "Page 12 \u00b7 3 of cell volume, concentrations in range",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...00 RNAP/ \u00b5m3), which nearly matches the number of \u03c370 factor per cell ( ~ 230). Discussion Due to its interesting characteristics, M. florum is an attractive model organism for synthetic genomics and systems biology. This near-minimal bacterium possesses a gen..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -5821,13 +5753,6 @@
               "text": "Tighter integration with new measurements",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-024_2020_Integrative_characterization_of_the_near_minimal_bacterium_Mesoplasma_florum.pdf#page=24",
-                  "section": "Page 24 \u00b7 Mol Syst Biol 11: 780",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...Gavin AC, Aebersold R, Serrano L (2011) Quantification of mRNA and protein and integration with protein turnover in a bacterium. Mol Syst Biol 7: 1 \u2013 12 Maniloff J ( 2002) Phylogeny and evolution. In Molecular Biology and pathogenicity of Mycoplasmas , S Razi..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-024.md",
@@ -5854,6 +5779,7 @@
         }
       },
       "cited_by_count": 17,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3112226911",
       "source_href": "../graphify_corpus/papers/WCM-024.md",
       "id": "WCM-024",
@@ -6093,6 +6019,7 @@
         }
       },
       "cited_by_count": 130,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2151643303",
       "source_href": "../graphify_corpus/papers/WCM-025.md",
       "id": "WCM-025",
@@ -6334,6 +6261,7 @@
         }
       },
       "cited_by_count": 54,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2048871574",
       "source_href": "../graphify_corpus/papers/WCM-026.md",
       "id": "WCM-026",
@@ -6369,7 +6297,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Whole-cell general",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-027_2023_Molecular_dynamics_simulation_of_an_entire_cell.pdf",
       "pdf_href": "../pdfs/WCM-027_2023_Molecular_dynamics_simulation_of_an_entire_cell.pdf",
       "landing_page_url": "https://doi.org/10.3389/fchem.2023.1106495",
@@ -6637,6 +6565,7 @@
         }
       },
       "cited_by_count": 151,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4317104064",
       "source_href": "../graphify_corpus/papers/WCM-027.md",
       "id": "WCM-027",
@@ -6824,6 +6753,7 @@
         }
       },
       "cited_by_count": 73,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3214093190",
       "source_href": "../graphify_corpus/papers/WCM-028.md",
       "id": "WCM-028",
@@ -7077,6 +7007,7 @@
         }
       },
       "cited_by_count": 282,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3046695191",
       "source_href": "../graphify_corpus/papers/WCM-029.md",
       "id": "WCM-029",
@@ -7111,7 +7042,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Bacterial cell general",
       "organism_group": "General bacteria",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf",
       "pdf_href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41586-022-05255-2",
@@ -7166,13 +7097,6 @@
           "content": "Translation is the fundamental process of protein synthesis and is catalysed by the ribosome in all living cells<sup>1</sup>. Here we use advances in cryo-electron tomography and sub-tomogram analysis<sup>2,3</sup> to visualize the structural dynamics of translation inside the bacterium Mycoplasma pneumoniae. To interpret the functional states in detail, we first obtain a high-resolution in-cell average map of all translating ribosomes and build an atomic model for the M. pneumoniae ribosome that reveals distinct extensions of ribosomal proteins. Classification then resolves 13 ribosome states that differ in their conformation and composition. These recapitulate major states that were previously resolved in vitro, and reflect intermediates during active translation. On the basis of these states, we animate translation elongation inside native cells and show how antibiotics reshape the cellular translation landscapes. During translation elongation, ribosomes often assemble in defined three-dimensional arrangements to form polysomes<sup>4</sup>. By mapping the intracellular organization of translating ribosomes, we show that their association into polysomes involves a local coordination mechanism that is mediated by the ribosomal protein L9. We propose that an extended conformation of L9 within polysomes mitigates collisions to facilitate translation fidelity. Our work thus demonstrates the feasibility of visualizing molecular processes at atomic detail inside cells.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf#page=1",
-              "section": "Page 1 \u00b7 Nature | Vol 610 | 6 October 2022 | 205",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: Nature | Vol 610 | 6 October 2022 | 205 Article Visualizing translation dynamics at atomic detail inside a bacterial cell Liang Xue1,2, Swantje Lenz3, Maria Zimmermann-Kogadeeva1, Dimitry Tegunov4, Patrick Cramer4, Peer Bork1,5,6, Juri Rapp..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1038/s41586-022-05255-2",
@@ -7224,13 +7148,6 @@
               "text": "Assumptions",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf#page=1",
-                  "section": "Page 1 \u00b7 Nature | Vol 610 | 6 October 2022 | 205",
-                  "note": "Approximate page anchor derived from local PDF text parsing."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-030.md",
@@ -7257,13 +7174,6 @@
               "text": "Parameter availability",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf#page=10",
-                  "section": "Page 10 \u00b7 Article",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...the Benjamini\u2013Hochberg procedure using the mafdr function in MATLAB 2019b with parameters ('bhfdr', 'true'). For polysome distance threshold analysis, matrices were created from the full ribosome dataset by varying the distance threshold to the nearest neighb..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-030.md",
@@ -7289,13 +7199,6 @@
             {
               "text": "The scope of experimental calibration",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf#page=5",
-                  "section": "Page 5 \u00b7 between neighbouring ribosomes (Extended Data Fig. 12a\u2013e, Methods",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...k ** * * All ribosomes Monosomes Polysomes 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 0.25 Experimental/theoretical 1 2a 2e 34 56 a 6e 78 Following ribosome (i+1) state 1 2a 2e 3 4 5 6a 6e 7 8Preceding ribosome (i) state 1 2a 2e 3 4 5 6a 6e 7 8 Class distribution (%) 50S..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -7329,13 +7232,6 @@
               "text": "Richer spatial detail",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf#page=1",
-                  "section": "Page 1 \u00b7 Nature | Vol 610 | 6 October 2022 | 205",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...se these technical advances to perform large-scale structure classification and spatial analysis of ribosomes, to visualize parts of the translation process in great detail inside M. pneumoniae as a prokaryotic minimal cell model18. In-cell structure of the M...."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-030.md",
@@ -7361,13 +7257,6 @@
             {
               "text": "Broader validation",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf#page=6",
-                  "section": "Page 6 \u00b7 Conclusions",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...tablish a framework to analyse structural dynamics of cellular processes in the future and will contribute to the construction of func- tional cell models at atomic detail. Online content Any methods, additional references, Nature Research reporting sum- marie..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -7395,13 +7284,6 @@
               "text": "Tighter integration with new measurements",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-030_2022_Visualizing_translation_dynamics_at_atomic_detail_inside_a_bacterial_cell.pdf#page=6",
-                  "section": "Page 6 \u00b7 Conclusions",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...Nature 464, 1012\u2013U1073 (2010). 32. Chen, C. et al. Single-molecule fluorescence measurements of ribosomal translocation dynamics. Mol. Cell 42, 367\u2013377 (2011). 33. Wilson, D. N. & Nierhaus, K. H. The E-site story: the importance of maintaining two tRNAs on the..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-030.md",
@@ -7428,6 +7310,7 @@
         }
       },
       "cited_by_count": 188,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4297497481",
       "source_href": "../graphify_corpus/papers/WCM-030.md",
       "id": "WCM-030",
@@ -7456,7 +7339,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "General bacteria",
       "organism_group": "General bacteria",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-031_2010_Entropy_as_the_driver_of_chromosome_segregation.pdf",
       "pdf_href": "../pdfs/WCM-031_2010_Entropy_as_the_driver_of_chromosome_segregation.pdf",
       "landing_page_url": "https://doi.org/10.1038/nrmicro2391",
@@ -7506,13 +7389,6 @@
           "title": "Abstract",
           "content": "Argues that polymer entropy can itself help drive segregation of replicated bacterial chromosomes, offering a physical complement to active transport models.",
           "refs": [
-            {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-031_2010_Entropy_as_the_driver_of_chromosome_segregation.pdf#page=8",
-              "section": "Page 8 \u00b7 wasd = 70\u00b120nm, again, in good agreement with d = 87nm above. Indeed, we have used these parameters including",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...B.-Y. Ha, and S. Jun, 2007, \u201cUnexpected relaxation dynamics of a self-avoiding polymer in cylindrical con\ufb01nement,\u201d J Chem Phys 127, 164903. Arnold, A., and S. Jun, 2007, \u201cTimescale of entropic segregation of \ufb02exible polymers in con\ufb01nement: Implications for ch..."
-            },
             {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
@@ -7565,13 +7441,6 @@
               "text": "Entropy alone is unlikely to explain all organism-specific segregation behaviors without active protein factors",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-031_2010_Entropy_as_the_driver_of_chromosome_segregation.pdf#page=8",
-                  "section": "Page 8 \u00b7 wasd = 70\u00b120nm, again, in good agreement with d = 87nm above. Indeed, we have used these parameters including",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...us, the replicating chromosomes could segregate purely driven by conformational entropy, and they will remain demixed (Bates and Kleckner, 2005; Jun and Mulder, 2006). B. Application to plasmid segregation. Another important biological question concerns plasmi..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-031.md",
@@ -7604,13 +7473,6 @@
               "text": "Combine entropic and protein-mediated mechanisms in quantitative simulations tied to live-cell measurements",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-031_2010_Entropy_as_the_driver_of_chromosome_segregation.pdf#page=8",
-                  "section": "Page 8 \u00b7 wasd = 70\u00b120nm, again, in good agreement with d = 87nm above. Indeed, we have used these parameters including",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...n\ufb01nement,\u201d J Chem Phys 127, 164903. Arnold, A., and S. Jun, 2007, \u201cTimescale of entropic segregation of \ufb02exible polymers in con\ufb01nement: Implications for chromo- some segregation in \ufb01lamentous bacteria,\u201d Phys Rev E 76, 031901. Bates, D., and N. Kleckner, 2005,..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-031.md",
@@ -7637,6 +7499,7 @@
         }
       },
       "cited_by_count": 244,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2049684722",
       "source_href": "../graphify_corpus/papers/WCM-031.md",
       "id": "WCM-031",
@@ -7839,6 +7702,7 @@
         }
       },
       "cited_by_count": 161,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3034359544",
       "source_href": "../graphify_corpus/papers/WCM-032.md",
       "id": "WCM-032",
@@ -7868,7 +7732,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "General bacteria",
       "organism_group": "General bacteria",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-033_2021_Mechanisms_for_Chromosome_Segregation_in_Bacteria.pdf",
       "pdf_href": "../pdfs/WCM-033_2021_Mechanisms_for_Chromosome_Segregation_in_Bacteria.pdf",
       "landing_page_url": "https://doi.org/10.3389/fmicb.2021.685687",
@@ -8082,6 +7946,7 @@
         }
       },
       "cited_by_count": 56,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3167697133",
       "source_href": "../graphify_corpus/papers/WCM-033.md",
       "id": "WCM-033",
@@ -8249,6 +8114,7 @@
         }
       },
       "cited_by_count": 871,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2788376770",
       "source_href": "../graphify_corpus/papers/WCM-034.md",
       "id": "WCM-034",
@@ -8492,6 +8358,7 @@
         }
       },
       "cited_by_count": 156,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3014551288",
       "source_href": "../graphify_corpus/papers/WCM-035.md",
       "id": "WCM-035",
@@ -8523,7 +8390,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Bacillus subtilis",
       "organism_group": "General bacteria",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-036_2021_DNA-loop-extruding_SMC_complexes_can_traverse_one_another_in_vivo.pdf",
       "pdf_href": "../pdfs/WCM-036_2021_DNA-loop-extruding_SMC_complexes_can_traverse_one_another_in_vivo.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41594-021-00626-1",
@@ -8573,13 +8440,6 @@
           "title": "Abstract",
           "content": "Shows in vivo that DNA-loop-extruding SMC complexes can traverse one another, helping explain chromosome organization with many simultaneous extruders.",
           "refs": [
-            {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-036_2021_DNA-loop-extruding_SMC_complexes_can_traverse_one_another_in_vivo.pdf#page=26",
-              "section": "Page 26 \u00b7 7 Virtanen, P. et al. SciPy 1.0: fundamental algorithms for scientific computing in Python. Nat Methods 17,",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...im, E., Kerssemakers, J., Shaltiel, I. A., Haering, C. H. & Dekker, C. DNA-loop extruding condensin complexes can traverse one another. Nature 579, 438-442, doi:10.1038/s41586-020-2067-5 (2020). 9 Wang, X. et al. Condensin promotes the juxtaposition of DNA fla..."
-            },
             {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
@@ -8632,13 +8492,6 @@
               "text": "The mechanism is characterized in a specific experimental context and may not transfer identically across bacteria",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-036_2021_DNA-loop-extruding_SMC_complexes_can_traverse_one_another_in_vivo.pdf#page=5",
-                  "section": "Page 5",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...size was set so that the chromosome volume density is 20%, which is within the experimentally expected range (see section below for further details). Parameterizing the polymer model. We use 1 monomer of 30 nm in diameter, containing 1 kb of DNA locally compa..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-036.md",
@@ -8671,13 +8524,6 @@
               "text": "Test how traversal rules vary across SMC systems and embed them in whole-cell chromosome models",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-036_2021_DNA-loop-extruding_SMC_complexes_can_traverse_one_another_in_vivo.pdf#page=5",
-                  "section": "Page 5",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ize was 27.2 monomer units in each dimension. This box size was set so that the chromosome volume density is 20%, which is within the experimentally expected range (see section below for further details). Parameterizing the polymer model. We use 1 monomer of 3..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-036.md",
@@ -8704,6 +8550,7 @@
         }
       },
       "cited_by_count": 107,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3184944554",
       "source_href": "../graphify_corpus/papers/WCM-036.md",
       "id": "WCM-036",
@@ -8733,7 +8580,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Escherichia coli",
       "organism_group": "Escherichia coli",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-037_2024_Loop-extruders_alter_bacterial_chromosome_topology_to_direct_entropic_forces_for.pdf",
       "pdf_href": "../pdfs/WCM-037_2024_Loop-extruders_alter_bacterial_chromosome_topology_to_direct_entropic_forces_for.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41467-024-49039-w",
@@ -8949,6 +8796,7 @@
         }
       },
       "cited_by_count": 28,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4399169858",
       "source_href": "../graphify_corpus/papers/WCM-037.md",
       "id": "WCM-037",
@@ -9155,6 +9003,7 @@
         }
       },
       "cited_by_count": 165,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2975167630",
       "source_href": "../graphify_corpus/papers/WCM-038.md",
       "id": "WCM-038",
@@ -9197,7 +9046,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Mycoplasma pneumoniae",
       "organism_group": "Mycoplasma / Mollicutes",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-039_2017_Defined_chromosome_structure_in_the_genome-reduced_bacterium_Mycoplasma_pneumoni.pdf",
       "pdf_href": "../pdfs/WCM-039_2017_Defined_chromosome_structure_in_the_genome-reduced_bacterium_Mycoplasma_pneumoni.pdf",
       "landing_page_url": "https://doi.org/10.1038/ncomms14665",
@@ -9363,6 +9212,7 @@
         }
       },
       "cited_by_count": 112,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2593043670",
       "source_href": "../graphify_corpus/papers/WCM-039.md",
       "id": "WCM-039",
@@ -9532,6 +9382,7 @@
         }
       },
       "cited_by_count": 366,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2008507782",
       "source_href": "../graphify_corpus/papers/WCM-040.md",
       "id": "WCM-040",
@@ -9696,6 +9547,7 @@
         }
       },
       "cited_by_count": 495,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W1883779479",
       "source_href": "../graphify_corpus/papers/WCM-041.md",
       "id": "WCM-041",
@@ -9896,6 +9748,7 @@
         }
       },
       "cited_by_count": 581,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2327011266",
       "source_href": "../graphify_corpus/papers/WCM-042.md",
       "id": "WCM-042",
@@ -10136,6 +9989,7 @@
         }
       },
       "cited_by_count": 34,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2139271927",
       "source_href": "../graphify_corpus/papers/WCM-043.md",
       "id": "WCM-043",
@@ -10166,7 +10020,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Escherichia coli",
       "organism_group": "Escherichia coli",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf",
       "pdf_href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf",
       "landing_page_url": "https://doi.org/10.1038/ncomms13090",
@@ -10221,13 +10075,6 @@
           "content": "A significant obstacle in training predictive cell models is the lack of integrated data sources. We develop semi-supervised normalization pipelines and perform experimental characterization (growth, transcriptional, proteome) to create Ecomics, a consistent, quality-controlled multi-omics compendium for Escherichia coli with cohesive meta-data information. We then use this resource to train a multi-scale model that integrates four omics layers to predict genome-wide concentrations and growth dynamics. The genetic and environmental ontology reconstructed from the omics data is substantially different and complementary to the genetic and chemical ontologies. The integration of different layers confers an incremental increase in the prediction performance, as does the information about the known gene regulatory and protein-protein interactions. The predictive performance of the model ranges from 0.54 to 0.87 for the various omics layers, which far exceeds various baselines. This work provides an integrative framework of omics-driven predictive modelling that is broadly applicable to guide biological discovery.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf#page=1",
-              "section": "Page 1 \u00b7 Received 2 Mar 2016 | Accepted 1 Sep 2016 | Published 7 Oct 2016",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...2, Navneet Rai 2,*, Violeta Zorraquino 2,* & Ilias T agkopoulos1,2 A signi\ufb01cant obstacle in training predictive cell models is the lack of integrated data sources. We develop semi-supervised normalization pipelines and perform experimental characterization (gr..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1038/ncomms13090",
@@ -10279,13 +10126,6 @@
               "text": "Training coverage",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf#page=5",
-                  "section": "Page 5 \u00b7 Figs 4,13\u201315; Supplementary Methods). MOMA was designed",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ibute in the new condition to predict should exist in at least one entry of the training set (in this case, Ecomics). Since there are 65 strains, 112 media, 52 stresses and 286 genetic perturbations in Ecomics, the theoretical space it can cover is given by th..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-044.md",
@@ -10312,13 +10152,6 @@
               "text": "Dataset harmonization",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf#page=11",
-                  "section": "Page 11 \u00b7 stochastic gradient descent (Supplementary Methods). In RNN, each connection ci,j",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...N), it (70,710 interactions of 3,163 proteins) was built from the core proteome dataset (Supplementary Methods), which represents 20 expression pro\ufb01les of 1,001 proteins, which are not used for proteome prediction. For two proteins to be considered co-expresse..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-044.md",
@@ -10344,13 +10177,6 @@
             {
               "text": "Out-of-distribution robustness",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf#page=2",
-                  "section": "Page 2 \u00b7 experimental conditions 6,7. More recently, we have witnessed",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...the standard assumption that total RNA/cell doesn\u2019t change, and thus expression distributions are identical across varying conditions is prone to produce false discoveries in the downstream analysis 21. This observation is especially important for developing a..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -10384,13 +10210,6 @@
               "text": "Mechanistic simulators",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf#page=8",
-                  "section": "Page 8 \u00b7 polymerase and ribosome (Supplementary Methods, for complete",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...gical experimental space in a structured manner 18 to guide new omics pro\ufb01ling. Future extension of Ecomics includes multiple data types such as ChIP-Seq and connection to other E. coli resources such as EcoCyc 32 and RegulonDB 48. We envision a structured dat..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-044.md",
@@ -10416,13 +10235,6 @@
             {
               "text": "Validate them across broader perturbations",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf#page=8",
-                  "section": "Page 8 \u00b7 polymerase and ribosome (Supplementary Methods, for complete",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ct an ontology of the environmental (stress, medium) and genetic (strains, gene perturbations) features based on their effect on genome-wide molecular expression, which itself is a proxy for several processes and behaviours. Although a network-based GO has bee..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -10450,6 +10262,7 @@
         }
       },
       "cited_by_count": 153,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2527974276",
       "source_href": "../graphify_corpus/papers/WCM-044.md",
       "id": "WCM-044",
@@ -10491,7 +10304,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Saccharomyces cerevisiae",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-045_2024_Yeast9_a_consensus_genome-scale_metabolic_model_for_S._cerevisiae_curated_by_th.pdf",
       "pdf_href": "../pdfs/WCM-045_2024_Yeast9_a_consensus_genome-scale_metabolic_model_for_S._cerevisiae_curated_by_th.pdf",
       "landing_page_url": "https://doi.org/10.1038/s44320-024-00060-7",
@@ -10544,13 +10357,6 @@
           "content": "Genome-scale metabolic models (GEMs) can facilitate metabolism-focused multi-omics integrative analysis. Since Yeast8, the yeast-GEM of Saccharomyces cerevisiae, published in 2019, has been continuously updated by the community. This has increased the quality and scope of the model, culminating now in Yeast9. To evaluate its predictive performance, we generated 163 condition-specific GEMs constrained by single-cell transcriptomics from osmotic pressure or reference conditions. Comparative flux analysis showed that yeast adapting to high osmotic pressure benefits from upregulating fluxes through central carbon metabolism. Furthermore, combining Yeast9 with proteomics revealed metabolic rewiring underlying its preference for nitrogen sources. Lastly, we created strain-specific GEMs (ssGEMs) constrained by transcriptomics for 1229 mutant strains. Well able to predict the strains' growth rates, fluxomics from those large-scale ssGEMs outperformed transcriptomics in predicting functional categories for all studied genes in machine learning models. Based on those findings we anticipate that Yeast9 will continue to empower systems biology studies of yeast metabolism.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-045_2024_Yeast9_a_consensus_genome-scale_metabolic_model_for_S._cerevisiae_curated_by_th.pdf#page=1",
-              "section": "Page 1 \u00b7 Abstract",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...n g2, Jens Nielsen 11,14, Hongzhong Lu 1 \u2709 &E d u a r dJK e r k h o v e n3,15 \u2709 Abstract Genome-scale metabolic models (GEMs) can facilitate metabolism- focused multi-omics integrative analysis. Since Yeast8, the yeast- GEM of Saccharomyces cerevisiae , publis..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1038/s44320-024-00060-7",
@@ -10602,13 +10408,6 @@
               "text": "Review or consensus framing does not by itself validate a new predictive whole-cell simulator",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-045_2024_Yeast9_a_consensus_genome-scale_metabolic_model_for_S._cerevisiae_curated_by_th.pdf#page=11",
-                  "section": "Page 11 \u00b7 coef\ufb01cient for that reaction. For reactions catalyzed by a complex,",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...re available for this paper at https://doi.org/10.1038/s44320-024-00060-7. Peer review information A peer review \ufb01le is available at https://doi.org/10.1038/s44320-024- 00060-7 References Angione C, Li\u00f3 P (2015) Predictive analytics of environmental adaptabili..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-045.md",
@@ -10641,13 +10440,6 @@
               "text": "Quantitative",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-045_2024_Yeast9_a_consensus_genome-scale_metabolic_model_for_S._cerevisiae_curated_by_th.pdf#page=2",
-                  "section": "Page 2 \u00b7 the genotype and the environment. Diverse growth environments,",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...where the biological activity of metabolic networks is contextualized based on quantitative transcriptomics or proteomics (Angione and Li\u00f3, 2015; Becker and Palsson, 2008; Domenzain et al, 2022; Tian and Reed, 2018;W a g n e re ta l , 2021;M a r t i n oe ta l..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-045.md",
@@ -10673,13 +10465,6 @@
             {
               "text": "Benchmarked models with stronger experimental validation",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-045_2024_Yeast9_a_consensus_genome-scale_metabolic_model_for_S._cerevisiae_curated_by_th.pdf#page=10",
-                  "section": "Page 10 \u00b7 163 single-cell-speci \ufb01c models were generated using the GIMME",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...by the single-cell Gasch \u2019s transcriptome dataset, the 163 single-cell-speci \ufb01c models were generated using the GIMME algorithm by COBRA Toolbox (Becker and Palsson, 2008)i n MATLAB based on Yeast9. - To analyze the metabolic difference between the osmotic str..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -10707,6 +10492,7 @@
         }
       },
       "cited_by_count": 39,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4401510590",
       "source_href": "../graphify_corpus/papers/WCM-045.md",
       "id": "WCM-045",
@@ -10737,7 +10523,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Escherichia coli",
       "organism_group": "Escherichia coli",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf",
       "pdf_href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41467-023-40380-0",
@@ -10790,13 +10576,6 @@
           "content": "Constraint-based metabolic models have been used for decades to predict the phenotype of microorganisms in different environments. However, quantitative predictions are limited unless labor-intensive measurements of media uptake fluxes are performed. We show how hybrid neural-mechanistic models can serve as an architecture for machine learning providing a way to improve phenotype predictions. We illustrate our hybrid models with growth rate predictions of Escherichia coli and Pseudomonas putida grown in different media and with phenotype predictions of gene knocked-out Escherichia coli mutants. Our neural-mechanistic models systematically outperform constraint-based models and require training set sizes orders of magnitude smaller than classical machine learning methods. Our hybrid approach opens a doorway to enhancing constraint-based modeling: instead of constraining mechanistic models with additional experimental measurements, our hybrid models grasp the power of machine learning while fulfilling mechanistic constrains, thus saving time and resources in typical systems biology or biological engineering projects.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf#page=1",
-              "section": "Page 1 \u00b7 smaller than classical machine learning methods. Our hybrid approach opens a",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...L\u00e9on Faure1, Bastien Mollet2,3, Wolfram Liebermeister 4 & Jean-Loup Faulon 1,5 Constraint-based metabolic models have been used for decades to predict the phenotype of microorganisms in different environments. However, quantita- tive predictions are limited u..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1038/s41467-023-40380-0",
@@ -10848,13 +10627,6 @@
               "text": "Infrastructure helps composition and reproducibility but does not alone guarantee biological fidelity",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf#page=8",
-                  "section": "Page 8 \u00b7 Overall, the results presented in Fig. 4 show that for both",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: an accuracy >90% was found for a dataset of growth assays based on media compositions (classi \ufb01cation task predicting growth vs. no growth). Consequently, we also show in Fig. 4 the performances of AMN and FBA for classi \ufb01cation. Precisely, we treat the..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-046.md",
@@ -10887,13 +10659,6 @@
               "text": "Assemble larger validated multiscale models",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf#page=8",
-                  "section": "Page 8 \u00b7 Overall, the results presented in Fig. 4 show that for both",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ving constrained optimization problems was re-used and adapted to develop three models (AMN-Wt, -LP and -QP) enabling gradient backpropagation within metabolic networks. The models exhibited excellent performance on FBA generated training sets (Fig.2 and Suppl..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-046.md",
@@ -10919,13 +10684,6 @@
             {
               "text": "Benchmark interoperability",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf#page=8",
-                  "section": "Page 8 \u00b7 Overall, the results presented in Fig. 4 show that for both",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...itute the AMN-Reservoir weights (learned during training) by random weights. We benchmarked our AMN-Reservoir approach with two datasets. The \ufb01rst one is the one used in Fig. 3, composed of 110 E. coli growth rates, and the second is a growth assay of P. putid..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -10953,6 +10711,7 @@
         }
       },
       "cited_by_count": 69,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4385543074",
       "source_href": "../graphify_corpus/papers/WCM-046.md",
       "id": "WCM-046",
@@ -10989,7 +10748,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Human / pan-cancer",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf",
       "pdf_href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf",
       "landing_page_url": "https://doi.org/10.1371/journal.pcbi.1005985",
@@ -11039,13 +10798,6 @@
           "title": "Abstract",
           "content": "Most cancer cells harbor multiple drivers whose epistasis and interactions with expression context clouds drug and drug combination sensitivity prediction. We constructed a mechanistic computational model that is context-tailored by omics data to capture regulation of stochastic proliferation and death by pan-cancer driver pathways. Simulations and experiments explore how the coordinated dynamics of RAF/MEK/ERK and PI-3K/AKT kinase activities in response to synergistic mitogen or drug combinations control cell fate in a specific cellular context. In this MCF10A cell context, simulations suggest that synergistic ERK and AKT inhibitor-induced death is likely mediated by BIM rather than BAD, which is supported by prior experimental studies. AKT dynamics explain S-phase entry synergy between EGF and insulin, but simulations suggest that stochastic ERK, and not AKT, dynamics seem to drive cell-to-cell proliferation variability, which in simulations is predictable from pre-stimulus fluctuations in C-Raf/B-Raf levels. Simulations suggest MEK alteration negligibly influences transformation, consistent with clinical data. Tailoring the model to an alternate cell expression and mutation context, a glioma cell line, allows prediction of increased sensitivity of cell death to AKT inhibition. Our model mechanistically interprets context-specific landscapes between driver pathways and cell fates, providing a framework for designing more rational cancer combination therapy.",
           "refs": [
-            {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=1",
-              "section": "Page 1 \u00b7 Abstract",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...emso n University, Clemson, SC, United States of America * mbirtwi@ clemson.edu Abstract Most cancer cells harbor multiple drivers whose epistasis and interactions with expression context clouds drug and drug combination sensitivity prediction. We constructed..."
-            },
             {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
@@ -11098,13 +10850,6 @@
               "text": "Assumptions",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=10",
-                  "section": "Page 10 \u00b7 (properties hypothesized by [36]) to ensure our model recapitulated these features (Figs 3F",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...cellu- lar behavior, which of course is predicated upon the considered data and assumptions. We first evaluate integrated behavior in the reference state\u2014serum starvation. Adjusting translation due to protein dispersion. After translation, proteins undergo pos..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-047.md",
@@ -11131,13 +10876,6 @@
               "text": "Parameter availability",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=22",
-                  "section": "Page 22 \u00b7 Methods",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...to capture events where the mechanisms are not sufficiently elucidated. Kinetic parameters are taken from original source models, previous models, experimental studies, or estimated to fit empirical observations (see S2 Table for rate laws and rate constant so..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-047.md",
@@ -11163,13 +10901,6 @@
             {
               "text": "The scope of experimental calibration",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=20",
-                  "section": "Page 20 \u00b7 Discussion",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...mechanisms of post-translational Myc regulation, pathways outside of pan-cancer scope, tumor metabolism, hypoxia signaling or immune response. We do not include VEGFR, which although an impor- tant receptor tyrosine kinase in cancer, predominantly plays a tiss..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -11203,13 +10934,6 @@
               "text": "Richer spatial detail",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=20",
-                  "section": "Page 20 \u00b7 Discussion",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...at most muta- tions are not functionally well-understood. We do not incorporate detailed mechanisms of post-translational Myc regulation, pathways outside of pan-cancer scope, tumor metabolism, hypoxia signaling or immune response. We do not include VEGFR, whi..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-047.md",
@@ -11235,13 +10959,6 @@
             {
               "text": "Broader validation",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=20",
-                  "section": "Page 20 \u00b7 Discussion",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...da- tion is slowed and it accumulates, driving BIM upregulation and cell death. Future experimen- tal work will have to test these mechanistic interpretations. Discussion We developed the first pan-cancer driver network model of cell proliferation and death re..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -11269,13 +10986,6 @@
               "text": "Tighter integration with new measurements",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=5",
-                  "section": "Page 5 \u00b7 Methods), allow calculation of context- and gene-specific transcription and translation rates",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...proteomics, which show some agreement with prior studies [20] (S2F Fig). These measurements, with prior protein and mRNA stability estimates (see above and Methods), allow calculation of context- and gene-specific transcription and translation rates during th..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-047.md",
@@ -11302,6 +11012,7 @@
         }
       },
       "cited_by_count": 57,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W2793626409",
       "source_href": "../graphify_corpus/papers/WCM-047.md",
       "id": "WCM-047",
@@ -11539,6 +11250,7 @@
         }
       },
       "cited_by_count": 5,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4411054644",
       "source_href": "../graphify_corpus/papers/WCM-048.md",
       "id": "WCM-048",
@@ -11577,7 +11289,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Human / pan-cancer",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf",
       "pdf_href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf",
       "landing_page_url": "https://doi.org/10.1101/2025.04.25.650731",
@@ -11630,13 +11342,6 @@
           "content": "Abstract Single-cell transcriptomics has revolutionized our understanding of cellular diversity, yet our understanding of the transcriptional programs across the tree of life remains limited. Here we present TranscriptFormer, a family of generative foundation models trained on up to 112 million cells spanning 1.53 billion years of evolution across 12 species. By jointly modeling gene identities and expression levels using a novel generative architecture, TranscriptFormer encodes multi-scale biological structure, functioning as a queryable virtual cell atlas. We demonstrate state-of-the-art performance on both in-distribution and out-of-distribution cell type classification, with robust performance even for species separated by over 685 million years of evolution. TranscriptFormer can also perform zero-shot disease state identification in human cells and accurately transfers cell state annotations across species boundaries. As a generative model, TranscriptFormer can be prompted to predict cell type-specific transcription factors and gene-gene interactions that align with independent experimental observations. Developmental trajectories, phylogenetic relationships and cellular hierarchies emerge naturally in TranscriptFormer\u2019s representations without any explicit training on these annotations. This work establishes a powerful framework for quantitative single-cell analysis, and comparative cellular biology, thus demonstrating that universal principles of cellular organization can be learned and predicted across the tree of life.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf#page=1",
-              "section": "Page 1 \u00b7 Abstract",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...sos (tkaraletsos@chanzuckerberg.com) and Stephen R. Quake (steve@quake-lab.org) Abstract Single-cell transcriptomics has revolutionized our understanding of cellular diversity, but integrating this knowledge across evolutionary distances remains challenging. H..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1101/2025.04.25.650731",
@@ -11688,13 +11393,6 @@
               "text": "Training coverage",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf#page=16",
-                  "section": "Page 16 \u00b7 Conclusions",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...tionary span of 1.53 billion years. Our findings demonstrate that generative pretraining on both genes and expression counts from diverse species creates representations with emergent biological properties that surpass previous approaches. The performance of T..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-049.md",
@@ -11721,13 +11419,6 @@
               "text": "Dataset harmonization",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf#page=16",
-                  "section": "Page 16 \u00b7 Conclusions",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...y at unprecedented scale. As single-cell technologies continue to generate vast datasets across the tree of life, foundation models like TranscriptFormer will become increasingly valuable for integrating this knowledge, identifying universal principles of cell..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-049.md",
@@ -11753,13 +11444,6 @@
             {
               "text": "Out-of-distribution robustness",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf#page=16",
-                  "section": "Page 16 \u00b7 Conclusions",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...approaches. The performance of TF-Metazoa over single-species models on both in-distribution and out-of-distribution tasks provides compelling evidence that broader evolutionary pretraining enhances biological generalization. This suggests that evolutionarily..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -11793,13 +11477,6 @@
               "text": "Mechanistic simulators",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf#page=16",
-                  "section": "Page 16 \u00b7 Conclusions",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...variations\u2014without explicit supervision. This emergent capability points toward future models that could serve not merely as repositories of data but as interactive knowledge bases capable of simulating complex cellular phenomena. The development of Transcript..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-049.md",
@@ -11825,13 +11502,6 @@
             {
               "text": "Validate them across broader perturbations",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf#page=16",
-                  "section": "Page 16 \u00b7 Conclusions",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...in biological foundation models by successfully integrating transcriptomic data across an unprecedented evolutionary span of 1.53 billion years. Our findings demonstrate that generative pretraining on both genes and expression counts from diverse species creat..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -11859,6 +11529,7 @@
         }
       },
       "cited_by_count": 23,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4409914987",
       "source_href": "../graphify_corpus/papers/WCM-049.md",
       "id": "WCM-049",
@@ -11892,7 +11563,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Whole-cell general",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf",
       "pdf_href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41592-024-02201-0",
@@ -11942,13 +11613,6 @@
           "title": "Abstract",
           "content": "scGPT: toward building a foundation model for single-cell multi-omics using generative AI.",
           "refs": [
-            {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf#page=1",
-              "section": "Page 1 \u00b7 nature methods",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: nature methods https://doi.org/10.1038/s41592-024-02201-0 Article scGPT: toward building a foundation model for single-cell multi-omics using generative AI In the format provided by the authors and unedited"
-            },
             {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
@@ -12001,13 +11665,6 @@
               "text": "Training coverage",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf#page=10",
-                  "section": "Page 10 \u00b7 Our analysis produced notable results, revealing a clear correlation between the relevance of the",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ed performance leap was observed when transitioning from the 300K to the 3M pre-training data scale. Overall, the positive correlation between pretraining data size and the performances on down- stream performances showcases the efficacy of pre-training. Pre-t..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-050.md",
@@ -12034,13 +11691,6 @@
               "text": "Dataset harmonization",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf#page=10",
-                  "section": "Page 10 \u00b7 Our analysis produced notable results, revealing a clear correlation between the relevance of the",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...igure 13D,E. Again, we observed consistently increasing trends across tasks and datasets. Notably, the most pronounced performance leap was observed when transitioning from the 300K to the 3M pre-training data scale. Overall, the positive correlation between p..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-050.md",
@@ -12066,13 +11716,6 @@
             {
               "text": "Out-of-distribution robustness",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf#page=15",
-                  "section": "Page 15 \u00b7 10 Discussion about future prospects and limitations",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...nd devices. In single-cell data analysis, technical batch effects indicate data distribution shifts that are driven by the sequencing procedure, rather than biological variations [28]. The mitigation of such 14"
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -12106,13 +11749,6 @@
               "text": "Mechanistic simulators",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf#page=15",
-                  "section": "Page 15 \u00b7 10 Discussion about future prospects and limitations",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: 10 Discussion about future prospects and limitations We have presented scGPT as a promising attempt to build single-cell foundation models. Although at a relatively early stage, we expect foundation m..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-050.md",
@@ -12138,13 +11774,6 @@
             {
               "text": "Validate them across broader perturbations",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf#page=10",
-                  "section": "Page 10 \u00b7 Our analysis produced notable results, revealing a clear correlation between the relevance of the",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...st neighbors for propagating reference labels, or for integrating similar cells across samples. We visualize the performances when using different pre-trained models in Supplementary Figure 13D,E. Again, we observed consistently increasing trends across tasks..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -12172,6 +11801,7 @@
         }
       },
       "cited_by_count": 885,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4392168151",
       "source_href": "../graphify_corpus/papers/WCM-050.md",
       "id": "WCM-050",
@@ -12225,7 +11855,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Whole-cell general",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf",
       "pdf_href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf",
       "landing_page_url": "https://doi.org/10.1101/2025.06.26.661135",
@@ -12278,13 +11908,6 @@
           "content": "Abstract Cellular responses to perturbations are a cornerstone for understanding biological mechanisms and selecting drug targets. While machine learning models offer tremendous potential for predicting perturbation effects, they currently struggle to generalize to unobserved cellular contexts. Here, we introduce S tate , a transformer model that predicts perturbation effects while accounting for cellular heterogeneity within and across experiments. S tate predicts perturbation effects across sets of cells and is trained using gene expression data from over 100 million perturbed cells. S tate improved discrimination of effects on large datasets by more than 30% and identified differentially expressed genes across genetic, signaling and chemical perturbations with significantly improved accuracy. Using its cell embedding trained on observational data from 167 million cells, S tate identified strong perturbations in novel cellular contexts where no perturbations were observed during training. We further introduce Cell-Eval, a comprehensive evaluation framework that highlights S tate \u2019s ability to detect cell type-specific perturbation responses, such as cell survival. Overall, the performance and flexibility of S tate sets the stage for scaling the development of virtual cell models.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=1",
-              "section": "Page 1 \u00b7 Abstract",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...rsity of California, San Francisco;5University of Pennsylvania;6Yale University Abstract Cellular responses to perturbations are a cornerstone for understanding biological mecha- nisms and selecting potential drug targets. While computational models offer trem..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1101/2025.06.26.661135",
@@ -12336,13 +11959,6 @@
               "text": "Training coverage",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=27",
-                  "section": "Page 27 \u00b7 This results in 1280 genes for which expression values must be predicted per cell. This",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...is embedding is used to capture and account for dataset-specific effects during training. The final embedding is the concatenation of these two quantities: z(i) cell = [e(i) cls,f proj(e(i) ds )]\u2208Rh+10 (31) where fproj(e(i) ds )\u2208R10 is a learned linear project..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-051.md",
@@ -12369,13 +11985,6 @@
               "text": "Dataset harmonization",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=3",
-                  "section": "Page 3 \u00b7 2024; Chevalley et al.,2022). Optimal transport-based methods that map unperturbed to",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...training the development of models that can generalize robustly across distinct datasets. While single-cell foundation models have emerged as a strategy for learning robust cell rep- resentations across datasets (Theodoris et al.,2023; Rosen et al.,2023; Cui e..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-051.md",
@@ -12401,13 +12010,6 @@
             {
               "text": "Out-of-distribution robustness",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=3",
-                  "section": "Page 3 \u00b7 2024; Chevalley et al.,2022). Optimal transport-based methods that map unperturbed to",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...tiasoetal., 2023; Saunders et al.,2024). Other models treat cell populations as distributions, employing generative approaches like variational autoencoders to learn data-generating distributions or explicitly disentangle labeled and unlabeled sources of varia..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -12441,13 +12043,6 @@
               "text": "Mechanistic simulators",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=17",
-                  "section": "Page 17 \u00b7 3. Discussion",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...s just one example of a potential use case forState, it shows the potential for future iterations of the model (or similar models) to provide guidance on the outcome of a particular treatment on a cell type that has not been previously tested with that treatme..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-051.md",
@@ -12473,13 +12068,6 @@
             {
               "text": "Validate them across broader perturbations",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=17",
-                  "section": "Page 17 \u00b7 3. Discussion",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...cannot be fully resolved using known covariates, and the variability introduced across different experiments and datasets. Our model, State, presents a scalable approach for learning a foundation model of cell state and behavior across diverse cellular context..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -12507,6 +12095,7 @@
         }
       },
       "cited_by_count": 44,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4411757935",
       "source_href": "../graphify_corpus/papers/WCM-051.md",
       "id": "WCM-051",
@@ -12540,7 +12129,7 @@
       "wcm_completeness_confidence": 0.84,
       "organism": "Whole-cell general",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf",
       "pdf_href": "../pdfs/WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf",
       "landing_page_url": "https://doi.org/10.1038/nmeth.2724",
@@ -12590,13 +12179,6 @@
           "title": "Abstract",
           "content": "Accelerated discovery via a whole-cell model.",
           "refs": [
-            {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf#page=1",
-              "section": "Page 1 \u00b7 1192 | VOL.10 NO.12 | DECEMBER 2013 | nature methods",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...o categories, the dif - ference in growth rate between model and experiment was accelerated discovery via a whole-cell model Jayodita C Sanghvi1,3, Sergi Regot1, Silvia Carrasco1, Jonathan R Karr2, Miriam V Gutschow1, Benjamin Bolival Jr1 & Markus W Covert1 to..."
-            },
             {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
@@ -12675,13 +12257,6 @@
               "text": "Parameter availability",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf#page=1",
-                  "section": "Page 1 \u00b7 1192 | VOL.10 NO.12 | DECEMBER 2013 | nature methods",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...crepancies between simulations and experiments led to predictions about kinetic parameters of specific enzymes that we subsequently validated. these findings represent, to our knowledge, the first application of whole-cell modeling to accelerate biological dis..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-052.md",
@@ -12707,13 +12282,6 @@
             {
               "text": "The scope of experimental calibration",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf#page=1",
-                  "section": "Page 1 \u00b7 1192 | VOL.10 NO.12 | DECEMBER 2013 | nature methods",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ingle-gene disruption library of M. genitalium, for all 86 strains for which an experimental rate could be determined 5,6 (Fig. 1b). We also compared our predictions to a metabolic model based on flux-balance analysis 7 and found that the whole-cell model made..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -12747,13 +12315,6 @@
               "text": "Richer spatial detail",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf#page=1",
-                  "section": "Page 1 \u00b7 1192 | VOL.10 NO.12 | DECEMBER 2013 | nature methods",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...tions with the qualitative information from our pre - vious work, we produced a detailed map of model-experiment comparisons for all 525 genes in the chromosome (Fig. 1 c). To our knowledge, this is the most comprehensive and quantita - tive comparison of any..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-052.md",
@@ -12779,13 +12340,6 @@
             {
               "text": "Broader validation",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf#page=1",
-                  "section": "Page 1 \u00b7 1192 | VOL.10 NO.12 | DECEMBER 2013 | nature methods",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...in expression 5. Although these comparisons represented perhaps the broad - est validation of any biological model, the most exciting promise of whole-cell modeling, prediction of previously undiscovered biology, remains to be fulfilled. In the process of mode..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -12813,13 +12367,6 @@
               "text": "Tighter integration with new measurements",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-052_2013_Accelerated_discovery_via_a_whole-cell_model.pdf#page=1",
-                  "section": "Page 1 \u00b7 1192 | VOL.10 NO.12 | DECEMBER 2013 | nature methods",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ch using our whole-cell model. We compared model predictions and experi- mental measurements of the specific growth rates of a nonessential single-gene disruption library of M. genitalium, for all 86 strains for which an experimental rate could be determined 5..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-052.md",
@@ -12846,6 +12393,7 @@
         }
       },
       "cited_by_count": 71,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W1986366456",
       "source_href": "../graphify_corpus/papers/WCM-052.md",
       "id": "WCM-052",
@@ -13030,6 +12578,7 @@
         }
       },
       "cited_by_count": 35,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4210560508",
       "source_href": "../graphify_corpus/papers/WCM-053.md",
       "id": "WCM-053",
@@ -13071,7 +12620,7 @@
       "wcm_completeness_confidence": 1.0,
       "organism": "Saccharomyces cerevisiae",
       "organism_group": "Whole-cell general",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf",
       "pdf_href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41467-022-28467-6",
@@ -13124,13 +12673,6 @@
           "content": "When conditions change, unicellular organisms rewire their metabolism to sustain cell maintenance and cellular growth. Such rewiring may be understood as resource re-allocation under cellular constraints. Eukaryal cells contain metabolically active organelles such as mitochondria, competing for cytosolic space and resources, and the nature of the relevant cellular constraints remain to be determined for such cells. Here, we present a comprehensive metabolic model of the yeast cell, based on its full metabolic reaction network extended with protein synthesis and degradation reactions. The model predicts metabolic fluxes and corresponding protein expression by constraining compartment-specific protein pools and maximising growth rate. Comparing model predictions with quantitative experimental data suggests that under glucose limitation, a mitochondrial constraint limits growth at the onset of ethanol formation-known as the Crabtree effect. Under sugar excess, however, a constraint on total cytosolic volume dictates overflow metabolism. Our comprehensive model thus identifies condition-dependent and compartment-specific constraints that can explain metabolic strategies and protein expression profiles from growth rate optimisation, providing a framework to understand metabolic adaptation in eukaryal cells.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf#page=1",
-              "section": "Page 1 \u00b7 Ibrahim E. Elsemman 1,7,8, Angelica Rodriguez Prado 2,3,8, Pranas Grigaitis 2,8, Manuel Garcia Albornoz 4,",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...b Beynon 5, Pascale Daran-Lapujade 3, Jens Nielsen 1,6 \u2709 & Bas Teusink 2 \u2709 When conditions change, unicellular organisms rewire their metabolism to sustain cell maintenance and cellular growth. Such rewiring may be understood as resource re-allocation under ce..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1038/s41467-022-28467-6",
@@ -13182,13 +12724,6 @@
               "text": "Assumptions",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf#page=2",
-                  "section": "Page 2 \u00b7 \ufb01tness. Unicellular organisms such as yeasts generally",
-                  "note": "Approximate page anchor derived from local PDF text parsing."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-054.md",
@@ -13215,13 +12750,6 @@
               "text": "Parameter availability",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf#page=4",
-                  "section": "Page 4 \u00b7 upon the onset of over \ufb02ow metabolism. Additionally, we varied",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...mbined with biomass measurements, allowed to estimate the so-called maintenance parameters, i.e., ATP usage that is not explicitly accounted for in the model (Supplementary Note 2). Label-free proteome quanti \ufb01cation allowed us to reliably estimate proteome fr..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-054.md",
@@ -13247,13 +12775,6 @@
             {
               "text": "The scope of experimental calibration",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf#page=3",
-                  "section": "Page 3 \u00b7 to maintain protein density. In this way we prevent choices about",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...for these constraints are based on independent literature data or were \ufb01tted to experimental data (as explici \ufb01ed in Supplementary Notes 2 and 3) and the values are either \ufb01xed or growth-rate dependent, depending on the nature of the constraint. The steady-sta..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -13287,13 +12808,6 @@
               "text": "Richer spatial detail",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf#page=8",
-                  "section": "Page 8 \u00b7 death36. For galactose, the toxicity of its intermediates 35 results in",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ised, eukaryal cell to date. It includes all its known metabolic reactions, and details of the protein synthesis, degrada- tion and transport machinery to express the enzymes. The key of our approach is the application of constraints on protein pools in the di..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-054.md",
@@ -13319,13 +12833,6 @@
             {
               "text": "Broader validation",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf#page=8",
-                  "section": "Page 8 \u00b7 death36. For galactose, the toxicity of its intermediates 35 results in",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ely the result of control by demand 42, with lower demand at lower growth rate. Discussion In this work, we developed the comprehensive model of a growing, compartmentalised, eukaryal cell to date. It includes all its known metabolic reactions, and details of..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -13353,13 +12860,6 @@
               "text": "Tighter integration with new measurements",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-054_2022_Whole-cell_modeling_in_yeast_predicts_compartment-specific_proteome_constraints.pdf#page=8",
-                  "section": "Page 8 \u00b7 death36. For galactose, the toxicity of its intermediates 35 results in",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...th \ufb02uxes and the proteome under different, well-controlled, conditions. Through integration and comparison with the model, we provide deeper insight into the physiology of Saccharomyces cerevisiae. ARTICLE NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-054.md",
@@ -13386,6 +12886,7 @@
         }
       },
       "cited_by_count": 109,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4221135528",
       "source_href": "../graphify_corpus/papers/WCM-054.md",
       "id": "WCM-054",
@@ -13417,7 +12918,7 @@
       "wcm_completeness_confidence": 1.0,
       "organism": "Escherichia coli",
       "organism_group": "Escherichia coli",
-      "pdf_status": "downloaded",
+      "pdf_status": "landing_page_only",
       "pdf_file": "WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf",
       "pdf_href": "../pdfs/WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf",
       "landing_page_url": "https://doi.org/10.1038/s41540-022-00242-9",
@@ -13472,13 +12973,6 @@
           "content": "Growth and environmental responses are essential for living organisms to survive and adapt to constantly changing environments. In order to simulate new conditions and capture dynamic responses to environmental shifts in a developing whole-cell model of E. coli, we incorporated additional regulation, including dynamics of the global regulator guanosine tetraphosphate (ppGpp), along with dynamics of amino acid biosynthesis and translation. With the model, we show that under perturbed ppGpp conditions, small molecule feedback inhibition pathways, in addition to regulation of expression, play a role in ppGpp regulation of growth. We also found that simulations with dysregulated amino acid synthesis pathways provide average amino acid concentration predictions that are comparable to experimental results but on the single-cell level, concentrations unexpectedly show regular fluctuations. Additionally, during both an upshift and downshift in nutrient availability, the simulated cell responds similarly with a transient increase in the mRNA:rRNA ratio. This additional simulation functionality should support a variety of new applications and expansions of the E. coli Whole-Cell Modeling Project.",
           "refs": [
             {
-              "label": "Parsed PDF anchor: Abstract",
-              "kind": "parsed_pdf_anchor",
-              "href": "../pdfs/WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf#page=1",
-              "section": "Page 1 \u00b7 INTRODUCTION",
-              "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...panded whole-cell model of E. coli links cellular physiology with mechanisms of growth rate control Travis A. Ahn-Horst 1, Luis Santiago Mille 1, Gwanggyu Sun 1, Jerry H. Morrison 1 and Markus W. Covert 1 \u2709 Growth and environmental responses are essential for..."
-            },
-            {
               "label": "OpenAlex abstract metadata",
               "kind": "metadata_abstract",
               "href": "https://doi.org/10.1038/s41540-022-00242-9",
@@ -13530,13 +13024,6 @@
               "text": "Training coverage",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf#page=11",
-                  "section": "Page 11 \u00b7 scalable methods to determine parameters 47\u201349 and while",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...ite dynamics at t h eg e n o m es c a l e50,t h e r ea r ed i f \ufb01culties in constraining kinetics while achiev ing balanced growth 16. The approach presented here provides a means of integrating hard kinetic constraints for a subset of metabolism that is fairl..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-055.md",
@@ -13563,13 +13050,6 @@
               "text": "Dataset harmonization",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf#page=1",
-                  "section": "Page 1 \u00b7 INTRODUCTION",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...behavior of single cells allows for integration and assessment of heterogeneous datasets and the scienti \ufb01c commu- nity\u2019s current understanding of biological interactions through mechanistic relationships. Although the original E. coli whole-cell model describ..."
-                },
-                {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
                   "href": "../graphify_corpus/papers/WCM-055.md",
@@ -13595,13 +13075,6 @@
             {
               "text": "Out-of-distribution robustness",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Limitation",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf#page=10",
-                  "section": "Page 10 \u00b7 ppGpp-based limitations on growth over time in changing",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...e \u201cMethods \u201d). Even so, the estimates of these parameters are not unique, and a distribution of a similar set of p a r a m e t e r sw o u l dl i k e l yl e a dt om a n yo ft h es a m ep h e n o t y p i c outcomes we noted in this work, since we already observe..."
-                },
                 {
                   "label": "Curated note section: Limitation",
                   "kind": "curated_limitation",
@@ -13635,13 +13108,6 @@
               "text": "Mechanistic simulators",
               "refs": [
                 {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf#page=10",
-                  "section": "Page 10 \u00b7 ppGpp-based limitations on growth over time in changing",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...l under stress 46. However, further modeling advances may be required to enable future progress and a more detailed description of growth. One limitation of the current model is the reduced representation of the amino acid network. In order to parameterize the..."
-                },
-                {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
                   "href": "../graphify_corpus/papers/WCM-055.md",
@@ -13667,13 +13133,6 @@
             {
               "text": "Validate them across broader perturbations",
               "refs": [
-                {
-                  "label": "Parsed PDF anchor: Future Work",
-                  "kind": "parsed_pdf_anchor",
-                  "href": "../pdfs/WCM-055_2022_An_expanded_whole-cell_model_of_E._coli_links_cellular_physiology_with_mechanism.pdf#page=10",
-                  "section": "Page 10 \u00b7 ppGpp-based limitations on growth over time in changing",
-                  "note": "Approximate page anchor derived from local PDF text parsing. Matched excerpt: ...l under stress 46. However, further modeling advances may be required to enable future progress and a more detailed description of growth. One limitation of the current model is the reduced representation of the amino acid network. In order to parameterize the..."
-                },
                 {
                   "label": "Curated note section: Future Work",
                   "kind": "curated_future_work",
@@ -13701,6 +13160,7 @@
         }
       },
       "cited_by_count": 45,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W4292302479",
       "source_href": "../graphify_corpus/papers/WCM-055.md",
       "id": "WCM-055",
@@ -13948,6 +13408,7 @@
         }
       },
       "cited_by_count": 37,
+      "citation_source": "openalex",
       "openalex_id": "https://openalex.org/W3005242175",
       "source_href": "../graphify_corpus/papers/WCM-056.md",
       "id": "WCM-056",

@@ -1,7 +1,7 @@
 # WCM Graph Build
 
 - Papers: 56
-- Downloaded PDFs: 26
+- Downloaded PDFs: 0
 - Nodes: 59
 - Edges: 388
 - Mechanistic models: 41

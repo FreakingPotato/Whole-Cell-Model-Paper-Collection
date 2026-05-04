@@ -1,7 +1,7 @@
 # PDF Sidecar Review
 
-- Papers still needing validated PDFs: 30
-- Rejected/quarantined PDFs: 28
+- Papers still needing validated PDFs: 56
+- Rejected/quarantined PDFs: 0
 
 Files:
 - `metadata/pdf_sidecar_review_queue.csv`

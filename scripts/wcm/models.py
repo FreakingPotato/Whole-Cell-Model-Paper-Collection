@@ -31,7 +31,7 @@ OPENALEX_CACHE_DIR = METADATA_DIR / "openalex_cache"
 ZOTERO_SYNC_STATE = METADATA_DIR / "zotero_sync_state.json"
 DB_PATH = METADATA_DIR / "wcm_state.sqlite"
 
-PARSER_VERSION = "2"
+PARSER_VERSION = "3"
 OPENALEX_CACHE_TTL_DAYS = 30
 
 
