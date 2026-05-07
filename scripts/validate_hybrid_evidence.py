@@ -30,6 +30,8 @@ EVIDENCE_FILE = ROOT / "metadata" / "hybrid_model_evidence.json"
 PAPER_META_FILE = ROOT / "metadata" / "wcm_paper_metadata.json"
 
 VALID_CONFIDENCE = {"manual_verified", "parsed_pdf", "metadata_only", "needs_review"}
+VALID_SCREENSHOT_STATUS = {"ok", "not_found", "manual_review", "no_pdf"}
+QUOTE_MAX_LEN = 1200
 
 
 def _load_papers() -> set[str]:
@@ -127,7 +129,43 @@ def main() -> int:
                 pdf_href = point.get("pdf_href")
                 if pdf_href and not (pdf_href.startswith("../") or pdf_href.startswith("./") or pdf_href.startswith("pdfs/") or pdf_href.startswith("http")):
                     errors.append(f"{eprefix}: pdf_href {pdf_href!r} looks malformed")
-                if not point.get("quote") and not point.get("page"):
+                screenshot_href = point.get("screenshot_href")
+                if screenshot_href is not None:
+                    if not isinstance(screenshot_href, str):
+                        errors.append(f"{eprefix}: screenshot_href must be a string")
+                    else:
+                        if not screenshot_href.endswith(".png"):
+                            errors.append(
+                                f"{eprefix}: screenshot_href {screenshot_href!r} must end in .png"
+                            )
+                        else:
+                            candidate = (EVIDENCE_FILE.parent / screenshot_href).resolve()
+                            if not candidate.is_file():
+                                alt = (ROOT / screenshot_href).resolve()
+                                if not alt.is_file():
+                                    warnings.append(
+                                        f"{eprefix}: screenshot_href {screenshot_href!r} not found on disk"
+                                    )
+                screenshot_status = point.get("screenshot_status")
+                if screenshot_status is not None and screenshot_status not in VALID_SCREENSHOT_STATUS:
+                    errors.append(
+                        f"{eprefix}: screenshot_status {screenshot_status!r} not in {sorted(VALID_SCREENSHOT_STATUS)}"
+                    )
+                page_val = point.get("page")
+                if page_val is not None:
+                    if not isinstance(page_val, int) or isinstance(page_val, bool) or page_val <= 0:
+                        errors.append(
+                            f"{eprefix}: page {page_val!r} must be a positive integer"
+                        )
+                quote_val = point.get("quote")
+                if quote_val is not None:
+                    if not isinstance(quote_val, str):
+                        errors.append(f"{eprefix}: quote must be a string")
+                    elif len(quote_val) > QUOTE_MAX_LEN:
+                        warnings.append(
+                            f"{eprefix}: quote length {len(quote_val)} exceeds {QUOTE_MAX_LEN} chars"
+                        )
+                if not point.get("quote") and not point.get("page") and screenshot_status != "ok":
                     if conf in (None, "metadata_only"):
                         warnings.append(
                             f"{eprefix}: no quote / page anchor — current confidence={conf or 'metadata_only'}; consider deepening to parsed_pdf"

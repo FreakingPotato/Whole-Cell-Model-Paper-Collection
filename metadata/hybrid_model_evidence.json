@@ -19,14 +19,22 @@
               "paper_id": "WCM-046",
               "text": "A neural-mechanistic hybrid extends genome-scale metabolic models with a learned component that fits flux predictions where the constraint-based structure alone is under-determined, lifting quantitative accuracy without abandoning the mechanistic backbone.",
               "section": "Abstract / Results",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 8,
+              "quote": "Discussion In this study we showed how a neural network approach, with meta- bolic networks embedded in the learning architecture, can be used to address metabolic modeling problems. Previous work on RNNs and PINNs for solving constrained optimization problems was re-used and adapted to develop three models (AMN-Wt, -LP and -QP) enabling gradient backpropagation within metabolic networks. The models exhibited excellent performance on FBA generated training sets (Fig. 2 and Supplementary Table S1). We also demonstrated that the models can directly be trained on an experimental E. coli growth r…",
+              "screenshot_href": "docs/assets/evidence/hybrid-embedded-closure-001.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-embedded-closure-002",
               "paper_id": "WCM-047",
               "text": "A mechanistic pan-cancer pathway model is informed by multi-omics inputs so the ML-derived priors fill stochastic-response gaps that the deterministic pathway structure cannot capture on its own.",
               "section": "Abstract",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 1,
+              "quote": "RESEARCH ARTICLE A mechanistic pan-cancer pathway model informed by multi-omics data interprets stochastic cell fate responses to drugs and mitogens",
+              "screenshot_href": "docs/assets/evidence/hybrid-embedded-closure-002.png",
+              "screenshot_status": "ok"
             }
           ]
         },
@@ -40,14 +48,19 @@
               "paper_id": "WCM-046",
               "text": "Stoichiometric and flux-balance constraints from the metabolic model bound the neural component of the hybrid model, preventing biologically implausible predictions while still allowing ML-driven refinement.",
               "section": "Methods",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 13,
+              "quote": "7. Schinn, S.-M., Morrison, C., Wei, W., Zhang, L. & Lewis, N. E. A genome-scale metabolic network model and machine learning predict amino acid concentrations in Chinese Hamster Ovary cell cultures. Biotechnol. Bioeng. 118, 2118–2123 (2021). 8. Freischem, L. J., Barahona, M. & Oyarzún, D. A. Prediction of gene essentiality using machine learning and genome-scale metabolic models. bioRxiv https://doi.org/10.1101/2022.03.31.486520 (2022). 9. Monk, J. M. et al. iML1515, a knowledgebase that computes Escherichia coli traits. Nat. Biotechnol. 35, 904–908 (2017). 10. Sahu, A., Blätke, M.-A., Szyma…",
+              "screenshot_href": "docs/assets/evidence/hybrid-embedded-constraint-001.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-embedded-constraint-002",
               "paper_id": "WCM-005",
               "text": "Reviews how integrating molecular and cellular structural data into whole-cell models constrains ML and statistical components against physical, geometric, and dynamical priors rather than fitting them in vacuo.",
               "section": "Review framing",
-              "confidence": "metadata_only"
+              "confidence": "metadata_only",
+              "screenshot_status": "no_pdf"
             }
           ]
         },
@@ -61,21 +74,30 @@
               "paper_id": "WCM-053",
               "text": "Vivarium is explicitly designed as a multi-scale interface where mechanistic submodels and ML / surrogate components can be substituted at module boundaries, allowing computationally cheap stand-ins for the most expensive parts of a whole-cell simulation.",
               "section": "Engine design",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 1,
+              "quote": "Systems biology Vivarium: an interface and engine for integrative multiscale modeling in computational biology",
+              "screenshot_href": "docs/assets/evidence/hybrid-embedded-emulation-001.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-embedded-emulation-002",
               "paper_id": "WCM-005",
               "text": "Argues that hybrid frameworks need a clear contract between mechanistic and learned components so that surrogates can replace expensive submodules without breaking downstream simulation invariants.",
               "section": "Discussion",
-              "confidence": "metadata_only"
+              "confidence": "metadata_only",
+              "screenshot_status": "no_pdf"
             },
             {
               "id": "hybrid-embedded-emulation-003",
               "paper_id": "WCM-001",
               "text": "The 4D minimal-cell simulation runs separate spatial, kinetic, and structural engines that exchange state at fixed intervals — a natural insertion point for ML surrogates of the most expensive subsystem.",
               "section": "Methods",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 23,
+              "quote": "The procedure for the 4DWCM hookSimulation function can be found in the deposited code for the model in Hook.py. The fre- quency of interruption to perform a hookSimulation is a user-defined variable at the start of the simulation in units of RDME time steps. Here, our hook frequency is 250 time steps, or 12.5 ms of biological time. This frequency was determined by the frequency required to update ribosome positions (discussed in Diffusion). Because we are communicating between spatially-localized and well-stirred re- action methods, we chose to track all particle counts dynamically in a sing…",
+              "screenshot_href": "docs/assets/evidence/hybrid-embedded-emulation-003.png",
+              "screenshot_status": "ok"
             }
           ]
         }
@@ -96,14 +118,22 @@
               "paper_id": "WCM-006",
               "text": "Identifies AI-driven knowledge extraction from the biological literature as a priority for virtual-cell construction, framing curation as a foundational pipeline step rather than a one-off effort.",
               "section": "Priorities and opportunities",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 1,
+              "quote": "1 Department of Computer Science, Stanford University, Stanford, CA, USA, 2 Genentech, South San Francisco, CA, USA, 3 Chan Zuckerberg Initiative, Redwood City, CA, USA, 4 School of Computer and Communication Sciences and School of Life Sciences, EPFL, Lausanne, Switzerland, 5 Arc Institute, Palo Alto, CA, USA, 6 KTH Royal Institute of Technology, Science for Life Laboratory, Department of Protein Science, Stockholm, Sweden, 7 Department of Bioengineering, Stanford University, Stanford, CA, USA, 8 Department of Pharmacology, University of California, San Diego, CA, USA, 9 Department of Bioeng…",
+              "screenshot_href": "docs/assets/evidence/hybrid-pipeline-curation-001.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-pipeline-curation-002",
               "paper_id": "WCM-045",
               "text": "Yeast9 is built and maintained by a community curation pipeline that aggregates omics evidence into a single consensus genome-scale metabolic model, demonstrating curation at WCM-relevant scale.",
               "section": "Community model",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 1,
+              "quote": "Genome-scale metabolic models (GEMs) can facilitate metabolism- focused multi-omics integrative analysis. Since Yeast8, the yeast- GEM of Saccharomyces cerevisiae, published in 2019, has been continuously updated by the community. This has increased the quality and scope of the model, culminating now in Yeast9. To evaluate its predictive performance, we generated 163 condition- speciﬁc GEMs constrained by single-cell transcriptomics from osmotic pressure or reference conditions. Comparative ﬂux analy- sis showed that yeast adapting to high osmotic pressure beneﬁts from upregulating ﬂuxes thro…",
+              "screenshot_href": "docs/assets/evidence/hybrid-pipeline-curation-002.png",
+              "screenshot_status": "ok"
             }
           ]
         },
@@ -117,14 +147,22 @@
               "paper_id": "WCM-044",
               "text": "Semi-supervised multi-omics integration over E. coli datasets estimates cellular state in unexplored conditions and feeds those estimates back into mechanistic interpretation.",
               "section": "Abstract",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 12,
+              "quote": "19. Gautier, L. et al. affy—analysis of Affymetrix GeneChip data at the probe level. Bioinformatics 20, 307–315 (2004). 20. Thompson, J. A., Tan, J. & Greene, C. S. Cross-platform normalization of microarray and RNA-seq data for machine learning applications. PeerJ 4, e1621 (2016). 21. Loven, J. et al. Revisiting global gene expression analysis. Cell 151, 476–482 (2012). 22. Goldberger, R. F. Molecular organization and cell function. Biological regulation and development. Vol. xvi 620 (Plenum Press, 1980). 23. Macklin, D. N., Ruggero, N. A. & Covert, M. W. The future of whole-cell modeling. C…",
+              "screenshot_href": "docs/assets/evidence/hybrid-pipeline-inference-001.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-pipeline-inference-002",
               "paper_id": "WCM-047",
               "text": "Pan-cancer pathway model treats multi-omics data as a calibration source, with ML-style estimation pinning parameters that the mechanistic structure alone leaves under-determined.",
               "section": "Methods",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 1,
+              "quote": "RESEARCH ARTICLE A mechanistic pan-cancer pathway model informed by multi-omics data interprets stochastic cell fate responses to drugs and mitogens",
+              "screenshot_href": "docs/assets/evidence/hybrid-pipeline-inference-002.png",
+              "screenshot_status": "ok"
             }
           ]
         },
@@ -138,14 +176,22 @@
               "paper_id": "WCM-008",
               "text": "Whole-cell simulation of E. coli is used as a structural-learning oracle, with the WCM scoring alternative operon architectures across expression regimes — a workflow trivially extensible to ML-proposed candidate structures.",
               "section": "Results",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 1,
+              "quote": "Cross-evaluation of E. coli’s operon structures via a whole-cell model suggests alternative cellular benefits for low- versus high- expressing operons",
+              "screenshot_href": "docs/assets/evidence/hybrid-pipeline-structural-001.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-pipeline-structural-002",
               "paper_id": "WCM-006",
               "text": "Calls out structural learning — ML systems that propose mechanistic architectures, not just parameters — as a key research direction for AI-assisted virtual cells.",
               "section": "Roadmap",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 3,
+              "quote": "cell models learned directly from data. These parallel revolutions provide an unprecedented opportunity for an ambitious vision of an AI Virtual Cell (AIVC), a multi-scale, multi-modal, large neural network-based model that can represent and simulate the behavior of molecules, cells and tissues across diverse states (Fig. 1). Experimentally, the exponential increase in the throughput of measurement technologies has led to the collection of large and growing reference datasets within and across different cell and tissue systems27,28,29,30, with data doubling every six months for the past sev-…",
+              "screenshot_href": "docs/assets/evidence/hybrid-pipeline-structural-002.png",
+              "screenshot_status": "ok"
             }
           ]
         }
@@ -166,21 +212,30 @@
               "paper_id": "WCM-007",
               "text": "Demonstrates that a large-scale E. coli whole-cell model can be cross-evaluated against many heterogeneous datasets simultaneously — the natural setting for matched ML/MM predictions.",
               "section": "Abstract",
-              "confidence": "metadata_only"
+              "confidence": "metadata_only",
+              "screenshot_status": "no_pdf"
             },
             {
               "id": "hybrid-parallel-matched-002",
               "paper_id": "WCM-051",
               "text": "The State perturbation model predicts cellular responses across diverse contexts — explicitly ML-side coverage of the same perturbation space mechanistic WCMs aim to predict.",
               "section": "Abstract",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 5,
+              "quote": "Figure 1: State: A transformer-based model for predicting perturbation effects across sets of cells. (A) Modeling perturbation effects at single-cell resolution requires disentangling bi- ological signals from confounding variation introduced by noise, batch effects, and heterogeneity across similarly treated cells. (B) State is a multi-scale machine learning architecture that oper- ates across genes, individual cells, and cell populations. The core State Transition model (ST) learns perturbation effects by training on sets of perturbed and unperturbed cell populations grouped by shared covar…",
+              "screenshot_href": "docs/assets/evidence/hybrid-parallel-matched-002.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-parallel-matched-003",
               "paper_id": "WCM-008",
               "text": "Operon-architecture cross-evaluation positions multiple model variants on identical predicted-vs-measured axes, demonstrating the diagnostic value of matched prediction tasks.",
               "section": "Results",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 37,
+              "quote": "• Model-based cross-evaluation of data suggests corrections to existing datasets",
+              "screenshot_href": "docs/assets/evidence/hybrid-parallel-matched-003.png",
+              "screenshot_status": "ok"
             }
           ]
         },
@@ -194,14 +249,19 @@
               "paper_id": "WCM-007",
               "text": "Identifies systematic discrepancies between mechanistic predictions and observations across heterogeneous E. coli datasets, exactly the regime where parallel ML predictions could attribute failure to data vs structure.",
               "section": "Discussion",
-              "confidence": "metadata_only"
+              "confidence": "metadata_only",
+              "screenshot_status": "no_pdf"
             },
             {
               "id": "hybrid-parallel-agreement-002",
               "paper_id": "WCM-006",
               "text": "Frames AI/ML and mechanistic virtual-cell efforts as complementary lenses whose joint deployment is necessary to diagnose where each paradigm is wrong.",
               "section": "Priorities and opportunities",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 3,
+              "quote": "cell models learned directly from data. These parallel revolutions provide an unprecedented opportunity for an ambitious vision of an AI Virtual Cell (AIVC), a multi-scale, multi-modal, large neural network-based model that can represent and simulate the behavior of molecules, cells and tissues across diverse states (Fig. 1). Experimentally, the exponential increase in the throughput of measurement technologies has led to the collection of large and growing reference datasets within and across different cell and tissue systems27,28,29,30, with data doubling every six months for the past sev-…",
+              "screenshot_href": "docs/assets/evidence/hybrid-parallel-agreement-002.png",
+              "screenshot_status": "ok"
             }
           ]
         },
@@ -215,21 +275,33 @@
               "paper_id": "WCM-050",
               "text": "scGPT shows that a foundation model trained on large-scale single-cell multi-omics generalises across tasks — a natural ML predictor to compare against a mechanistic WCM under matched perturbations.",
               "section": "Abstract",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 10,
+              "quote": "We pre-trained scGPT on cell atlases including all human cell types, envisioning that it contributes to specific downstream applications primarily via fine-tuning. Given that downstream applications typically focus on a limited subset of tissues or cell types, we are prompted to consider whether it would be more beneficial to enhance performance for a specific fine-tuning task through context- specific pre-training. To be specific, for the downstream fine-tuning on specific contexts of certain cell types, we are interested in comparing the contributions of three different pre-trained models:…",
+              "screenshot_href": "docs/assets/evidence/hybrid-parallel-foundation-001.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-parallel-foundation-002",
               "paper_id": "WCM-049",
               "text": "TranscriptFormer trains across 1.5 billion years of evolutionary distance, providing a cross-species ML predictor whose disagreements with organism-specific mechanistic WCMs are themselves diagnostic.",
               "section": "Abstract",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 2,
+              "quote": "Single-cell genomics has revolutionized our understanding of cellular diversity of tissues and organisms. The dramatic improvement of single-cell technologies enabled the profiling of cell type transcriptomes of diverse organisms (1–7), leading to a holistic understanding of how cellular heterogeneity shapes developmental processes (8), tissue homeostasis and its dysregulation in disease states. Scalable and cheap assays have enabled scientists to routinely generate scRNA-seq data from millions of cells, and have prompted large data collection centers to harmonize and standardize data around…",
+              "screenshot_href": "docs/assets/evidence/hybrid-parallel-foundation-002.png",
+              "screenshot_status": "ok"
             },
             {
               "id": "hybrid-parallel-foundation-003",
               "paper_id": "WCM-051",
               "text": "State predicts perturbation responses in contexts where mechanistic WCMs would otherwise be the only option, defining a concrete ML ↔ MM head-to-head for the parallel paradigm.",
               "section": "Abstract",
-              "confidence": "metadata_only"
+              "confidence": "parsed_pdf",
+              "page": 1,
+              "quote": "Cellular responses to perturbations are a cornerstone for understanding biological mecha- nisms and selecting potential drug targets. While computational models offer tremendous potential for predicting perturbation effects compared to experimental approaches, they currently struggle to generalize effects from experimentally observed cellular contexts to un- observed ones. Here, we introduce State, a machine learning architecture that predicts per- turbation effects while accounting for cellular heterogeneity within and across perturbation experiments. State operates across physical scales: i…",
+              "screenshot_href": "docs/assets/evidence/hybrid-parallel-foundation-003.png",
+              "screenshot_status": "ok"
             }
           ]
         }

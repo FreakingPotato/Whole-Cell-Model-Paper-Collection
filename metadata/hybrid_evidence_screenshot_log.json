@@ -1,0 +1,141 @@
+{
+  "hybrid-embedded-closure-001": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 136079,
+    "page": 8
+  },
+  "hybrid-embedded-closure-002": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 67826,
+    "page": 1
+  },
+  "hybrid-embedded-constraint-001": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 157157,
+    "page": 13
+  },
+  "hybrid-embedded-constraint-002": {
+    "status": "no_pdf",
+    "notes": "no PDF for WCM-005"
+  },
+  "hybrid-embedded-emulation-001": {
+    "status": "ok",
+    "score": 70.0,
+    "page": 1,
+    "block_bbox": [
+      63.16,
+      120.27,
+      476.1,
+      179.47
+    ],
+    "png_bytes": 67257,
+    "notes": "matched on page 1"
+  },
+  "hybrid-embedded-emulation-002": {
+    "status": "no_pdf",
+    "notes": "no PDF for WCM-005"
+  },
+  "hybrid-embedded-emulation-003": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 309817,
+    "page": 23
+  },
+  "hybrid-pipeline-curation-001": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 260592,
+    "page": 1
+  },
+  "hybrid-pipeline-curation-002": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 329983,
+    "page": 1
+  },
+  "hybrid-pipeline-inference-001": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 144434,
+    "page": 12
+  },
+  "hybrid-pipeline-inference-002": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 67826,
+    "page": 1
+  },
+  "hybrid-pipeline-structural-001": {
+    "status": "ok",
+    "score": 75.2,
+    "page": 1,
+    "block_bbox": [
+      90.0,
+      126.12,
+      521.87,
+      184.33
+    ],
+    "png_bytes": 83280,
+    "notes": "matched on page 1"
+  },
+  "hybrid-pipeline-structural-002": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 152529,
+    "page": 3
+  },
+  "hybrid-parallel-matched-001": {
+    "status": "no_pdf",
+    "notes": "no PDF for WCM-007"
+  },
+  "hybrid-parallel-matched-002": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 332368,
+    "page": 5
+  },
+  "hybrid-parallel-matched-003": {
+    "status": "ok",
+    "score": 72.0,
+    "page": 37,
+    "block_bbox": [
+      168.0,
+      107.74,
+      507.52,
+      119.26
+    ],
+    "png_bytes": 50659,
+    "notes": "matched on page 37"
+  },
+  "hybrid-parallel-agreement-001": {
+    "status": "no_pdf",
+    "notes": "no PDF for WCM-007"
+  },
+  "hybrid-parallel-agreement-002": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 152529,
+    "page": 3
+  },
+  "hybrid-parallel-foundation-001": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 277739,
+    "page": 10
+  },
+  "hybrid-parallel-foundation-002": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 128996,
+    "page": 2
+  },
+  "hybrid-parallel-foundation-003": {
+    "status": "ok",
+    "notes": "skipped (idempotent)",
+    "png_bytes": 222209,
+    "page": 1
+  }
+}

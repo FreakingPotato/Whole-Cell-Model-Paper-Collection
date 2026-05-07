@@ -1,0 +1,272 @@
+{
+  "WCM-002": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Cell 2012 (Karr et al). is_oa=closed per Unpaywall. EPMC PMC3413483 render returns persistent HTTP 500. Cell.com PDF returns 403."
+  },
+  "WCM-003": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Cell 2022 (Thornburg). EPMC PMC9985924 returns persistent 500; Cell article PDF 403."
+  },
+  "WCM-004": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Nat Rev Microbiol 2009. EPMC PMC2887316 render persistently times out / 500."
+  },
+  "WCM-005": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Curr Opin Struct Biol (Elsevier). is_oa=False per OpenAlex/Unpaywall. Only OA path was sciencedirect.com/article/am which 403s for automated clients (anti-scraping). No bioRxiv/repository preprint located via OpenAlex/Unpaywall/EuropePMC/Semantic Scholar."
+  },
+  "WCM-007": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": "https://europepmc.org/articles/PMC7990026?pdf=render",
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Science aav3751 (Macklin 2020). PMC7990026 exists but: PMC OA service reports identifierIsNotOpenAccess; europepmc render endpoint persistently returns HTTP 500 'Failed to retrieve PDF'; pmc.ncbi.nlm.nih.gov/articles/PMC7990026/pdf/nihms-1657274.pdf serves a JS proof-of-work interstitial which we will not bypass; OSTI biblio pages do not expose a PDF servlet."
+  },
+  "WCM-008": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC10957310?pdf=render",
+    "saved_to": "pdfs/WCM-008_2024_Cross_evaluation_of_E_coli_s_operon_structures_via_a_whole_cell_model_suggests_a.pdf",
+    "sha256": "89d0b120ddaa229fa01e03b4ab78a8ffe6c66ddfbfac57f538e694207668989d",
+    "bytes": 1963955,
+    "notes": ""
+  },
+  "WCM-009": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC4576174?pdf=render",
+    "saved_to": "pdfs/WCM-009_2015_Toward_a_Whole_Cell_Model_of_Ribosome_Biogenesis_Kinetic_Modeling_of_SSU_Assembl.pdf",
+    "sha256": "a54c9c5c90cd8485d173ee4cfd45a7b917f472314938bda14c465d2b5d24ccad",
+    "bytes": 2405662,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-010": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Biopolymers 2016. EPMC PMC4958520 render persistent 500."
+  },
+  "WCM-011": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Science 2010 (Gibson). is_oa=False, no PMC."
+  },
+  "WCM-012": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Science 2016 (Hutchison). is_oa=False, no PMC."
+  },
+  "WCM-013": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC6609329?pdf=render",
+    "saved_to": "pdfs/WCM-013_2019_Essential_metabolism_for_a_minimal_cell.pdf",
+    "sha256": "dcff6f4699cdfb6de213d2c13e62106a40e8d720fa7decf307dab838b34f920c",
+    "bytes": 8953342,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-017": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC9483919?pdf=render",
+    "saved_to": "pdfs/WCM-017_2022_Toward_the_Complete_Functional_Characterization_of_a_Minimal_Bacterial_Proteome.pdf",
+    "sha256": "f1e1dd4d82049b445b645edf468c128374e41a4a22bf268a760416630f01f610",
+    "bytes": 7305089,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-018": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Cell 2021 (Pelletier). Bronze OA at cell.com but PDF endpoint 403s; no PMC."
+  },
+  "WCM-020": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC10448532?pdf=render",
+    "saved_to": "pdfs/WCM-020_2023_Adaptive_evolution_of_a_minimal_organism_with_a_synthetic_genome.pdf",
+    "sha256": "716f81d7e86679ae6f2e79d0eb753cb1ad9b2b51f963a3c9bbde5a9f6013d75e",
+    "bytes": 3322432,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-023": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC10784680?pdf=render",
+    "saved_to": "pdfs/WCM-023_2023_Integrative_modeling_of_JCVI_Syn3A_nucleoids_with_a_modular_approach.pdf",
+    "sha256": "53c5cc208ac9357fc49c16ec92f937b8a7429d111549448ab806ab241a65f23c",
+    "bytes": 13551388,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-025": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "JCC 2012 (Lattice Microbes). EPMC PMC3762454 render persistent 500. Wiley publisher 403."
+  },
+  "WCM-026": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Parallel Computing 2014. EPMC PMC4039640 render persistent 500. Elsevier publisher no direct PDF."
+  },
+  "WCM-028": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "JMB 2021 (Maritan). EPMC PMC8752489 render persistent 500. manuscript.elsevier.com 403."
+  },
+  "WCM-029": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC7115962?pdf=render",
+    "saved_to": "pdfs/WCM-029_2020_In_cell_architecture_of_an_actively_transcribing_translating_expressome.pdf",
+    "sha256": "d442fd8f2ecab559d387a5e085f4f63324bb8fbd499d4c16bb7ce8b42f7c6223",
+    "bytes": 2256696,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-032": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsob.200097",
+    "saved_to": "pdfs/WCM-032_2020_Bacterial_chromosome_segregation_by_the_ParABS_system.pdf",
+    "sha256": "89c00d785dc24062c4fc2ea33e9e044a4a384cf88b986a63c1c40804ad254e55",
+    "bytes": 1183278,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-034": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC6329450?pdf=render",
+    "saved_to": "pdfs/WCM-034_2018_Real_time_imaging_of_DNA_loop_extrusion_by_condensin.pdf",
+    "sha256": "6298080d8d950dc8437629244a6c867b4b16a38420c32b3e810c90846f635405",
+    "bytes": 2232991,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-035": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC7295573?pdf=render",
+    "saved_to": "pdfs/WCM-035_2020_Chromosome_organization_by_one_sided_and_two_sided_loop_extrusion.pdf",
+    "sha256": "5c161847dc05aa398db7d34b86fef8fa51822b69f80fa82855bdc03fe028cc9a",
+    "bytes": 4604797,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-038": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.pnas.org/content/pnas/116/41/20489.full.pdf",
+    "saved_to": "pdfs/WCM-038_2019_RNA_polymerases_as_moving_barriers_to_condensin_loop_extrusion.pdf",
+    "sha256": "4167bb6323e7ec8e4db296dd76568f3966e521f31db70eeb79bc3694fad69f00",
+    "bytes": 2002028,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-040": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Nature 2010 (Llopis). EPMC PMC2896451 render persistent 500."
+  },
+  "WCM-041": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Mol Microbiol 2012. Wiley pdfdirect 403; EPMC PMC3383343 render persistent 500."
+  },
+  "WCM-042": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "EcoSal 2008. is_oa=False, no PMC."
+  },
+  "WCM-043": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://jb.asm.org/content/jb/180/2/256.full.pdf",
+    "saved_to": "pdfs/WCM-043_1998_Cell_Reproduction_and_Morphological_Changes_in_Mycoplasma_capricolum.pdf",
+    "sha256": "3b538297ffe4f373848b55c7687930c49c5d0470a5445184ac3eb5719528af2e",
+    "bytes": 2435278,
+    "notes": "Broader-corpus PDF acquired via OA route."
+  },
+  "WCM-048": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "eLife 2025 (overflow metabolism). is_oa via eLife but Unpaywall/OpenAlex didn't expose a PDF URL; not in EPMC index yet."
+  },
+  "WCM-053": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC8963310?pdf=render",
+    "saved_to": "pdfs/WCM-053_2022_Vivarium_an_interface_and_engine_for_integrative_multiscale_modeling_in_computat.pdf",
+    "sha256": "679899b91cb7f88341106b5049ce6419784433892460c8428daf0c65ff700b1a",
+    "bytes": 851989,
+    "notes": ""
+  },
+  "WCM-056": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "notes": "Biotech Bioeng 2020 (Yeast WM_S288C). is_oa=False, no PMC."
+  }
+}

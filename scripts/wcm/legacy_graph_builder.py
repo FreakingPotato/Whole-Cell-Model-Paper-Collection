@@ -2036,6 +2036,8 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
   #evidence-modal .modal-info { padding: 20px 22px; overflow-y: auto; border-right: 1px solid #1e293b; }
   #evidence-modal .modal-pdf { background: #020617; position: relative; display: flex; align-items: stretch; justify-content: stretch; }
   #evidence-modal .modal-pdf iframe { width: 100%; height: 100%; border: 0; background: #020617; }
+  #evidence-modal .modal-pdf img.evidence-screenshot { width: 100%; height: 100%; object-fit: contain; background: #020617; }
+  #evidence-modal .modal-screenshot-caption { position: absolute; top: 8px; left: 12px; background: rgba(15, 23, 42, 0.85); border: 1px solid #334155; color: #cbd5e1; font-size: 11px; padding: 3px 8px; border-radius: 999px; z-index: 4; }
   #evidence-modal .modal-pdf-fallback { color: #cbd5e1; padding: 24px; font-size: 13px; line-height: 1.65; }
   #evidence-modal .modal-info h3 { margin: 0 0 4px; font-size: 16px; color: #f1f5f9; }
   #evidence-modal .modal-info .modal-citation { color: #7dd3fc; font-size: 13px; margin-bottom: 14px; }
@@ -3130,7 +3132,13 @@ function openEvidenceModal(evidenceId) {
     </div>
   `;
   const pdfPanel = evidenceModal.querySelector('.modal-pdf');
-  if (pdfWithPage) {
+  if (point.screenshot_href) {
+    const captionLabel = paper.display_label || paper.label || citation;
+    const caption = point.page
+      ? `<div class="modal-screenshot-caption">Page ${escapeHtml(String(point.page))} · ${escapeHtml(captionLabel)}</div>`
+      : '';
+    pdfPanel.innerHTML = `${caption}<img class="evidence-screenshot" src="${escapeHtml(point.screenshot_href)}" alt="Supporting paragraph from ${escapeHtml(citation)}">`;
+  } else if (pdfWithPage) {
     pdfPanel.innerHTML = `<iframe src="${escapeHtml(pdfWithPage)}" title="${escapeHtml(paper.title || 'PDF')}"></iframe>`;
   } else {
     pdfPanel.innerHTML = `<div class="modal-pdf-fallback">
@@ -3186,6 +3194,36 @@ startIdleDrift();
             json.dumps(hybrid_evidence, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8",
         )
+        # Mirror the evidence PNGs (under docs/assets/evidence/) into
+        # graphify-out/evidence/ so the modal's <img src> resolves with a path
+        # that is graph.html-relative, not repo-root-relative. Rewrite the
+        # screenshot_href paths in the *embedded* JSON to point at the local
+        # mirror; the canonical metadata/hybrid_model_evidence.json keeps the
+        # repo-root-relative paths.
+        evidence_target = GRAPHIFY_OUT / "evidence"
+        evidence_target.mkdir(parents=True, exist_ok=True)
+        import shutil
+        copied: set[str] = set()
+        embedded_evidence = json.loads(json.dumps(hybrid_evidence))
+        for paradigm in embedded_evidence.get("paradigms", []) or []:
+            for claim in paradigm.get("claims", []) or []:
+                for point in claim.get("evidence_points", []) or []:
+                    href = point.get("screenshot_href")
+                    if not href:
+                        continue
+                    src_path = ROOT / href
+                    if not src_path.is_file():
+                        continue
+                    dest_path = evidence_target / src_path.name
+                    if src_path.name not in copied:
+                        try:
+                            shutil.copy2(src_path, dest_path)
+                            copied.add(src_path.name)
+                        except OSError:
+                            continue
+                    point["screenshot_href"] = f"evidence/{src_path.name}"
+    else:
+        embedded_evidence = {}
     html = (
         template.replace("__GRAPH_DATA__", json.dumps(graph_data))
         .replace("__COMMUNITY_LABELS__", json.dumps({str(key): value for key, value in community_labels.items()}))
@@ -3193,7 +3231,7 @@ startIdleDrift();
         .replace("__COMMUNITY_DEFINITIONS__", json.dumps(CLASS_DEFINITIONS))
         .replace("__ORGANISM_GROUP_ORDER__", json.dumps(ORGANISM_GROUP_ORDER))
         .replace("__ORGANISM_GROUP_LABELS__", json.dumps(ORGANISM_GROUP_LABELS))
-        .replace("__HYBRID_EVIDENCE__", json.dumps(hybrid_evidence))
+        .replace("__HYBRID_EVIDENCE__", json.dumps(embedded_evidence))
     )
     (GRAPHIFY_OUT / "graph.html").write_text(html, encoding="utf-8")
 

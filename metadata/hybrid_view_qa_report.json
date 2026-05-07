@@ -1,0 +1,1061 @@
+{
+  "checklist": {
+    "1_layout_buttons": {
+      "expected": [
+        "force",
+        "year",
+        "organism",
+        "virtual",
+        "hybrid"
+      ],
+      "found": [
+        "force",
+        "year",
+        "organism",
+        "virtual",
+        "hybrid"
+      ],
+      "labels": {
+        "force": "Force",
+        "year": "By Year",
+        "organism": "By Organism",
+        "virtual": "Virtual Cells",
+        "hybrid": "Hybrid Model Summary"
+      },
+      "pass": true
+    },
+    "layout_hybrid_state": {
+      "bodyDataView": "hybrid",
+      "hash": "#hybrid",
+      "paradigmCards": 3,
+      "evidenceItems": 21,
+      "layoutBtns": [
+        {
+          "layout": "force",
+          "active": false,
+          "text": "Force"
+        },
+        {
+          "layout": "year",
+          "active": false,
+          "text": "By Year"
+        },
+        {
+          "layout": "organism",
+          "active": false,
+          "text": "By Organism"
+        },
+        {
+          "layout": "virtual",
+          "active": false,
+          "text": "Virtual Cells"
+        },
+        {
+          "layout": "hybrid",
+          "active": true,
+          "text": "Hybrid Model Summary"
+        }
+      ]
+    },
+    "layout_hybrid_png": "/home/stark/Whole_Cell_Model/docs/qa/01_hybrid_overview.png",
+    "layout_hybrid_png_size": 210581,
+    "layout_force_state": {
+      "bodyDataView": null,
+      "hash": "#force",
+      "paradigmCards": 0,
+      "evidenceItems": 0,
+      "layoutBtns": [
+        {
+          "layout": "force",
+          "active": true,
+          "text": "Force"
+        },
+        {
+          "layout": "year",
+          "active": false,
+          "text": "By Year"
+        },
+        {
+          "layout": "organism",
+          "active": false,
+          "text": "By Organism"
+        },
+        {
+          "layout": "virtual",
+          "active": false,
+          "text": "Virtual Cells"
+        },
+        {
+          "layout": "hybrid",
+          "active": false,
+          "text": "Hybrid Model Summary"
+        }
+      ]
+    },
+    "layout_force_png": "/home/stark/Whole_Cell_Model/docs/qa/02_force_layout.png",
+    "layout_force_png_size": 448548,
+    "layout_virtual_state": {
+      "bodyDataView": null,
+      "hash": "#virtual",
+      "paradigmCards": 0,
+      "evidenceItems": 0,
+      "layoutBtns": [
+        {
+          "layout": "force",
+          "active": false,
+          "text": "Force"
+        },
+        {
+          "layout": "year",
+          "active": false,
+          "text": "By Year"
+        },
+        {
+          "layout": "organism",
+          "active": false,
+          "text": "By Organism"
+        },
+        {
+          "layout": "virtual",
+          "active": true,
+          "text": "Virtual Cells"
+        },
+        {
+          "layout": "hybrid",
+          "active": false,
+          "text": "Hybrid Model Summary"
+        }
+      ]
+    },
+    "layout_virtual_png": "/home/stark/Whole_Cell_Model/docs/qa/03_virtual_layout.png",
+    "layout_virtual_png_size": 435158,
+    "esc_test": {
+      "page": {
+        "bodyDataView": "hybrid",
+        "hash": "#hybrid",
+        "paradigmCards": 3,
+        "evidenceItems": 21,
+        "claimRows": 9,
+        "hasHybridSummary": true,
+        "hasEvidenceModal": true
+      },
+      "clicked": true,
+      "found": true,
+      "modal": {
+        "open": true,
+        "hasImg": true,
+        "imgSrc": "evidence/hybrid-embedded-closure-001.png",
+        "hasIframe": false,
+        "hasFallback": false,
+        "captionText": "Page 8 \u00b7 Faure 2023",
+        "actions": [
+          {
+            "href": "https://doi.org/10.1038/s41467-023-40380-0",
+            "text": "Open DOI / landing page \u2197"
+          },
+          {
+            "href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf#page=8",
+            "text": "Open full PDF \u2197"
+          }
+        ],
+        "modalTitle": "A neural-mechanistic hybrid extends genome-scale metabolic models with a learned component that fits flux predictions where the constraint-based structure alone is under-determined, lifting quantitative accuracy without abandoning the mechanistic backbone."
+      },
+      "action": "esc",
+      "eid": "hybrid-embedded-closure-001",
+      "afterEscOpen": false
+    },
+    "9_console_errors": {
+      "err_lines": [],
+      "count": 0
+    }
+  },
+  "evidence": [
+    {
+      "id": "hybrid-embedded-closure-001",
+      "paradigm": "embedded",
+      "claim": "embedded-closure",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-embedded-closure-001.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 8 \u00b7 Faure 2023",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1038/s41467-023-40380-0",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf#page=8",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "A neural-mechanistic hybrid extends genome-scale metabolic models with a learned component that fits flux predictions where the constraint-based structure alone is under-determined, lifting quantitative accuracy without abandoning the mechanistic backbone."
+        },
+        "action": "click",
+        "eid": "hybrid-embedded-closure-001"
+      },
+      "saved_modal_png": "/home/stark/Whole_Cell_Model/docs/qa/modal_hybrid-embedded-closure-001.png",
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-embedded-closure-002",
+      "paradigm": "embedded",
+      "claim": "embedded-closure",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-embedded-closure-002.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 1 \u00b7 Bouhaddou 2018",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1371/journal.pcbi.1005985",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=1",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "A mechanistic pan-cancer pathway model is informed by multi-omics inputs so the ML-derived priors fill stochastic-response gaps that the deterministic pathway structure cannot capture on its own."
+        },
+        "action": "click",
+        "eid": "hybrid-embedded-closure-002"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-embedded-constraint-001",
+      "paradigm": "embedded",
+      "claim": "embedded-constraint",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-embedded-constraint-001.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 13 \u00b7 Faure 2023",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1038/s41467-023-40380-0",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-046_2023_A_neural-mechanistic_hybrid_approach_improving_the_predictive_power_of_genome-sc.pdf#page=13",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Stoichiometric and flux-balance constraints from the metabolic model bound the neural component of the hybrid model, preventing biologically implausible predictions while still allowing ML-driven refinement."
+        },
+        "action": "click",
+        "eid": "hybrid-embedded-constraint-001"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-embedded-constraint-002",
+      "paradigm": "embedded",
+      "claim": "embedded-constraint",
+      "expected_status": "no_pdf",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": false,
+          "imgSrc": null,
+          "hasIframe": false,
+          "hasFallback": true,
+          "captionText": null,
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.sbi.2022.102392",
+              "text": "Open DOI / landing page \u2197"
+            }
+          ],
+          "modalTitle": "Reviews how integrating molecular and cellular structural data into whole-cell models constrains ML and statistical components against physical, geometric, and dynamical priors rather than fitting them in vacuo."
+        },
+        "action": "click",
+        "eid": "hybrid-embedded-constraint-002"
+      },
+      "saved_modal_png": "/home/stark/Whole_Cell_Model/docs/qa/modal_hybrid-embedded-constraint-002.png",
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-embedded-emulation-001",
+      "paradigm": "embedded",
+      "claim": "embedded-emulation",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-embedded-emulation-001.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 1 \u00b7 Agmon 2022",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1093/bioinformatics/btac049",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-053_2022_Vivarium_an_interface_and_engine_for_integrative_multiscale_modeling_in_computat.pdf#page=1",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Vivarium is explicitly designed as a multi-scale interface where mechanistic submodels and ML / surrogate components can be substituted at module boundaries, allowing computationally cheap stand-ins for the most expensive parts of a whole-cell simulation."
+        },
+        "action": "click",
+        "eid": "hybrid-embedded-emulation-001"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-embedded-emulation-002",
+      "paradigm": "embedded",
+      "claim": "embedded-emulation",
+      "expected_status": "no_pdf",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": false,
+          "imgSrc": null,
+          "hasIframe": false,
+          "hasFallback": true,
+          "captionText": null,
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.sbi.2022.102392",
+              "text": "Open DOI / landing page \u2197"
+            }
+          ],
+          "modalTitle": "Argues that hybrid frameworks need a clear contract between mechanistic and learned components so that surrogates can replace expensive submodules without breaking downstream simulation invariants."
+        },
+        "action": "click",
+        "eid": "hybrid-embedded-emulation-002"
+      },
+      "saved_modal_png": "/home/stark/Whole_Cell_Model/docs/qa/modal_hybrid-embedded-emulation-002.png",
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-embedded-emulation-003",
+      "paradigm": "embedded",
+      "claim": "embedded-emulation",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-embedded-emulation-003.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 23 \u00b7 Thornburg 2026",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.cell.2026.02.009",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-001_2026_Bringing_the_genetically_minimal_cell_to_life_on_a_computer_in_4D.pdf#page=23",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "The 4D minimal-cell simulation runs separate spatial, kinetic, and structural engines that exchange state at fixed intervals \u2014 a natural insertion point for ML surrogates of the most expensive subsystem."
+        },
+        "action": "click",
+        "eid": "hybrid-embedded-emulation-003"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-pipeline-curation-001",
+      "paradigm": "pipeline",
+      "claim": "pipeline-curation",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-pipeline-curation-001.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 1 \u00b7 Bunne 2024",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.cell.2024.11.015",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-006_2024_How_to_build_the_virtual_cell_with_artificial_intelligence_Priorities_and_oppor.pdf#page=1",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Identifies AI-driven knowledge extraction from the biological literature as a priority for virtual-cell construction, framing curation as a foundational pipeline step rather than a one-off effort."
+        },
+        "action": "click",
+        "eid": "hybrid-pipeline-curation-001"
+      },
+      "saved_modal_png": "/home/stark/Whole_Cell_Model/docs/qa/modal_hybrid-pipeline-curation-001.png",
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-pipeline-curation-002",
+      "paradigm": "pipeline",
+      "claim": "pipeline-curation",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-pipeline-curation-002.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 1 \u00b7 Zhang 2024",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1038/s44320-024-00060-7",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-045_2024_Yeast9_a_consensus_genome-scale_metabolic_model_for_S._cerevisiae_curated_by_th.pdf#page=1",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Yeast9 is built and maintained by a community curation pipeline that aggregates omics evidence into a single consensus genome-scale metabolic model, demonstrating curation at WCM-relevant scale."
+        },
+        "action": "click",
+        "eid": "hybrid-pipeline-curation-002"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-pipeline-inference-001",
+      "paradigm": "pipeline",
+      "claim": "pipeline-inference",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-pipeline-inference-001.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 12 \u00b7 Kim 2016",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1038/ncomms13090",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-044_2016_Multi-omics_integration_accurately_predicts_cellular_state_in_unexplored_conditi.pdf#page=12",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Semi-supervised multi-omics integration over E. coli datasets estimates cellular state in unexplored conditions and feeds those estimates back into mechanistic interpretation."
+        },
+        "action": "click",
+        "eid": "hybrid-pipeline-inference-001"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-pipeline-inference-002",
+      "paradigm": "pipeline",
+      "claim": "pipeline-inference",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-pipeline-inference-002.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 1 \u00b7 Bouhaddou 2018",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1371/journal.pcbi.1005985",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-047_2018_A_mechanistic_pan-cancer_pathway_model_informed_by_multi-omics_data_interprets_s.pdf#page=1",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Pan-cancer pathway model treats multi-omics data as a calibration source, with ML-style estimation pinning parameters that the mechanistic structure alone leaves under-determined."
+        },
+        "action": "click",
+        "eid": "hybrid-pipeline-inference-002"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-pipeline-structural-001",
+      "paradigm": "pipeline",
+      "claim": "pipeline-structural-learning",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-pipeline-structural-001.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 1 \u00b7 Sun 2024",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.cels.2024.02.002",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-008_2024_Cross_evaluation_of_E_coli_s_operon_structures_via_a_whole_cell_model_suggests_a.pdf#page=1",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Whole-cell simulation of E. coli is used as a structural-learning oracle, with the WCM scoring alternative operon architectures across expression regimes \u2014 a workflow trivially extensible to ML-proposed candidate structures."
+        },
+        "action": "click",
+        "eid": "hybrid-pipeline-structural-001"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-pipeline-structural-002",
+      "paradigm": "pipeline",
+      "claim": "pipeline-structural-learning",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-pipeline-structural-002.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 3 \u00b7 Bunne 2024",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.cell.2024.11.015",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-006_2024_How_to_build_the_virtual_cell_with_artificial_intelligence_Priorities_and_oppor.pdf#page=3",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Calls out structural learning \u2014 ML systems that propose mechanistic architectures, not just parameters \u2014 as a key research direction for AI-assisted virtual cells."
+        },
+        "action": "click",
+        "eid": "hybrid-pipeline-structural-002"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-matched-001",
+      "paradigm": "parallel",
+      "claim": "parallel-matched-predictions",
+      "expected_status": "no_pdf",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": false,
+          "imgSrc": null,
+          "hasIframe": false,
+          "hasFallback": true,
+          "captionText": null,
+          "actions": [
+            {
+              "href": "https://doi.org/10.1126/science.aav3751",
+              "text": "Open DOI / landing page \u2197"
+            }
+          ],
+          "modalTitle": "Demonstrates that a large-scale E. coli whole-cell model can be cross-evaluated against many heterogeneous datasets simultaneously \u2014 the natural setting for matched ML/MM predictions."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-matched-001"
+      },
+      "saved_modal_png": "/home/stark/Whole_Cell_Model/docs/qa/modal_hybrid-parallel-matched-001.png",
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-matched-002",
+      "paradigm": "parallel",
+      "claim": "parallel-matched-predictions",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-parallel-matched-002.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 5 \u00b7 Adduri 2025",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1101/2025.06.26.661135",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=5",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "The State perturbation model predicts cellular responses across diverse contexts \u2014 explicitly ML-side coverage of the same perturbation space mechanistic WCMs aim to predict."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-matched-002"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-matched-003",
+      "paradigm": "parallel",
+      "claim": "parallel-matched-predictions",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-parallel-matched-003.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 37 \u00b7 Sun 2024",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.cels.2024.02.002",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-008_2024_Cross_evaluation_of_E_coli_s_operon_structures_via_a_whole_cell_model_suggests_a.pdf#page=37",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Operon-architecture cross-evaluation positions multiple model variants on identical predicted-vs-measured axes, demonstrating the diagnostic value of matched prediction tasks."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-matched-003"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-agreement-001",
+      "paradigm": "parallel",
+      "claim": "parallel-agreement-disagreement",
+      "expected_status": "no_pdf",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": false,
+          "imgSrc": null,
+          "hasIframe": false,
+          "hasFallback": true,
+          "captionText": null,
+          "actions": [
+            {
+              "href": "https://doi.org/10.1126/science.aav3751",
+              "text": "Open DOI / landing page \u2197"
+            }
+          ],
+          "modalTitle": "Identifies systematic discrepancies between mechanistic predictions and observations across heterogeneous E. coli datasets, exactly the regime where parallel ML predictions could attribute failure to data vs structure."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-agreement-001"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-agreement-002",
+      "paradigm": "parallel",
+      "claim": "parallel-agreement-disagreement",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-parallel-agreement-002.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 3 \u00b7 Bunne 2024",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1016/j.cell.2024.11.015",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-006_2024_How_to_build_the_virtual_cell_with_artificial_intelligence_Priorities_and_oppor.pdf#page=3",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "Frames AI/ML and mechanistic virtual-cell efforts as complementary lenses whose joint deployment is necessary to diagnose where each paradigm is wrong."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-agreement-002"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-foundation-001",
+      "paradigm": "parallel",
+      "claim": "parallel-foundation-models",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-parallel-foundation-001.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 10 \u00b7 Cui 2024",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1038/s41592-024-02201-0",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-050_2024_scGPT_toward_building_a_foundation_model_for_single-cell_multi-omics_using_gene.pdf#page=10",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "scGPT shows that a foundation model trained on large-scale single-cell multi-omics generalises across tasks \u2014 a natural ML predictor to compare against a mechanistic WCM under matched perturbations."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-foundation-001"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-foundation-002",
+      "paradigm": "parallel",
+      "claim": "parallel-foundation-models",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-parallel-foundation-002.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 2 \u00b7 Pearce 2025",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1101/2025.04.25.650731",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-049_2025_A_Cross-Species_Generative_Cell_Atlas_Across_1.5_Billion_Years_of_Evolution_The.pdf#page=2",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "TranscriptFormer trains across 1.5 billion years of evolutionary distance, providing a cross-species ML predictor whose disagreements with organism-specific mechanistic WCMs are themselves diagnostic."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-foundation-002"
+      },
+      "saved_modal_png": null,
+      "problems": [],
+      "pass": true
+    },
+    {
+      "id": "hybrid-parallel-foundation-003",
+      "paradigm": "parallel",
+      "claim": "parallel-foundation-models",
+      "expected_status": "ok",
+      "screenshot_state": {
+        "page": {
+          "bodyDataView": "hybrid",
+          "hash": "#hybrid",
+          "paradigmCards": 3,
+          "evidenceItems": 21,
+          "claimRows": 9,
+          "hasHybridSummary": true,
+          "hasEvidenceModal": true
+        },
+        "clicked": true,
+        "found": true,
+        "modal": {
+          "open": true,
+          "hasImg": true,
+          "imgSrc": "evidence/hybrid-parallel-foundation-003.png",
+          "hasIframe": false,
+          "hasFallback": false,
+          "captionText": "Page 1 \u00b7 Adduri 2025",
+          "actions": [
+            {
+              "href": "https://doi.org/10.1101/2025.06.26.661135",
+              "text": "Open DOI / landing page \u2197"
+            },
+            {
+              "href": "../pdfs/WCM-051_2025_Predicting_cellular_responses_to_perturbation_across_diverse_contexts_with_State.pdf#page=1",
+              "text": "Open full PDF \u2197"
+            }
+          ],
+          "modalTitle": "State predicts perturbation responses in contexts where mechanistic WCMs would otherwise be the only option, defining a concrete ML \u2194 MM head-to-head for the parallel paradigm."
+        },
+        "action": "click",
+        "eid": "hybrid-parallel-foundation-003"
+      },
+      "saved_modal_png": "/home/stark/Whole_Cell_Model/docs/qa/modal_hybrid-parallel-foundation-003.png",
+      "problems": [],
+      "pass": true
+    }
+  ]
+}
