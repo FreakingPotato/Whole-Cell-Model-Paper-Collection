@@ -43,6 +43,7 @@ SIDECAR_SUMMARY = METADATA_DIR / "pdf_sidecar_summary.md"
 CLASS_TABLE = METADATA_DIR / "wcm_method_classes.csv"
 ORGANISM_TABLE = METADATA_DIR / "wcm_organisms.csv"
 PAPER_METADATA_JSON = METADATA_DIR / "wcm_paper_metadata.json"
+HYBRID_EVIDENCE_JSON = METADATA_DIR / "hybrid_model_evidence.json"
 AUTO_INGEST_JSON = METADATA_DIR / "auto_ingested_papers.json"
 PDF_PARSE_CACHE_JSON = METADATA_DIR / "pdf_parse_cache.json"
 PDF_PROCESSING_STATUS = METADATA_DIR / "pdf_processing_status.csv"
@@ -1993,6 +1994,59 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
   .neighbor small { display: block; color: #94a3b8; margin-top: 2px; }
   .viewer-note { margin-top: 18px; padding: 10px 12px; border-radius: 12px; background: #111827; border: 1px solid #1f2937; color: #cbd5e1; font-size: 12px; line-height: 1.6; }
   @media (max-width: 1080px) { body { grid-template-columns: 1fr; grid-template-rows: 58vh 42vh; } #main { min-height: 0; } #graph { min-height: 360px; } #sidebar { border-left: none; border-top: 1px solid #1e293b; } }
+  /* --- Hybrid Model Summary view --- */
+  body[data-view="hybrid"] #graph, body[data-view="hybrid"] #sidebar { display: none; }
+  body[data-view="hybrid"] { grid-template-columns: 1fr; }
+  body[data-view="hybrid"] #main { display: flex; flex-direction: column; }
+  #hybrid-summary { display: none; flex: 1 1 auto; overflow-y: auto; padding: 24px 28px 80px; background: #0b1220; }
+  body[data-view="hybrid"] #hybrid-summary { display: block; }
+  #hybrid-summary .hybrid-header { max-width: 1080px; margin: 0 auto 24px; }
+  #hybrid-summary h2 { margin: 0 0 6px; font-size: 22px; }
+  #hybrid-summary .hybrid-thesis { margin: 8px 0 0; color: #cbd5e1; font-size: 14px; line-height: 1.65; }
+  #hybrid-summary .hybrid-paradigms { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+  .paradigm-card { background: #111827; border: 1px solid #1f2937; border-radius: 14px; padding: 18px 20px; }
+  .paradigm-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .paradigm-header h3 { margin: 0; font-size: 17px; color: #f1f5f9; }
+  .paradigm-id-pill { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #93c5fd; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.4); padding: 2px 8px; border-radius: 999px; }
+  .paradigm-summary { margin: 0 0 14px; color: #cbd5e1; font-size: 13px; line-height: 1.6; }
+  .claim-row { border-top: 1px solid #1f2937; padding: 14px 0; }
+  .claim-row:first-of-type { border-top: 1px solid #2a3445; }
+  .claim-head { display: flex; gap: 14px; align-items: flex-start; cursor: pointer; }
+  .claim-head:hover { background: rgba(56, 189, 248, 0.04); }
+  .claim-toggle { color: #38bdf8; font-size: 12px; flex: 0 0 14px; user-select: none; }
+  .claim-subtype { flex: 0 0 200px; color: #93c5fd; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .claim-text { flex: 1 1 auto; font-size: 14px; color: #e5e7eb; line-height: 1.55; }
+  .claim-papercount { flex: 0 0 auto; font-size: 11px; color: #94a3b8; padding: 2px 8px; border: 1px solid #334155; border-radius: 999px; }
+  .evidence-list { margin: 12px 0 0 30px; padding: 0; list-style: none; display: none; flex-direction: column; gap: 8px; }
+  .claim-row.expanded .evidence-list { display: flex; }
+  .claim-row.expanded .claim-toggle::before { content: '▾'; }
+  .claim-row:not(.expanded) .claim-toggle::before { content: '▸'; }
+  .evidence-item { background: #0f172a; border: 1px solid #1f2937; border-radius: 10px; padding: 10px 12px; cursor: pointer; transition: border-color 120ms ease; }
+  .evidence-item:hover { border-color: #38bdf8; }
+  .evidence-text { margin: 0 0 6px; font-size: 13px; color: #e5e7eb; line-height: 1.55; }
+  .evidence-paper { font-size: 12px; color: #94a3b8; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .evidence-paper .citation-pill { color: #7dd3fc; font-weight: 500; }
+  .evidence-paper .pdf-pill { color: #34d399; }
+  .evidence-paper .nopdf-pill { color: #fbbf24; }
+  .evidence-paper .confidence-pill { color: #cbd5e1; padding: 1px 6px; border: 1px solid #334155; border-radius: 999px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  /* Evidence detail modal */
+  #evidence-modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(2, 6, 23, 0.78); backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 24px; }
+  #evidence-modal[data-open="true"] { display: flex; }
+  #evidence-modal .modal-card { background: #0b1220; border: 1px solid #334155; border-radius: 14px; width: min(1180px, 100%); height: min(86vh, 920px); display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55); }
+  #evidence-modal .modal-info { padding: 20px 22px; overflow-y: auto; border-right: 1px solid #1e293b; }
+  #evidence-modal .modal-pdf { background: #020617; position: relative; display: flex; align-items: stretch; justify-content: stretch; }
+  #evidence-modal .modal-pdf iframe { width: 100%; height: 100%; border: 0; background: #020617; }
+  #evidence-modal .modal-pdf-fallback { color: #cbd5e1; padding: 24px; font-size: 13px; line-height: 1.65; }
+  #evidence-modal .modal-info h3 { margin: 0 0 4px; font-size: 16px; color: #f1f5f9; }
+  #evidence-modal .modal-info .modal-citation { color: #7dd3fc; font-size: 13px; margin-bottom: 14px; }
+  #evidence-modal .modal-info .modal-callout { background: #111827; border: 1px solid #1f2937; border-left: 3px solid #38bdf8; padding: 10px 12px; border-radius: 8px; font-size: 13px; line-height: 1.6; color: #e5e7eb; margin-bottom: 12px; }
+  #evidence-modal .modal-info .modal-meta { font-size: 12px; color: #94a3b8; line-height: 1.7; margin-bottom: 14px; }
+  #evidence-modal .modal-info .modal-meta strong { color: #cbd5e1; }
+  #evidence-modal .modal-info .modal-actions { display: flex; flex-direction: column; gap: 8px; }
+  #evidence-modal .modal-info .modal-actions a { display: inline-flex; align-items: center; gap: 8px; background: #111827; border: 1px solid #334155; color: #e2e8f0; padding: 8px 12px; border-radius: 10px; font-size: 12px; text-decoration: none; }
+  #evidence-modal .modal-info .modal-actions a:hover { border-color: #38bdf8; color: #f1f5f9; }
+  #evidence-modal .modal-close { position: absolute; top: 12px; right: 14px; background: rgba(15, 23, 42, 0.8); color: #e2e8f0; border: 1px solid #334155; border-radius: 999px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; z-index: 5; }
+  @media (max-width: 1080px) { #evidence-modal .modal-card { grid-template-columns: 1fr; grid-template-rows: auto 1fr; height: 92vh; } #evidence-modal .modal-info { border-right: 0; border-bottom: 1px solid #1e293b; max-height: 35vh; } }
 </style>
 </head>
 <body>
@@ -2009,6 +2063,7 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
           <button data-layout="year" class="layout-btn">By Year</button>
           <button data-layout="organism" class="layout-btn">By Organism</button>
           <button data-layout="virtual" class="layout-btn">Virtual Cells</button>
+          <button data-layout="hybrid" class="layout-btn">Hybrid Model Summary</button>
         </div>
         <input id="search" type="search" placeholder="Search papers, authors, organism, journals..." />
       </div>
@@ -2018,6 +2073,7 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
       <div id="layout-guides"></div>
       <div id="legend"></div>
     </div>
+    <div id="hybrid-summary"></div>
   </div>
   <aside id="sidebar">
     <div id="empty-state">
@@ -2025,11 +2081,19 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
     </div>
     <div id="details" style="display:none;"></div>
   </aside>
+  <div id="evidence-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-info"></div>
+      <div class="modal-pdf"><div class="modal-pdf-fallback">Loading evidence…</div></div>
+      <button class="modal-close" type="button" aria-label="Close">×</button>
+    </div>
+  </div>
 <script>
 const GRAPH_DATA = __GRAPH_DATA__;
 const COMMUNITY_LABELS = __COMMUNITY_LABELS__;
 const COMMUNITY_COLORS = __COMMUNITY_COLORS__;
 const COMMUNITY_DEFINITIONS = __COMMUNITY_DEFINITIONS__;
+const HYBRID_EVIDENCE = __HYBRID_EVIDENCE__;
 const SECTION_ORDER = ['overview', 'abstract', 'methods_summary', 'limitations', 'future_work'];
 const ORGANISM_GROUP_ORDER = __ORGANISM_GROUP_ORDER__;
 const ORGANISM_GROUP_LABELS = __ORGANISM_GROUP_LABELS__;
@@ -2484,7 +2548,7 @@ function baseNetworkOptions(layoutName) {
 
 function requestedLayoutFromHash() {
   const hash = (window.location.hash || '').replace('#', '').toLowerCase();
-  if (hash === 'year' || hash === 'organism' || hash === 'force' || hash === 'virtual') {
+  if (hash === 'year' || hash === 'organism' || hash === 'force' || hash === 'virtual' || hash === 'hybrid') {
     return hash;
   }
   return 'force';
@@ -2620,6 +2684,12 @@ function attachNetworkEvents() {
 function mountNetwork(layoutName) {
   currentLayout = layoutName;
   syncActiveLayoutButton(layoutName);
+  if (layoutName === 'hybrid') {
+    document.body.setAttribute('data-view', 'hybrid');
+    mountHybridSummary();
+    return;
+  }
+  document.body.removeAttribute('data-view');
   ensureGraphContainerSize();
   activeSelection = null;
   visNodes = buildNodeDataset(layoutName);
@@ -2908,6 +2978,194 @@ function startIdleDrift() {
   requestAnimationFrame(frame);
 }
 
+// --- Hybrid Model Summary view ---------------------------------------------
+const PAPER_BY_ID = (() => {
+  const map = {};
+  GRAPH_DATA.nodes.filter(node => node.file_type === 'paper').forEach(node => {
+    map[node.id] = node;
+  });
+  return map;
+})();
+
+const EVIDENCE_BY_ID = (() => {
+  const map = {};
+  if (!HYBRID_EVIDENCE || !Array.isArray(HYBRID_EVIDENCE.paradigms)) return map;
+  HYBRID_EVIDENCE.paradigms.forEach(paradigm => {
+    (paradigm.claims || []).forEach(claim => {
+      (claim.evidence_points || []).forEach(point => {
+        map[point.id] = { paradigm, claim, point };
+      });
+    });
+  });
+  return map;
+})();
+
+let hybridMounted = false;
+function mountHybridSummary() {
+  const root = document.getElementById('hybrid-summary');
+  if (!root) return;
+  if (!hybridMounted) {
+    root.innerHTML = renderHybridSummaryHTML();
+    attachHybridHandlers(root);
+    hybridMounted = true;
+  }
+}
+
+function renderHybridSummaryHTML() {
+  if (!HYBRID_EVIDENCE || !Array.isArray(HYBRID_EVIDENCE.paradigms)) {
+    return `<div class="hybrid-header"><h2>Hybrid Model Summary</h2><p class="hybrid-thesis">No evidence file found. Add metadata/hybrid_model_evidence.json and rebuild.</p></div>`;
+  }
+  const header = `
+    <div class="hybrid-header">
+      <h2>${escapeHtml(HYBRID_EVIDENCE.title || 'Hybrid Model Summary')}</h2>
+      <p class="hybrid-thesis">${escapeHtml(HYBRID_EVIDENCE.thesis || HYBRID_EVIDENCE.description || '')}</p>
+    </div>
+  `;
+  const paradigmsHtml = HYBRID_EVIDENCE.paradigms.map(renderParadigmCard).join('');
+  return header + `<div class="hybrid-paradigms">${paradigmsHtml}</div>`;
+}
+
+function renderParadigmCard(paradigm) {
+  const claims = (paradigm.claims || []).map(claim => renderClaimRow(claim, paradigm)).join('');
+  return `
+    <section class="paradigm-card" data-paradigm="${escapeHtml(paradigm.id)}">
+      <div class="paradigm-header">
+        <h3>${escapeHtml(paradigm.label)}</h3>
+        <span class="paradigm-id-pill">${escapeHtml(paradigm.id)}</span>
+      </div>
+      <p class="paradigm-summary">${escapeHtml(paradigm.summary || '')}</p>
+      ${claims}
+    </section>
+  `;
+}
+
+function renderClaimRow(claim, paradigm) {
+  const points = (claim.evidence_points || []).map(p => renderEvidenceItem(p, claim, paradigm)).join('');
+  const count = (claim.evidence_points || []).length;
+  const subtype = claim.subtype || '';
+  return `
+    <div class="claim-row" data-claim="${escapeHtml(claim.id)}">
+      <div class="claim-head" data-action="toggle-claim">
+        <span class="claim-toggle"></span>
+        <span class="claim-subtype">${escapeHtml(subtype)}</span>
+        <span class="claim-text">${escapeHtml(claim.claim)}</span>
+        <span class="claim-papercount">${count} ${count === 1 ? 'paper' : 'papers'}</span>
+      </div>
+      <ul class="evidence-list">${points}</ul>
+    </div>
+  `;
+}
+
+function renderEvidenceItem(point, claim, paradigm) {
+  const paper = PAPER_BY_ID[point.paper_id];
+  const citation = paper ? (paper.display_label || paper.label || point.paper_id) : (point.citation_label || point.paper_id || 'Unknown paper');
+  const journal = paper ? (paper.journal || '') : '';
+  const year = paper ? (paper.year || '') : '';
+  const hasPdf = paper && paper.pdf_status === 'downloaded' && paper.pdf_href;
+  const pdfChip = hasPdf ? `<span class="pdf-pill">📄 PDF available</span>` : `<span class="nopdf-pill">DOI / landing page only</span>`;
+  const conf = point.confidence || 'metadata_only';
+  return `
+    <li class="evidence-item" data-evidence-id="${escapeHtml(point.id)}">
+      <p class="evidence-text">${escapeHtml(point.text)}</p>
+      <div class="evidence-paper">
+        <span class="citation-pill">${escapeHtml(citation)}</span>
+        ${journal ? `<span>${escapeHtml(journal)}</span>` : ''}
+        ${year ? `<span>${escapeHtml(String(year))}</span>` : ''}
+        ${pdfChip}
+        <span class="confidence-pill">${escapeHtml(conf)}</span>
+      </div>
+    </li>
+  `;
+}
+
+function attachHybridHandlers(root) {
+  root.addEventListener('click', event => {
+    const head = event.target.closest('[data-action="toggle-claim"]');
+    if (head) {
+      head.parentElement.classList.toggle('expanded');
+      return;
+    }
+    const item = event.target.closest('.evidence-item');
+    if (item) {
+      openEvidenceModal(item.dataset.evidenceId);
+    }
+  });
+  // Auto-expand the first claim in each paradigm so the table is not flat-empty.
+  root.querySelectorAll('.paradigm-card').forEach(card => {
+    const first = card.querySelector('.claim-row');
+    if (first) first.classList.add('expanded');
+  });
+}
+
+// --- Evidence detail modal -------------------------------------------------
+const evidenceModal = document.getElementById('evidence-modal');
+
+function openEvidenceModal(evidenceId) {
+  const record = EVIDENCE_BY_ID[evidenceId];
+  if (!record || !evidenceModal) return;
+  const { paradigm, claim, point } = record;
+  const paper = PAPER_BY_ID[point.paper_id] || {};
+  const citation = paper.display_label || paper.label || point.citation_label || point.paper_id || 'Unknown paper';
+  const doiHref = paper.doi ? `https://doi.org/${paper.doi}` : (paper.landing_page_url || '');
+  const landingHref = paper.landing_page_url || doiHref || '';
+  const pdfHref = (paper.pdf_status === 'downloaded' && paper.pdf_href) ? paper.pdf_href : '';
+  const pageHash = point.page ? `#page=${point.page}` : '';
+  const pdfWithPage = pdfHref ? `${pdfHref}${pageHash}` : '';
+
+  const info = evidenceModal.querySelector('.modal-info');
+  info.innerHTML = `
+    <h3 id="modal-title">${escapeHtml(paper.title || point.text || 'Evidence')}</h3>
+    <div class="modal-citation">${escapeHtml(citation)}${paper.journal ? ' · ' + escapeHtml(paper.journal) : ''}${paper.year ? ' · ' + escapeHtml(String(paper.year)) : ''}</div>
+    <div class="modal-callout"><strong style="color:#7dd3fc">${escapeHtml(paradigm.label)} → ${escapeHtml(claim.subtype || '')}</strong><br>${escapeHtml(point.text)}</div>
+    ${point.quote ? `<div class="modal-callout"><em>${escapeHtml(point.quote)}</em></div>` : ''}
+    <div class="modal-meta">
+      ${point.section ? `<div><strong>Section:</strong> ${escapeHtml(point.section)}</div>` : ''}
+      ${point.page ? `<div><strong>Page:</strong> ${escapeHtml(String(point.page))}</div>` : ''}
+      ${paper.doi ? `<div><strong>DOI:</strong> ${escapeHtml(paper.doi)}</div>` : ''}
+      <div><strong>Provenance:</strong> ${escapeHtml(point.confidence || 'metadata_only')}</div>
+    </div>
+    <div class="modal-actions">
+      ${landingHref ? `<a href="${escapeHtml(landingHref)}" target="_blank" rel="noreferrer">Open DOI / landing page ↗</a>` : ''}
+      ${pdfWithPage ? `<a href="${escapeHtml(pdfWithPage)}" target="_blank" rel="noreferrer">Open full PDF ↗</a>` : ''}
+    </div>
+  `;
+  const pdfPanel = evidenceModal.querySelector('.modal-pdf');
+  if (pdfWithPage) {
+    pdfPanel.innerHTML = `<iframe src="${escapeHtml(pdfWithPage)}" title="${escapeHtml(paper.title || 'PDF')}"></iframe>`;
+  } else {
+    pdfPanel.innerHTML = `<div class="modal-pdf-fallback">
+      <p><strong>Local PDF unavailable.</strong></p>
+      <p>${escapeHtml(point.text)}</p>
+      ${point.quote ? `<p style="margin-top:12px;"><em>${escapeHtml(point.quote)}</em></p>` : ''}
+      <p style="margin-top:12px;">Use the DOI / landing-page link to read the full source.</p>
+    </div>`;
+  }
+  evidenceModal.setAttribute('data-open', 'true');
+}
+
+function closeEvidenceModal() {
+  if (!evidenceModal) return;
+  evidenceModal.removeAttribute('data-open');
+  const pdfPanel = evidenceModal.querySelector('.modal-pdf');
+  if (pdfPanel) {
+    // Drop the iframe so the PDF stops downloading / locking the focus.
+    pdfPanel.innerHTML = '<div class="modal-pdf-fallback">Loading evidence…</div>';
+  }
+}
+
+if (evidenceModal) {
+  evidenceModal.addEventListener('click', event => {
+    if (event.target === evidenceModal || event.target.classList.contains('modal-close')) {
+      closeEvidenceModal();
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && evidenceModal.getAttribute('data-open') === 'true') {
+      closeEvidenceModal();
+    }
+  });
+}
+
 renderLegend();
 setTimeout(() => setIdleBaseFromCurrentView(), 600);
 startIdleDrift();
@@ -2915,6 +3173,19 @@ startIdleDrift();
 </body>
 </html>
 """
+    hybrid_evidence: dict = {}
+    if HYBRID_EVIDENCE_JSON.is_file():
+        try:
+            hybrid_evidence = json.loads(HYBRID_EVIDENCE_JSON.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            hybrid_evidence = {}
+    # Mirror the evidence JSON into graphify-out so external tooling can consume
+    # the same canonical source served by GitHub Pages.
+    if hybrid_evidence:
+        (GRAPHIFY_OUT / "hybrid_model_evidence.json").write_text(
+            json.dumps(hybrid_evidence, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
     html = (
         template.replace("__GRAPH_DATA__", json.dumps(graph_data))
         .replace("__COMMUNITY_LABELS__", json.dumps({str(key): value for key, value in community_labels.items()}))
@@ -2922,6 +3193,7 @@ startIdleDrift();
         .replace("__COMMUNITY_DEFINITIONS__", json.dumps(CLASS_DEFINITIONS))
         .replace("__ORGANISM_GROUP_ORDER__", json.dumps(ORGANISM_GROUP_ORDER))
         .replace("__ORGANISM_GROUP_LABELS__", json.dumps(ORGANISM_GROUP_LABELS))
+        .replace("__HYBRID_EVIDENCE__", json.dumps(hybrid_evidence))
     )
     (GRAPHIFY_OUT / "graph.html").write_text(html, encoding="utf-8")
 

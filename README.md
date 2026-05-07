@@ -48,12 +48,54 @@ A more **systematic, agentic build** of the same idea — a general-purpose know
 
 What you can do in the explorer:
 
-- **Four layouts** — force-directed, by year, by organism, and **Virtual Cells** (groups papers by WCM completeness: Complete WCM · Partial WCM · Related Model — large groups wrap into sub-columns).
+- **Four graph layouts + one evidence view** — force-directed, by year, by organism, **Virtual Cells** (groups papers by WCM completeness: Complete · Partial · Related), and **Hybrid Model Summary** (a non-graph evidence-table view, see below).
 - **Cleaner labels** — `Author Year` on the graph, full title on hover and in the side panel.
 - **Rich node details** — title, journal, year, citation count, abstract, methods summary, limitations, and future work.
 - **Provenance-aware hovers** — limitation and future-work bullets link to parsed-PDF page anchors when an article PDF is available, plus the curated note section and the DOI / landing page.
 - **Color = method class** — 🔵 Mechanistic models · 🟠 Machine Learning models · 🔴 Hybrid architectures.
 - Subtle idle camera drift when the graph is not being manipulated.
+
+### Hybrid Model Summary view
+
+Argues — with seeded literature evidence — that progress toward predictive whole-cell models will come from coordinating three complementary ML–mechanistic strategies, not from a single best paradigm:
+
+1. **Embedded ML–MM hybridisation** — closure, constraint, emulation/surrogate.
+2. **Pipeline ML→MM systems** — curation, inference, structural learning.
+3. **Parallel ML–MM comparison** — matched predictions, agreement vs disagreement, foundation-model baselines.
+
+Each paradigm card lists claims; each claim expands into evidence bullets that trace back to specific papers in this corpus. **Click an evidence bullet** to open a modal that shows the paper title, citation, the supporting excerpt, and — when a local PDF is present — embeds the PDF with page-level navigation (`#page=N`); falls back gracefully to the DOI / landing page.
+
+Evidence lives in the editable `metadata/hybrid_model_evidence.json` (mirrored to `graphify-out/hybrid_model_evidence.json` at build time). To extend:
+
+```bash
+# 1. Edit the JSON (see schema + adding-evidence note below).
+# 2. Validate.
+python scripts/validate_hybrid_evidence.py
+
+# 3. Re-export.
+python scripts/build_wcm_graph.py --stage export
+```
+
+#### Adding new evidence
+
+Each evidence point lives under a paradigm → claim and looks like:
+
+```json
+{
+  "id": "hybrid-embedded-closure-001",
+  "paper_id": "WCM-046",
+  "text": "Concise plain-English summary of the support claim.",
+  "section": "Results",
+  "page": 3,
+  "quote": "Optional verbatim excerpt (≤ 1 sentence is fine).",
+  "confidence": "manual_verified | parsed_pdf | metadata_only | needs_review"
+}
+```
+
+- `paper_id` must match an entry in `metadata/wcm_paper_metadata.json`. To cite a paper not yet in the corpus, set `"external_reference": true` and provide a `citation_label` + `doi`.
+- `page` is consumed as `#page=N` in the embedded PDF iframe.
+- `confidence` defaults to `metadata_only`. Bump to `parsed_pdf` once you have a verified excerpt and page anchor.
+- The validation script flags missing `quote`/`page` anchors as warnings (non-fatal) so curators can deepen weaker rows over time.
 
 GitHub Pages is published from the repository root; `index.html` redirects to `graphify-out/graph.html`, and `.nojekyll` keeps the viewer's relative links into `graphify_corpus/` working as plain static files.
 
