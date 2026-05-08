@@ -44,6 +44,7 @@ CLASS_TABLE = METADATA_DIR / "wcm_method_classes.csv"
 ORGANISM_TABLE = METADATA_DIR / "wcm_organisms.csv"
 PAPER_METADATA_JSON = METADATA_DIR / "wcm_paper_metadata.json"
 HYBRID_EVIDENCE_JSON = METADATA_DIR / "hybrid_model_evidence.json"
+EXTERNAL_PAPERS_JSON = METADATA_DIR / "hybrid_external_papers.json"
 AUTO_INGEST_JSON = METADATA_DIR / "auto_ingested_papers.json"
 PDF_PARSE_CACHE_JSON = METADATA_DIR / "pdf_parse_cache.json"
 PDF_PROCESSING_STATUS = METADATA_DIR / "pdf_processing_status.csv"
@@ -2029,6 +2030,12 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
   .evidence-paper .pdf-pill { color: #34d399; }
   .evidence-paper .nopdf-pill { color: #fbbf24; }
   .evidence-paper .confidence-pill { color: #cbd5e1; padding: 1px 6px; border: 1px solid #334155; border-radius: 999px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .evidence-paper .journal-pill { color: #d8b4fe; font-style: italic; }
+  .evidence-paper .citation-count-pill { color: #f0abfc; padding: 1px 6px; border: 1px solid rgba(240, 171, 252, 0.3); border-radius: 999px; font-size: 10px; }
+  /* Hybrid summary: download-CSV button (bottom-right floating). */
+  body[data-view="hybrid"] #hybrid-download-csv { position: fixed; right: 24px; bottom: 24px; z-index: 9; background: linear-gradient(180deg, #1e293b, #0b1220); color: #e2e8f0; border: 1px solid #38bdf8; border-radius: 999px; padding: 10px 16px; font-size: 13px; cursor: pointer; box-shadow: 0 4px 14px rgba(2, 6, 23, 0.45), 0 0 0 1px rgba(56, 189, 248, 0.18); display: inline-flex; align-items: center; gap: 8px; }
+  body[data-view="hybrid"] #hybrid-download-csv:hover { border-color: #7dd3fc; color: #fff; box-shadow: 0 6px 20px rgba(2, 6, 23, 0.55), 0 0 0 1px rgba(56, 189, 248, 0.35); }
+  body:not([data-view="hybrid"]) #hybrid-download-csv { display: none; }
   .evidence-paper .quality-primary { color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 1px 6px; border-radius: 999px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
   .evidence-paper .quality-secondary { color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.35); padding: 1px 6px; border-radius: 999px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
   .evidence-paper .multi-claim-pill { color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.35); padding: 1px 6px; border-radius: 999px; font-size: 10px; }
@@ -2096,6 +2103,9 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
       <div id="legend"></div>
     </div>
     <div id="hybrid-summary"></div>
+    <button id="hybrid-download-csv" type="button" title="Download evidence metadata as TSV (open in Google Sheets / Excel)">
+      <span aria-hidden="true">⬇</span> Download metadata (TSV)
+    </button>
   </div>
   <aside id="sidebar">
     <div id="empty-state">
@@ -3001,6 +3011,9 @@ function startIdleDrift() {
 }
 
 // --- Hybrid Model Summary view ---------------------------------------------
+// Map of WCM-NNN paper_id → graph node (with title, journal, year, doi,
+// cited_by_count, pdf_status, pdf_href, etc.). The graph only carries WCM
+// corpus papers, so we ALSO need a separate registry for EXT-NNN papers.
 const PAPER_BY_ID = (() => {
   const map = {};
   GRAPH_DATA.nodes.filter(node => node.file_type === 'paper').forEach(node => {
@@ -3008,6 +3021,48 @@ const PAPER_BY_ID = (() => {
   });
   return map;
 })();
+
+// EXT-NNN registry. Embedded from metadata/hybrid_external_papers.json at
+// build time so the table + modal can show journal / authors / citations
+// for cross-domain rows the same way they do for WCM rows.
+const EXTERNAL_PAPERS = __EXTERNAL_PAPERS__;
+
+// Unified lookup. Prefer WCM (graph node has the richest fields); fall back
+// to external registry. Returns a normalized object with the keys the UI
+// reads: title, journal, year, doi, landing_page_url, pdf_href, pdf_status,
+// cited_by_count, authors, display_label.
+function lookupPaper(paperId) {
+  if (!paperId) return null;
+  const wcm = PAPER_BY_ID[paperId];
+  if (wcm) return wcm;
+  const ext = (EXTERNAL_PAPERS && EXTERNAL_PAPERS.papers) ? EXTERNAL_PAPERS.papers[paperId] : null;
+  if (!ext) return null;
+  const authors = Array.isArray(ext.authors) ? ext.authors : [];
+  const firstAuthor = authors.length ? authors[0] : '';
+  const displayLabel = firstAuthor
+    ? `${firstAuthor.split(/\s+/).slice(-1)[0]} ${ext.year || ''}`.trim()
+    : (paperId);
+  return {
+    paper_id: paperId,
+    title: ext.title || '',
+    journal: ext.journal || '',
+    year: ext.year || '',
+    doi: ext.doi || '',
+    landing_page_url: ext.doi ? `https://doi.org/${ext.doi}` : '',
+    pdf_href: '',
+    pdf_status: 'landing_page_only',
+    cited_by_count: ext.cited_by_count || 0,
+    authors: authors,
+    display_label: displayLabel,
+    label: displayLabel,
+    abstract: ext.abstract || '',
+  };
+}
+
+function formatCitations(n) {
+  if (typeof n !== 'number' || !Number.isFinite(n)) return '';
+  return n.toLocaleString('en-US');
+}
 
 const EVIDENCE_BY_ID = (() => {
   const map = {};
@@ -3122,12 +3177,16 @@ function renderClaimRow(claim, paradigm) {
 }
 
 function renderEvidenceItem(point, claim, paradigm) {
-  const paper = PAPER_BY_ID[point.paper_id];
-  const citation = paper ? (paper.display_label || paper.label || point.paper_id) : (point.citation_label || point.paper_id || 'Unknown paper');
-  const journal = paper ? (paper.journal || '') : '';
-  const year = paper ? (paper.year || '') : '';
-  const hasPdf = paper && paper.pdf_status === 'downloaded' && paper.pdf_href;
+  const paper = lookupPaper(point.paper_id) || {};
+  const citation = paper.display_label || paper.label || point.citation_label || point.paper_id || 'Unknown paper';
+  const journal = paper.journal || '';
+  const year = paper.year || '';
+  const cited = (typeof paper.cited_by_count === 'number') ? paper.cited_by_count : 0;
+  const hasPdf = paper.pdf_status === 'downloaded' && paper.pdf_href;
   const pdfChip = hasPdf ? `<span class="pdf-pill">📄 PDF available</span>` : `<span class="nopdf-pill">DOI / landing page only</span>`;
+  const citePill = (cited > 0)
+    ? `<span class="citation-count-pill" title="OpenAlex cited_by_count">${formatCitations(cited)} citations</span>`
+    : '';
   const conf = point.confidence || 'metadata_only';
 
   // Rank pill (left of row).
@@ -3158,8 +3217,9 @@ function renderEvidenceItem(point, claim, paradigm) {
       <p class="evidence-text">${rankPill}${escapeHtml(point.text)}</p>
       <div class="evidence-paper">
         <span class="citation-pill">${escapeHtml(citation)}</span>
-        ${journal ? `<span>${escapeHtml(journal)}</span>` : ''}
+        ${journal ? `<span class="journal-pill">${escapeHtml(journal)}</span>` : ''}
         ${year ? `<span>${escapeHtml(String(year))}</span>` : ''}
+        ${citePill}
         ${pdfChip}
         <span class="confidence-pill">${escapeHtml(conf)}</span>
         ${qualityPill}
@@ -3169,6 +3229,120 @@ function renderEvidenceItem(point, claim, paradigm) {
     </li>
   `;
 }
+
+// --- CSV / TSV download for the evidence table -----------------------------
+// Builds a TSV (tab-separated) so curators can paste straight into Google
+// Sheets without comma-escaping headaches. Columns:
+//   Title, Authors, Group, Year, URL, Reviewed by,
+//   Model paradigm, Key methods/results, Core contribution to hybrid idea
+function _csvField(s) {
+  // TSV-safe: collapse newlines and tabs to spaces. We do NOT need to
+  // double-quote because we use a tab delimiter.
+  return String(s == null ? '' : s).replace(/[\\t\\r\\n]+/g, ' ').trim();
+}
+
+function _topRubricRationales(point, n) {
+  if (!point || !point.rubric) return '';
+  const dimOrder = ['useful_outcomes','immediate_benefit','plausible','scalable','how_to_validate'];
+  const entries = dimOrder.map(d => {
+    const r = point.rubric[d];
+    if (!r) return null;
+    return { dim: d, score: r.score || 0, rationale: r.rationale || '' };
+  }).filter(Boolean);
+  entries.sort((a, b) => b.score - a.score);
+  return entries.slice(0, n)
+    .map(e => `[${RUBRIC_DIM_LABELS[e.dim] || e.dim} ${e.score}] ${e.rationale}`)
+    .join(' | ');
+}
+
+function buildEvidenceTSV() {
+  const cols = [
+    'Title',
+    'Authors',
+    'Group',
+    'Year',
+    'URL',
+    'Reviewed by',
+    'Model paradigm',
+    'Key methods/results',
+    'Core contribution to hybrid idea',
+    // Useful extras for traceability — appended after the user-listed cols.
+    'Paper ID',
+    'Claim ID',
+    'Subtype',
+    'Journal',
+    'Cited by count',
+    'Journal tier',
+    'Match quality',
+    'Weighted total',
+    'Rank within claim',
+    'Confidence',
+    'Screenshot status',
+  ];
+  const rows = [cols];
+  if (!HYBRID_EVIDENCE || !Array.isArray(HYBRID_EVIDENCE.paradigms)) {
+    return rows.map(r => r.join('\\t')).join('\\n');
+  }
+  for (const paradigm of HYBRID_EVIDENCE.paradigms) {
+    for (const claim of (paradigm.claims || [])) {
+      for (const point of (claim.evidence_points || [])) {
+        const paper = lookupPaper(point.paper_id) || {};
+        const authors = Array.isArray(paper.authors) ? paper.authors.join(', ') : '';
+        const url = paper.landing_page_url
+          || (paper.doi ? `https://doi.org/${paper.doi}` : '');
+        const reviewedBy = point.scored_by
+          || point.promoted_by
+          || (point.confidence === 'manual_verified' ? 'manual curator' : 'agent pipeline');
+        const keyMethods = _topRubricRationales(point, 2);
+        rows.push([
+          _csvField(paper.title || ''),
+          _csvField(authors),
+          _csvField(paradigm.id || ''),
+          _csvField(paper.year || ''),
+          _csvField(url),
+          _csvField(reviewedBy),
+          _csvField(paradigm.label || ''),
+          _csvField(keyMethods),
+          _csvField(point.text || ''),
+          _csvField(point.paper_id || ''),
+          _csvField(claim.id || ''),
+          _csvField(claim.subtype || ''),
+          _csvField(paper.journal || ''),
+          _csvField(typeof paper.cited_by_count === 'number' ? paper.cited_by_count : ''),
+          _csvField(typeof point.journal_tier === 'number' ? point.journal_tier : ''),
+          _csvField(point.claim_match_quality || ''),
+          _csvField(typeof point.weighted_total === 'number' ? point.weighted_total : ''),
+          _csvField(typeof point.rank_within_claim === 'number' ? point.rank_within_claim : ''),
+          _csvField(point.confidence || ''),
+          _csvField(point.screenshot_status || ''),
+        ]);
+      }
+    }
+  }
+  return rows.map(r => r.join('\\t')).join('\\n');
+}
+
+function downloadEvidenceTSV() {
+  const tsv = buildEvidenceTSV();
+  // Prepend BOM so Excel auto-detects UTF-8 properly when opened directly.
+  const blob = new Blob(['\\ufeff' + tsv], { type: 'text/tab-separated-values;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const ts = new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = `hybrid_model_evidence_${ts}.tsv`;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => {
+    URL.revokeObjectURL(url);
+    a.remove();
+  }, 0);
+}
+
+(() => {
+  const btn = document.getElementById('hybrid-download-csv');
+  if (btn) btn.addEventListener('click', downloadEvidenceTSV);
+})();
 
 function attachHybridHandlers(root) {
   root.addEventListener('click', event => {
@@ -3196,7 +3370,7 @@ function openEvidenceModal(evidenceId) {
   const record = EVIDENCE_BY_ID[evidenceId];
   if (!record || !evidenceModal) return;
   const { paradigm, claim, point } = record;
-  const paper = PAPER_BY_ID[point.paper_id] || {};
+  const paper = lookupPaper(point.paper_id) || {};
   const citation = paper.display_label || paper.label || point.citation_label || point.paper_id || 'Unknown paper';
   const doiHref = paper.doi ? `https://doi.org/${paper.doi}` : (paper.landing_page_url || '');
   const landingHref = paper.landing_page_url || doiHref || '';
@@ -3324,6 +3498,14 @@ startIdleDrift();
 </body>
 </html>
 """
+    def _load_external_papers() -> dict:
+        if not EXTERNAL_PAPERS_JSON.is_file():
+            return {}
+        try:
+            return json.loads(EXTERNAL_PAPERS_JSON.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            return {}
+
     hybrid_evidence: dict = {}
     if HYBRID_EVIDENCE_JSON.is_file():
         try:
@@ -3390,6 +3572,7 @@ startIdleDrift();
         .replace("__ORGANISM_GROUP_ORDER__", json.dumps(ORGANISM_GROUP_ORDER))
         .replace("__ORGANISM_GROUP_LABELS__", json.dumps(ORGANISM_GROUP_LABELS))
         .replace("__HYBRID_EVIDENCE__", json.dumps(embedded_evidence))
+        .replace("__EXTERNAL_PAPERS__", json.dumps(_load_external_papers()))
     )
     (GRAPHIFY_OUT / "graph.html").write_text(html, encoding="utf-8")
 

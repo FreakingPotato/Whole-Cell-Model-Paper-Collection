@@ -177,12 +177,70 @@ def _section_hint_for_page(page_idx: int) -> str:
     return f"page {page_idx + 1}"
 
 
+_REFERENCES_HEADING_RE = re.compile(
+    r"^\s*(?:references|bibliography|literature\s+cited|works\s+cited|"
+    r"reference\s+list|cited\s+literature)\s*$",
+    re.IGNORECASE,
+)
+
+
+def _find_references_cutoff(
+    doc: fitz.Document,
+) -> tuple[int, float] | None:
+    """Find the page index + y-top of the references heading.
+
+    Returns ``(page_idx, y_top)`` of the line whose text matches a heading
+    like "References" / "Bibliography". Sentences at or after that position
+    must be excluded so we never highlight bibliography entries that happen
+    to keyword-match the claim. Returns ``None`` if no heading is found —
+    in which case we conservatively keep all sentences (the per-line
+    ``_looks_like_reference_line`` heuristic still applies as a safety net).
+
+    Heuristic: the heading is typically a short, lone line (≤ 40 chars), in
+    its own block, on a page in the *back* of the document. We only accept a
+    match if it sits past the 40 % mark of the document, so that an
+    abstract that mentions the word "references" doesn't trip us up.
+    """
+    n_pages = len(doc)
+    if n_pages == 0:
+        return None
+    earliest_eligible_page = max(0, int(n_pages * 0.40))
+    for page_idx in range(earliest_eligible_page, n_pages):
+        page = doc.load_page(page_idx)
+        try:
+            page_dict = page.get_text("dict")
+        except Exception:
+            continue
+        for block in page_dict.get("blocks", []):
+            if block.get("type") != 0:
+                continue
+            lines = block.get("lines") or []
+            for line in lines:
+                spans = line.get("spans") or []
+                line_text = "".join(span.get("text", "") for span in spans).strip()
+                if not line_text or len(line_text) > 40:
+                    continue
+                if _REFERENCES_HEADING_RE.match(line_text):
+                    bbox = line.get("bbox") or (0, 0, 0, 0)
+                    return page_idx, float(bbox[1])
+    return None
+
+
 def _build_sentence_corpus(doc: fitz.Document) -> tuple[list[Sentence], int]:
-    """Return ``(sentences, total_block_text_len)``."""
+    """Return ``(sentences, total_block_text_len)``.
+
+    Sentences that fall at or after the References / Bibliography heading
+    are excluded so bibliography entries can never become evidence.
+    """
     sentences: list[Sentence] = []
     total_text_len = 0
+    refs_cutoff = _find_references_cutoff(doc)
 
     for page_idx in range(len(doc)):
+        # Hard cutoff at the references heading: skip the entire rest of
+        # the document so we never touch the bibliography.
+        if refs_cutoff is not None and page_idx > refs_cutoff[0]:
+            break
         page = doc.load_page(page_idx)
         try:
             page_dict = page.get_text("dict")
@@ -252,6 +310,13 @@ def _build_sentence_corpus(doc: fitz.Document) -> tuple[list[Sentence], int]:
                     hits.append(lb)
                 if not hits:
                     continue
+                # Same-page cutoff: if we're on the references-heading page
+                # itself, drop any sentence whose top-line bbox is below the
+                # heading.
+                if refs_cutoff is not None and page_idx == refs_cutoff[0]:
+                    sentence_top = min(b[1] for b in hits)
+                    if sentence_top >= refs_cutoff[1]:
+                        continue
                 clean = _collapse_ws(sent_clean)
                 # Filter out reference-list fragments and ultra-short
                 # sentences. partial_ratio gives "." or "Struct." a perfect

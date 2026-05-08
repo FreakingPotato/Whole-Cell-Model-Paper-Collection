@@ -1,18 +1,168 @@
 {
   "hybrid-embedded-closure-001": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 2
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      5,
+      6,
+      13
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 64831,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 149029,
+        "scores": [
+          73.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 148738,
+        "scores": [
+          74.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 129566,
+        "scores": [
+          74.3
+        ]
+      },
+      {
+        "group": 5,
+        "page": 13,
+        "n_sentences": 1,
+        "png_bytes": 149020,
+        "scores": [
+          78.4
+        ]
+      }
+    ]
   },
   "hybrid-embedded-closure-002": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 5
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      5,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 58883,
+        "scores": [
+          89.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 133599,
+        "scores": [
+          74.1,
+          91.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 95538,
+        "scores": [
+          72.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 98797,
+        "scores": [
+          76.8
+        ]
+      }
+    ]
   },
   "hybrid-embedded-constraint-001": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 1
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 124466,
+        "scores": [
+          72.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 129628,
+        "scores": [
+          73.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 123627,
+        "scores": [
+          73.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 118940,
+        "scores": [
+          74.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 159241,
+        "scores": [
+          72.1
+        ]
+      }
+    ]
   },
   "hybrid-embedded-constraint-002": {
     "status": "no_pdf",
@@ -20,8 +170,51 @@
   },
   "hybrid-embedded-emulation-001": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 5
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 49551,
+        "scores": [
+          70.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 104329,
+        "scores": [
+          72.7
+        ]
+      },
+      {
+        "group": 3,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 89966,
+        "scores": [
+          74.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 5,
+        "n_sentences": 2,
+        "png_bytes": 74765,
+        "scores": [
+          75.8,
+          71.7
+        ]
+      }
+    ]
   },
   "hybrid-embedded-emulation-002": {
     "status": "no_pdf",
@@ -29,38 +222,404 @@
   },
   "hybrid-embedded-emulation-003": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 1
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      5,
+      7,
+      14,
+      15,
+      25
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 70995,
+        "scores": [
+          72.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 148588,
+        "scores": [
+          70.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 153685,
+        "scores": [
+          71.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 15,
+        "n_sentences": 1,
+        "png_bytes": 124254,
+        "scores": [
+          71.3
+        ]
+      },
+      {
+        "group": 5,
+        "page": 25,
+        "n_sentences": 1,
+        "png_bytes": 120049,
+        "scores": [
+          69.0
+        ]
+      }
+    ]
   },
   "hybrid-pipeline-curation-001": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 5
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 122515,
+        "scores": [
+          67.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 50071,
+        "scores": [
+          68.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 102301,
+        "scores": [
+          68.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 64159,
+        "scores": [
+          67.9
+        ]
+      },
+      {
+        "group": 5,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 120474,
+        "scores": [
+          67.4
+        ]
+      }
+    ]
   },
   "hybrid-pipeline-curation-002": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 1
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      3,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 47272,
+        "scores": [
+          85.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 78458,
+        "scores": [
+          76.7
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 74732,
+        "scores": [
+          70.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 54615,
+        "scores": [
+          68.8
+        ]
+      },
+      {
+        "group": 5,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 82485,
+        "scores": [
+          69.6
+        ]
+      }
+    ]
   },
   "hybrid-pipeline-inference-001": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 1
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      4,
+      5,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 68682,
+        "scores": [
+          79.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 88236,
+        "scores": [
+          77.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 83063,
+        "scores": [
+          73.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 138535,
+        "scores": [
+          70.5
+        ]
+      },
+      {
+        "group": 5,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 132017,
+        "scores": [
+          70.7
+        ]
+      }
+    ]
   },
   "hybrid-pipeline-inference-002": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 5
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      20,
+      23,
+      25
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 58883,
+        "scores": [
+          74.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 126911,
+        "scores": [
+          76.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 20,
+        "n_sentences": 1,
+        "png_bytes": 46486,
+        "scores": [
+          73.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 23,
+        "n_sentences": 1,
+        "png_bytes": 77380,
+        "scores": [
+          73.6
+        ]
+      },
+      {
+        "group": 5,
+        "page": 25,
+        "n_sentences": 1,
+        "png_bytes": 76560,
+        "scores": [
+          76.3
+        ]
+      }
+    ]
   },
   "hybrid-pipeline-structural-001": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 4
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      9,
+      14,
+      29,
+      30
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 58032,
+        "scores": [
+          75.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 66696,
+        "scores": [
+          75.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 51337,
+        "scores": [
+          70.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 29,
+        "n_sentences": 1,
+        "png_bytes": 59542,
+        "scores": [
+          70.5
+        ]
+      },
+      {
+        "group": 5,
+        "page": 30,
+        "n_sentences": 1,
+        "png_bytes": 81847,
+        "scores": [
+          70.0
+        ]
+      }
+    ]
   },
   "hybrid-pipeline-structural-002": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 3
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      2,
+      6,
+      8,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 130932,
+        "scores": [
+          80.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 126415,
+        "scores": [
+          76.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 78056,
+        "scores": [
+          74.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 2,
+        "png_bytes": 169842,
+        "scores": [
+          72.4,
+          72.5
+        ]
+      }
+    ]
   },
   "hybrid-parallel-matched-001": {
     "status": "no_pdf",
@@ -68,13 +627,120 @@
   },
   "hybrid-parallel-matched-002": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 2
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      6,
+      16,
+      21,
+      46
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 30511,
+        "scores": [
+          90.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 42187,
+        "scores": [
+          80.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 75651,
+        "scores": [
+          81.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 21,
+        "n_sentences": 1,
+        "png_bytes": 70965,
+        "scores": [
+          80.5
+        ]
+      },
+      {
+        "group": 5,
+        "page": 46,
+        "n_sentences": 1,
+        "png_bytes": 81803,
+        "scores": [
+          82.2
+        ]
+      }
+    ]
   },
   "hybrid-parallel-matched-003": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 5
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      5,
+      11,
+      21
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 58032,
+        "scores": [
+          65.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 98779,
+        "scores": [
+          65.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 84287,
+        "scores": [
+          67.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 68523,
+        "scores": [
+          65.8
+        ]
+      },
+      {
+        "group": 5,
+        "page": 21,
+        "n_sentences": 1,
+        "png_bytes": 80188,
+        "scores": [
+          66.9
+        ]
+      }
+    ]
   },
   "hybrid-parallel-agreement-001": {
     "status": "no_pdf",
@@ -82,37 +748,244 @@
   },
   "hybrid-parallel-agreement-002": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 3
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      8,
+      9,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 103943,
+        "scores": [
+          68.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 127053,
+        "scores": [
+          64.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 158587,
+        "scores": [
+          65.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 2,
+        "png_bytes": 115881,
+        "scores": [
+          67.0,
+          66.4
+        ]
+      }
+    ]
   },
   "hybrid-parallel-foundation-001": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 3
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      12,
+      15,
+      17
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 55619,
+        "scores": [
+          89.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 12,
+        "n_sentences": 1,
+        "png_bytes": 69664,
+        "scores": [
+          71.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 15,
+        "n_sentences": 2,
+        "png_bytes": 73734,
+        "scores": [
+          69.6,
+          69.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 78913,
+        "scores": [
+          73.6
+        ]
+      }
+    ]
   },
   "hybrid-parallel-foundation-002": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 3
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      5,
+      10,
+      19,
+      22
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 41088,
+        "scores": [
+          79.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 84718,
+        "scores": [
+          77.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 70242,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 19,
+        "n_sentences": 1,
+        "png_bytes": 95684,
+        "scores": [
+          77.6
+        ]
+      },
+      {
+        "group": 5,
+        "page": 22,
+        "n_sentences": 1,
+        "png_bytes": 76725,
+        "scores": [
+          76.5
+        ]
+      }
+    ]
   },
   "hybrid-parallel-foundation-003": {
     "status": "ok",
-    "notes": "skipped (idempotent)",
-    "screenshots": 3
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      6,
+      11,
+      31,
+      46
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 30511,
+        "scores": [
+          81.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 51282,
+        "scores": [
+          83.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 51840,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 31,
+        "n_sentences": 1,
+        "png_bytes": 71129,
+        "scores": [
+          76.5
+        ]
+      },
+      {
+        "group": 5,
+        "page": 46,
+        "n_sentences": 1,
+        "png_bytes": 81803,
+        "scores": [
+          77.1
+        ]
+      }
+    ]
   },
   "hybrid-embedded-closure-EXT001": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
     "screenshots": 5,
     "pages": [
+      2,
       3,
+      7,
       9,
-      14,
-      18
+      14
     ],
     "groups": [
       {
         "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 71282,
+        "scores": [
+          77.8
+        ]
+      },
+      {
+        "group": 2,
         "page": 3,
         "n_sentences": 1,
         "png_bytes": 82306,
@@ -121,7 +994,16 @@
         ]
       },
       {
-        "group": 2,
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 82919,
+        "scores": [
+          76.9
+        ]
+      },
+      {
+        "group": 4,
         "page": 9,
         "n_sentences": 1,
         "png_bytes": 62898,
@@ -130,30 +1012,12 @@
         ]
       },
       {
-        "group": 3,
+        "group": 5,
         "page": 14,
         "n_sentences": 1,
         "png_bytes": 57482,
         "scores": [
           80.3
-        ]
-      },
-      {
-        "group": 4,
-        "page": 18,
-        "n_sentences": 1,
-        "png_bytes": 81314,
-        "scores": [
-          83.6
-        ]
-      },
-      {
-        "group": 5,
-        "page": 18,
-        "n_sentences": 1,
-        "png_bytes": 87338,
-        "scores": [
-          92.7
         ]
       }
     ]
@@ -220,16 +1084,26 @@
   "hybrid-embedded-closure-EXT003": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 5,
+    "screenshots": 4,
     "pages": [
+      3,
       4,
       5,
-      6,
-      9
+      6
     ],
     "groups": [
       {
         "group": 1,
+        "page": 3,
+        "n_sentences": 2,
+        "png_bytes": 187316,
+        "scores": [
+          74.1,
+          72.9
+        ]
+      },
+      {
+        "group": 2,
         "page": 4,
         "n_sentences": 1,
         "png_bytes": 137690,
@@ -238,7 +1112,7 @@
         ]
       },
       {
-        "group": 2,
+        "group": 3,
         "page": 5,
         "n_sentences": 1,
         "png_bytes": 83651,
@@ -247,30 +1121,12 @@
         ]
       },
       {
-        "group": 3,
+        "group": 4,
         "page": 6,
         "n_sentences": 1,
         "png_bytes": 107274,
         "scores": [
           76.5
-        ]
-      },
-      {
-        "group": 4,
-        "page": 9,
-        "n_sentences": 1,
-        "png_bytes": 128930,
-        "scores": [
-          77.6
-        ]
-      },
-      {
-        "group": 5,
-        "page": 9,
-        "n_sentences": 1,
-        "png_bytes": 118432,
-        "scores": [
-          78.3
         ]
       }
     ]
@@ -328,17 +1184,24 @@
   "hybrid-embedded-closure-EXT005": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 5,
+    "screenshots": 4,
     "pages": [
       1,
       16,
-      17,
-      22,
-      23
+      17
     ],
     "groups": [
       {
         "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 58312,
+        "scores": [
+          72.6
+        ]
+      },
+      {
+        "group": 2,
         "page": 1,
         "n_sentences": 1,
         "png_bytes": 60137,
@@ -347,39 +1210,22 @@
         ]
       },
       {
-        "group": 2,
+        "group": 3,
         "page": 16,
-        "n_sentences": 1,
-        "png_bytes": 61639,
+        "n_sentences": 2,
+        "png_bytes": 47636,
         "scores": [
-          78.1
+          78.1,
+          72.2
         ]
       },
       {
-        "group": 3,
+        "group": 4,
         "page": 17,
         "n_sentences": 1,
         "png_bytes": 44873,
         "scores": [
           78.1
-        ]
-      },
-      {
-        "group": 4,
-        "page": 22,
-        "n_sentences": 1,
-        "png_bytes": 42895,
-        "scores": [
-          73.0
-        ]
-      },
-      {
-        "group": 5,
-        "page": 23,
-        "n_sentences": 1,
-        "png_bytes": 76992,
-        "scores": [
-          73.2
         ]
       }
     ]
@@ -392,7 +1238,7 @@
       1,
       2,
       3,
-      22
+      16
     ],
     "groups": [
       {
@@ -433,11 +1279,11 @@
       },
       {
         "group": 5,
-        "page": 22,
+        "page": 16,
         "n_sentences": 1,
-        "png_bytes": 137921,
+        "png_bytes": 74636,
         "scores": [
-          90.4
+          82.7
         ]
       }
     ]
@@ -626,8 +1472,10 @@
     "screenshots": 5,
     "pages": [
       1,
-      24,
-      25
+      2,
+      7,
+      14,
+      17
     ],
     "groups": [
       {
@@ -641,38 +1489,38 @@
       },
       {
         "group": 2,
-        "page": 24,
+        "page": 2,
         "n_sentences": 1,
-        "png_bytes": 111214,
+        "png_bytes": 53473,
         "scores": [
-          75.4
+          70.0
         ]
       },
       {
         "group": 3,
-        "page": 24,
+        "page": 7,
         "n_sentences": 1,
-        "png_bytes": 86306,
+        "png_bytes": 89027,
         "scores": [
-          72.3
+          70.5
         ]
       },
       {
         "group": 4,
-        "page": 24,
+        "page": 14,
         "n_sentences": 1,
-        "png_bytes": 104408,
+        "png_bytes": 50901,
         "scores": [
-          72.9
+          71.9
         ]
       },
       {
         "group": 5,
-        "page": 25,
+        "page": 17,
         "n_sentences": 1,
-        "png_bytes": 80629,
+        "png_bytes": 62841,
         "scores": [
-          72.3
+          70.9
         ]
       }
     ]
@@ -682,12 +1530,32 @@
     "strategy": "multi-sentence-multi-page",
     "screenshots": 5,
     "pages": [
+      2,
+      3,
       4,
-      18
+      11
     ],
     "groups": [
       {
         "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 69745,
+        "scores": [
+          69.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 46825,
+        "scores": [
+          71.0
+        ]
+      },
+      {
+        "group": 3,
         "page": 4,
         "n_sentences": 1,
         "png_bytes": 52366,
@@ -696,7 +1564,7 @@
         ]
       },
       {
-        "group": 2,
+        "group": 4,
         "page": 4,
         "n_sentences": 1,
         "png_bytes": 63123,
@@ -705,30 +1573,12 @@
         ]
       },
       {
-        "group": 3,
-        "page": 18,
-        "n_sentences": 1,
-        "png_bytes": 82017,
-        "scores": [
-          72.5
-        ]
-      },
-      {
-        "group": 4,
-        "page": 18,
-        "n_sentences": 1,
-        "png_bytes": 86468,
-        "scores": [
-          76.2
-        ]
-      },
-      {
         "group": 5,
-        "page": 18,
+        "page": 11,
         "n_sentences": 1,
-        "png_bytes": 93331,
+        "png_bytes": 72615,
         "scores": [
-          71.2
+          68.4
         ]
       }
     ]
@@ -799,8 +1649,8 @@
     "pages": [
       1,
       2,
-      17,
-      19
+      9,
+      13
     ],
     "groups": [
       {
@@ -814,6 +1664,15 @@
       },
       {
         "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 78711,
+        "scores": [
+          72.4
+        ]
+      },
+      {
+        "group": 3,
         "page": 2,
         "n_sentences": 1,
         "png_bytes": 97770,
@@ -822,30 +1681,21 @@
         ]
       },
       {
-        "group": 3,
-        "page": 17,
-        "n_sentences": 1,
-        "png_bytes": 48959,
-        "scores": [
-          78.1
-        ]
-      },
-      {
         "group": 4,
-        "page": 19,
+        "page": 9,
         "n_sentences": 1,
-        "png_bytes": 68560,
+        "png_bytes": 72968,
         "scores": [
-          82.7
+          75.1
         ]
       },
       {
         "group": 5,
-        "page": 19,
+        "page": 13,
         "n_sentences": 1,
-        "png_bytes": 69833,
+        "png_bytes": 89065,
         "scores": [
-          93.7
+          74.1
         ]
       }
     ]
@@ -914,10 +1764,9 @@
     "screenshots": 5,
     "pages": [
       1,
+      7,
       11,
-      16,
-      17,
-      19
+      13
     ],
     "groups": [
       {
@@ -931,6 +1780,24 @@
       },
       {
         "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 73928,
+        "scores": [
+          74.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 67600,
+        "scores": [
+          74.1
+        ]
+      },
+      {
+        "group": 4,
         "page": 11,
         "n_sentences": 1,
         "png_bytes": 66373,
@@ -939,30 +1806,12 @@
         ]
       },
       {
-        "group": 3,
-        "page": 16,
-        "n_sentences": 1,
-        "png_bytes": 49997,
-        "scores": [
-          82.8
-        ]
-      },
-      {
-        "group": 4,
-        "page": 17,
-        "n_sentences": 1,
-        "png_bytes": 47459,
-        "scores": [
-          78.1
-        ]
-      },
-      {
         "group": 5,
-        "page": 19,
+        "page": 13,
         "n_sentences": 1,
-        "png_bytes": 51708,
+        "png_bytes": 66418,
         "scores": [
-          77.4
+          74.2
         ]
       }
     ]
@@ -973,9 +1822,10 @@
     "screenshots": 5,
     "pages": [
       1,
+      2,
       3,
-      25,
-      26
+      17,
+      21
     ],
     "groups": [
       {
@@ -989,6 +1839,15 @@
       },
       {
         "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 81174,
+        "scores": [
+          83.6
+        ]
+      },
+      {
+        "group": 3,
         "page": 3,
         "n_sentences": 1,
         "png_bytes": 51890,
@@ -997,30 +1856,21 @@
         ]
       },
       {
-        "group": 3,
-        "page": 25,
-        "n_sentences": 1,
-        "png_bytes": 50201,
-        "scores": [
-          88.0
-        ]
-      },
-      {
         "group": 4,
-        "page": 26,
+        "page": 17,
         "n_sentences": 1,
-        "png_bytes": 67998,
+        "png_bytes": 51682,
         "scores": [
-          97.2
+          85.9
         ]
       },
       {
         "group": 5,
-        "page": 26,
+        "page": 21,
         "n_sentences": 1,
-        "png_bytes": 72429,
+        "png_bytes": 59769,
         "scores": [
-          94.5
+          85.2
         ]
       }
     ]
@@ -1031,8 +1881,9 @@
     "screenshots": 5,
     "pages": [
       1,
-      11,
-      12
+      9,
+      10,
+      11
     ],
     "groups": [
       {
@@ -1055,29 +1906,29 @@
       },
       {
         "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 83161,
+        "scores": [
+          76.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 135054,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 5,
         "page": 11,
         "n_sentences": 1,
         "png_bytes": 124595,
         "scores": [
           80.4
-        ]
-      },
-      {
-        "group": 4,
-        "page": 11,
-        "n_sentences": 1,
-        "png_bytes": 102730,
-        "scores": [
-          80.8
-        ]
-      },
-      {
-        "group": 5,
-        "page": 12,
-        "n_sentences": 1,
-        "png_bytes": 153812,
-        "scores": [
-          79.7
         ]
       }
     ]
@@ -1088,10 +1939,8 @@
     "screenshots": 5,
     "pages": [
       1,
-      21,
-      22,
-      24,
-      25
+      3,
+      4
     ],
     "groups": [
       {
@@ -1105,38 +1954,38 @@
       },
       {
         "group": 2,
-        "page": 21,
+        "page": 1,
         "n_sentences": 1,
-        "png_bytes": 45210,
+        "png_bytes": 71706,
         "scores": [
-          83.0
+          75.6
         ]
       },
       {
         "group": 3,
-        "page": 22,
+        "page": 3,
         "n_sentences": 1,
-        "png_bytes": 54579,
+        "png_bytes": 86922,
         "scores": [
-          79.4
+          77.9
         ]
       },
       {
         "group": 4,
-        "page": 24,
+        "page": 4,
         "n_sentences": 1,
-        "png_bytes": 55487,
+        "png_bytes": 53531,
         "scores": [
-          79.6
+          77.4
         ]
       },
       {
         "group": 5,
-        "page": 25,
+        "page": 4,
         "n_sentences": 1,
-        "png_bytes": 65929,
+        "png_bytes": 44595,
         "scores": [
-          80.0
+          77.1
         ]
       }
     ]
@@ -1311,11 +2160,13 @@
   "hybrid-pipeline-curation-EXT002": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 5,
     "pages": [
       1,
       2,
-      8
+      3,
+      4,
+      6
     ],
     "groups": [
       {
@@ -1338,21 +2189,29 @@
       },
       {
         "group": 3,
-        "page": 8,
-        "n_sentences": 2,
-        "png_bytes": 196617,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 152314,
         "scores": [
-          77.4,
-          85.4
+          73.0
         ]
       },
       {
         "group": 4,
-        "page": 8,
+        "page": 4,
         "n_sentences": 1,
-        "png_bytes": 126737,
+        "png_bytes": 169286,
         "scores": [
-          78.0
+          74.8
+        ]
+      },
+      {
+        "group": 5,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 110477,
+        "scores": [
+          75.1
         ]
       }
     ]
@@ -1360,11 +2219,12 @@
   "hybrid-pipeline-curation-EXT003": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 5,
     "pages": [
       1,
+      5,
       6,
-      9
+      8
     ],
     "groups": [
       {
@@ -1378,6 +2238,24 @@
       },
       {
         "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 127890,
+        "scores": [
+          67.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 100754,
+        "scores": [
+          67.4
+        ]
+      },
+      {
+        "group": 4,
         "page": 6,
         "n_sentences": 1,
         "png_bytes": 99499,
@@ -1386,22 +2264,12 @@
         ]
       },
       {
-        "group": 3,
-        "page": 9,
-        "n_sentences": 2,
-        "png_bytes": 188768,
-        "scores": [
-          80.7,
-          93.9
-        ]
-      },
-      {
-        "group": 4,
-        "page": 9,
+        "group": 5,
+        "page": 8,
         "n_sentences": 1,
-        "png_bytes": 152879,
+        "png_bytes": 185803,
         "scores": [
-          70.6
+          67.7
         ]
       }
     ]
@@ -1409,11 +2277,11 @@
   "hybrid-pipeline-curation-EXT004": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 3,
+    "screenshots": 5,
     "pages": [
       1,
-      3,
-      6
+      2,
+      3
     ],
     "groups": [
       {
@@ -1427,6 +2295,24 @@
       },
       {
         "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 73971,
+        "scores": [
+          73.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 123008,
+        "scores": [
+          70.3
+        ]
+      },
+      {
+        "group": 4,
         "page": 3,
         "n_sentences": 1,
         "png_bytes": 137160,
@@ -1435,14 +2321,12 @@
         ]
       },
       {
-        "group": 3,
-        "page": 6,
-        "n_sentences": 3,
-        "png_bytes": 190415,
+        "group": 5,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 112431,
         "scores": [
-          96.7,
-          87.1,
-          77.4
+          76.3
         ]
       }
     ]
@@ -1454,8 +2338,9 @@
     "pages": [
       1,
       2,
-      7,
-      8
+      4,
+      6,
+      7
     ],
     "groups": [
       {
@@ -1478,29 +2363,29 @@
       },
       {
         "group": 3,
-        "page": 7,
+        "page": 4,
         "n_sentences": 1,
-        "png_bytes": 148841,
+        "png_bytes": 94633,
         "scores": [
-          73.2
+          73.1
         ]
       },
       {
         "group": 4,
-        "page": 8,
+        "page": 6,
         "n_sentences": 1,
-        "png_bytes": 201307,
+        "png_bytes": 66361,
         "scores": [
-          79.7
+          71.6
         ]
       },
       {
         "group": 5,
-        "page": 8,
+        "page": 7,
         "n_sentences": 1,
-        "png_bytes": 201292,
+        "png_bytes": 130305,
         "scores": [
-          75.8
+          70.6
         ]
       }
     ]
@@ -1551,9 +2436,9 @@
     "screenshots": 4,
     "pages": [
       1,
+      2,
       4,
-      7,
-      8
+      7
     ],
     "groups": [
       {
@@ -1567,30 +2452,30 @@
       },
       {
         "group": 2,
-        "page": 4,
+        "page": 2,
         "n_sentences": 1,
-        "png_bytes": 141494,
+        "png_bytes": 137715,
         "scores": [
-          79.9
+          72.3
         ]
       },
       {
         "group": 3,
-        "page": 7,
+        "page": 4,
         "n_sentences": 2,
-        "png_bytes": 97094,
+        "png_bytes": 150789,
         "scores": [
-          77.8,
-          78.3
+          72.1,
+          79.9
         ]
       },
       {
         "group": 4,
-        "page": 8,
+        "page": 7,
         "n_sentences": 1,
-        "png_bytes": 151129,
+        "png_bytes": 107671,
         "scores": [
-          84.9
+          77.8
         ]
       }
     ]
@@ -1598,10 +2483,11 @@
   "hybrid-pipeline-curation-EXT008": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 5,
     "pages": [
       1,
       2,
+      4,
       14,
       15
     ],
@@ -1626,6 +2512,15 @@
       },
       {
         "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 128698,
+        "scores": [
+          79.2
+        ]
+      },
+      {
+        "group": 4,
         "page": 14,
         "n_sentences": 1,
         "png_bytes": 118121,
@@ -1634,13 +2529,12 @@
         ]
       },
       {
-        "group": 4,
+        "group": 5,
         "page": 15,
-        "n_sentences": 2,
-        "png_bytes": 183635,
+        "n_sentences": 1,
+        "png_bytes": 110212,
         "scores": [
-          80.0,
-          80.0
+          79.6
         ]
       }
     ]
@@ -1648,7 +2542,7 @@
   "hybrid-pipeline-curation-EXT009": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 3,
     "pages": [
       1,
       3,
@@ -1658,9 +2552,10 @@
       {
         "group": 1,
         "page": 1,
-        "n_sentences": 1,
-        "png_bytes": 140052,
+        "n_sentences": 2,
+        "png_bytes": 179707,
         "scores": [
+          73.9,
           74.0
         ]
       },
@@ -1682,25 +2577,18 @@
         "scores": [
           86.7
         ]
-      },
-      {
-        "group": 4,
-        "page": 6,
-        "n_sentences": 1,
-        "png_bytes": 151925,
-        "scores": [
-          86.2
-        ]
       }
     ]
   },
   "hybrid-pipeline-curation-EXT010": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 5,
     "pages": [
       1,
+      2,
       5,
+      6,
       7
     ],
     "groups": [
@@ -1715,6 +2603,15 @@
       },
       {
         "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 132026,
+        "scores": [
+          74.1
+        ]
+      },
+      {
+        "group": 3,
         "page": 5,
         "n_sentences": 1,
         "png_bytes": 170076,
@@ -1723,22 +2620,21 @@
         ]
       },
       {
-        "group": 3,
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 107684,
+        "scores": [
+          73.5
+        ]
+      },
+      {
+        "group": 5,
         "page": 7,
         "n_sentences": 1,
         "png_bytes": 109749,
         "scores": [
           75.2
-        ]
-      },
-      {
-        "group": 4,
-        "page": 7,
-        "n_sentences": 2,
-        "png_bytes": 159596,
-        "scores": [
-          85.8,
-          81.8
         ]
       }
     ]
@@ -1798,8 +2694,8 @@
     "screenshots": 5,
     "pages": [
       1,
-      6,
-      24
+      2,
+      6
     ],
     "groups": [
       {
@@ -1831,20 +2727,20 @@
       },
       {
         "group": 4,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 40097,
+        "scores": [
+          79.4
+        ]
+      },
+      {
+        "group": 5,
         "page": 6,
         "n_sentences": 1,
         "png_bytes": 74975,
         "scores": [
           84.0
-        ]
-      },
-      {
-        "group": 5,
-        "page": 24,
-        "n_sentences": 1,
-        "png_bytes": 110286,
-        "scores": [
-          80.3
         ]
       }
     ]
@@ -1902,11 +2798,11 @@
   "hybrid-pipeline-inference-EXT004": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 5,
     "pages": [
       1,
       3,
-      9
+      4
     ],
     "groups": [
       {
@@ -1920,6 +2816,24 @@
       },
       {
         "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 71617,
+        "scores": [
+          78.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 82726,
+        "scores": [
+          78.1
+        ]
+      },
+      {
+        "group": 4,
         "page": 3,
         "n_sentences": 1,
         "png_bytes": 54848,
@@ -1928,22 +2842,12 @@
         ]
       },
       {
-        "group": 3,
-        "page": 9,
+        "group": 5,
+        "page": 4,
         "n_sentences": 1,
-        "png_bytes": 116810,
+        "png_bytes": 118940,
         "scores": [
-          87.2
-        ]
-      },
-      {
-        "group": 4,
-        "page": 9,
-        "n_sentences": 2,
-        "png_bytes": 164919,
-        "scores": [
-          85.0,
-          82.8
+          71.8
         ]
       }
     ]
@@ -1955,8 +2859,7 @@
     "pages": [
       1,
       3,
-      23,
-      26
+      23
     ],
     "groups": [
       {
@@ -1971,6 +2874,15 @@
       },
       {
         "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 84903,
+        "scores": [
+          77.4
+        ]
+      },
+      {
+        "group": 3,
         "page": 3,
         "n_sentences": 1,
         "png_bytes": 60564,
@@ -1979,21 +2891,12 @@
         ]
       },
       {
-        "group": 3,
+        "group": 4,
         "page": 23,
         "n_sentences": 1,
         "png_bytes": 76321,
         "scores": [
           80.9
-        ]
-      },
-      {
-        "group": 4,
-        "page": 26,
-        "n_sentences": 1,
-        "png_bytes": 132278,
-        "scores": [
-          78.7
         ]
       }
     ]
@@ -2119,8 +3022,8 @@
     "pages": [
       1,
       8,
-      26,
-      31
+      16,
+      26
     ],
     "groups": [
       {
@@ -2152,20 +3055,20 @@
       },
       {
         "group": 4,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 103563,
+        "scores": [
+          78.1
+        ]
+      },
+      {
+        "group": 5,
         "page": 26,
         "n_sentences": 1,
         "png_bytes": 46718,
         "scores": [
           80.0
-        ]
-      },
-      {
-        "group": 5,
-        "page": 31,
-        "n_sentences": 1,
-        "png_bytes": 96677,
-        "scores": [
-          79.5
         ]
       }
     ]
@@ -2222,12 +3125,13 @@
   "hybrid-pipeline-structural-learning-EXT003": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 5,
     "pages": [
       1,
       2,
-      11,
-      12
+      5,
+      7,
+      11
     ],
     "groups": [
       {
@@ -2250,21 +3154,29 @@
       },
       {
         "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 108936,
+        "scores": [
+          73.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 147517,
+        "scores": [
+          73.3
+        ]
+      },
+      {
+        "group": 5,
         "page": 11,
         "n_sentences": 1,
         "png_bytes": 116524,
         "scores": [
           80.7
-        ]
-      },
-      {
-        "group": 4,
-        "page": 12,
-        "n_sentences": 2,
-        "png_bytes": 163357,
-        "scores": [
-          77.7,
-          87.7
         ]
       }
     ]
@@ -2325,8 +3237,8 @@
     "screenshots": 4,
     "pages": [
       1,
-      5,
-      12
+      2,
+      5
     ],
     "groups": [
       {
@@ -2341,29 +3253,29 @@
       {
         "group": 2,
         "page": 1,
-        "n_sentences": 1,
-        "png_bytes": 97774,
+        "n_sentences": 2,
+        "png_bytes": 187872,
         "scores": [
+          75.1,
           79.9
         ]
       },
       {
         "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 140894,
+        "scores": [
+          72.8
+        ]
+      },
+      {
+        "group": 4,
         "page": 5,
         "n_sentences": 1,
         "png_bytes": 190850,
         "scores": [
           78.7
-        ]
-      },
-      {
-        "group": 4,
-        "page": 12,
-        "n_sentences": 2,
-        "png_bytes": 158398,
-        "scores": [
-          107.7,
-          106.1
         ]
       }
     ]
@@ -2424,7 +3336,7 @@
     "pages": [
       1,
       14,
-      19
+      15
     ],
     "groups": [
       {
@@ -2465,11 +3377,11 @@
       },
       {
         "group": 5,
-        "page": 19,
+        "page": 15,
         "n_sentences": 1,
-        "png_bytes": 86656,
+        "png_bytes": 83068,
         "scores": [
-          81.4
+          80.4
         ]
       }
     ]
@@ -2619,9 +3531,9 @@
     "screenshots": 4,
     "pages": [
       1,
+      2,
       5,
-      8,
-      14
+      8
     ],
     "groups": [
       {
@@ -2636,6 +3548,15 @@
       },
       {
         "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 85639,
+        "scores": [
+          74.4
+        ]
+      },
+      {
+        "group": 3,
         "page": 5,
         "n_sentences": 1,
         "png_bytes": 68574,
@@ -2644,21 +3565,12 @@
         ]
       },
       {
-        "group": 3,
+        "group": 4,
         "page": 8,
         "n_sentences": 1,
         "png_bytes": 59646,
         "scores": [
           77.9
-        ]
-      },
-      {
-        "group": 4,
-        "page": 14,
-        "n_sentences": 1,
-        "png_bytes": 30169,
-        "scores": [
-          78.2
         ]
       }
     ]
@@ -2666,11 +3578,11 @@
   "hybrid-parallel-matched-predictions-EXT004": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 4,
+    "screenshots": 5,
     "pages": [
       1,
-      16,
-      18
+      10,
+      11
     ],
     "groups": [
       {
@@ -2686,28 +3598,36 @@
         "group": 2,
         "page": 1,
         "n_sentences": 1,
+        "png_bytes": 91280,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 1,
+        "n_sentences": 1,
         "png_bytes": 64890,
         "scores": [
           104.8
         ]
       },
       {
-        "group": 3,
-        "page": 16,
-        "n_sentences": 2,
-        "png_bytes": 130889,
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 102802,
         "scores": [
-          81.3,
-          92.1
+          78.2
         ]
       },
       {
-        "group": 4,
-        "page": 18,
+        "group": 5,
+        "page": 11,
         "n_sentences": 1,
-        "png_bytes": 121973,
+        "png_bytes": 89768,
         "scores": [
-          83.3
+          79.2
         ]
       }
     ]
@@ -2998,13 +3918,11 @@
   "hybrid-parallel-agreement-disagreement-EXT004": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 5,
+    "screenshots": 4,
     "pages": [
       1,
-      15,
-      16,
-      17,
-      18
+      2,
+      15
     ],
     "groups": [
       {
@@ -3018,38 +3936,30 @@
       },
       {
         "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 94088,
+        "scores": [
+          71.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 2,
+        "png_bytes": 96845,
+        "scores": [
+          70.6,
+          73.2
+        ]
+      },
+      {
+        "group": 4,
         "page": 15,
         "n_sentences": 1,
         "png_bytes": 66755,
         "scores": [
           90.1
-        ]
-      },
-      {
-        "group": 3,
-        "page": 16,
-        "n_sentences": 1,
-        "png_bytes": 78616,
-        "scores": [
-          80.3
-        ]
-      },
-      {
-        "group": 4,
-        "page": 17,
-        "n_sentences": 1,
-        "png_bytes": 86435,
-        "scores": [
-          82.2
-        ]
-      },
-      {
-        "group": 5,
-        "page": 18,
-        "n_sentences": 1,
-        "png_bytes": 81968,
-        "scores": [
-          77.0
         ]
       }
     ]
@@ -3057,16 +3967,24 @@
   "hybrid-parallel-agreement-disagreement-EXT005": {
     "status": "ok",
     "strategy": "multi-sentence-multi-page",
-    "screenshots": 5,
+    "screenshots": 4,
     "pages": [
+      1,
       2,
-      8,
-      9,
-      11
+      7
     ],
     "groups": [
       {
         "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 158048,
+        "scores": [
+          77.0
+        ]
+      },
+      {
+        "group": 2,
         "page": 2,
         "n_sentences": 1,
         "png_bytes": 75155,
@@ -3075,39 +3993,22 @@
         ]
       },
       {
-        "group": 2,
+        "group": 3,
         "page": 2,
-        "n_sentences": 1,
-        "png_bytes": 138337,
+        "n_sentences": 2,
+        "png_bytes": 174486,
         "scores": [
+          76.6,
           93.6
         ]
       },
       {
-        "group": 3,
-        "page": 8,
-        "n_sentences": 1,
-        "png_bytes": 109298,
-        "scores": [
-          87.3
-        ]
-      },
-      {
         "group": 4,
-        "page": 9,
+        "page": 7,
         "n_sentences": 1,
-        "png_bytes": 113304,
+        "png_bytes": 122322,
         "scores": [
-          97.4
-        ]
-      },
-      {
-        "group": 5,
-        "page": 11,
-        "n_sentences": 1,
-        "png_bytes": 62997,
-        "scores": [
-          83.1
+          76.6
         ]
       }
     ]
@@ -3118,10 +4019,10 @@
     "screenshots": 5,
     "pages": [
       1,
+      5,
       12,
-      39,
-      49,
-      57
+      36,
+      39
     ],
     "groups": [
       {
@@ -3135,6 +4036,15 @@
       },
       {
         "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 65770,
+        "scores": [
+          78.7
+        ]
+      },
+      {
+        "group": 3,
         "page": 12,
         "n_sentences": 1,
         "png_bytes": 55066,
@@ -3143,30 +4053,21 @@
         ]
       },
       {
-        "group": 3,
+        "group": 4,
+        "page": 36,
+        "n_sentences": 1,
+        "png_bytes": 106204,
+        "scores": [
+          77.8
+        ]
+      },
+      {
+        "group": 5,
         "page": 39,
         "n_sentences": 1,
         "png_bytes": 69079,
         "scores": [
           82.8
-        ]
-      },
-      {
-        "group": 4,
-        "page": 49,
-        "n_sentences": 1,
-        "png_bytes": 78420,
-        "scores": [
-          85.0
-        ]
-      },
-      {
-        "group": 5,
-        "page": 57,
-        "n_sentences": 1,
-        "png_bytes": 114437,
-        "scores": [
-          88.3
         ]
       }
     ]
@@ -3177,8 +4078,8 @@
     "screenshots": 4,
     "pages": [
       1,
-      12,
-      13
+      10,
+      12
     ],
     "groups": [
       {
@@ -3202,20 +4103,20 @@
       },
       {
         "group": 3,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 129080,
+        "scores": [
+          77.9
+        ]
+      },
+      {
+        "group": 4,
         "page": 12,
         "n_sentences": 1,
         "png_bytes": 112596,
         "scores": [
           87.2
-        ]
-      },
-      {
-        "group": 4,
-        "page": 13,
-        "n_sentences": 1,
-        "png_bytes": 121847,
-        "scores": [
-          115.9
         ]
       }
     ]
@@ -3335,13 +4236,23 @@
     "strategy": "multi-sentence-multi-page",
     "screenshots": 4,
     "pages": [
+      1,
       2,
-      8,
-      9
+      3,
+      8
     ],
     "groups": [
       {
         "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 30859,
+        "scores": [
+          77.1
+        ]
+      },
+      {
+        "group": 2,
         "page": 2,
         "n_sentences": 1,
         "png_bytes": 146134,
@@ -3350,31 +4261,22 @@
         ]
       },
       {
-        "group": 2,
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 113278,
+        "scores": [
+          76.9
+        ]
+      },
+      {
+        "group": 4,
         "page": 8,
         "n_sentences": 2,
         "png_bytes": 136456,
         "scores": [
           85.6,
           104.2
-        ]
-      },
-      {
-        "group": 3,
-        "page": 8,
-        "n_sentences": 1,
-        "png_bytes": 91659,
-        "scores": [
-          84.6
-        ]
-      },
-      {
-        "group": 4,
-        "page": 9,
-        "n_sentences": 1,
-        "png_bytes": 120766,
-        "scores": [
-          80.5
         ]
       }
     ]
