@@ -1,0 +1,672 @@
+{
+  "EXT-002": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-018-07210-0.pdf",
+    "saved_to": "pdfs/EXT-002_2018_Deep_learning_for_universal_linear_embeddings_of_nonlinear_dynamics.pdf",
+    "sha256": "04f977dbce9c42a23925a5eafb0a913153834e1219d5afe5f8473d895dceb3c3",
+    "bytes": 1621244,
+    "n_pages": 10,
+    "notes": "ok (10 pages)"
+  },
+  "EXT-004": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-017-00030-8.pdf",
+    "saved_to": "pdfs/EXT-004_2017_Chaos_as_an_intermittently_forced_linear_system.pdf",
+    "sha256": "8e071eefe03a7ed1096a569d58d6be290c55c96561fc19a487e7e3f2ece6e04b",
+    "bytes": 3574427,
+    "n_pages": 9,
+    "notes": "ok (9 pages)"
+  },
+  "EXT-005": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.osti.gov/servlets/purl/1850305",
+    "saved_to": "pdfs/EXT-005_2020_DPM_A_deep_learning_PDE_augmentation_method_with_application_to_large_eddy_simul.pdf",
+    "sha256": "202228f6f2a21df24ec4cb16832040cc3c0fbf7dc338cbd6e19b9f4d0c77d0ab",
+    "bytes": 8432846,
+    "n_pages": 33,
+    "notes": "ok (33 pages)"
+  },
+  "EXT-006": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://arxiv.org/pdf/1804.02480",
+    "saved_to": "pdfs/EXT-006_2018_Data_driven_closures_for_stochastic_dynamical_systems.pdf",
+    "sha256": "a0fd1895cc7290ee2dab9da4a86623d8fed3fc0ca3ff7fee553d51475c46141c",
+    "bytes": 11040835,
+    "n_pages": 23,
+    "notes": "ok (23 pages)"
+  },
+  "EXT-007": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://ris.utwente.nl/ws/files/323585594/buchfink-et-al-2023-symplectic-model-reduction-of-hamiltonian-systems-on-nonlinear-manifolds-and-approximation-with.pdf",
+    "saved_to": "pdfs/EXT-007_2023_Symplectic_Model_Reduction_of_Hamiltonian_Systems_on_Nonlinear_Manifolds_and_App.pdf",
+    "sha256": "c483129af27c3ba999668f61962bde82a9ba701ac25439b3b56ae40de8602ad3",
+    "bytes": 1498677,
+    "n_pages": 23,
+    "notes": "ok (23 pages)"
+  },
+  "EXT-008": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2210.14675v2.pdf",
+    "saved_to": "pdfs/EXT-008_2022_Comparison_of_neural_closure_models_for_discretised_PDEs.pdf",
+    "sha256": "3823445e3fe8956b86f728a5eb9740ce372be6152c8decdfee63922273cdd565",
+    "bytes": 5188329,
+    "n_pages": 24,
+    "notes": "ok (24 pages)"
+  },
+  "EXT-011": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/1711.10561.pdf",
+    "saved_to": "pdfs/EXT-011_2018_Physics_informed_neural_networks_A_deep_learning_framework_for_solving_forward_a.pdf",
+    "sha256": "2a8db6776a110a4f36bd1e36af79cf31a2e74baa5af8f7ee3d9286a75fdc400d",
+    "bytes": 579573,
+    "n_pages": 22,
+    "notes": "ok (22 pages)"
+  },
+  "EXT-012": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.osti.gov/servlets/purl/2282016",
+    "saved_to": "pdfs/EXT-012_2021_Physics_informed_machine_learning.pdf",
+    "sha256": "5f28df0b345786d9c740ef6479daa5ed7de7faebe5dc9f35ad022706b86e557a",
+    "bytes": 2979574,
+    "n_pages": 20,
+    "notes": "ok (20 pages)"
+  },
+  "EXT-013": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2001.04536.pdf",
+    "saved_to": "pdfs/EXT-013_2021_Understanding_and_Mitigating_Gradient_Flow_Pathologies_in_Physics_Informed_Neura.pdf",
+    "sha256": "937e4f3610d52f283e124492ec836740dba6cdb0390ff3919a583d25be2b3881",
+    "bytes": 7367775,
+    "n_pages": 28,
+    "notes": "ok (28 pages)"
+  },
+  "EXT-015": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://arxiv.org/pdf/2003.06496",
+    "saved_to": "pdfs/EXT-015_2020_NSFnets_Navier_Stokes_flow_nets_Physics_informed_neural_networks_for_the_incompr.pdf",
+    "sha256": "dda79e70937a72a49fdb4ed78ff901dc1fb74bc9c3e578998e120ff57e94710a",
+    "bytes": 7935974,
+    "n_pages": 35,
+    "notes": "ok (35 pages)"
+  },
+  "EXT-017": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.osti.gov/servlets/purl/1977272",
+    "saved_to": "pdfs/EXT-017_2021_When_and_why_PINNs_fail_to_train_A_neural_tangent_kernel_perspective.pdf",
+    "sha256": "daa93b9b025da1bae2bfe9c0d63070ea83e88d8fbdfcb4c9c651c0ec7ce36a4a",
+    "bytes": 5683677,
+    "n_pages": 29,
+    "notes": "ok (29 pages)"
+  },
+  "EXT-018": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "n_pages": null,
+    "notes": "Journal 'Computer Methods in Applied Mechanics and Engineering' direct PDF host blocks automated requests (Nature 406 / Sciencedirect 403). bioRxiv mirror returns 403. No arXiv preprint located. Original notes: pass1: openalex_oa: https://www.sciencedirect.com/science/article/am/pii/S0045782520302127?via%3Dihub -> HTTP 403 | unpaywall: https://www.sciencedirect.com/science/article/am/pii/S0045782520302127?via%3Dihub -> HTTP 403 | arxiv: no arxiv_id | europepmc: no PMCID at EPMC | journal_direct: no url || pass2: arxiv: validation_failed: title words not found in first 3 pages (matched 1/3) | openalex_oa:"
+  },
+  "EXT-020": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://arxiv.org/pdf/1901.06314",
+    "saved_to": "pdfs/EXT-020_2019_Physics_constrained_deep_learning_for_high_dimensional_surrogate_modeling_and_un.pdf",
+    "sha256": "b63347dcee29d7c99a41667a90f043419718f8f01b0b809526ba74542b4c7bca",
+    "bytes": 5108842,
+    "n_pages": 51,
+    "notes": "ok (51 pages)"
+  },
+  "EXT-021": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://arxiv.org/pdf/1910.03193",
+    "saved_to": "pdfs/EXT-021_2021_Learning_nonlinear_operators_via_DeepONet_based_on_the_universal_approximation_t.pdf",
+    "sha256": "4b0bea3d69cbcb044b4e6b754de87ad3dc6efe7e5f2606cb090bca0e00bbad4a",
+    "bytes": 757987,
+    "n_pages": 22,
+    "notes": "ok (22 pages)"
+  },
+  "EXT-023": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC8480920?pdf=render",
+    "saved_to": "pdfs/EXT-023_2021_Learning_the_solution_operator_of_parametric_partial_differential_equations_with.pdf",
+    "sha256": "ea3705e40f64e110399c2d992325a603576811204e8bb971469ab107342649b9",
+    "bytes": 4885393,
+    "n_pages": 9,
+    "notes": "ok (9 pages)"
+  },
+  "EXT-024": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2309.15325.pdf",
+    "saved_to": "pdfs/EXT-024_2024_Neural_operators_for_accelerating_scientific_simulations_and_design.pdf",
+    "sha256": "e0080c903e8c80457f7953fe019f455f4b65c05e8d1d2e2f97f60895bde3db2a",
+    "bytes": 513916,
+    "n_pages": 23,
+    "notes": "ok (23 pages)"
+  },
+  "EXT-025": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2202.06137.pdf",
+    "saved_to": "pdfs/EXT-025_2022_MIONet_Learning_Multiple_Input_Operators_via_Tensor_Product.pdf",
+    "sha256": "625669860b310d7bb9d14622b3478101fa5e29cd2738a0b31075f804f30a0eb0",
+    "bytes": 755804,
+    "n_pages": 25,
+    "notes": "ok (25 pages)"
+  },
+  "EXT-027": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2406.02917.pdf",
+    "saved_to": "pdfs/EXT-027_2024_A_comprehensive_and_FAIR_comparison_between_MLP_and_KAN_representations_for_diff.pdf",
+    "sha256": "cc753496df1b56b047d86d6806c167b039fec7c9df9c22b68db6e4382c66a9a3",
+    "bytes": 10754340,
+    "n_pages": 37,
+    "notes": "ok (37 pages)"
+  },
+  "EXT-028": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41524-022-00876-7.pdf",
+    "saved_to": "pdfs/EXT-028_2022_Learning_two_phase_microstructure_evolution_using_neural_operators_and_autoencod.pdf",
+    "sha256": "ae87244cffac96a18c0b6694287ff24678b49904de007886c6ac8f82e061f9ca",
+    "bytes": 4438655,
+    "n_pages": 13,
+    "notes": "ok (13 pages)"
+  },
+  "EXT-029": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2411.06587.pdf",
+    "saved_to": "pdfs/EXT-029_2025_Variational_Physics_informed_Neural_Operator_VINO_for_solving_partial_differenti.pdf",
+    "sha256": "eecfe1f07e76ddf5ef364ec75fdf4b7734aeda0a7dd410404cac0910f0754d27",
+    "bytes": 20648256,
+    "n_pages": 30,
+    "notes": "ok (30 pages)"
+  },
+  "EXT-030": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.osti.gov/servlets/purl/1906445",
+    "saved_to": "pdfs/EXT-030_2022_Deep_transfer_operator_learning_for_partial_differential_equations_under_conditi.pdf",
+    "sha256": "b0570d1447d73af39bbe80d7bd9e2a013bc757cecef5551d9e00ebce8856a424",
+    "bytes": 9473566,
+    "n_pages": 36,
+    "notes": "ok (36 pages)"
+  },
+  "EXT-031": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC6323986?pdf=render",
+    "saved_to": "pdfs/EXT-031_2018_STRING_v11_protein_protein_association_networks_with_increased_coverage_supporti.pdf",
+    "sha256": "20d504efad2de739950f55b63c788f7a330a3b54bac128c84072bcc224285965",
+    "bytes": 1760619,
+    "n_pages": 7,
+    "notes": "ok (7 pages)"
+  },
+  "EXT-032": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC7779004?pdf=render",
+    "saved_to": "pdfs/EXT-032_2020_The_STRING_database_in_2021_customizable_protein_protein_networks_and_functional.pdf",
+    "sha256": "f34b085a58b4dff1ecf87a5828261f16ef41bc88b33e0b08b92b3240b6ba8980",
+    "bytes": 1690175,
+    "n_pages": 8,
+    "notes": "ok (8 pages)"
+  },
+  "EXT-033": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC9825434?pdf=render",
+    "saved_to": "pdfs/EXT-033_2022_The_STRING_database_in_2023_protein_protein_association_networks_and_functional.pdf",
+    "sha256": "56625b669fdc087f5e861c9587e526375b507d65d8fc60b581ea0513955f2931",
+    "bytes": 3339187,
+    "n_pages": 9,
+    "notes": "ok (9 pages)"
+  },
+  "EXT-034": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC7778908?pdf=render",
+    "saved_to": "pdfs/EXT-034_2020_UniProt_the_universal_protein_knowledgebase_in_2021.pdf",
+    "sha256": "22dec2dbc89162abbf139cd8332881cb80813fec9d4e6727cc7e28e7b7d2706f",
+    "bytes": 2405411,
+    "n_pages": 10,
+    "notes": "ok (10 pages)"
+  },
+  "EXT-035": {
+    "status": "downloaded",
+    "source": "unpaywall",
+    "pdf_url": "https://arxiv.org/pdf/1901.08746",
+    "saved_to": "pdfs/EXT-035_2019_BioBERT_a_pre_trained_biomedical_language_representation_model_for_biomedical_te.pdf",
+    "sha256": "ca36358bf3bb2ad4bccc27fa045d43053a9b68a991a52455dc4416685e266345",
+    "bytes": 1403854,
+    "n_pages": 7,
+    "notes": "ok (7 pages)"
+  },
+  "EXT-036": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC3965103?pdf=render",
+    "saved_to": "pdfs/EXT-036_2013_miRBase_annotating_high_confidence_microRNAs_using_deep_sequencing_data.pdf",
+    "sha256": "43ba93eb32b2ea09b6c58307c5eb313566f62af4f6d7941bd43fe8856507878b",
+    "bytes": 7835152,
+    "n_pages": 6,
+    "notes": "ok (6 pages)"
+  },
+  "EXT-037": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC6323917?pdf=render",
+    "saved_to": "pdfs/EXT-037_2018_miRBase_from_microRNA_sequences_to_function.pdf",
+    "sha256": "e6e68042b982178bc9ff801f05705c491f48f6ac4a307e23fc029d7828cc72c9",
+    "bytes": 1913642,
+    "n_pages": 8,
+    "notes": "ok (8 pages)"
+  },
+  "EXT-038": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC2425479?pdf=render",
+    "saved_to": "pdfs/EXT-038_2008_High_throughput_functional_annotation_and_data_mining_with_the_Blast2GO_suite.pdf",
+    "sha256": "1d8ac6b5577e3110a9a9541a22beaf148c2629a63066fc3db93832ece5f7f565",
+    "bytes": 1159695,
+    "n_pages": 16,
+    "notes": "ok (16 pages)"
+  },
+  "EXT-039": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC1347471?pdf=render",
+    "saved_to": "pdfs/EXT-039_2005_BioGRID_a_general_repository_for_interaction_datasets.pdf",
+    "sha256": "c3e8b0af4ae499fe7da5c833524cb8ecf474193c13453a9870c93b4e4fee03de",
+    "bytes": 221757,
+    "n_pages": 5,
+    "notes": "ok (5 pages)"
+  },
+  "EXT-040": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC3013807?pdf=render",
+    "saved_to": "pdfs/EXT-040_2010_The_STRING_database_in_2011_functional_interaction_networks_of_proteins_globally.pdf",
+    "sha256": "fbfd6f88860642edeafbf398c4d3039eb6e6925589cb0e386f99bc9459ecc9a3",
+    "bytes": 8819948,
+    "n_pages": 8,
+    "notes": "ok (8 pages)"
+  },
+  "EXT-041": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable",
+    "saved_to": "pdfs/EXT-041_2013_Approximate_Bayesian_Computation.pdf",
+    "sha256": "1a4d137daa0a7263771e2cccc4666b537213b4ed7204f64e7341a9b902aafb8f",
+    "bytes": 428472,
+    "n_pages": 10,
+    "notes": "ok (10 pages)"
+  },
+  "EXT-042": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1004845&type=printable",
+    "saved_to": "pdfs/EXT-042_2016_Deep_Learning_for_Population_Genetic_Inference.pdf",
+    "sha256": "25d3039a8dc3047e9a2d11137d0ea2a06f9886c7a7abfeceacec1ec08ca707fa",
+    "bytes": 2700248,
+    "n_pages": 28,
+    "notes": "ok (28 pages)"
+  },
+  "EXT-043": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2106.12594.pdf",
+    "saved_to": "pdfs/EXT-043_2021_Real_Time_Gravitational_Wave_Science_with_Neural_Posterior_Estimation.pdf",
+    "sha256": "7a506105e87806f05fc8d4429f20c2866661be5a64e477757482af7c1b552707",
+    "bytes": 4873829,
+    "n_pages": 19,
+    "notes": "ok (19 pages)"
+  },
+  "EXT-046": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2210.05686.pdf",
+    "saved_to": "pdfs/EXT-046_2023_Neural_Importance_Sampling_for_Rapid_and_Reliable_Gravitational_Wave_Inference.pdf",
+    "sha256": "06038a4da04b0f311543d7bc8379b373b4174789687b13ff0c46ac52615d130b",
+    "bytes": 2167463,
+    "n_pages": 15,
+    "notes": "ok (15 pages)"
+  },
+  "EXT-047": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1009472&type=printable",
+    "saved_to": "pdfs/EXT-047_2021_OutbreakFlow_Model_based_Bayesian_inference_of_disease_outbreak_dynamics_with_in.pdf",
+    "sha256": "ef6f164f7c95db1759890946477a39a3cf4e5f933355345c9d6f9450b154079a",
+    "bytes": 2774369,
+    "n_pages": 26,
+    "notes": "ok (26 pages)"
+  },
+  "EXT-048": {
+    "status": "downloaded",
+    "source": "unpaywall",
+    "pdf_url": "https://www.osti.gov/servlets/purl/2470279",
+    "saved_to": "pdfs/EXT-048_2023_A_forward_modeling_approach_to_analyzing_galaxy_clustering_with_S_scp_im_scp_BIG.pdf",
+    "sha256": "e102d0e92d71f2a39626f358bc1d7d8ea36dd22f1610ae7bcc678f6bb30f1cfd",
+    "bytes": 9828343,
+    "n_pages": 9,
+    "notes": "ok (9 pages)"
+  },
+  "EXT-049": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1011108&type=printable",
+    "saved_to": "pdfs/EXT-049_2024_Methods_and_considerations_for_estimating_parameters_in_biophysically_detailed_n.pdf",
+    "sha256": "af1269ac53e60e85ba6527944b796ee5c4ef5fd3183c9e7f0c5e3590b4e0b17e",
+    "bytes": 3094073,
+    "n_pages": 29,
+    "notes": "ok (29 pages)"
+  },
+  "EXT-051": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC5406137?pdf=render",
+    "saved_to": "pdfs/EXT-051_2017_Data_driven_discovery_of_partial_differential_equations.pdf",
+    "sha256": "5dc557341101eb347b0fa03045c3a47f41984fab585cd762fe5b866acf08975e",
+    "bytes": 862069,
+    "n_pages": 6,
+    "notes": "ok (6 pages)"
+  },
+  "EXT-052": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s43588-023-00428-z.pdf",
+    "saved_to": "pdfs/EXT-052_2023_Machine_guided_path_sampling_to_discover_mechanisms_of_molecular_self_organizati.pdf",
+    "sha256": "e2aeac4f2f8fb9d260b64cf768a99ee3252caf950fc153adcad24ce37211a424",
+    "bytes": 12819132,
+    "n_pages": 21,
+    "notes": "ok (21 pages)"
+  },
+  "EXT-053": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-021-23479-0.pdf",
+    "saved_to": "pdfs/EXT-053_2021_Robust_learning_from_noisy_incomplete_high_dimensional_experimental_data_via_phy.pdf",
+    "sha256": "f1fca13c6536645e3847f5049a5d8618ca8abb272e6c6dc5a3f7a741c7b9aad7",
+    "bytes": 1765462,
+    "n_pages": 8,
+    "notes": "ok (8 pages)"
+  },
+  "EXT-054": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.osti.gov/servlets/purl/2440706",
+    "saved_to": "pdfs/EXT-054_2023_Discovering_a_reaction_diffusion_model_for_Alzheimer_s_disease_by_combining_PINN.pdf",
+    "sha256": "986d849dd802757197252843b8d5583c63b08a856c0739514daecfe7b840303e",
+    "bytes": 3027990,
+    "n_pages": 21,
+    "notes": "ok (21 pages)"
+  },
+  "EXT-055": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-021-26434-1.pdf",
+    "saved_to": "pdfs/EXT-055_2021_Physics_informed_learning_of_governing_equations_from_scarce_data.pdf",
+    "sha256": "8e01d81c5cac6a7f0feec06bf5ae548595e5b6fa5fdac5783c93ec974482dca9",
+    "bytes": 9627969,
+    "n_pages": 13,
+    "notes": "ok (13 pages)"
+  },
+  "EXT-056": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41586-023-06574-8.pdf",
+    "saved_to": "pdfs/EXT-056_2023_State_estimation_of_a_physical_system_with_unknown_governing_equations.pdf",
+    "sha256": "ce939ca668c58d1e4dacbe5e4af19b5ef7bf3a33345884c6761d0ba45b095606",
+    "bytes": 16426770,
+    "n_pages": 22,
+    "notes": "ok (22 pages)"
+  },
+  "EXT-057": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1011916&type=printable",
+    "saved_to": "pdfs/EXT-057_2024_AI_Aristotle_A_physics_informed_framework_for_systems_biology_gray_box_identific.pdf",
+    "sha256": "d7ceaaa852f42bc6d5c94064179cd7719039278055c3cd9fc368773f7db361cf",
+    "bytes": 4029084,
+    "n_pages": 33,
+    "notes": "ok (33 pages)"
+  },
+  "EXT-058": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.osti.gov/servlets/purl/2417947",
+    "saved_to": "pdfs/EXT-058_2023_Derivative_based_SINDy_DSINDy_Addressing_the_challenge_of_discovering_governing.pdf",
+    "sha256": "11b01690925566927649b10b83553b1263c8c7bc5018c2b6bce58a1c131e7f07",
+    "bytes": 1607409,
+    "n_pages": 40,
+    "notes": "ok (40 pages)"
+  },
+  "EXT-061": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41586-023-06291-2.pdf",
+    "saved_to": "pdfs/EXT-061_2023_Large_language_models_encode_clinical_knowledge.pdf",
+    "sha256": "969d7f5ae18a244a4fc156914e6200c4962fac11132ac6a9a2518ae58e4741d4",
+    "bytes": 4867390,
+    "n_pages": 28,
+    "notes": "ok (28 pages)"
+  },
+  "EXT-063": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/nmeth.2340.pdf",
+    "saved_to": "pdfs/EXT-063_2013_A_large_scale_evaluation_of_computational_protein_function_prediction.pdf",
+    "sha256": "d655cc19d59328bf0b1b7c3109c91b5f38e7466c8f3b229b9f2d256ec2328a08",
+    "bytes": 802384,
+    "n_pages": 9,
+    "notes": "ok (9 pages)"
+  },
+  "EXT-064": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-019-10105-3.pdf",
+    "saved_to": "pdfs/EXT-064_2019_Inferring_causation_from_time_series_in_Earth_system_sciences.pdf",
+    "sha256": "63d4f11148b5ec121b5daa3cc0a9d5bbfe8e4a060dcd35b039ccb0ebd9a7bbe6",
+    "bytes": 2322205,
+    "n_pages": 13,
+    "notes": "ok (13 pages)"
+  },
+  "EXT-065": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003963&type=printable",
+    "saved_to": "pdfs/EXT-065_2014_Deep_Neural_Networks_Rival_the_Representation_of_Primate_IT_Cortex_for_Core_Visu.pdf",
+    "sha256": "92b1a0aa319d8b8bbee336e6fba515ab7cdb0c1e05f88875a67fc0608a9d4653",
+    "bytes": 1268517,
+    "n_pages": 18,
+    "notes": "ok (18 pages)"
+  },
+  "EXT-066": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41586-021-03854-z.pdf",
+    "saved_to": "pdfs/EXT-066_2021_Skilful_precipitation_nowcasting_using_deep_generative_models_of_radar.pdf",
+    "sha256": "ca5f10f9deb516da9672272e277cee3b2a729ddf60513942afa574380c48a44b",
+    "bytes": 4994924,
+    "n_pages": 19,
+    "notes": "ok (19 pages)"
+  },
+  "EXT-070": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2006.16189v4.pdf",
+    "saved_to": "pdfs/EXT-070_2020_DOME_Recommendations_for_supervised_machine_learning_validation_in_biology.pdf",
+    "sha256": "13d76454509e4bc1bc1501b6d254cede16789e199661d59a9540982866f4a734",
+    "bytes": 683851,
+    "n_pages": 21,
+    "notes": "ok (21 pages)"
+  },
+  "EXT-071": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/1811.12907.pdf",
+    "saved_to": "pdfs/EXT-071_2019_GWTC_1_A_Gravitational_Wave_Transient_Catalog_of_Compact_Binary_Mergers_Observed.pdf",
+    "sha256": "b191b1f025db6f7f518defe6181bcc3ede2fd8059491cbcb199ef284e9bd59c6",
+    "bytes": 6972562,
+    "n_pages": 49,
+    "notes": "ok (49 pages)"
+  },
+  "EXT-072": {
+    "status": "downloaded",
+    "source": "repository",
+    "pdf_url": "https://www.repository.cam.ac.uk/bitstreams/ff0ce559-d15e-47e6-a63b-0865bdd794ab/download",
+    "saved_to": "pdfs/EXT-072_2016_Reproducibility_in_density_functional_theory_calculations_of_solids.pdf",
+    "sha256": "87f5280f1f361a08ad9a3144bfe9102d9acfbe11111108a3dd4d4ac6059003bd",
+    "bytes": 233383,
+    "n_pages": 29,
+    "notes": "ok (29 pages)"
+  },
+  "EXT-073": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-022-34025-x.pdf",
+    "saved_to": "pdfs/EXT-073_2022_Uncertainty_informed_deep_learning_models_enable_high_confidence_predictions_for.pdf",
+    "sha256": "12f92ec19d132bbcb52eff4e98c6d820ef7d3bcb320ddafdd32d5b8adf80bd0a",
+    "bytes": 8063119,
+    "n_pages": 14,
+    "notes": "ok (14 pages)"
+  },
+  "EXT-075": {
+    "status": "downloaded",
+    "source": "europepmc",
+    "pdf_url": "https://europepmc.org/articles/PMC12087009?pdf=render",
+    "saved_to": "pdfs/EXT-075_2024_Lightning_Pose_improved_animal_pose_estimation_via_semi_supervised_learning_Baye.pdf",
+    "sha256": "0cd88fdace8bb83fcd3a589b9226eee2214e387985e581cb71a3ab7a99541f71",
+    "bytes": 6352883,
+    "n_pages": 58,
+    "notes": "ok (58 pages)"
+  },
+  "EXT-076": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-023-36960-9.pdf",
+    "saved_to": "pdfs/EXT-076_2023_Deep_learning_enabled_segmentation_of_ambiguous_bioimages_with_deepflash2.pdf",
+    "sha256": "d2b0ddd835e7b2bf616a453c89c72920fcdf95f4a59cb97bc271628e8b6eb078",
+    "bytes": 4162834,
+    "n_pages": 14,
+    "notes": "ok (14 pages)"
+  },
+  "EXT-077": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2512.17153v2.pdf",
+    "saved_to": "pdfs/EXT-077_2025_Am_I_Confused_or_Is_This_Confusing_Deep_Ensembles_for_ENSO_Uncertainty_Quantific.pdf",
+    "sha256": "b556d1cf54d0a16e080f5331337fe7e4778d86426464585679b90f9cf8b01afc",
+    "bytes": 15628880,
+    "n_pages": 34,
+    "notes": "ok (34 pages)"
+  },
+  "EXT-078": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2511.13766v1.pdf",
+    "saved_to": "pdfs/EXT-078_2025_Credal_Ensemble_Distillation_for_Uncertainty_Quantification.pdf",
+    "sha256": "f0aaba2b5de230a8e4f18f7a272d69e5d52c9c993e2cabadc28c29b41f879e8e",
+    "bytes": 2494814,
+    "n_pages": 13,
+    "notes": "ok (13 pages)"
+  },
+  "EXT-080": {
+    "status": "downloaded",
+    "source": "arxiv",
+    "pdf_url": "https://arxiv.org/pdf/2409.18628v1.pdf",
+    "saved_to": "pdfs/EXT-080_2024_Towards_Integrating_Epistemic_Uncertainty_Estimation_into_the_Radiotherapy_Workf.pdf",
+    "sha256": "26dd4138b54ac984fb97a00be021c85a7c9512440b060676261ca860b2b4032e",
+    "bytes": 1401303,
+    "n_pages": 10,
+    "notes": "ok (10 pages)"
+  },
+  "EXT-081": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-44824-z.pdf",
+    "saved_to": "pdfs/EXT-081_2024_Segment_anything_in_medical_images.pdf",
+    "sha256": "78925a99aaf7f17d728bc1e4e4c262fc234d33f4319d258d9f6b2080b42ded2b",
+    "bytes": 5196000,
+    "n_pages": 9,
+    "notes": "ok (9 pages)"
+  },
+  "EXT-082": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "n_pages": null,
+    "notes": "Journal 'Nature' direct PDF host blocks automated requests (Nature 406 / Sciencedirect 403). bioRxiv mirror returns 403. No arXiv preprint located. Original notes: pass1: openalex_oa: https://www.nature.com/articles/s41586-023-05881-4.pdf -> response is not a PDF (magic-bytes check failed) | unpaywall: https://www.nature.com/articles/s41586-023-05881-4.pdf -> response is not a PDF (magic-bytes check failed) | arxiv: no arxiv_id | europepmc: no PMCID at EPMC | journal_direct: no url || pass2: arxiv: validation_failed: title words not found in first 3 pages (m"
+  },
+  "EXT-083": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41586-023-06735-9.pdf",
+    "saved_to": "pdfs/EXT-083_2023_Scaling_deep_learning_for_materials_discovery.pdf",
+    "sha256": "f1af6c92eda54f5bd84eb5012f3010d7bb9167dca337414cffca81623b4a535a",
+    "bytes": 3132539,
+    "n_pages": 11,
+    "notes": "ok (11 pages)"
+  },
+  "EXT-084": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41586-023-06555-x.pdf",
+    "saved_to": "pdfs/EXT-084_2023_A_foundation_model_for_generalizable_disease_detection_from_retinal_images.pdf",
+    "sha256": "fe4cdfb0aaa4fb539b89bfb0280731f2619820c2dc97440360e1bf74f3bee798",
+    "bytes": 22132449,
+    "n_pages": 26,
+    "notes": "ok (26 pages)"
+  },
+  "EXT-085": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41586-024-07441-w.pdf",
+    "saved_to": "pdfs/EXT-085_2024_A_whole_slide_foundation_model_for_digital_pathology_from_real_world_data.pdf",
+    "sha256": "52eda6b291c49c85274f034462e3e0d168d8bca505d845bed648fabae4192b76",
+    "bytes": 5011924,
+    "n_pages": 22,
+    "notes": "ok (22 pages)"
+  },
+  "EXT-086": {
+    "status": "paywalled",
+    "source": "none",
+    "pdf_url": null,
+    "saved_to": null,
+    "sha256": null,
+    "bytes": null,
+    "n_pages": null,
+    "notes": "Journal 'Nature Machine Intelligence' direct PDF host blocks automated requests (Nature 406 / Sciencedirect 403). bioRxiv mirror returns 403. No arXiv preprint located. Original notes: pass1: openalex_oa: https://www.nature.com/articles/s42256-022-00534-z.pdf -> response is not a PDF (magic-bytes check failed) | unpaywall: https://www.nature.com/articles/s42256-022-00534-z.pdf -> response is not a PDF (magic-bytes check failed) | arxiv: no arxiv_id | europepmc: no PMCID at EPMC | journal_direct: no url || pass2: biorxiv: https://www.biorxiv.org/content/biorxiv/early/2022/08/01/2"
+  },
+  "EXT-089": {
+    "status": "downloaded",
+    "source": "openalex_oa",
+    "pdf_url": "https://www.nature.com/articles/s41586-024-08328-6.pdf",
+    "saved_to": "pdfs/EXT-089_2025_Accurate_predictions_on_small_data_with_a_tabular_foundation_model.pdf",
+    "sha256": "6b5ce3dba2ef7454ad0868ad733a64b4ac89bcd98307773fad1e0e977caaa013",
+    "bytes": 16957699,
+    "n_pages": 23,
+    "notes": "ok (23 pages)"
+  }
+}

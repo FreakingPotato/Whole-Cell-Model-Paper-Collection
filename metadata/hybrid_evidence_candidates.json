@@ -1,0 +1,3031 @@
+{
+  "schema_version": "0.2",
+  "generated_by": "agent-R",
+  "generated_at": "2026-05-08",
+  "claims": {
+    "embedded-closure": {
+      "paradigm": "embedded",
+      "claim_text": "ML modules can approximate poorly characterised regulatory or kinetic processes inside an otherwise mechanistic framework, raising predictive accuracy without requiring fully resolved mechanisms.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-embedded-closure-EXT008",
+          "paper_id": "EXT-008",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Comparison of neural closure models for discretised PDEs",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Systematically compares derivative-fitting and trajectory-fitting neural closures on Burgers and Kuramoto-Sivashinsky."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides clear training-loss prescriptions (trajectory + discretise-then-optimise) directly reusable for closure models."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Findings backed by accuracy/stability comparisons across two benchmark PDEs and three loss procedures."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Tested on small 1D PDEs; cell-scale dimensionality unaddressed."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Explicitly contrasts derivative versus trajectory fitting, an ablation pattern WCM teams can adopt."
+            }
+          },
+          "weighted_total": 20.2,
+          "match_score": 0.721,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT005",
+          "paper_id": "EXT-005",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "DPM: A deep learning PDE augmentation method with application to large-eddy simulation",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Title and venue indicate a deep PDE-augmentation closure for LES, directly exemplifying ML closure of unresolved subgrid physics."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "LES code-coupled deep models are achievable, though biological PDE coupling adds plumbing."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Published in JCP; LES-with-NN closure is a well-supported methodology in the field."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "LES is a multimillion-DOF problem, supporting scalability claims even though biology specifics differ."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "DPM-style works typically validate against high-fidelity DNS, a transferable gold-standard pattern."
+            }
+          },
+          "weighted_total": 19.1,
+          "match_score": 0.682,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT002",
+          "paper_id": "EXT-002",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Learned Koopman embedding linearises nonlinear dynamics, indirectly demonstrating ML closure of unknown dynamical structure."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Auto-encoder architecture is reproducible, but adapting to mechanistic biological submodels still requires substantial work."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Method connects to Koopman theory and shows compact eigenfunction representations on benchmark systems."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Examples are low-dimensional dynamical systems, far from 10^5-variable cell-scale problems."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validated against analytical Koopman spectra and reconstruction error on known systems."
+            }
+          },
+          "weighted_total": 16.7,
+          "match_score": 0.596,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT004",
+          "paper_id": "EXT-004",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Chaos as an intermittently forced linear system",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "HAVOK closes nonlinear chaos by data-driven forcing on top of a linear Koopman model — closure analogue."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Delay-embedding + SVD pipeline is straightforward, but applying to biological kinetics needs adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Validated on Lorenz, magnetic-field reversals and measles outbreaks with consistent forcing statistics."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Demonstrated on low-dimensional time series; whole-cell scale untested."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Compares forcing-statistics signatures across canonical and real systems, a borrowable ablation pattern."
+            }
+          },
+          "weighted_total": 16.7,
+          "match_score": 0.596,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT006",
+          "paper_id": "EXT-006",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Data-driven closures for stochastic dynamical systems",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Title explicitly addresses data-driven closure of stochastic dynamical systems — closely matching the closure claim."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Methodology likely exists in code form, but bridging stochastic chemistry submodels still demands engineering."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "JCP venue and topic suggest sound methodology, though abstract is missing for deeper assessment."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Without abstract details, scalability to 10^5 variables is uncertain; stochastic systems are typically modest-sized."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Closure papers typically include ablation against full stochastic ground truth, a useful template."
+            }
+          },
+          "weighted_total": 15.8,
+          "match_score": 0.564,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT007",
+          "paper_id": "EXT-007",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Symplectic Model Reduction of Hamiltonian Systems on Nonlinear Manifolds and Approximation with Weakly Symplectic Autoencoder",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Symplectic-manifold ROM preserves structure but is reduction, not closure of poorly characterised kinetics."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Hamiltonian framework rarely matches dissipative biological networks; non-trivial port to WCM."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mathematically rigorous: introduces symplectic manifold Galerkin with explicit structure-preservation guarantees."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Designed for high-dimensional Hamiltonian PDEs but not demonstrated at whole-cell scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Energy-conservation and stability benchmarks are valuable validation checks for any reduced model."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.529,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT001",
+          "paper_id": "EXT-001",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Sparse and Compositionally Robust Inference of Microbial Ecological Networks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "SPIEC-EASI infers OTU networks via inverse covariance; not a closure model embedded in a mechanistic framework."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Open R/Python tool exists, but it learns associations rather than closing kinetic gaps in a WCM."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound graphical-model methodology with cross-validation, but the link to closure-style hybrid modelling is indirect."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Demonstrated on hundreds of OTUs; nothing about whole-cell-scale kinetic processes."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Stability selection and synthetic benchmarks help, but they target network inference not embedded ML closure."
+            }
+          },
+          "weighted_total": 10.6,
+          "match_score": 0.379,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT009",
+          "paper_id": "EXT-009",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Curvature effects in turbulent premixed flames of H2/Air: a DNS study with reduced chemistry",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "DNS study with reduced chemistry but no embedded ML closure module."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Combustion chemistry reduction is hand-engineered; no ML pipeline to lift directly into WCM."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Standard DNS analysis is sound, but the closure-claim relevance is tangential."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "DNS is high-DOF but the reduced chemistry mechanism is small and not learned."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "PDF analysis of OH radical states is a niche validation tool, not transferable to ML closure."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.332,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT010",
+          "paper_id": "EXT-010",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Exploring the beta distribution in variable-density turbulent mixing",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Assumed-PDF closure for turbulent mixing, but uses statistical (beta) closure rather than ML."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Stochastic-differential-equation derivation is mathematics-heavy and not a plug-in ML closure."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Mathematically grounded extension of beta-PDF closure to variable-density mixing."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Closure approach is generic but not demonstrated at WCM scale or with ML acceleration."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Comparison of moment equations to mass conservation is narrow and not ML-specific."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.332,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT003",
+          "paper_id": "EXT-003",
+          "claim_ref": "embedded-closure",
+          "paradigm": "embedded",
+          "paper_title": "Structural Properties of the Caenorhabditis elegans Neuronal Network",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 0,
+              "rationale": "Paper analyses C. elegans wiring topology; no ML closure of mechanistic gaps is presented."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Wiring data is reusable but offers no embedded ML method for WCM closure."
+            },
+            "plausible": {
+              "score": 1,
+              "rationale": "Network statistics are sound but not relevant to ML-mechanistic hybrid closure claim."
+            },
+            "scalable": {
+              "score": 1,
+              "rationale": "Single small connectome; not addressing whole-cell scale mechanistic processes."
+            },
+            "how_to_validate": {
+              "score": 1,
+              "rationale": "Topology consistency checks are not a transferable validation strategy for hybrid closure."
+            }
+          },
+          "weighted_total": 4.0,
+          "match_score": 0.143,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "embedded-constraint": {
+      "paradigm": "embedded",
+      "claim_text": "Mechanistic priors regularise or structure ML predictions so that learned components remain biologically plausible and generalise outside the training distribution.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT011",
+          "paper_id": "EXT-011",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Foundational PINN paper showing PDE residual penalties keep NN predictions consistent with physics across forward/inverse tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Mature open-source frameworks (DeepXDE, JAX) wrap this method; adoption costs are low for ODE/PDE-style biology."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Extensively validated on canonical PDEs (Burgers, Schrodinger) with low residuals and 15k+ citations."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to moderate PDE problems but vanilla PINNs struggle with stiff multi-timescale systems typical of WCMs."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides residual-based loss diagnostics and synthetic-data ablations, a directly borrowable validation template."
+            }
+          },
+          "weighted_total": 23.7,
+          "match_score": 0.846,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT012",
+          "paper_id": "EXT-012",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "Physics-informed machine learning",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Reviews concrete physics-prior wins (PINN, operator learning) where mechanistic constraints improve generalisation."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Acts as a curated pointer to mature methods and code; reduces decision overhead for WCM teams."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Authoritative Nature Reviews synthesis with broad evidence base from scientific ML community."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Surveys methods at varying scales but does not itself demonstrate cell-scale deployment."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation idioms (ablation, generalisation tests) but at survey level rather than recipe level."
+            }
+          },
+          "weighted_total": 21.5,
+          "match_score": 0.768,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT020",
+          "paper_id": "EXT-020",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "Physics-constrained deep learning for high-dimensional surrogate modeling and uncertainty quantification without labeled data",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Physics-constrained NN trains without labels, leveraging mechanistic priors to keep predictions plausible — direct match."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Label-free training is attractive when WCM ground truth is scarce; methodology is reproducible."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "JCP paper with 1k+ citations applying physics-constrained learning to high-dimensional surrogates."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Explicitly targets high-dimensional surrogate modelling, partially supporting WCM-scale ambitions."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides UQ comparisons and constraint-satisfaction checks usable as validation patterns."
+            }
+          },
+          "weighted_total": 21.3,
+          "match_score": 0.761,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT018",
+          "paper_id": "EXT-018",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "Conservative physics-informed neural networks on discrete domains for conservation laws: Applications to forward and inverse problems",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Conservative PINN enforces conservation-law constraints, directly making ML predictions physically plausible."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Conservation-form constraints map naturally onto stoichiometric and mass-balance constraints in WCM contexts."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "1k+ citation CMAME paper with peer-reviewed forward and inverse benchmarks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discrete-domain decomposition supports moderate scaling; full-cell scale not yet demonstrated."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Direct comparison with conservation residuals and inverse-problem ground truth — borrowable validation."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT013",
+          "paper_id": "EXT-013",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "Understanding and Mitigating Gradient Flow Pathologies in Physics-Informed Neural Networks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Diagnoses and fixes gradient pathologies in PINNs, indirectly improving how mechanistic priors regularise training."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides adaptive loss-balancing tricks reusable in any PINN-style WCM closure or constraint module."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "SIAM SISC paper with formal stiff-dynamics analysis backing the mitigation strategies."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Helps PINNs handle stiff problems, partially relevant to multi-timescale cell models."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Demonstrates failure modes via loss-landscape diagnostics, a useful PINN validation pattern."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT017",
+          "paper_id": "EXT-017",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "When and why PINNs fail to train: A neural tangent kernel perspective",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Identifies NTK-based failure regimes for physics-constrained NNs, indirectly improving prior-regularised training."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides loss-weighting prescriptions that drop into existing PINN-style hybrid pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Backed by neural tangent kernel theory and JCP-quality empirical analysis with 1k+ citations."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "NTK insights help stiff regimes seen in larger PINN problems but cell-scale unproven."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Failure-mode characterisation provides a diagnostic protocol for new constrained ML applications."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT015",
+          "paper_id": "EXT-015",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "NSFnets (Navier-Stokes flow nets): Physics-informed neural networks for the incompressible Navier-Stokes equations",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Embeds incompressible NS constraints into NN solver, showing physics priors improve flow predictions."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "NSFnets recipe is reusable, but mapping to reaction-diffusion biology takes engineering."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Strong validation against DNS for canonical NS benchmarks, supporting the methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrates NS solver at moderate Reynolds; 10^5 DOF cell-scale not addressed."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "DNS comparison and divergence-free residuals offer a transferable validation template."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT019",
+          "paper_id": "EXT-019",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "B-PINNs: Bayesian physics-informed neural networks for forward and inverse PDE problems with noisy data",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Bayesian PINN combines mechanistic PDE priors with uncertainty quantification, regularising ML predictions under noisy data."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Bayesian inference on top of PINN adds compute cost and tooling overhead for WCM teams."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "JCP-quality methodology with formal posterior sampling and noise-robust benchmarks."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Bayesian sampling further limits scale; whole-cell-size deployment is unrealistic without surrogates."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Posterior-based calibration and noise-injection ablations are an excellent template for hybrid model UQ."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675,
+          "tier": "primary",
+          "promotion_status": "dropped_diversity_filter"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT014",
+          "paper_id": "EXT-014",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "Physics-informed neural networks for high-speed flows",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Applies PINN constraints (Euler equations) to compressible flow, demonstrating prior-driven generalisation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Code patterns transfer to PDE-style biology, but high-speed-flow specifics are domain-distant from WCM."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Peer-reviewed CMAME paper with 1k+ citations applying PINNs to a hard physics regime."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Handles shocks via tailored loss; moderate scalability but not WCM-scale demonstrated."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Compares against numerical solvers and exact solutions, an adoptable gold-standard ablation."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT016",
+          "paper_id": "EXT-016",
+          "claim_ref": "embedded-constraint",
+          "paradigm": "embedded",
+          "paper_title": "A physics-informed deep learning framework for inversion and surrogate modeling in solid mechanics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Solid-mechanics PINN handles inversion under physics constraints, supporting prior-regularised ML."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Framework is general but solid-mechanics governing equations differ from biochemistry, requiring adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "1k+ citations and CMAME peer review back the inversion and surrogate-modelling methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Inversion problems shown at moderate mesh sizes; whole-cell scale untested."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Benchmarks against FEM solutions provide a borrowable gold-standard validation pattern."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        }
+      ]
+    },
+    "embedded-emulation": {
+      "paradigm": "embedded",
+      "claim_text": "ML surrogates can replace expensive mechanistic submodules — such as spatial dynamics, stochastic chemistry, or molecular simulations — to make whole-cell-scale simulation tractable on accessible hardware.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT021",
+          "paper_id": "EXT-021",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "DeepONet learns operator maps replacing PDE solvers — canonical surrogate for expensive mechanistic submodules."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open DeepONet code and clear training recipe make adoption straightforward for biological PDE/ODE submodules."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Backed by universal approximation theorem and 2.6k citations across operator-learning applications."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Operator nets scale across discretisations and have been pushed toward large-scale physics emulation."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Compares against numerical solvers across diverse PDE benchmarks — directly transferable validation template."
+            }
+          },
+          "weighted_total": 24.6,
+          "match_score": 0.879,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT023",
+          "paper_id": "EXT-023",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Learning the solution operator of parametric partial differential equations with physics-informed DeepONets",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Physics-informed DeepONets predict PDE solutions up to three orders of magnitude faster than conventional solvers."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Combines surrogate speed with physics priors and trains without paired data — high payoff for WCM submodule replacement."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Science Advances publication with quantitative speedups across multiple parametric PDE families."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Operator-learning architecture scales across parameter regimes and discretisations."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Speedup-versus-solver and parameter-sweep ablations are a directly adoptable validation strategy."
+            }
+          },
+          "weighted_total": 23.5,
+          "match_score": 0.839,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT024",
+          "paper_id": "EXT-024",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Neural operators for accelerating scientific simulations and design",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Reviews concrete neural-operator surrogate wins in fluids, materials, and biology, directly supporting emulation claim."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Survey points at multiple usable architectures but offers no single drop-in tool."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Nature Reviews Physics synthesis grounded in dozens of validated applications."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Emphasises operator learning as the path to scalable scientific surrogates across disciplines."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation idioms across operator-learning case studies but at survey granularity."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT029",
+          "paper_id": "EXT-029",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Variational Physics-informed Neural Operator (VINO) for solving partial differential equations",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "VINO trains label-free using variational PDE energy and outperforms baselines as mesh resolution grows."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Variational formulation needs domain discretisation infrastructure that biology teams may lack."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "CMAME paper with comparative results showing VINO superiority at fine meshes."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Performance improves with mesh resolution, indicating scalability potential for spatial submodels."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Mesh-refinement studies and comparison to existing operators provide an adoptable ablation pattern."
+            }
+          },
+          "weighted_total": 20.7,
+          "match_score": 0.739,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT028",
+          "paper_id": "EXT-028",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Learning two-phase microstructure evolution using neural operators and autoencoder architectures",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Autoencoder + DeepONet replaces phase-field solver for microstructure evolution — direct surrogate-emulation example."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Latent-space + operator pipeline is reusable, but training data generation from full solver still needed."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "npj Comp Mat paper with explicit interpolation and extrapolation accelerations over phase-field solver."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Latent-space compression makes higher-resolution microstructures tractable; cell-scale untested."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates against high-fidelity phase-field simulations on both interpolation and extrapolation tasks."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.707,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT030",
+          "paper_id": "EXT-030",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Deep transfer operator learning for partial differential equations under conditional shift",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DeepONet transfer learning under conditional shift makes surrogates reusable across related PDE tasks — supports emulation in scarce-data biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Transfer recipe with hybrid loss is implementable but RKHS embeddings add nontrivial code."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Nature Machine Intelligence paper grounded in conditional-embedding operator theory with multiple PDE demos."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transfer reduces data needs but the underlying DeepONet scale matches, not exceeds, the original."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Diverse transfer-learning scenarios with quantitative comparisons constitute a borrowable validation suite."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.707,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT025",
+          "paper_id": "EXT-025",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "MIONet: Learning Multiple-Input Operators via Tensor Product",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "MIONet extends operator learning to multiple-input operators, broadening the class of mechanistic submodules emulable."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Reference implementation exists; multi-input formulation matches biology where states + parameters + signals co-vary."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Provides universal approximation theorem for multiple-input operators plus error analysis and ODE/PDE benchmarks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated on canonical ODE/PDE systems — extension to whole-cell scale not yet shown."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Approximation-error bounds plus benchmarks against ODE/PDE solutions provide a borrowable validation pattern."
+            }
+          },
+          "weighted_total": 19.1,
+          "match_score": 0.682,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT027",
+          "paper_id": "EXT-027",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "A comprehensive and FAIR comparison between MLP and KAN representations for differential equations and operator networks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Benchmarks MLP vs KAN inside operator networks, informing best surrogate architectures for emulation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Architecture-comparison findings directly guide WCM-team choice between MLP and KAN backbones."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "FAIR comparison protocol on standard benchmarks lends methodological credibility."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Studies benchmark-scale problems; cell-scale stress tests not part of the comparison."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "FAIR comparison framework itself is a borrowable validation methodology for surrogate selection."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.654,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT026",
+          "paper_id": "EXT-026",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Wavelet Neural Operator for solving parametric partial differential equations in computational mechanics problems",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Wavelet neural operator emulates parametric PDE solvers in mechanics — concrete surrogate example, slightly distant from biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Standard neural-operator code patterns apply; wavelet basis adds modest complexity."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "CMAME paper with 150+ citations and benchmark studies on parametric PDEs."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Multiscale wavelet basis aids resolution scaling but cell-scale dimensionality is unproven."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Compares against finite-element solutions across multiple PDEs — adoptable gold-standard test."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT022",
+          "paper_id": "EXT-022",
+          "claim_ref": "embedded-emulation",
+          "paradigm": "embedded",
+          "paper_title": "Climate policy implications of nonlinear decline of Arctic land permafrost and other cryosphere elements",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "PAGE-ICE integrates dynamic emulators of complex physical models — concrete surrogate-replacement example, but climate not biology."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Methodology is climate-economic; transferring emulators to WCM submodules requires fresh training."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Nature Communications publication with quantitative downstream policy effects supports the emulator approach."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Shows emulators replacing expensive Earth-system models, demonstrating the surrogate concept at scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validates by comparing economic impact under multiple Paris-aligned scenarios — domain-specific ablation."
+            }
+          },
+          "weighted_total": 16.3,
+          "match_score": 0.582,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        }
+      ]
+    },
+    "parallel-agreement-disagreement": {
+      "paradigm": "parallel",
+      "claim_text": "Agreement between ML and MM predictions increases confidence in joint outputs; disagreement localises epistemic uncertainty — missing data, missing mechanism, or incorrect assumption.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT072",
+          "paper_id": "EXT-072",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Reproducibility in density functional theory calculations of solids",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Compares 15 DFT codes on identical crystals — paradigmatic disagreement-localises-assumption study."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Delta-test cross-code comparison is directly portable as a WCM ensemble-agreement protocol."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Community study with controlled inputs and quantitative agreement metric is rigorous."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales to dozens of codes and many materials; analogous to multi-WCM/ML comparison."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Defines explicit Delta metric for pairwise agreement — directly borrowable validation tool."
+            }
+          },
+          "weighted_total": 23.8,
+          "match_score": 0.85,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT073",
+          "paper_id": "EXT-073",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Uncertainty-informed deep learning models enable high-confidence predictions for digital histopathology",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Demonstrates that uncertainty thresholds isolate high- vs low-confidence ML predictions — directly supports agreement-as-confidence."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Dropout-based uncertainty calibration is immediately adoptable for ML side of WCM comparisons."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Standard MC-dropout with thresholds derived from training data is methodologically sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Approach scales to whole-slide imaging; cross-modality scaling not yet shown."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports calibration plots and abstention rates — useful validation pattern for joint outputs."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT071",
+          "paper_id": "EXT-071",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "GWTC-1: A Gravitational-Wave Transient Catalog of Compact Binary Mergers Observed by LIGO and Virgo during the First and Second Observing Runs",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Detection requires agreement between matched-filter and unmodelled searches — concrete agreement-as-confidence pattern."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Multi-pipeline agreement protocol transferable to ML/MM joint detection in cells."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Three independent search pipelines with calibrated false-alarm rates are exemplary methodology."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Pipeline scales over thousands of candidate events; concept generalises across scales."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Quantitative false-alarm-rate cross-validation across pipelines is a borrowable strategy."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT077",
+          "paper_id": "EXT-077",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Am I Confused or Is This Confusing?: Deep Ensembles for ENSO Uncertainty Quantification",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Deep ensembles deployed alongside Earth-system models for ENSO — direct ML/MM agreement-disagreement study."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Methodology is preprint but framework is reusable for WCM ensemble UQ."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Probabilistic neural-network ensembles with formal aleatoric/epistemic decomposition is sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to climate ensembles; cell-scale generalisation not demonstrated."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Compares ensemble disagreement against CESM2-LE benchmark — concrete validation route."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.707,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT078",
+          "paper_id": "EXT-078",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Credal Ensemble Distillation for Uncertainty Quantification",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Distills ensemble disagreement into single model with epistemic/aleatoric split — supports disagreement-as-uncertainty."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "CED framework is novel but applicable for compressing WCM-side ensembles."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Credal-set formulation with class-wise probability intervals is theoretically sound."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Distillation reduces inference cost — scales to large WCM ensembles."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validates against ensemble baselines on classification benchmarks; biology validation absent."
+            }
+          },
+          "weighted_total": 18.5,
+          "match_score": 0.661,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT075",
+          "paper_id": "EXT-075",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Lightning Pose: improved animal pose estimation via semi-supervised learning, Bayesian ensembling and cloud-native open-source tools",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Bayesian ensemble disagreement flags uncertain frames — supports disagreement-as-uncertainty principle."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open-source ensembling tools transferable to WCM ensemble-agreement workflows."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Semi-supervised learning with ensemble-based uncertainty is methodologically sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to videos but not directly to whole-cell modalities."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Demonstrates cross-validation of ensemble disagreement against held-out human labels."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.654,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT076",
+          "paper_id": "EXT-076",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Deep learning-enabled segmentation of ambiguous bioimages with deepflash2",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Uses multi-expert annotations and deep ensembles to flag disagreement on ambiguous images — direct analog to claim."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Tool can be applied today to bioimage workflows; broader WCM adoption needs adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Ensemble methodology with multi-rater ground truth is robust."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to many bioimage tasks but is image-modality specific."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Quantifies inter-annotator vs model disagreement — borrowable validation pattern."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.654,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT080",
+          "paper_id": "EXT-080",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Towards Integrating Epistemic Uncertainty Estimation into the Radiotherapy Workflow",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Uses epistemic uncertainty to flag OOD scenarios — operational example of disagreement isolating gaps."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Workflow integration patterns transferable to ML/MM disagreement triggers in WCM pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Standard deep-learning UQ methodology applied in clinical context with validation."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Application-specific; concept scales but implementation domain-bound."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides OOD-detection validation protocol applicable to ML/MM disagreement assessment."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.654,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT079",
+          "paper_id": "EXT-079",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Deep Ensembles for Epistemic Uncertainty: A Frequentist Perspective",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides theoretical grounding for epistemic-uncertainty decomposition via ensemble disagreement."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Frequentist framework usable for WCM-ensemble disagreement analysis with adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Theoretical analysis grounded in mutual-information bounds is rigorous."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Generic to any ensemble; scales to large models."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Limited empirical validation — mostly theory; less actionable for WCM teams."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT074",
+          "paper_id": "EXT-074",
+          "claim_ref": "parallel-agreement-disagreement",
+          "paradigm": "parallel",
+          "paper_title": "Large-scale DNA-based phenotypic recording and deep learning enable highly accurate sequence-function mapping",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Sequence-function mapping is impressive but does not explicitly compare ML vs mechanistic predictions for agreement."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides a high-throughput phenotype recording usable as ground-truth for ML/MM agreement studies."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Recombinase-based phenotypic recording is experimentally validated and reproducible."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Approach scales to millions of GREs — a relevant data substrate for cell-scale comparisons."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides held-out test prediction accuracy but no joint MM/ML disagreement metric."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.607,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        }
+      ]
+    },
+    "parallel-foundation-models": {
+      "paradigm": "parallel",
+      "claim_text": "Recent single-cell and cross-species foundation models supply mechanism-agnostic predictions over the same generative biology that mechanistic WCMs target, making them practical ML-side parallel baselines.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT086",
+          "paper_id": "EXT-086",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "scBERT as a large-scale pretrained deep language model for cell type annotation of single-cell RNA-seq data",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "scBERT is exactly a single-cell foundation model providing mechanism-agnostic predictions on the same generative biology WCMs target."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "WCM teams can adopt scBERT today as ML-side baseline for cell-type/state prediction."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Large-scale pretraining on scRNA-seq with transformer architecture is methodologically sound and reproducible."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Designed for cross-tissue, cross-species single-cell data — directly scales toward whole-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports cross-dataset cell-type annotation benchmarks providing concrete validation targets."
+            }
+          },
+          "weighted_total": 26.8,
+          "match_score": 0.957,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT089",
+          "paper_id": "EXT-089",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "Accurate predictions on small data with a tabular foundation model",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "TabPFN is a tabular foundation model that outperforms baselines on small data — relevant for WCM-scale tabular outputs."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "TabPFN can be applied today as ML-side baseline on tabular biological readouts."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Prior-data-fitted-network training with strong empirical wins is methodologically rigorous."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales up to 10K samples efficiently; suitable for many WCM-relevant tabular regimes."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides extensive benchmark comparison against tuned baselines as validation pattern."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 0.825,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT081",
+          "paper_id": "EXT-081",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "Segment anything in medical images",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "MedSAM foundation model unifies segmentation across modalities — analog for WCM-side foundation baselines on imaging readouts."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "MedSAM weights publicly available for cell-segmentation benchmarking against MM predictions."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on 1.57M image-mask pairs with comprehensive evaluation across 10 modalities."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Foundation-model design scales across modalities and tasks — transferable pattern."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides extensive cross-modality and cross-task validation protocol borrowable for WCM imaging."
+            }
+          },
+          "weighted_total": 21.6,
+          "match_score": 0.771,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT083",
+          "paper_id": "EXT-083",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "Scaling deep learning for materials discovery",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "GNoME ML predicts stable materials cross-checked against DFT — direct ML/MM parallel-baseline pattern."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Workflow blueprint transferable but materials-specific; cellular reuse needs adaptation."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on 380K stable structures with 736 experimentally realized — exceptional rigor."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Scales to 2.2M discoveries — order-of-magnitude expansion demonstrates foundation-scale ML."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Convex-hull and experimental-realization metrics are concrete cross-validation strategies."
+            }
+          },
+          "weighted_total": 21.2,
+          "match_score": 0.757,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT082",
+          "paper_id": "EXT-082",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "Foundation models for generalist medical artificial intelligence",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Defines GMAI paradigm covering multimodal genomics/imaging/EHR — direct conceptual blueprint for WCM-side foundation baselines."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Vision paper rather than implementation; concepts immediately adoptable for design."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Conceptual framework grounded in established self-supervision and multimodal pretraining."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Argues for multimodal scaling from imaging to genomics — high-relevance scaling roadmap."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation considerations but does not provide concrete WCM benchmarks."
+            }
+          },
+          "weighted_total": 20.9,
+          "match_score": 0.746,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT061",
+          "paper_id": "EXT-061",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "Large language models encode clinical knowledge",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Med-PaLM is a large foundation model demonstrating mechanism-agnostic clinical predictions, but not single-cell biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Instruction-prompt-tuning recipe applicable to bio foundation models for WCM-comparable outputs."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous benchmarking with human-evaluation rubric is methodologically strong."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrates scaling laws across model sizes — relevant to bio foundation-model training."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides MultiMedQA benchmark and human-eval framework as validation templates."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT084",
+          "paper_id": "EXT-084",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "A foundation model for generalizable disease detection from retinal images",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "RETFound demonstrates foundation-model label-efficient adaptation across diseases — generalizes idea to bio FM baselines."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Retinal-image specific but recipe (SSL on unlabelled data + fine-tuning) is reusable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on 1.6M unlabelled retinal images with multi-disease downstream evaluation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrates scaling of self-supervised learning in biomedical imaging."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports adaptation to many tasks with comparison models — explicit validation template."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT085",
+          "paper_id": "EXT-085",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "A whole-slide foundation model for digital pathology from real-world data",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Prov-GigaPath foundation model trained on real-world pathology — exemplifies FM-as-baseline for biomedical readouts."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open-weight model usable for pathology-comparable WCM imaging readouts; cellular scope different."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on whole-slide imagery with pathology-report integration is methodologically strong."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Whole-slide modeling scales to gigapixel images — applicable scaling pattern."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validation across many digital-pathology tasks provides borrowable evaluation suite."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT087",
+          "paper_id": "EXT-087",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "Detecting hallucinations in large language models using semantic entropy",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Provides hallucination-detection method for LLMs but not directly a WCM-side foundation baseline."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Semantic-entropy approach reusable for filtering bio-FM outputs in joint comparisons."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Semantic-entropy estimator with cross-task validation is methodologically robust."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Method-agnostic to specific LLM; scales across foundation models."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides concrete uncertainty-based abstention validation protocol."
+            }
+          },
+          "weighted_total": 17.7,
+          "match_score": 0.632,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT088",
+          "paper_id": "EXT-088",
+          "claim_ref": "parallel-foundation-models",
+          "paradigm": "parallel",
+          "paper_title": "Structured information extraction from scientific text with large language models",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Demonstrates LLM text-extraction in materials science — useful for FM tooling but not WCM ML-side baselines on biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Pipeline reusable for curating WCM training data from literature."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Fine-tuning GPT-3/Llama on three domain tasks is sound and reproducible."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Approach scales across many extraction tasks; broadly applicable."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reports extraction accuracy on representative tasks; less directly tied to ML/MM matching."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.607,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        }
+      ]
+    },
+    "parallel-matched-predictions": {
+      "paradigm": "parallel",
+      "claim_text": "ML and mechanistic models can be deployed simultaneously over a shared, measurable output space, with matched perturbation conditions, so their predictions are directly comparable.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT063",
+          "paper_id": "EXT-063",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "A large-scale evaluation of computational protein function prediction",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "CAFA demonstrates 54 methods evaluated on the same 866-protein output space — exactly the matched-prediction setup."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "WCM teams can adopt the CAFA pattern of matched targets and shared scoring metrics now."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Community-wide blinded benchmark with consistent metrics is methodologically exemplary."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Framework scales to many models and many proteins; conceptually portable to whole-cell readouts."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides explicit precision-recall and term-centric metrics as a validation template."
+            }
+          },
+          "weighted_total": 23.8,
+          "match_score": 0.85,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT066",
+          "paper_id": "EXT-066",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "Skilful precipitation nowcasting using deep generative models of radar",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Compares deep generative ML against numerical weather-prediction models on the same radar fields — matched-output paradigm."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Comparative evaluation framework directly transferable; cellular analog requires re-mapping."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Triple-evaluation (statistical, economic, cognitive) of skill is methodologically strong."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Framework scales to large operational domains; concept extends to whole-cell readouts."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Ranking by expert meteorologists provides a forecast-value validation template."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 0.779,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT070",
+          "paper_id": "EXT-070",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "DOME: Recommendations for supervised machine learning validation in biology",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides DOME validation checklist applicable when matching ML predictions against mechanistic outputs."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "WCM teams can adopt DOME criteria today to standardise ML-side reporting in matched comparisons."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Community-derived recommendations are widely endorsed and reproducible."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Generic checklist scales across biological prediction tasks including whole-cell."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Explicit data-optimization-model-evaluation framework is a directly borrowable validation template."
+            }
+          },
+          "weighted_total": 21.2,
+          "match_score": 0.757,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT065",
+          "paper_id": "EXT-065",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "Deep Neural Networks Rival the Representation of Primate IT Cortex for Core Visual Object Recognition",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Directly compares DNN representations and primate IT cortex on the same image set — paradigmatic matched-prediction example."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Representational-similarity protocol borrowable for matching ML/MM cellular predictions on shared inputs."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Uses representational dissimilarity matrices and behavioural metrics — well-validated comparison methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Approach scales to deeper networks but visual-cortex domain is narrower than whole-cell."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides explicit kernel-based comparison metrics readily applicable to matched predictions."
+            }
+          },
+          "weighted_total": 20.9,
+          "match_score": 0.746,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT064",
+          "paper_id": "EXT-064",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "Inferring causation from time series in Earth system sciences",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Reviews data-driven causal methods alongside mechanistic Earth-system models — analogous parallel-paradigm setting."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Causal-inference benchmarks could be repurposed for ML/MM comparison but require adaptation to cells."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Establishes rigorous benchmarking framework for causal discovery against simulated ground truth."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Methods scale to high-dimensional time series but not yet whole-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Proposes synthetic-data benchmarks with known causal graphs — a borrowable validation strategy."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.654,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT061",
+          "paper_id": "EXT-061",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "Large language models encode clinical knowledge",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Med-PaLM benchmarks LLM accuracy on MedQA but does not match outputs against a mechanistic model under shared conditions."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "WCM teams cannot directly reuse clinical-QA evaluations as ML/MM matched-prediction baselines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology of benchmark evaluation against multiple held-out QA datasets is rigorous and reproducible."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrates LLM scaling laws but only along QA tasks, not biological output spaces."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides structured human-evaluation rubric (factuality, harm, bias) transferable to comparing model outputs."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.529,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT062",
+          "paper_id": "EXT-062",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "SRAMP: prediction of mammalian N6-methyladenosine (m6A) sites based on sequence-derived features",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Builds an ML predictor for m6A sites but never compares to a mechanistic model on a shared output space."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Sequence-feature classifiers reusable but not directly as parallel-paradigm baselines for WCMs."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Standard supervised-learning pipeline with cross-validation is methodologically sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Per-site classifier scales to transcriptome but is narrow in modality."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reports AUC on independent test sets — a borrowable evaluation pattern for matched predictions."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.529,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT067",
+          "paper_id": "EXT-067",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "Quantifying climate feedbacks in polar regions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Quantifies feedbacks in mechanistic climate models but not against ML predictions on shared outputs."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Feedback-decomposition framework is mechanistic-only and hard to repurpose immediately."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology for radiative kernel decomposition is well-established."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to many GCMs but does not directly target ML/MM matched outputs."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Process-oriented evaluation is borrowable but not specific to matched predictions."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.529,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT069",
+          "paper_id": "EXT-069",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Surveys learning curves for sample-size decisions; not a matched-prediction comparison."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Useful for sizing ML training sets but not for parallel-paradigm output matching."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Survey is methodologically thorough across algorithms and applications."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Concepts apply broadly but do not address mechanistic-model comparison."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides protocols for evaluating learners but not joint ML/MM evaluation."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.529,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT068",
+          "paper_id": "EXT-068",
+          "claim_ref": "parallel-matched-predictions",
+          "paradigm": "parallel",
+          "paper_title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Discusses ML-driven official statistics but no matched-prediction comparison with mechanistic models."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Topic is data-source drift in statistics; minimal direct WCM applicability."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Survey-style methodology is reasonable but not empirically demonstrative."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Statistical-survey framing does not scale to mechanistic-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Generic data-quality recommendations only loosely transferable."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.332,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "pipeline-curation": {
+      "paradigm": "pipeline",
+      "claim_text": "ML and LLM text mining can collate biological mechanisms and observable phenomena from the literature into a form usable by mechanistic-model builders.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT035",
+          "paper_id": "EXT-035",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "BioBERT: a pre-trained biomedical language representation model for biomedical text mining",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Domain-adapted BERT directly enables NER, relation extraction, and QA on biomedical literature for mechanism harvesting."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Pre-trained weights are openly available and plug into standard NLP pipelines for immediate curation workflows."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Demonstrates measurable gains over generic BERT on biomedical NLP benchmarks via domain-specific pretraining."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Transformer architecture scales to large corpora; fine-tuning task overhead is the only friction."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reports task-level F1/accuracy on biomedical benchmarks but no curation-specific WCM validation pipeline."
+            }
+          },
+          "weighted_total": 25.2,
+          "match_score": 0.9,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT033",
+          "paper_id": "EXT-033",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "The STRING database in 2023: protein–protein association networks and functional enrichment analyses for any sequenced genome of interest",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Aggregates physical and functional protein interactions including text-mined evidence, suiting mechanism extraction for WCM builders."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Available for any sequenced genome of interest, immediately usable to seed organism-specific mechanisms."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Established curation workflow with strong scoring methodology and broad community adoption."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Designed to scale to any sequenced genome with automated text mining and computational predictions."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Functional enrichment and confidence scores partially address validation but not WCM-specific."
+            }
+          },
+          "weighted_total": 24.6,
+          "match_score": 0.879,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT034",
+          "paper_id": "EXT-034",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "UniProt: the universal protein knowledgebase in 2021",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Provides curated 190M-protein annotations with literature-extracted functional info, directly usable in WCM gene-product modules."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open knowledgebase with the new ARBA automated annotator means immediate adoption is straightforward."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Long-standing community resource with rigorous expert curation plus rule-based automation."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "190M sequences and proteome completeness assessment scale beyond whole-cell needs."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reviewed/unreviewed status and credit-based evaluation give validation cues, but not a WCM-specific protocol."
+            }
+          },
+          "weighted_total": 24.6,
+          "match_score": 0.879,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT031",
+          "paper_id": "EXT-031",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "STRING aggregates curated PPI evidence across 5090 organisms via text mining and computational predictions, supplying mechanism inputs."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Public web/API at string-db.org with genome-wide upload supports immediate WCM curation use."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Mature, widely cited (~19k citations) integration of multiple evidence channels and benchmarked enrichment classifications."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Coverage doubled to 5090 organisms with genome-wide dataset upload, demonstrating scaling toward whole-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Confidence scores and enrichment analysis guide validation, but no formal WCM-specific validation protocol."
+            }
+          },
+          "weighted_total": 23.7,
+          "match_score": 0.846,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT032",
+          "paper_id": "EXT-032",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "The STRING database in 2021: customizable protein–protein networks, and functional characterization of user-uploaded gene/measurement sets",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Integrates text mining, experimental databases, co-expression, and cross-organism transfer for protein interaction curation."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Customizable user-uploaded gene/measurement sets directly usable for WCM mechanism curation."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Mature multi-source scoring approach with extensive citation track record (~8k)."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Cross-organism transfer and database scope make it suitable for genome-scale model curation."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Source-specific confidence scores enable filtering, but no built-in WCM validation strategy."
+            }
+          },
+          "weighted_total": 23.7,
+          "match_score": 0.846,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT039",
+          "paper_id": "EXT-039",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "BioGRID: a general repository for interaction datasets",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Provides 116k+ curated physical/genetic interactions including 30k from exhaustive yeast literature curation, directly usable in mechanism graphs."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Free download as PSI-MI XML or tab-delimited text, plug-and-play for WCM builders."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Manual primary-literature curation gives high-confidence interaction data."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Covers 4 model organisms in this version; scaling needs broader curation effort."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Source attribution per interaction enables provenance-based validation."
+            }
+          },
+          "weighted_total": 22.8,
+          "match_score": 0.814,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT040",
+          "paper_id": "EXT-040",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "The STRING database in 2011: functional interaction networks of proteins, globally integrated and scored",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Earlier STRING release integrating experimental and computational PPI predictions for mechanistic curation."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Online resource was directly usable, though superseded by newer releases (EXT-031/032/033)."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Established scoring system distinguishing experimental vs computational evidence."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Comprehensive coverage scaling toward systems-level modelling."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Scored evidence channels provide partial validation framework."
+            }
+          },
+          "weighted_total": 22.4,
+          "match_score": 0.8,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT038",
+          "paper_id": "EXT-038",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "High-throughput functional annotation and data mining with the Blast2GO suite",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Automates functional annotation of DNA/protein sequences with GO terms, directly feeding WCM gene-product mechanism construction."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Biologist-oriented tool widely used for high-throughput functional annotation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mature method in the field with strong adoption and validation track record."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Designed for high-throughput sequence annotation, scaling to genome-wide datasets."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Annotation scoring exists but pre-deep-learning era validation may need upgrading."
+            }
+          },
+          "weighted_total": 21.3,
+          "match_score": 0.761,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT036",
+          "paper_id": "EXT-036",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "miRBase: annotating high confidence microRNAs using deep sequencing data",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Curates 30,424 mature miRNAs across 206 species using deep-sequencing-based confidence levels useful for regulatory mechanism inputs."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Public mirbase.org database with confidence annotations is directly reusable, though scope is narrow (miRNAs only)."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sequencing-driven re-annotation methodology is well-described and community-trusted."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales across species but limited to miRNA submodule of any whole-cell model."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Confidence levels provide validation hooks for downstream model builders."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-curation-EXT037",
+          "paper_id": "EXT-037",
+          "claim_ref": "pipeline-curation",
+          "paradigm": "pipeline",
+          "paper_title": "miRBase: from microRNA sequences to function",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Maps 5.5B reads across 1493 datasets to validate miRNA annotations and add functional context for mechanistic use."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Disseminated functional info accessible online; ready for WCM regulatory module curation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Read-mapping evidence supports 20-65% of annotations, with clear removal criteria."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "271 organisms supported, but covers only one regulatory class within a whole cell."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Read-mapping statistics offer concrete validation evidence, transferable but narrow."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        }
+      ]
+    },
+    "pipeline-inference": {
+      "paradigm": "pipeline",
+      "claim_text": "ML can infer parameters, latent states, and missing quantities for mechanistic models from heterogeneous omics datasets.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT049",
+          "paper_id": "EXT-049",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Methods and considerations for estimating parameters in biophysically detailed neural models with simulation based inference",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Directly applies SBI to estimate parameters in biophysically detailed neural models, addressing the no-likelihood challenge identical to WCM."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Practical methods/considerations paper aimed at practitioners using openly available neural models — immediately portable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Methodologically rigorous Bayesian SBI on established detailed mechanistic neuron models."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales toward complex biophysical models; whole-cell scale would require extensions but the paradigm fits."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Explicitly addresses identifiability and posterior validation considerations — a near-direct WCM-builder template."
+            }
+          },
+          "weighted_total": 26.6,
+          "match_score": 0.95,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT047",
+          "paper_id": "EXT-047",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "OutbreakFlow: Model-based Bayesian inference of disease outbreak dynamics with invertible neural networks and its application to the COVID-19 pandemics in Germany",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Couples mathematical epidemiological model with invertible neural networks for amortized parameter inference — archetypal pipeline ML→MM use case."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Two-phase train-then-infer workflow is reproducible and adaptable for WCM ODE models."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Successfully applied to real COVID-19 German data with mechanistic SIR-type model."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Amortization makes inference cheap on new data; scaling to many parameters requires architecture care."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Posterior calibration diagnostics from BayesFlow approach are transferable validation tools."
+            }
+          },
+          "weighted_total": 24.6,
+          "match_score": 0.879,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT046",
+          "paper_id": "EXT-046",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Neural Importance Sampling for Rapid and Reliable Gravitational-Wave Inference",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Combines amortized neural posterior estimation with importance sampling for corrected, diagnosed posteriors — directly applicable methodology to mechanistic inference."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Method is general but demonstrated on GW data; transferring to WCM needs adapting forward models."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Provides bias-free posteriors plus sample-efficiency diagnostic; addresses common deep-learning concerns."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Amortized scheme scales to 42 events analyzed; same paradigm scales for repeated WCM inferences."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Sample efficiency diagnostic and importance-weighted correction are explicitly designed for validation."
+            }
+          },
+          "weighted_total": 22.5,
+          "match_score": 0.804,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT041",
+          "paper_id": "EXT-041",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Approximate Bayesian Computation",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "ABC bypasses likelihood evaluation, enabling parameter inference for complex models where analytical likelihoods are infeasible — directly applicable to WCM."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Mature method with established software, immediately adoptable for mechanistic model parameter fitting."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Foundational, well-grounded statistical method with broad theoretical support."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Classical ABC scales poorly with high-dimensional summary statistics, though approximations help."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Posterior predictive checks and choice of summary statistics provide a clear validation strategy."
+            }
+          },
+          "weighted_total": 22.2,
+          "match_score": 0.793,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT042",
+          "paper_id": "EXT-042",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Deep Learning for Population Genetic Inference",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Likelihood-free deep learning learns features mapping summary statistics to population-genetic parameters — prototype for omics-driven inference."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Method demonstrated for population genetics; adapting to WCM omics requires re-architecting."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Demonstrated on a concrete selection/demography problem with quantitative success."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Multilayer networks scale to hundreds of correlated summaries; suitable for high-dim data."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Simulation-based validation is implicit; cross-checks against ground-truth simulations are demonstrated."
+            }
+          },
+          "weighted_total": 20.0,
+          "match_score": 0.714,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT043",
+          "paper_id": "EXT-043",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Real-Time Gravitational Wave Science with Neural Posterior Estimation",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Neural posterior estimation reduces inference from days to 20s on LIGO data, illustrating amortized SBI gains transferable to WCM parameter inference."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Domain-specific to gravitational waves; WCM adoption needs significant retraining infrastructure."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Quantitatively matches standard MCMC on 8 events with massive speed gain."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Amortization makes it scale across many events once trained, suiting genome-scale repeat inferences."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates against established Bayesian samplers — a transferable validation strategy."
+            }
+          },
+          "weighted_total": 19.0,
+          "match_score": 0.679,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT048",
+          "paper_id": "EXT-048",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "A forward modeling approach to analyzing galaxy clustering with SimBIG",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Simulation-based inference with normalizing flows on 20k forward-model simulations — methodology transferable to WCM but cosmology domain."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Astrophysics-specific; adapting requires WCM-quality forward simulator and survey realism analog."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Built on 2000 high-fidelity Quijote N-body sims with detailed survey realism."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "SBI with normalizing flows handles high-dim summary statistics, suiting omics scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Standard cosmology comparisons demonstrate SBI calibration — transferable validation pattern."
+            }
+          },
+          "weighted_total": 19.0,
+          "match_score": 0.679,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT045",
+          "paper_id": "EXT-045",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Detecting adaptive introgression in human evolution using convolutional neural networks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "CNNs trained on simulated genomic data identify introgressed variants — example of ML mapping omics to evolutionary parameters."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Specific to introgression detection; WCM adaptation requires reframing the inference problem."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Outperforms alternative methods in classification and parameter estimation per simulation benchmarks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "CNN approach scales over genome regions but limited to sequence-data inference."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Simulation-based training provides ground-truth validation transferable in principle."
+            }
+          },
+          "weighted_total": 16.3,
+          "match_score": 0.582,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT044",
+          "paper_id": "EXT-044",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Bayesian inference of atomistic structure in functional materials",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "BOSS uses Bayesian active learning over atomistic energy landscapes — only loosely related to omics-driven WCM parameter inference."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Materials-science focus means significant adaptation needed for biological mechanistic models."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Demonstrated on molecular surface adsorption with active learning rigor."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Building-block approach offers some scaling, but not to whole-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Surrogate-energy validation strategy is transferable but indirect for WCM."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.529,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-pipeline-inference-EXT050",
+          "paper_id": "EXT-050",
+          "claim_ref": "pipeline-inference",
+          "paradigm": "pipeline",
+          "paper_title": "Disordered Heterogeneous Universe: Galaxy Distribution and Clustering across Length Scales",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Applies disordered-media statistics to galaxy distributions; no ML inference of mechanistic parameters from omics."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Cosmology methodology unrelated to WCM parameter inference workflows."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound application of known correlation/cluster statistics."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Methods scale across length scales but not to biological complexity."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Comparative correlation-function analysis is only weakly relevant to WCM validation."
+            }
+          },
+          "weighted_total": 10.4,
+          "match_score": 0.371,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "pipeline-structural-learning": {
+      "paradigm": "pipeline",
+      "claim_text": "ML can propose, evaluate, or refine candidate mechanistic model structures — including organism-scale architecture choices that would be intractable to enumerate by hand.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT057",
+          "paper_id": "EXT-057",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "AI-Aristotle: A physics-informed framework for systems biology gray-box identification",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Explicitly identifies parameters and missing physics in systems biology gray-box models via PINN+symbolic regression — direct match for WCM structure refinement."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Framework benchmarked on pharmacokinetic and endocrine models, packaging methods practitioners can adopt."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "X-TFC + PINN + SR combination is methodologically sound and tested on two systems-biology benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Domain-decomposition (X-TFC) suggests scaling toward larger biological networks."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Systematic accuracy/speed/flexibility/robustness evaluation provides a clear validation template."
+            }
+          },
+          "weighted_total": 25.3,
+          "match_score": 0.904,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT051",
+          "paper_id": "EXT-051",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "Data-driven discovery of partial differential equations",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Sparse regression discovers governing PDEs from time-series data via Pareto model selection — archetypal ML structure-learning method."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Method (PDE-FIND/SINDy family) has open implementations and is widely re-used."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Proven on diverse benchmark systems with parsimony-driven model selection."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Effective on canonical PDEs; scaling to genome-wide network structure remains an open challenge."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Pareto frontier balancing complexity vs accuracy is a transferable validation strategy."
+            }
+          },
+          "weighted_total": 23.7,
+          "match_score": 0.846,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT055",
+          "paper_id": "EXT-055",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "Physics-informed learning of governing equations from scarce data",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Integrates PINNs with sparse regression to discover nonlinear PDEs from scarce, noisy spatiotemporal data — directly proposes mechanistic structure."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Builds on widely available PINN/SINDy tooling, adoptable for WCM submodel discovery."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Combines representation learning, automatic differentiation, and sparse term identification with concrete PDE recoveries."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated on canonical PDEs; whole-cell scale untested but conceptually extensible."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Tests against known governing equations under scarce-data regimes — useful validation pattern."
+            }
+          },
+          "weighted_total": 23.7,
+          "match_score": 0.846,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT056",
+          "paper_id": "EXT-056",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "State estimation of a physical system with unknown governing equations",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Approximate Bayesian state estimation simultaneously learns missing model terms and states — directly relevant to refining mechanistic structure."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Variational Markov-Gaussian-process method requires implementation effort; not yet a turnkey tool."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Published in Nature; methodologically rigorous reparametrization for stochastic variational inference."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Authors note broader applicability beyond state estimation, suggesting scaling potential."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Standard state-estimation comparisons available, but no explicit WCM validation playbook."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT052",
+          "paper_id": "EXT-052",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "Machine-guided path sampling to discover mechanisms of molecular self-organization",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Autonomous algorithm constructs/validates mechanistic models for self-organization, with symbolic regression for human-interpretable mechanisms."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Targeted at molecular path sampling — useful template, but adapting to WCM needs trajectory-data infrastructure."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Validated on ion association, gas hydrates, polymer folding, and membrane assembly cases."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated for individual self-organization phenomena; whole-cell scaling not shown."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Closed-loop validate-and-update of mechanistic models is precisely the validation pattern WCM-builders need."
+            }
+          },
+          "weighted_total": 20.9,
+          "match_score": 0.746,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT053",
+          "paper_id": "EXT-053",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "Robust learning from noisy, incomplete, high-dimensional experimental data via physically constrained symbolic regression",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Combines symbolic regression with physical constraints to discover quantitatively accurate models from noisy, incomplete high-dim data."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Method demonstrated on turbulent fluid flow; biological adaptation requires constraint specification."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Shows reconstruction of inaccessible variables (pressure, forcing) from velocity-only data — strong methodological evidence."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Effective on a single non-equilibrium system; scaling to organism-scale architectures untested."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Recovery of held-out latent variables provides a concrete validation protocol."
+            }
+          },
+          "weighted_total": 20.9,
+          "match_score": 0.746,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT054",
+          "paper_id": "EXT-054",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "Discovering a reaction–diffusion model for Alzheimer’s disease by combining PINNs with symbolic regression",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Title indicates discovery of a biological reaction-diffusion model via PINNs+symbolic regression — directly relevant pipeline structure-learning."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "PINN+SR pipelines exist in open implementations but adapting to WCM needs effort; abstract not available limits judgment."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Plausible from title alone; abstract empty so methodology details cannot be assessed."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Reaction-diffusion scope could extend to spatial WCM components, but scaling unclear without abstract."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "PINN data fitting plus symbolic recovery typically enables in-sample/out-sample validation, but specifics not visible."
+            }
+          },
+          "weighted_total": 18.0,
+          "match_score": 0.643,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT058",
+          "paper_id": "EXT-058",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "Derivative-based SINDy (DSINDy): Addressing the challenge of discovering governing equations from noisy data",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Addresses noisy-data SINDy (governing-equation discovery) — relevant to data-driven mechanistic structure learning."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "SINDy variants have open implementations, but abstract empty so adoption specifics uncertain."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Title plausible and topic well-grounded, but no abstract to assess methodology depth."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "SINDy class scales to moderate-sized systems; whole-cell scaling unclear from title alone."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "SINDy benchmarks typically validate against known equations; specifics not visible."
+            }
+          },
+          "weighted_total": 18.0,
+          "match_score": 0.643,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT059",
+          "paper_id": "EXT-059",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "A Parametric and Feasibility Study for Data Sampling of the Dynamic Mode Decomposition--Range, Resolution, and Universal Convergence States",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "DMD sampling parametric study on turbulent shear flow — only loosely connected to ML proposing mechanistic structures."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Provides DMD sampling guidance but not a direct WCM structure-discovery tool."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Numerical study with concrete simulations; rigor moderate (uncited arXiv)."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Single-system fluid case offers limited evidence of organism-scale scaling."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Sampling-convergence diagnostics give some validation cues for DMD-style learning."
+            }
+          },
+          "weighted_total": 12.8,
+          "match_score": 0.457,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-pipeline-structural-learning-EXT060",
+          "paper_id": "EXT-060",
+          "claim_ref": "pipeline-structural-learning",
+          "paradigm": "pipeline",
+          "paper_title": "Analytical stable Gaussian soliton supported by a parity-time-symmetric potential with power-law nonlinearity",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 0,
+              "rationale": "Analytical soliton stability analysis under PT-symmetric nonlinear potentials — unrelated to ML structure learning for mechanistic models."
+            },
+            "immediate_benefit": {
+              "score": 0,
+              "rationale": "Theoretical optical/PT-symmetry physics with no ML pipeline component."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Self-contained analytical+numerical stability work, but off-topic for the claim."
+            },
+            "scalable": {
+              "score": 0,
+              "rationale": "No relevance to whole-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 1,
+              "rationale": "Linear stability + numerical simulation pattern is generic; not specific WCM guidance."
+            }
+          },
+          "weighted_total": 4.0,
+          "match_score": 0.143,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    }
+  }
+}

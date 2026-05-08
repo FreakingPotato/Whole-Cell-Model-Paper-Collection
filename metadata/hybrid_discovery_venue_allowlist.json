@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1",
+  "description": "High-impact venue allowlist for hybrid ML-MM cross-domain discovery (Agent D1, v3 workflow). Names are normalised lowercase substrings; matching is substring-based against OpenAlex/S2/arXiv source.display_name.",
+  "groups": {
+    "general": [
+      "Nature",
+      "Science",
+      "Cell",
+      "Proceedings of the National Academy of Sciences",
+      "PNAS",
+      "Nature Communications",
+      "Nature Methods",
+      "Nature Computational Science",
+      "Nature Machine Intelligence",
+      "Nature Reviews Physics",
+      "Science Advances",
+      "eLife"
+    ],
+    "physics_computational": [
+      "Physical Review Letters",
+      "Physical Review X",
+      "Journal of Computational Physics",
+      "Computer Methods in Applied Mechanics and Engineering",
+      "SIAM Journal on Scientific Computing"
+    ],
+    "chemistry_materials": [
+      "Journal of the American Chemical Society",
+      "JACS",
+      "Nature Chemistry",
+      "Journal of Chemical Theory and Computation",
+      "Chemical Science",
+      "npj Computational Materials"
+    ],
+    "biology_bioinformatics": [
+      "Cell Systems",
+      "Molecular Systems Biology",
+      "Bioinformatics",
+      "PLoS Computational Biology",
+      "PLOS Computational Biology",
+      "Genome Research",
+      "Nucleic Acids Research"
+    ],
+    "ml_methods": [
+      "Neural Information Processing Systems",
+      "NeurIPS",
+      "International Conference on Machine Learning",
+      "ICML",
+      "International Conference on Learning Representations",
+      "ICLR",
+      "Journal of Machine Learning Research",
+      "Transactions on Machine Learning Research"
+    ]
+  },
+  "extra_aliases": {
+    "Proceedings of the National Academy of Sciences": ["PNAS"],
+    "Journal of the American Chemical Society": ["JACS"],
+    "Neural Information Processing Systems": ["NeurIPS", "Advances in Neural Information Processing Systems", "NIPS"],
+    "International Conference on Machine Learning": ["ICML", "Proceedings of Machine Learning Research"],
+    "International Conference on Learning Representations": ["ICLR"]
+  }
+}

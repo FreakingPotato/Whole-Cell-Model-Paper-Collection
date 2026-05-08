@@ -1,0 +1,983 @@
+{
+  "schema_version": "0.1",
+  "paradigm": "parallel",
+  "scored_at": "2026-05-08T00:00:00Z",
+  "scored_by": "S3",
+  "claims": {
+    "parallel-matched-predictions": {
+      "claim_text": "ML and mechanistic models can be deployed simultaneously over a shared, measurable output space, with matched perturbation conditions, so their predictions are directly comparable.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT061",
+          "paper_id": "EXT-061",
+          "paper_title": "Large language models encode clinical knowledge",
+          "paper_year": 2023,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 2942,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Med-PaLM benchmarks LLM accuracy on MedQA but does not match outputs against a mechanistic model under shared conditions."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "WCM teams cannot directly reuse clinical-QA evaluations as ML/MM matched-prediction baselines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology of benchmark evaluation against multiple held-out QA datasets is rigorous and reproducible."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrates LLM scaling laws but only along QA tasks, not biological output spaces."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides structured human-evaluation rubric (factuality, harm, bias) transferable to comparing model outputs."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.5286
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT062",
+          "paper_id": "EXT-062",
+          "paper_title": "SRAMP: prediction of mammalian N6-methyladenosine (m6A) sites based on sequence-derived features",
+          "paper_year": 2016,
+          "paper_journal": "Nucleic Acids Research",
+          "paper_cited_by_count": 1224,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Builds an ML predictor for m6A sites but never compares to a mechanistic model on a shared output space."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Sequence-feature classifiers reusable but not directly as parallel-paradigm baselines for WCMs."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Standard supervised-learning pipeline with cross-validation is methodologically sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Per-site classifier scales to transcriptome but is narrow in modality."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reports AUC on independent test sets \u2014 a borrowable evaluation pattern for matched predictions."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.5286
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT063",
+          "paper_id": "EXT-063",
+          "paper_title": "A large-scale evaluation of computational protein function prediction",
+          "paper_year": 2013,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 1086,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "CAFA demonstrates 54 methods evaluated on the same 866-protein output space \u2014 exactly the matched-prediction setup."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "WCM teams can adopt the CAFA pattern of matched targets and shared scoring metrics now."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Community-wide blinded benchmark with consistent metrics is methodologically exemplary."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Framework scales to many models and many proteins; conceptually portable to whole-cell readouts."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides explicit precision-recall and term-centric metrics as a validation template."
+            }
+          },
+          "weighted_total": 23.8,
+          "match_score": 0.85
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT064",
+          "paper_id": "EXT-064",
+          "paper_title": "Inferring causation from time series in Earth system sciences",
+          "paper_year": 2019,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 915,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Reviews data-driven causal methods alongside mechanistic Earth-system models \u2014 analogous parallel-paradigm setting."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Causal-inference benchmarks could be repurposed for ML/MM comparison but require adaptation to cells."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Establishes rigorous benchmarking framework for causal discovery against simulated ground truth."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Methods scale to high-dimensional time series but not yet whole-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Proposes synthetic-data benchmarks with known causal graphs \u2014 a borrowable validation strategy."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.6536
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT065",
+          "paper_id": "EXT-065",
+          "paper_title": "Deep Neural Networks Rival the Representation of Primate IT Cortex for Core Visual Object Recognition",
+          "paper_year": 2014,
+          "paper_journal": "PLoS Computational Biology",
+          "paper_cited_by_count": 914,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Directly compares DNN representations and primate IT cortex on the same image set \u2014 paradigmatic matched-prediction example."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Representational-similarity protocol borrowable for matching ML/MM cellular predictions on shared inputs."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Uses representational dissimilarity matrices and behavioural metrics \u2014 well-validated comparison methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Approach scales to deeper networks but visual-cortex domain is narrower than whole-cell."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides explicit kernel-based comparison metrics readily applicable to matched predictions."
+            }
+          },
+          "weighted_total": 20.9,
+          "match_score": 0.7464
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT066",
+          "paper_id": "EXT-066",
+          "paper_title": "Skilful precipitation nowcasting using deep generative models of radar",
+          "paper_year": 2021,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 889,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Compares deep generative ML against numerical weather-prediction models on the same radar fields \u2014 matched-output paradigm."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Comparative evaluation framework directly transferable; cellular analog requires re-mapping."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Triple-evaluation (statistical, economic, cognitive) of skill is methodologically strong."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Framework scales to large operational domains; concept extends to whole-cell readouts."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Ranking by expert meteorologists provides a forecast-value validation template."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 0.7786
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT067",
+          "paper_id": "EXT-067",
+          "paper_title": "Quantifying climate feedbacks in polar regions",
+          "paper_year": 2018,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 551,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Quantifies feedbacks in mechanistic climate models but not against ML predictions on shared outputs."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Feedback-decomposition framework is mechanistic-only and hard to repurpose immediately."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology for radiative kernel decomposition is well-established."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to many GCMs but does not directly target ML/MM matched outputs."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Process-oriented evaluation is borrowable but not specific to matched predictions."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.5286
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT068",
+          "paper_id": "EXT-068",
+          "paper_title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+          "paper_year": 2023,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Discusses ML-driven official statistics but no matched-prediction comparison with mechanistic models."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Topic is data-source drift in statistics; minimal direct WCM applicability."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Survey-style methodology is reasonable but not empirically demonstrative."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Statistical-survey framing does not scale to mechanistic-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Generic data-quality recommendations only loosely transferable."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.3321
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT069",
+          "paper_id": "EXT-069",
+          "paper_title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey",
+          "paper_year": 2022,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Surveys learning curves for sample-size decisions; not a matched-prediction comparison."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Useful for sizing ML training sets but not for parallel-paradigm output matching."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Survey is methodologically thorough across algorithms and applications."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Concepts apply broadly but do not address mechanistic-model comparison."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides protocols for evaluating learners but not joint ML/MM evaluation."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.5286
+        },
+        {
+          "candidate_id": "candidate-parallel-matched-predictions-EXT070",
+          "paper_id": "EXT-070",
+          "paper_title": "DOME: Recommendations for supervised machine learning validation in biology",
+          "paper_year": 2020,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides DOME validation checklist applicable when matching ML predictions against mechanistic outputs."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "WCM teams can adopt DOME criteria today to standardise ML-side reporting in matched comparisons."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Community-derived recommendations are widely endorsed and reproducible."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Generic checklist scales across biological prediction tasks including whole-cell."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Explicit data-optimization-model-evaluation framework is a directly borrowable validation template."
+            }
+          },
+          "weighted_total": 21.2,
+          "match_score": 0.7571
+        }
+      ]
+    },
+    "parallel-agreement-disagreement": {
+      "claim_text": "Agreement between ML and MM predictions increases confidence in joint outputs; disagreement localises epistemic uncertainty \u2014 missing data, missing mechanism, or incorrect assumption.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT071",
+          "paper_id": "EXT-071",
+          "paper_title": "GWTC-1: A Gravitational-Wave Transient Catalog of Compact Binary Mergers Observed by LIGO and Virgo during the First and Second Observing Runs",
+          "paper_year": 2019,
+          "paper_journal": "Physical Review X",
+          "paper_cited_by_count": 3544,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Detection requires agreement between matched-filter and unmodelled searches \u2014 concrete agreement-as-confidence pattern."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Multi-pipeline agreement protocol transferable to ML/MM joint detection in cells."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Three independent search pipelines with calibrated false-alarm rates are exemplary methodology."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Pipeline scales over thousands of candidate events; concept generalises across scales."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Quantitative false-alarm-rate cross-validation across pipelines is a borrowable strategy."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT072",
+          "paper_id": "EXT-072",
+          "paper_title": "Reproducibility in density functional theory calculations of solids",
+          "paper_year": 2016,
+          "paper_journal": "Science",
+          "paper_cited_by_count": 1608,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Compares 15 DFT codes on identical crystals \u2014 paradigmatic disagreement-localises-assumption study."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Delta-test cross-code comparison is directly portable as a WCM ensemble-agreement protocol."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Community study with controlled inputs and quantitative agreement metric is rigorous."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales to dozens of codes and many materials; analogous to multi-WCM/ML comparison."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Defines explicit Delta metric for pairwise agreement \u2014 directly borrowable validation tool."
+            }
+          },
+          "weighted_total": 23.8,
+          "match_score": 0.85
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT073",
+          "paper_id": "EXT-073",
+          "paper_title": "Uncertainty-informed deep learning models enable high-confidence predictions for digital histopathology",
+          "paper_year": 2022,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 117,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Demonstrates that uncertainty thresholds isolate high- vs low-confidence ML predictions \u2014 directly supports agreement-as-confidence."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Dropout-based uncertainty calibration is immediately adoptable for ML side of WCM comparisons."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Standard MC-dropout with thresholds derived from training data is methodologically sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Approach scales to whole-slide imaging; cross-modality scaling not yet shown."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports calibration plots and abstention rates \u2014 useful validation pattern for joint outputs."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.7536
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT074",
+          "paper_id": "EXT-074",
+          "paper_title": "Large-scale DNA-based phenotypic recording and deep learning enable highly accurate sequence-function mapping",
+          "paper_year": 2020,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 69,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Sequence-function mapping is impressive but does not explicitly compare ML vs mechanistic predictions for agreement."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides a high-throughput phenotype recording usable as ground-truth for ML/MM agreement studies."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Recombinase-based phenotypic recording is experimentally validated and reproducible."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Approach scales to millions of GREs \u2014 a relevant data substrate for cell-scale comparisons."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides held-out test prediction accuracy but no joint MM/ML disagreement metric."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.6071
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT075",
+          "paper_id": "EXT-075",
+          "paper_title": "Lightning Pose: improved animal pose estimation via semi-supervised learning, Bayesian ensembling and cloud-native open-source tools",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 55,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Bayesian ensemble disagreement flags uncertain frames \u2014 supports disagreement-as-uncertainty principle."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open-source ensembling tools transferable to WCM ensemble-agreement workflows."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Semi-supervised learning with ensemble-based uncertainty is methodologically sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to videos but not directly to whole-cell modalities."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Demonstrates cross-validation of ensemble disagreement against held-out human labels."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.6536
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT076",
+          "paper_id": "EXT-076",
+          "paper_title": "Deep learning-enabled segmentation of ambiguous bioimages with deepflash2",
+          "paper_year": 2023,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 24,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Uses multi-expert annotations and deep ensembles to flag disagreement on ambiguous images \u2014 direct analog to claim."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Tool can be applied today to bioimage workflows; broader WCM adoption needs adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Ensemble methodology with multi-rater ground truth is robust."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to many bioimage tasks but is image-modality specific."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Quantifies inter-annotator vs model disagreement \u2014 borrowable validation pattern."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.6536
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT077",
+          "paper_id": "EXT-077",
+          "paper_title": "Am I Confused or Is This Confusing?: Deep Ensembles for ENSO Uncertainty Quantification",
+          "paper_year": 2025,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Deep ensembles deployed alongside Earth-system models for ENSO \u2014 direct ML/MM agreement-disagreement study."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Methodology is preprint but framework is reusable for WCM ensemble UQ."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Probabilistic neural-network ensembles with formal aleatoric/epistemic decomposition is sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to climate ensembles; cell-scale generalisation not demonstrated."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Compares ensemble disagreement against CESM2-LE benchmark \u2014 concrete validation route."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.7071
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT078",
+          "paper_id": "EXT-078",
+          "paper_title": "Credal Ensemble Distillation for Uncertainty Quantification",
+          "paper_year": 2025,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Distills ensemble disagreement into single model with epistemic/aleatoric split \u2014 supports disagreement-as-uncertainty."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "CED framework is novel but applicable for compressing WCM-side ensembles."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Credal-set formulation with class-wise probability intervals is theoretically sound."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Distillation reduces inference cost \u2014 scales to large WCM ensembles."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validates against ensemble baselines on classification benchmarks; biology validation absent."
+            }
+          },
+          "weighted_total": 18.5,
+          "match_score": 0.6607
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT079",
+          "paper_id": "EXT-079",
+          "paper_title": "Deep Ensembles for Epistemic Uncertainty: A Frequentist Perspective",
+          "paper_year": 2025,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides theoretical grounding for epistemic-uncertainty decomposition via ensemble disagreement."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Frequentist framework usable for WCM-ensemble disagreement analysis with adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Theoretical analysis grounded in mutual-information bounds is rigorous."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Generic to any ensemble; scales to large models."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Limited empirical validation \u2014 mostly theory; less actionable for WCM teams."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.6286
+        },
+        {
+          "candidate_id": "candidate-parallel-agreement-disagreement-EXT080",
+          "paper_id": "EXT-080",
+          "paper_title": "Towards Integrating Epistemic Uncertainty Estimation into the Radiotherapy Workflow",
+          "paper_year": 2024,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Uses epistemic uncertainty to flag OOD scenarios \u2014 operational example of disagreement isolating gaps."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Workflow integration patterns transferable to ML/MM disagreement triggers in WCM pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Standard deep-learning UQ methodology applied in clinical context with validation."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Application-specific; concept scales but implementation domain-bound."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides OOD-detection validation protocol applicable to ML/MM disagreement assessment."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.6536
+        }
+      ]
+    },
+    "parallel-foundation-models": {
+      "claim_text": "Recent single-cell and cross-species foundation models supply mechanism-agnostic predictions over the same generative biology that mechanistic WCMs target, making them practical ML-side parallel baselines.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT061",
+          "paper_id": "EXT-061",
+          "paper_title": "Large language models encode clinical knowledge",
+          "paper_year": 2023,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 2942,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Med-PaLM is a large foundation model demonstrating mechanism-agnostic clinical predictions, but not single-cell biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Instruction-prompt-tuning recipe applicable to bio foundation models for WCM-comparable outputs."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous benchmarking with human-evaluation rubric is methodologically strong."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrates scaling laws across model sizes \u2014 relevant to bio foundation-model training."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides MultiMedQA benchmark and human-eval framework as validation templates."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT081",
+          "paper_id": "EXT-081",
+          "paper_title": "Segment anything in medical images",
+          "paper_year": 2024,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 2231,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "MedSAM foundation model unifies segmentation across modalities \u2014 analog for WCM-side foundation baselines on imaging readouts."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "MedSAM weights publicly available for cell-segmentation benchmarking against MM predictions."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on 1.57M image-mask pairs with comprehensive evaluation across 10 modalities."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Foundation-model design scales across modalities and tasks \u2014 transferable pattern."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides extensive cross-modality and cross-task validation protocol borrowable for WCM imaging."
+            }
+          },
+          "weighted_total": 21.6,
+          "match_score": 0.7714
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT082",
+          "paper_id": "EXT-082",
+          "paper_title": "Foundation models for generalist medical artificial intelligence",
+          "paper_year": 2023,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 1476,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Defines GMAI paradigm covering multimodal genomics/imaging/EHR \u2014 direct conceptual blueprint for WCM-side foundation baselines."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Vision paper rather than implementation; concepts immediately adoptable for design."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Conceptual framework grounded in established self-supervision and multimodal pretraining."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Argues for multimodal scaling from imaging to genomics \u2014 high-relevance scaling roadmap."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation considerations but does not provide concrete WCM benchmarks."
+            }
+          },
+          "weighted_total": 20.9,
+          "match_score": 0.7464
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT083",
+          "paper_id": "EXT-083",
+          "paper_title": "Scaling deep learning for materials discovery",
+          "paper_year": 2023,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 1108,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "GNoME ML predicts stable materials cross-checked against DFT \u2014 direct ML/MM parallel-baseline pattern."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Workflow blueprint transferable but materials-specific; cellular reuse needs adaptation."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on 380K stable structures with 736 experimentally realized \u2014 exceptional rigor."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Scales to 2.2M discoveries \u2014 order-of-magnitude expansion demonstrates foundation-scale ML."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Convex-hull and experimental-realization metrics are concrete cross-validation strategies."
+            }
+          },
+          "weighted_total": 21.2,
+          "match_score": 0.7571
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT084",
+          "paper_id": "EXT-084",
+          "paper_title": "A foundation model for generalizable disease detection from retinal images",
+          "paper_year": 2023,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 778,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "RETFound demonstrates foundation-model label-efficient adaptation across diseases \u2014 generalizes idea to bio FM baselines."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Retinal-image specific but recipe (SSL on unlabelled data + fine-tuning) is reusable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on 1.6M unlabelled retinal images with multi-disease downstream evaluation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrates scaling of self-supervised learning in biomedical imaging."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports adaptation to many tasks with comparison models \u2014 explicit validation template."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT085",
+          "paper_id": "EXT-085",
+          "paper_title": "A whole-slide foundation model for digital pathology from real-world data",
+          "paper_year": 2024,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 587,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Prov-GigaPath foundation model trained on real-world pathology \u2014 exemplifies FM-as-baseline for biomedical readouts."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open-weight model usable for pathology-comparable WCM imaging readouts; cellular scope different."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Trained on whole-slide imagery with pathology-report integration is methodologically strong."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Whole-slide modeling scales to gigapixel images \u2014 applicable scaling pattern."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validation across many digital-pathology tasks provides borrowable evaluation suite."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 0.725
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT086",
+          "paper_id": "EXT-086",
+          "paper_title": "scBERT as a large-scale pretrained deep language model for cell type annotation of single-cell RNA-seq data",
+          "paper_year": 2022,
+          "paper_journal": "Nature Machine Intelligence",
+          "paper_cited_by_count": 556,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "scBERT is exactly a single-cell foundation model providing mechanism-agnostic predictions on the same generative biology WCMs target."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "WCM teams can adopt scBERT today as ML-side baseline for cell-type/state prediction."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Large-scale pretraining on scRNA-seq with transformer architecture is methodologically sound and reproducible."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Designed for cross-tissue, cross-species single-cell data \u2014 directly scales toward whole-cell complexity."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports cross-dataset cell-type annotation benchmarks providing concrete validation targets."
+            }
+          },
+          "weighted_total": 26.8,
+          "match_score": 0.9571
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT087",
+          "paper_id": "EXT-087",
+          "paper_title": "Detecting hallucinations in large language models using semantic entropy",
+          "paper_year": 2024,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 549,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Provides hallucination-detection method for LLMs but not directly a WCM-side foundation baseline."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Semantic-entropy approach reusable for filtering bio-FM outputs in joint comparisons."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Semantic-entropy estimator with cross-task validation is methodologically robust."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Method-agnostic to specific LLM; scales across foundation models."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides concrete uncertainty-based abstention validation protocol."
+            }
+          },
+          "weighted_total": 17.7,
+          "match_score": 0.6321
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT088",
+          "paper_id": "EXT-088",
+          "paper_title": "Structured information extraction from scientific text with large language models",
+          "paper_year": 2024,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 533,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Demonstrates LLM text-extraction in materials science \u2014 useful for FM tooling but not WCM ML-side baselines on biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Pipeline reusable for curating WCM training data from literature."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Fine-tuning GPT-3/Llama on three domain tasks is sound and reproducible."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Approach scales across many extraction tasks; broadly applicable."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reports extraction accuracy on representative tasks; less directly tied to ML/MM matching."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.6071
+        },
+        {
+          "candidate_id": "candidate-parallel-foundation-models-EXT089",
+          "paper_id": "EXT-089",
+          "paper_title": "Accurate predictions on small data with a tabular foundation model",
+          "paper_year": 2025,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 519,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "TabPFN is a tabular foundation model that outperforms baselines on small data \u2014 relevant for WCM-scale tabular outputs."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "TabPFN can be applied today as ML-side baseline on tabular biological readouts."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Prior-data-fitted-network training with strong empirical wins is methodologically rigorous."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales up to 10K samples efficiently; suitable for many WCM-relevant tabular regimes."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides extensive benchmark comparison against tuned baselines as validation pattern."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 0.825
+        }
+      ]
+    }
+  }
+}

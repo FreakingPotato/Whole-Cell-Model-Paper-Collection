@@ -1,0 +1,181 @@
+{
+  "embedded-closure": {
+    "queries_run": [
+      "openalex: \"neural closure\" turbulence",
+      "openalex: \"data-driven closure\" model",
+      "openalex: \"machine learning subgrid\" parameterization",
+      "openalex: \"learned closure\" mechanistic",
+      "openalex: neural network closure differential equations",
+      "s2: neural closure turbulence model",
+      "s2: machine learning subgrid scale parameterization",
+      "arxiv: neural closure model turbulence"
+    ],
+    "openalex_returned": 103,
+    "after_venue_filter": 14,
+    "after_citations_filter": 14,
+    "after_relevance_filter": 7,
+    "after_dedup": 7,
+    "kept_top_n": 10,
+    "supplemented_from": [
+      "semantic_scholar",
+      "arxiv"
+    ]
+  },
+  "embedded-constraint": {
+    "queries_run": [
+      "openalex: \"physics-informed neural networks\"",
+      "openalex: \"physics-constrained\" neural network",
+      "openalex: \"PINN\" partial differential equations",
+      "openalex: \"biophysics-informed neural\"",
+      "openalex: \"hard constraint\" neural network physics"
+    ],
+    "openalex_returned": 202,
+    "after_venue_filter": 73,
+    "after_citations_filter": 73,
+    "after_relevance_filter": 61,
+    "after_dedup": 37,
+    "kept_top_n": 10,
+    "supplemented_from": []
+  },
+  "embedded-emulation": {
+    "queries_run": [
+      "openalex: \"neural operator\" partial differential",
+      "openalex: \"Fourier neural operator\"",
+      "openalex: \"deep operator network\" DeepONet",
+      "openalex: \"neural surrogate\" simulation",
+      "openalex: emulator deep learning climate",
+      "openalex: \"machine learning surrogate\" molecular dynamics"
+    ],
+    "openalex_returned": 264,
+    "after_venue_filter": 62,
+    "after_citations_filter": 62,
+    "after_relevance_filter": 36,
+    "after_dedup": 26,
+    "kept_top_n": 10,
+    "supplemented_from": []
+  },
+  "pipeline-curation": {
+    "queries_run": [
+      "openalex: \"large language model\" biological knowledge extraction",
+      "openalex: \"LLM\" literature mining biology pathway",
+      "openalex: \"text mining\" biological pathway curation",
+      "openalex: \"automated curation\" biomedical knowledge",
+      "openalex: GPT biological mechanism extraction",
+      "openalex: natural language processing biomedical relation extraction"
+    ],
+    "openalex_returned": 300,
+    "after_venue_filter": 84,
+    "after_citations_filter": 84,
+    "after_relevance_filter": 56,
+    "after_dedup": 49,
+    "kept_top_n": 10,
+    "supplemented_from": []
+  },
+  "pipeline-inference": {
+    "queries_run": [
+      "openalex: \"simulation-based inference\"",
+      "openalex: \"neural posterior estimation\"",
+      "openalex: \"likelihood-free inference\" neural",
+      "openalex: \"amortized inference\" simulator",
+      "openalex: machine learning parameter estimation mechanistic model",
+      "openalex: approximate Bayesian computation neural network"
+    ],
+    "openalex_returned": 268,
+    "after_venue_filter": 37,
+    "after_citations_filter": 37,
+    "after_relevance_filter": 14,
+    "after_dedup": 10,
+    "kept_top_n": 10,
+    "supplemented_from": []
+  },
+  "pipeline-structural-learning": {
+    "queries_run": [
+      "openalex: \"sparse identification\" \"nonlinear dynamics\"",
+      "openalex: SINDy data-driven discovery",
+      "openalex: \"symbolic regression\" governing equations",
+      "openalex: \"model discovery\" partial differential equations",
+      "openalex: \"equation discovery\" machine learning",
+      "openalex: data-driven discovery dynamical systems",
+      "s2: sparse identification nonlinear dynamics SINDy",
+      "s2: symbolic regression governing equations",
+      "s2: data-driven discovery dynamical systems",
+      "arxiv: sparse identification nonlinear dynamics"
+    ],
+    "openalex_returned": 300,
+    "after_venue_filter": 53,
+    "after_citations_filter": 53,
+    "after_relevance_filter": 12,
+    "after_dedup": 8,
+    "kept_top_n": 10,
+    "supplemented_from": [
+      "semantic_scholar",
+      "arxiv"
+    ]
+  },
+  "parallel-matched-predictions": {
+    "queries_run": [
+      "openalex: \"machine learning\" \"mechanistic model\" comparison prediction",
+      "openalex: data-driven mechanistic intercomparison perturbation",
+      "openalex: \"neural network\" versus \"mechanistic\" benchmark",
+      "openalex: \"hybrid model\" benchmark perturbation prediction",
+      "openalex: deep learning mechanistic baseline biological prediction",
+      "openalex: machine learning weather forecast benchmark physical model",
+      "openalex: perturbation prediction deep learning benchmark",
+      "s2: machine learning mechanistic model comparison perturbation",
+      "s2: deep learning mechanistic benchmark biological",
+      "s2: perturbation prediction deep learning benchmark",
+      "arxiv: machine learning mechanistic comparison"
+    ],
+    "openalex_returned": 350,
+    "after_venue_filter": 39,
+    "after_citations_filter": 39,
+    "after_relevance_filter": 9,
+    "after_dedup": 7,
+    "kept_top_n": 10,
+    "supplemented_from": [
+      "semantic_scholar",
+      "arxiv"
+    ]
+  },
+  "parallel-agreement-disagreement": {
+    "queries_run": [
+      "openalex: \"hybrid model\" \"uncertainty quantification\"",
+      "openalex: \"epistemic uncertainty\" mechanistic machine learning",
+      "openalex: \"deep ensemble\" disagreement uncertainty",
+      "openalex: \"model disagreement\" epistemic",
+      "openalex: machine learning physics uncertainty quantification",
+      "openalex: Bayesian deep learning uncertainty quantification",
+      "s2: hybrid model uncertainty quantification",
+      "s2: deep ensemble epistemic uncertainty",
+      "s2: Bayesian deep learning uncertainty",
+      "arxiv: epistemic uncertainty deep ensemble"
+    ],
+    "openalex_returned": 260,
+    "after_venue_filter": 31,
+    "after_citations_filter": 31,
+    "after_relevance_filter": 7,
+    "after_dedup": 6,
+    "kept_top_n": 10,
+    "supplemented_from": [
+      "semantic_scholar",
+      "arxiv"
+    ]
+  },
+  "parallel-foundation-models": {
+    "queries_run": [
+      "openalex: \"foundation model\" single cell",
+      "openalex: single-cell foundation model transcriptomic",
+      "openalex: \"foundation model\" biology genomics",
+      "openalex: \"large-scale pretraining\" cell transcriptomic",
+      "openalex: \"foundation model\" protein language",
+      "openalex: pretrained transformer single-cell genomics"
+    ],
+    "openalex_returned": 300,
+    "after_venue_filter": 87,
+    "after_citations_filter": 87,
+    "after_relevance_filter": 34,
+    "after_dedup": 23,
+    "kept_top_n": 10,
+    "supplemented_from": []
+  }
+}

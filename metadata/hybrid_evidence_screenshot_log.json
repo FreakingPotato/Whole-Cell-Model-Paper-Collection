@@ -2,20 +2,17 @@
   "hybrid-embedded-closure-001": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 136079,
-    "page": 8
+    "screenshots": 2
   },
   "hybrid-embedded-closure-002": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 67826,
-    "page": 1
+    "screenshots": 5
   },
   "hybrid-embedded-constraint-001": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 157157,
-    "page": 13
+    "screenshots": 1
   },
   "hybrid-embedded-constraint-002": {
     "status": "no_pdf",
@@ -23,16 +20,8 @@
   },
   "hybrid-embedded-emulation-001": {
     "status": "ok",
-    "score": 70.0,
-    "page": 1,
-    "block_bbox": [
-      63.16,
-      120.27,
-      476.1,
-      179.47
-    ],
-    "png_bytes": 67257,
-    "notes": "matched on page 1"
+    "notes": "skipped (idempotent)",
+    "screenshots": 5
   },
   "hybrid-embedded-emulation-002": {
     "status": "no_pdf",
@@ -41,51 +30,37 @@
   "hybrid-embedded-emulation-003": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 309817,
-    "page": 23
+    "screenshots": 1
   },
   "hybrid-pipeline-curation-001": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 260592,
-    "page": 1
+    "screenshots": 5
   },
   "hybrid-pipeline-curation-002": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 329983,
-    "page": 1
+    "screenshots": 1
   },
   "hybrid-pipeline-inference-001": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 144434,
-    "page": 12
+    "screenshots": 1
   },
   "hybrid-pipeline-inference-002": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 67826,
-    "page": 1
+    "screenshots": 5
   },
   "hybrid-pipeline-structural-001": {
     "status": "ok",
-    "score": 75.2,
-    "page": 1,
-    "block_bbox": [
-      90.0,
-      126.12,
-      521.87,
-      184.33
-    ],
-    "png_bytes": 83280,
-    "notes": "matched on page 1"
+    "notes": "skipped (idempotent)",
+    "screenshots": 4
   },
   "hybrid-pipeline-structural-002": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 152529,
-    "page": 3
+    "screenshots": 3
   },
   "hybrid-parallel-matched-001": {
     "status": "no_pdf",
@@ -94,21 +69,12 @@
   "hybrid-parallel-matched-002": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 332368,
-    "page": 5
+    "screenshots": 2
   },
   "hybrid-parallel-matched-003": {
     "status": "ok",
-    "score": 72.0,
-    "page": 37,
-    "block_bbox": [
-      168.0,
-      107.74,
-      507.52,
-      119.26
-    ],
-    "png_bytes": 50659,
-    "notes": "matched on page 37"
+    "notes": "skipped (idempotent)",
+    "screenshots": 5
   },
   "hybrid-parallel-agreement-001": {
     "status": "no_pdf",
@@ -117,25 +83,3527 @@
   "hybrid-parallel-agreement-002": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 152529,
-    "page": 3
+    "screenshots": 3
   },
   "hybrid-parallel-foundation-001": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 277739,
-    "page": 10
+    "screenshots": 3
   },
   "hybrid-parallel-foundation-002": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 128996,
-    "page": 2
+    "screenshots": 3
   },
   "hybrid-parallel-foundation-003": {
     "status": "ok",
     "notes": "skipped (idempotent)",
-    "png_bytes": 222209,
-    "page": 1
+    "screenshots": 3
+  },
+  "hybrid-embedded-closure-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      3,
+      9,
+      14,
+      18
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 82306,
+        "scores": [
+          86.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 62898,
+        "scores": [
+          78.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 57482,
+        "scores": [
+          80.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 81314,
+        "scores": [
+          83.6
+        ]
+      },
+      {
+        "group": 5,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 87338,
+        "scores": [
+          92.7
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-closure-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      4,
+      7,
+      16
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 37846,
+        "scores": [
+          115.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 72389,
+        "scores": [
+          78.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 63874,
+        "scores": [
+          92.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 58019,
+        "scores": [
+          79.4
+        ]
+      },
+      {
+        "group": 5,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 88468,
+        "scores": [
+          81.4
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-closure-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      4,
+      5,
+      6,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 137690,
+        "scores": [
+          77.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 83651,
+        "scores": [
+          77.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 107274,
+        "scores": [
+          76.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 128930,
+        "scores": [
+          77.6
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 118432,
+        "scores": [
+          78.3
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-closure-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      4,
+      6,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 104541,
+        "scores": [
+          83.5,
+          81.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 120296,
+        "scores": [
+          75.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 190189,
+        "scores": [
+          77.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 101573,
+        "scores": [
+          72.8
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-closure-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      16,
+      17,
+      22,
+      23
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 60137,
+        "scores": [
+          74.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 61639,
+        "scores": [
+          78.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 44873,
+        "scores": [
+          78.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 22,
+        "n_sentences": 1,
+        "png_bytes": 42895,
+        "scores": [
+          73.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 23,
+        "n_sentences": 1,
+        "png_bytes": 76992,
+        "scores": [
+          73.2
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-closure-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      3,
+      22
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 51415,
+        "scores": [
+          100.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 53467,
+        "scores": [
+          84.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 65613,
+        "scores": [
+          83.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 67926,
+        "scores": [
+          93.5
+        ]
+      },
+      {
+        "group": 5,
+        "page": 22,
+        "n_sentences": 1,
+        "png_bytes": 137921,
+        "scores": [
+          90.4
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-constraint-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      7,
+      10,
+      18
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 42242,
+        "scores": [
+          74.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 72166,
+        "scores": [
+          71.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 56335,
+        "scores": [
+          69.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 78079,
+        "scores": [
+          69.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 39842,
+        "scores": [
+          73.2
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-constraint-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      3,
+      10,
+      17
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 120560,
+        "scores": [
+          78.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 95942,
+        "scores": [
+          77.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 110312,
+        "scores": [
+          76.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 95299,
+        "scores": [
+          88.1
+        ]
+      },
+      {
+        "group": 5,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 151692,
+        "scores": [
+          75.4
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-constraint-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      9,
+      13,
+      22
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 59342,
+        "scores": [
+          103.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 87464,
+        "scores": [
+          79.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 78783,
+        "scores": [
+          79.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 13,
+        "n_sentences": 1,
+        "png_bytes": 71397,
+        "scores": [
+          75.7
+        ]
+      },
+      {
+        "group": 5,
+        "page": 22,
+        "n_sentences": 1,
+        "png_bytes": 41954,
+        "scores": [
+          87.6
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-constraint-EXT004": {
+    "status": "no_pdf",
+    "notes": "no PDF for EXT-018"
+  },
+  "hybrid-embedded-constraint-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      24,
+      25
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 33191,
+        "scores": [
+          110.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 111214,
+        "scores": [
+          75.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 86306,
+        "scores": [
+          72.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 104408,
+        "scores": [
+          72.9
+        ]
+      },
+      {
+        "group": 5,
+        "page": 25,
+        "n_sentences": 1,
+        "png_bytes": 80629,
+        "scores": [
+          72.3
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-constraint-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      4,
+      18
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 52366,
+        "scores": [
+          71.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 63123,
+        "scores": [
+          72.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 82017,
+        "scores": [
+          72.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 86468,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 93331,
+        "scores": [
+          71.2
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-constraint-EXT007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      5,
+      7,
+      11,
+      27
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 50810,
+        "scores": [
+          103.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 54195,
+        "scores": [
+          70.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 55919,
+        "scores": [
+          70.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 66604,
+        "scores": [
+          68.4
+        ]
+      },
+      {
+        "group": 5,
+        "page": 27,
+        "n_sentences": 1,
+        "png_bytes": 66842,
+        "scores": [
+          69.7
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      17,
+      19
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 51681,
+        "scores": [
+          93.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 97770,
+        "scores": [
+          93.7
+        ]
+      },
+      {
+        "group": 3,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 48959,
+        "scores": [
+          78.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 19,
+        "n_sentences": 1,
+        "png_bytes": 68560,
+        "scores": [
+          82.7
+        ]
+      },
+      {
+        "group": 5,
+        "page": 19,
+        "n_sentences": 1,
+        "png_bytes": 69833,
+        "scores": [
+          93.7
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      7,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 72524,
+        "scores": [
+          110.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 122165,
+        "scores": [
+          95.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 81065,
+        "scores": [
+          86.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 72426,
+        "scores": [
+          88.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 64190,
+        "scores": [
+          101.9
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      11,
+      16,
+      17,
+      19
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 73788,
+        "scores": [
+          88.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 66373,
+        "scores": [
+          81.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 49997,
+        "scores": [
+          82.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 47459,
+        "scores": [
+          78.1
+        ]
+      },
+      {
+        "group": 5,
+        "page": 19,
+        "n_sentences": 1,
+        "png_bytes": 51708,
+        "scores": [
+          77.4
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      3,
+      25,
+      26
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 79819,
+        "scores": [
+          92.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 51890,
+        "scores": [
+          87.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 25,
+        "n_sentences": 1,
+        "png_bytes": 50201,
+        "scores": [
+          88.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 26,
+        "n_sentences": 1,
+        "png_bytes": 67998,
+        "scores": [
+          97.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 26,
+        "n_sentences": 1,
+        "png_bytes": 72429,
+        "scores": [
+          94.5
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      11,
+      12
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 52393,
+        "scores": [
+          111.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 80827,
+        "scores": [
+          81.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 124595,
+        "scores": [
+          80.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 102730,
+        "scores": [
+          80.8
+        ]
+      },
+      {
+        "group": 5,
+        "page": 12,
+        "n_sentences": 1,
+        "png_bytes": 153812,
+        "scores": [
+          79.7
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      21,
+      22,
+      24,
+      25
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 38419,
+        "scores": [
+          111.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 21,
+        "n_sentences": 1,
+        "png_bytes": 45210,
+        "scores": [
+          83.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 22,
+        "n_sentences": 1,
+        "png_bytes": 54579,
+        "scores": [
+          79.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 55487,
+        "scores": [
+          79.6
+        ]
+      },
+      {
+        "group": 5,
+        "page": 25,
+        "n_sentences": 1,
+        "png_bytes": 65929,
+        "scores": [
+          80.0
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      8,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 70685,
+        "scores": [
+          79.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 2,
+        "png_bytes": 136535,
+        "scores": [
+          79.6,
+          80.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 36459,
+        "scores": [
+          80.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 37792,
+        "scores": [
+          80.4
+        ]
+      }
+    ]
+  },
+  "hybrid-embedded-emulation-EXT008": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      14,
+      16,
+      31
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 48026,
+        "scores": [
+          102.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 106334,
+        "scores": [
+          70.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 76133,
+        "scores": [
+          75.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 75323,
+        "scores": [
+          70.8
+        ]
+      },
+      {
+        "group": 5,
+        "page": 31,
+        "n_sentences": 1,
+        "png_bytes": 74164,
+        "scores": [
+          72.3
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 51418,
+        "scores": [
+          102.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 115228,
+        "scores": [
+          80.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 113301,
+        "scores": [
+          91.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 152153,
+        "scores": [
+          79.6
+        ]
+      },
+      {
+        "group": 5,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 101650,
+        "scores": [
+          87.0
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 67845,
+        "scores": [
+          111.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 100848,
+        "scores": [
+          77.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 2,
+        "png_bytes": 196617,
+        "scores": [
+          77.4,
+          85.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 126737,
+        "scores": [
+          78.0
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      6,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 132051,
+        "scores": [
+          69.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 99499,
+        "scores": [
+          69.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 2,
+        "png_bytes": 188768,
+        "scores": [
+          80.7,
+          93.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 152879,
+        "scores": [
+          70.6
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      3,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 69270,
+        "scores": [
+          97.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 137160,
+        "scores": [
+          87.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 3,
+        "png_bytes": 190415,
+        "scores": [
+          96.7,
+          87.1,
+          77.4
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      7,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 71904,
+        "scores": [
+          110.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 106904,
+        "scores": [
+          78.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 148841,
+        "scores": [
+          73.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 201307,
+        "scores": [
+          79.7
+        ]
+      },
+      {
+        "group": 5,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 201292,
+        "scores": [
+          75.8
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      4
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 164209,
+        "scores": [
+          75.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 150308,
+        "scores": [
+          81.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 3,
+        "png_bytes": 146143,
+        "scores": [
+          78.4,
+          76.5,
+          104.0
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      4,
+      7,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 59831,
+        "scores": [
+          108.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 141494,
+        "scores": [
+          79.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 2,
+        "png_bytes": 97094,
+        "scores": [
+          77.8,
+          78.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 151129,
+        "scores": [
+          84.9
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT008": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      14,
+      15
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 118792,
+        "scores": [
+          80.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 128174,
+        "scores": [
+          79.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 118121,
+        "scores": [
+          80.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 15,
+        "n_sentences": 2,
+        "png_bytes": 183635,
+        "scores": [
+          80.0,
+          80.0
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT009": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 140052,
+        "scores": [
+          74.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 2,
+        "png_bytes": 107258,
+        "scores": [
+          78.8,
+          75.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 119535,
+        "scores": [
+          86.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 151925,
+        "scores": [
+          86.2
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-curation-EXT010": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      5,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 100423,
+        "scores": [
+          80.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 170076,
+        "scores": [
+          76.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 109749,
+        "scores": [
+          75.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 2,
+        "png_bytes": 159596,
+        "scores": [
+          85.8,
+          81.8
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-inference-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      24
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 50881,
+        "scores": [
+          94.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 118837,
+        "scores": [
+          83.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 116511,
+        "scores": [
+          89.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 24,
+        "n_sentences": 2,
+        "png_bytes": 76638,
+        "scores": [
+          83.0,
+          83.5
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-inference-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      6,
+      24
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 77572,
+        "scores": [
+          87.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 119697,
+        "scores": [
+          89.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 87340,
+        "scores": [
+          80.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 74975,
+        "scores": [
+          84.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 110286,
+        "scores": [
+          80.3
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-inference-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      5,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 182867,
+        "scores": [
+          88.0,
+          72.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 114706,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 147103,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 120260,
+        "scores": [
+          72.6
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-inference-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 95981,
+        "scores": [
+          78.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 54848,
+        "scores": [
+          83.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 116810,
+        "scores": [
+          87.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 2,
+        "png_bytes": 164919,
+        "scores": [
+          85.0,
+          82.8
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-inference-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3,
+      23,
+      26
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 118149,
+        "scores": [
+          91.3,
+          80.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 60564,
+        "scores": [
+          83.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 23,
+        "n_sentences": 1,
+        "png_bytes": 76321,
+        "scores": [
+          80.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 26,
+        "n_sentences": 1,
+        "png_bytes": 132278,
+        "scores": [
+          78.7
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-inference-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 95674,
+        "scores": [
+          75.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 70835,
+        "scores": [
+          93.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 102674,
+        "scores": [
+          73.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 85616,
+        "scores": [
+          95.9
+        ]
+      },
+      {
+        "group": 5,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 89250,
+        "scores": [
+          75.9
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-inference-EXT007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      7,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 201092,
+        "scores": [
+          79.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 110329,
+        "scores": [
+          76.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 108526,
+        "scores": [
+          90.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 162387,
+        "scores": [
+          84.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 117445,
+        "scores": [
+          109.2
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      8,
+      26,
+      31
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 44950,
+        "scores": [
+          106.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 123374,
+        "scores": [
+          85.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 133082,
+        "scores": [
+          84.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 26,
+        "n_sentences": 1,
+        "png_bytes": 46718,
+        "scores": [
+          80.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 31,
+        "n_sentences": 1,
+        "png_bytes": 96677,
+        "scores": [
+          79.5
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      2,
+      4,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 74608,
+        "scores": [
+          74.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 92655,
+        "scores": [
+          75.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 2,
+        "png_bytes": 170144,
+        "scores": [
+          82.7,
+          75.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 56149,
+        "scores": [
+          82.9
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      11,
+      12
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 74371,
+        "scores": [
+          77.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 85260,
+        "scores": [
+          97.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 116524,
+        "scores": [
+          80.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 12,
+        "n_sentences": 2,
+        "png_bytes": 163357,
+        "scores": [
+          77.7,
+          87.7
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      7,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 151274,
+        "scores": [
+          75.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 2,
+        "png_bytes": 185171,
+        "scores": [
+          88.3,
+          75.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 165580,
+        "scores": [
+          80.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 150137,
+        "scores": [
+          78.8
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      5,
+      12
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 53597,
+        "scores": [
+          94.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 97774,
+        "scores": [
+          79.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 190850,
+        "scores": [
+          78.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 12,
+        "n_sentences": 2,
+        "png_bytes": 158398,
+        "scores": [
+          107.7,
+          106.1
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      6,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 67932,
+        "scores": [
+          103.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 39724,
+        "scores": [
+          80.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 2,
+        "png_bytes": 126090,
+        "scores": [
+          76.2,
+          75.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 166167,
+        "scores": [
+          75.6
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      14,
+      19
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 98962,
+        "scores": [
+          84.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 72706,
+        "scores": [
+          82.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 110666,
+        "scores": [
+          81.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 109364,
+        "scores": [
+          81.4
+        ]
+      },
+      {
+        "group": 5,
+        "page": 19,
+        "n_sentences": 1,
+        "png_bytes": 86656,
+        "scores": [
+          81.4
+        ]
+      }
+    ]
+  },
+  "hybrid-pipeline-structural-learning-EXT008": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      12
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 109488,
+        "scores": [
+          74.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 3,
+        "png_bytes": 74453,
+        "scores": [
+          75.1,
+          77.9,
+          74.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 12,
+        "n_sentences": 1,
+        "png_bytes": 119508,
+        "scores": [
+          74.5
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-matched-predictions-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      4,
+      6,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 129586,
+        "scores": [
+          80.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 120712,
+        "scores": [
+          85.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 157680,
+        "scores": [
+          82.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 198147,
+        "scores": [
+          86.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 201318,
+        "scores": [
+          83.6
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-matched-predictions-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      2,
+      6,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 161584,
+        "scores": [
+          76.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 6,
+        "n_sentences": 3,
+        "png_bytes": 177396,
+        "scores": [
+          80.6,
+          81.8,
+          73.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 150627,
+        "scores": [
+          74.4
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-matched-predictions-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      5,
+      8,
+      14
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 130901,
+        "scores": [
+          85.8,
+          75.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 68574,
+        "scores": [
+          78.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 59646,
+        "scores": [
+          77.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 30169,
+        "scores": [
+          78.2
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-matched-predictions-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      16,
+      18
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 76640,
+        "scores": [
+          108.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 64890,
+        "scores": [
+          104.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 16,
+        "n_sentences": 2,
+        "png_bytes": 130889,
+        "scores": [
+          81.3,
+          92.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 121973,
+        "scores": [
+          83.3
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-matched-predictions-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      3,
+      6,
+      7,
+      10,
+      11
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 118865,
+        "scores": [
+          81.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 97631,
+        "scores": [
+          83.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 108456,
+        "scores": [
+          88.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 95780,
+        "scores": [
+          89.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 127418,
+        "scores": [
+          81.3
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-matched-predictions-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      8,
+      14,
+      15
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 193253,
+        "scores": [
+          87.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 157640,
+        "scores": [
+          84.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 2,
+        "png_bytes": 146772,
+        "scores": [
+          85.6,
+          87.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 15,
+        "n_sentences": 1,
+        "png_bytes": 117390,
+        "scores": [
+          86.7
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      4,
+      6,
+      16,
+      24
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 58582,
+        "scores": [
+          77.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 59595,
+        "scores": [
+          76.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 39950,
+        "scores": [
+          86.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 41175,
+        "scores": [
+          84.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 51085,
+        "scores": [
+          76.9
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      4,
+      5,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 66183,
+        "scores": [
+          87.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 114180,
+        "scores": [
+          83.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 135902,
+        "scores": [
+          79.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 84893,
+        "scores": [
+          79.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 122351,
+        "scores": [
+          79.5
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      9,
+      17,
+      24
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 44224,
+        "scores": [
+          97.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 73010,
+        "scores": [
+          74.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 102467,
+        "scores": [
+          74.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 92155,
+        "scores": [
+          74.8
+        ]
+      },
+      {
+        "group": 5,
+        "page": 24,
+        "n_sentences": 1,
+        "png_bytes": 114192,
+        "scores": [
+          75.1
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      15,
+      16,
+      17,
+      18
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 32896,
+        "scores": [
+          104.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 15,
+        "n_sentences": 1,
+        "png_bytes": 66755,
+        "scores": [
+          90.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 16,
+        "n_sentences": 1,
+        "png_bytes": 78616,
+        "scores": [
+          80.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 86435,
+        "scores": [
+          82.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 18,
+        "n_sentences": 1,
+        "png_bytes": 81968,
+        "scores": [
+          77.0
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      8,
+      9,
+      11
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 75155,
+        "scores": [
+          84.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 138337,
+        "scores": [
+          93.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 109298,
+        "scores": [
+          87.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 113304,
+        "scores": [
+          97.4
+        ]
+      },
+      {
+        "group": 5,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 62997,
+        "scores": [
+          83.1
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      12,
+      39,
+      49,
+      57
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 52601,
+        "scores": [
+          98.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 12,
+        "n_sentences": 1,
+        "png_bytes": 55066,
+        "scores": [
+          82.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 39,
+        "n_sentences": 1,
+        "png_bytes": 69079,
+        "scores": [
+          82.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 49,
+        "n_sentences": 1,
+        "png_bytes": 78420,
+        "scores": [
+          85.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 57,
+        "n_sentences": 1,
+        "png_bytes": 114437,
+        "scores": [
+          88.3
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      12,
+      13
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 52745,
+        "scores": [
+          92.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 95433,
+        "scores": [
+          85.8,
+          84.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 12,
+        "n_sentences": 1,
+        "png_bytes": 112596,
+        "scores": [
+          87.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 13,
+        "n_sentences": 1,
+        "png_bytes": 121847,
+        "scores": [
+          115.9
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-agreement-disagreement-EXT008": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      4,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 33723,
+        "scores": [
+          117.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 84658,
+        "scores": [
+          77.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 43605,
+        "scores": [
+          77.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 46994,
+        "scores": [
+          82.7
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 63133,
+        "scores": [
+          81.0
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-foundation-models-EXT001": {
+    "status": "no_pdf",
+    "notes": "no PDF for EXT-086"
+  },
+  "hybrid-parallel-foundation-models-EXT002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      7,
+      8,
+      13
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 170840,
+        "scores": [
+          84.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 7,
+        "n_sentences": 2,
+        "png_bytes": 170697,
+        "scores": [
+          73.7,
+          74.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 201369,
+        "scores": [
+          90.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 13,
+        "n_sentences": 1,
+        "png_bytes": 111337,
+        "scores": [
+          73.7
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-foundation-models-EXT003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      2,
+      8,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 146134,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 8,
+        "n_sentences": 2,
+        "png_bytes": 136456,
+        "scores": [
+          85.6,
+          104.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 91659,
+        "scores": [
+          84.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 120766,
+        "scores": [
+          80.5
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-foundation-models-EXT004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      4,
+      5,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 63603,
+        "scores": [
+          79.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 198471,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 103996,
+        "scores": [
+          79.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 170346,
+        "scores": [
+          76.4
+        ]
+      },
+      {
+        "group": 5,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 170046,
+        "scores": [
+          76.6
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-foundation-models-EXT005": {
+    "status": "no_pdf",
+    "notes": "no PDF for EXT-082"
+  },
+  "hybrid-parallel-foundation-models-EXT006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      8,
+      14,
+      15
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 193253,
+        "scores": [
+          87.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 157640,
+        "scores": [
+          84.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 14,
+        "n_sentences": 2,
+        "png_bytes": 146772,
+        "scores": [
+          85.6,
+          87.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 15,
+        "n_sentences": 1,
+        "png_bytes": 117390,
+        "scores": [
+          86.7
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-foundation-models-EXT007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      8,
+      9,
+      17
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 39460,
+        "scores": [
+          114.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 77401,
+        "scores": [
+          78.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 181743,
+        "scores": [
+          86.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 133091,
+        "scores": [
+          86.1
+        ]
+      },
+      {
+        "group": 5,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 179302,
+        "scores": [
+          74.8
+        ]
+      }
+    ]
+  },
+  "hybrid-parallel-foundation-models-EXT008": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      7,
+      8,
+      19
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 42232,
+        "scores": [
+          114.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 162224,
+        "scores": [
+          79.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 122460,
+        "scores": [
+          77.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 113904,
+        "scores": [
+          86.7
+        ]
+      },
+      {
+        "group": 5,
+        "page": 19,
+        "n_sentences": 1,
+        "png_bytes": 117183,
+        "scores": [
+          76.9
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,983 @@
+{
+  "schema_version": "0.1",
+  "paradigm": "embedded",
+  "scored_at": "2026-05-08T00:00:00Z",
+  "scored_by": "S1",
+  "claims": {
+    "embedded-closure": {
+      "claim_text": "ML modules can approximate poorly characterised regulatory or kinetic processes inside an otherwise mechanistic framework, raising predictive accuracy without requiring fully resolved mechanisms.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-embedded-closure-EXT001",
+          "paper_id": "EXT-001",
+          "paper_title": "Sparse and Compositionally Robust Inference of Microbial Ecological Networks",
+          "paper_year": 2015,
+          "paper_journal": "PLoS Computational Biology",
+          "paper_cited_by_count": 1841,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "SPIEC-EASI infers OTU networks via inverse covariance; not a closure model embedded in a mechanistic framework."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Open R/Python tool exists, but it learns associations rather than closing kinetic gaps in a WCM."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound graphical-model methodology with cross-validation, but the link to closure-style hybrid modelling is indirect."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Demonstrated on hundreds of OTUs; nothing about whole-cell-scale kinetic processes."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Stability selection and synthetic benchmarks help, but they target network inference not embedded ML closure."
+            }
+          },
+          "weighted_total": 10.6,
+          "match_score": 0.379
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT002",
+          "paper_id": "EXT-002",
+          "paper_title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+          "paper_year": 2018,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 1333,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Learned Koopman embedding linearises nonlinear dynamics, indirectly demonstrating ML closure of unknown dynamical structure."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Auto-encoder architecture is reproducible, but adapting to mechanistic biological submodels still requires substantial work."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Method connects to Koopman theory and shows compact eigenfunction representations on benchmark systems."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Examples are low-dimensional dynamical systems, far from 10^5-variable cell-scale problems."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validated against analytical Koopman spectra and reconstruction error on known systems."
+            }
+          },
+          "weighted_total": 16.7,
+          "match_score": 0.596
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT003",
+          "paper_id": "EXT-003",
+          "paper_title": "Structural Properties of the Caenorhabditis elegans Neuronal Network",
+          "paper_year": 2011,
+          "paper_journal": "PLoS Computational Biology",
+          "paper_cited_by_count": 925,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 0,
+              "rationale": "Paper analyses C. elegans wiring topology; no ML closure of mechanistic gaps is presented."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Wiring data is reusable but offers no embedded ML method for WCM closure."
+            },
+            "plausible": {
+              "score": 1,
+              "rationale": "Network statistics are sound but not relevant to ML-mechanistic hybrid closure claim."
+            },
+            "scalable": {
+              "score": 1,
+              "rationale": "Single small connectome; not addressing whole-cell scale mechanistic processes."
+            },
+            "how_to_validate": {
+              "score": 1,
+              "rationale": "Topology consistency checks are not a transferable validation strategy for hybrid closure."
+            }
+          },
+          "weighted_total": 4.0,
+          "match_score": 0.143
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT004",
+          "paper_id": "EXT-004",
+          "paper_title": "Chaos as an intermittently forced linear system",
+          "paper_year": 2017,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 595,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "HAVOK closes nonlinear chaos by data-driven forcing on top of a linear Koopman model \u2014 closure analogue."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Delay-embedding + SVD pipeline is straightforward, but applying to biological kinetics needs adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Validated on Lorenz, magnetic-field reversals and measles outbreaks with consistent forcing statistics."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Demonstrated on low-dimensional time series; whole-cell scale untested."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Compares forcing-statistics signatures across canonical and real systems, a borrowable ablation pattern."
+            }
+          },
+          "weighted_total": 16.7,
+          "match_score": 0.596
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT005",
+          "paper_id": "EXT-005",
+          "paper_title": "DPM: A deep learning PDE augmentation method with application to large-eddy simulation",
+          "paper_year": 2020,
+          "paper_journal": "Journal of Computational Physics",
+          "paper_cited_by_count": 140,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Title and venue indicate a deep PDE-augmentation closure for LES, directly exemplifying ML closure of unresolved subgrid physics."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "LES code-coupled deep models are achievable, though biological PDE coupling adds plumbing."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Published in JCP; LES-with-NN closure is a well-supported methodology in the field."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "LES is a multimillion-DOF problem, supporting scalability claims even though biology specifics differ."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "DPM-style works typically validate against high-fidelity DNS, a transferable gold-standard pattern."
+            }
+          },
+          "weighted_total": 19.1,
+          "match_score": 0.682
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT006",
+          "paper_id": "EXT-006",
+          "paper_title": "Data-driven closures for stochastic dynamical systems",
+          "paper_year": 2018,
+          "paper_journal": "Journal of Computational Physics",
+          "paper_cited_by_count": 35,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Title explicitly addresses data-driven closure of stochastic dynamical systems \u2014 closely matching the closure claim."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Methodology likely exists in code form, but bridging stochastic chemistry submodels still demands engineering."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "JCP venue and topic suggest sound methodology, though abstract is missing for deeper assessment."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Without abstract details, scalability to 10^5 variables is uncertain; stochastic systems are typically modest-sized."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Closure papers typically include ablation against full stochastic ground truth, a useful template."
+            }
+          },
+          "weighted_total": 15.8,
+          "match_score": 0.564
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT007",
+          "paper_id": "EXT-007",
+          "paper_title": "Symplectic Model Reduction of Hamiltonian Systems on Nonlinear Manifolds and Approximation with Weakly Symplectic Autoencoder",
+          "paper_year": 2023,
+          "paper_journal": "SIAM Journal on Scientific Computing",
+          "paper_cited_by_count": 29,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Symplectic-manifold ROM preserves structure but is reduction, not closure of poorly characterised kinetics."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Hamiltonian framework rarely matches dissipative biological networks; non-trivial port to WCM."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mathematically rigorous: introduces symplectic manifold Galerkin with explicit structure-preservation guarantees."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Designed for high-dimensional Hamiltonian PDEs but not demonstrated at whole-cell scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Energy-conservation and stability benchmarks are valuable validation checks for any reduced model."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.529
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT008",
+          "paper_id": "EXT-008",
+          "paper_title": "Comparison of neural closure models for discretised PDEs",
+          "paper_year": 2022,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Systematically compares derivative-fitting and trajectory-fitting neural closures on Burgers and Kuramoto-Sivashinsky."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides clear training-loss prescriptions (trajectory + discretise-then-optimise) directly reusable for closure models."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Findings backed by accuracy/stability comparisons across two benchmark PDEs and three loss procedures."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Tested on small 1D PDEs; cell-scale dimensionality unaddressed."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Explicitly contrasts derivative versus trajectory fitting, an ablation pattern WCM teams can adopt."
+            }
+          },
+          "weighted_total": 20.2,
+          "match_score": 0.721
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT009",
+          "paper_id": "EXT-009",
+          "paper_title": "Curvature effects in turbulent premixed flames of H2/Air: a DNS study with reduced chemistry",
+          "paper_year": 2017,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "DNS study with reduced chemistry but no embedded ML closure module."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Combustion chemistry reduction is hand-engineered; no ML pipeline to lift directly into WCM."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Standard DNS analysis is sound, but the closure-claim relevance is tangential."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "DNS is high-DOF but the reduced chemistry mechanism is small and not learned."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "PDF analysis of OH radical states is a niche validation tool, not transferable to ML closure."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.332
+        },
+        {
+          "candidate_id": "candidate-embedded-closure-EXT010",
+          "paper_id": "EXT-010",
+          "paper_title": "Exploring the beta distribution in variable-density turbulent mixing",
+          "paper_year": 2010,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Assumed-PDF closure for turbulent mixing, but uses statistical (beta) closure rather than ML."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Stochastic-differential-equation derivation is mathematics-heavy and not a plug-in ML closure."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Mathematically grounded extension of beta-PDF closure to variable-density mixing."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Closure approach is generic but not demonstrated at WCM scale or with ML acceleration."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Comparison of moment equations to mass conservation is narrow and not ML-specific."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.332
+        }
+      ]
+    },
+    "embedded-constraint": {
+      "claim_text": "Mechanistic priors regularise or structure ML predictions so that learned components remain biologically plausible and generalise outside the training distribution.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT011",
+          "paper_id": "EXT-011",
+          "paper_title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+          "paper_year": 2018,
+          "paper_journal": "Journal of Computational Physics",
+          "paper_cited_by_count": 15748,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Foundational PINN paper showing PDE residual penalties keep NN predictions consistent with physics across forward/inverse tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Mature open-source frameworks (DeepXDE, JAX) wrap this method; adoption costs are low for ODE/PDE-style biology."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Extensively validated on canonical PDEs (Burgers, Schrodinger) with low residuals and 15k+ citations."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to moderate PDE problems but vanilla PINNs struggle with stiff multi-timescale systems typical of WCMs."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides residual-based loss diagnostics and synthetic-data ablations, a directly borrowable validation template."
+            }
+          },
+          "weighted_total": 23.7,
+          "match_score": 0.846
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT012",
+          "paper_id": "EXT-012",
+          "paper_title": "Physics-informed machine learning",
+          "paper_year": 2021,
+          "paper_journal": "Nature Reviews Physics",
+          "paper_cited_by_count": 6120,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Reviews concrete physics-prior wins (PINN, operator learning) where mechanistic constraints improve generalisation."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Acts as a curated pointer to mature methods and code; reduces decision overhead for WCM teams."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Authoritative Nature Reviews synthesis with broad evidence base from scientific ML community."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Surveys methods at varying scales but does not itself demonstrate cell-scale deployment."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation idioms (ablation, generalisation tests) but at survey level rather than recipe level."
+            }
+          },
+          "weighted_total": 21.5,
+          "match_score": 0.768
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT013",
+          "paper_id": "EXT-013",
+          "paper_title": "Understanding and Mitigating Gradient Flow Pathologies in Physics-Informed Neural Networks",
+          "paper_year": 2021,
+          "paper_journal": "SIAM Journal on Scientific Computing",
+          "paper_cited_by_count": 1483,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Diagnoses and fixes gradient pathologies in PINNs, indirectly improving how mechanistic priors regularise training."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides adaptive loss-balancing tricks reusable in any PINN-style WCM closure or constraint module."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "SIAM SISC paper with formal stiff-dynamics analysis backing the mitigation strategies."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Helps PINNs handle stiff problems, partially relevant to multi-timescale cell models."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Demonstrates failure modes via loss-landscape diagnostics, a useful PINN validation pattern."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT014",
+          "paper_id": "EXT-014",
+          "paper_title": "Physics-informed neural networks for high-speed flows",
+          "paper_year": 2019,
+          "paper_journal": "Computer Methods in Applied Mechanics and Engineering",
+          "paper_cited_by_count": 1171,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Applies PINN constraints (Euler equations) to compressible flow, demonstrating prior-driven generalisation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Code patterns transfer to PDE-style biology, but high-speed-flow specifics are domain-distant from WCM."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Peer-reviewed CMAME paper with 1k+ citations applying PINNs to a hard physics regime."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Handles shocks via tailored loss; moderate scalability but not WCM-scale demonstrated."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Compares against numerical solvers and exact solutions, an adoptable gold-standard ablation."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT015",
+          "paper_id": "EXT-015",
+          "paper_title": "NSFnets (Navier-Stokes flow nets): Physics-informed neural networks for the incompressible Navier-Stokes equations",
+          "paper_year": 2020,
+          "paper_journal": "Journal of Computational Physics",
+          "paper_cited_by_count": 1118,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Embeds incompressible NS constraints into NN solver, showing physics priors improve flow predictions."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "NSFnets recipe is reusable, but mapping to reaction-diffusion biology takes engineering."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Strong validation against DNS for canonical NS benchmarks, supporting the methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrates NS solver at moderate Reynolds; 10^5 DOF cell-scale not addressed."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "DNS comparison and divergence-free residuals offer a transferable validation template."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT016",
+          "paper_id": "EXT-016",
+          "paper_title": "A physics-informed deep learning framework for inversion and surrogate modeling in solid mechanics",
+          "paper_year": 2021,
+          "paper_journal": "Computer Methods in Applied Mechanics and Engineering",
+          "paper_cited_by_count": 1092,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Solid-mechanics PINN handles inversion under physics constraints, supporting prior-regularised ML."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Framework is general but solid-mechanics governing equations differ from biochemistry, requiring adaptation."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "1k+ citations and CMAME peer review back the inversion and surrogate-modelling methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Inversion problems shown at moderate mesh sizes; whole-cell scale untested."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Benchmarks against FEM solutions provide a borrowable gold-standard validation pattern."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT017",
+          "paper_id": "EXT-017",
+          "paper_title": "When and why PINNs fail to train: A neural tangent kernel perspective",
+          "paper_year": 2021,
+          "paper_journal": "Journal of Computational Physics",
+          "paper_cited_by_count": 1090,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Identifies NTK-based failure regimes for physics-constrained NNs, indirectly improving prior-regularised training."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides loss-weighting prescriptions that drop into existing PINN-style hybrid pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Backed by neural tangent kernel theory and JCP-quality empirical analysis with 1k+ citations."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "NTK insights help stiff regimes seen in larger PINN problems but cell-scale unproven."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Failure-mode characterisation provides a diagnostic protocol for new constrained ML applications."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT018",
+          "paper_id": "EXT-018",
+          "paper_title": "Conservative physics-informed neural networks on discrete domains for conservation laws: Applications to forward and inverse problems",
+          "paper_year": 2020,
+          "paper_journal": "Computer Methods in Applied Mechanics and Engineering",
+          "paper_cited_by_count": 1039,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Conservative PINN enforces conservation-law constraints, directly making ML predictions physically plausible."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Conservation-form constraints map naturally onto stoichiometric and mass-balance constraints in WCM contexts."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "1k+ citation CMAME paper with peer-reviewed forward and inverse benchmarks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discrete-domain decomposition supports moderate scaling; full-cell scale not yet demonstrated."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Direct comparison with conservation residuals and inverse-problem ground truth \u2014 borrowable validation."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT019",
+          "paper_id": "EXT-019",
+          "paper_title": "B-PINNs: Bayesian physics-informed neural networks for forward and inverse PDE problems with noisy data",
+          "paper_year": 2020,
+          "paper_journal": "Journal of Computational Physics",
+          "paper_cited_by_count": 1014,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Bayesian PINN combines mechanistic PDE priors with uncertainty quantification, regularising ML predictions under noisy data."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Bayesian inference on top of PINN adds compute cost and tooling overhead for WCM teams."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "JCP-quality methodology with formal posterior sampling and noise-robust benchmarks."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Bayesian sampling further limits scale; whole-cell-size deployment is unrealistic without surrogates."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Posterior-based calibration and noise-injection ablations are an excellent template for hybrid model UQ."
+            }
+          },
+          "weighted_total": 18.9,
+          "match_score": 0.675
+        },
+        {
+          "candidate_id": "candidate-embedded-constraint-EXT020",
+          "paper_id": "EXT-020",
+          "paper_title": "Physics-constrained deep learning for high-dimensional surrogate modeling and uncertainty quantification without labeled data",
+          "paper_year": 2019,
+          "paper_journal": "Journal of Computational Physics",
+          "paper_cited_by_count": 1006,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Physics-constrained NN trains without labels, leveraging mechanistic priors to keep predictions plausible \u2014 direct match."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Label-free training is attractive when WCM ground truth is scarce; methodology is reproducible."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "JCP paper with 1k+ citations applying physics-constrained learning to high-dimensional surrogates."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Explicitly targets high-dimensional surrogate modelling, partially supporting WCM-scale ambitions."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides UQ comparisons and constraint-satisfaction checks usable as validation patterns."
+            }
+          },
+          "weighted_total": 21.3,
+          "match_score": 0.761
+        }
+      ]
+    },
+    "embedded-emulation": {
+      "claim_text": "ML surrogates can replace expensive mechanistic submodules \u2014 such as spatial dynamics, stochastic chemistry, or molecular simulations \u2014 to make whole-cell-scale simulation tractable on accessible hardware.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT021",
+          "paper_id": "EXT-021",
+          "paper_title": "Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators",
+          "paper_year": 2021,
+          "paper_journal": "Nature Machine Intelligence",
+          "paper_cited_by_count": 2608,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "DeepONet learns operator maps replacing PDE solvers \u2014 canonical surrogate for expensive mechanistic submodules."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open DeepONet code and clear training recipe make adoption straightforward for biological PDE/ODE submodules."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Backed by universal approximation theorem and 2.6k citations across operator-learning applications."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Operator nets scale across discretisations and have been pushed toward large-scale physics emulation."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Compares against numerical solvers across diverse PDE benchmarks \u2014 directly transferable validation template."
+            }
+          },
+          "weighted_total": 24.6,
+          "match_score": 0.879
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT022",
+          "paper_id": "EXT-022",
+          "paper_title": "Climate policy implications of nonlinear decline of Arctic land permafrost and other cryosphere elements",
+          "paper_year": 2019,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 807,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "PAGE-ICE integrates dynamic emulators of complex physical models \u2014 concrete surrogate-replacement example, but climate not biology."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Methodology is climate-economic; transferring emulators to WCM submodules requires fresh training."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Nature Communications publication with quantitative downstream policy effects supports the emulator approach."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Shows emulators replacing expensive Earth-system models, demonstrating the surrogate concept at scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validates by comparing economic impact under multiple Paris-aligned scenarios \u2014 domain-specific ablation."
+            }
+          },
+          "weighted_total": 16.3,
+          "match_score": 0.582
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT023",
+          "paper_id": "EXT-023",
+          "paper_title": "Learning the solution operator of parametric partial differential equations with physics-informed DeepONets",
+          "paper_year": 2021,
+          "paper_journal": "Science Advances",
+          "paper_cited_by_count": 675,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Physics-informed DeepONets predict PDE solutions up to three orders of magnitude faster than conventional solvers."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Combines surrogate speed with physics priors and trains without paired data \u2014 high payoff for WCM submodule replacement."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Science Advances publication with quantitative speedups across multiple parametric PDE families."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Operator-learning architecture scales across parameter regimes and discretisations."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Speedup-versus-solver and parameter-sweep ablations are a directly adoptable validation strategy."
+            }
+          },
+          "weighted_total": 23.5,
+          "match_score": 0.839
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT024",
+          "paper_id": "EXT-024",
+          "paper_title": "Neural operators for accelerating scientific simulations and design",
+          "paper_year": 2024,
+          "paper_journal": "Nature Reviews Physics",
+          "paper_cited_by_count": 204,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Reviews concrete neural-operator surrogate wins in fluids, materials, and biology, directly supporting emulation claim."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Survey points at multiple usable architectures but offers no single drop-in tool."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Nature Reviews Physics synthesis grounded in dozens of validated applications."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Emphasises operator learning as the path to scalable scientific surrogates across disciplines."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation idioms across operator-learning case studies but at survey granularity."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT025",
+          "paper_id": "EXT-025",
+          "paper_title": "MIONet: Learning Multiple-Input Operators via Tensor Product",
+          "paper_year": 2022,
+          "paper_journal": "SIAM Journal on Scientific Computing",
+          "paper_cited_by_count": 185,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "MIONet extends operator learning to multiple-input operators, broadening the class of mechanistic submodules emulable."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Reference implementation exists; multi-input formulation matches biology where states + parameters + signals co-vary."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Provides universal approximation theorem for multiple-input operators plus error analysis and ODE/PDE benchmarks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated on canonical ODE/PDE systems \u2014 extension to whole-cell scale not yet shown."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Approximation-error bounds plus benchmarks against ODE/PDE solutions provide a borrowable validation pattern."
+            }
+          },
+          "weighted_total": 19.1,
+          "match_score": 0.682
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT026",
+          "paper_id": "EXT-026",
+          "paper_title": "Wavelet Neural Operator for solving parametric partial differential equations in computational mechanics problems",
+          "paper_year": 2022,
+          "paper_journal": "Computer Methods in Applied Mechanics and Engineering",
+          "paper_cited_by_count": 156,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Wavelet neural operator emulates parametric PDE solvers in mechanics \u2014 concrete surrogate example, slightly distant from biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Standard neural-operator code patterns apply; wavelet basis adds modest complexity."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "CMAME paper with 150+ citations and benchmark studies on parametric PDEs."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Multiscale wavelet basis aids resolution scaling but cell-scale dimensionality is unproven."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Compares against finite-element solutions across multiple PDEs \u2014 adoptable gold-standard test."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.629
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT027",
+          "paper_id": "EXT-027",
+          "paper_title": "A comprehensive and FAIR comparison between MLP and KAN representations for differential equations and operator networks",
+          "paper_year": 2024,
+          "paper_journal": "Computer Methods in Applied Mechanics and Engineering",
+          "paper_cited_by_count": 132,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Benchmarks MLP vs KAN inside operator networks, informing best surrogate architectures for emulation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Architecture-comparison findings directly guide WCM-team choice between MLP and KAN backbones."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "FAIR comparison protocol on standard benchmarks lends methodological credibility."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Studies benchmark-scale problems; cell-scale stress tests not part of the comparison."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "FAIR comparison framework itself is a borrowable validation methodology for surrogate selection."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.654
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT028",
+          "paper_id": "EXT-028",
+          "paper_title": "Learning two-phase microstructure evolution using neural operators and autoencoder architectures",
+          "paper_year": 2022,
+          "paper_journal": "npj Computational Materials",
+          "paper_cited_by_count": 132,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Autoencoder + DeepONet replaces phase-field solver for microstructure evolution \u2014 direct surrogate-emulation example."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Latent-space + operator pipeline is reusable, but training data generation from full solver still needed."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "npj Comp Mat paper with explicit interpolation and extrapolation accelerations over phase-field solver."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Latent-space compression makes higher-resolution microstructures tractable; cell-scale untested."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates against high-fidelity phase-field simulations on both interpolation and extrapolation tasks."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.707
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT029",
+          "paper_id": "EXT-029",
+          "paper_title": "Variational Physics-informed Neural Operator (VINO) for solving partial differential equations",
+          "paper_year": 2025,
+          "paper_journal": "Computer Methods in Applied Mechanics and Engineering",
+          "paper_cited_by_count": 117,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "VINO trains label-free using variational PDE energy and outperforms baselines as mesh resolution grows."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Variational formulation needs domain discretisation infrastructure that biology teams may lack."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "CMAME paper with comparative results showing VINO superiority at fine meshes."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Performance improves with mesh resolution, indicating scalability potential for spatial submodels."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Mesh-refinement studies and comparison to existing operators provide an adoptable ablation pattern."
+            }
+          },
+          "weighted_total": 20.7,
+          "match_score": 0.739
+        },
+        {
+          "candidate_id": "candidate-embedded-emulation-EXT030",
+          "paper_id": "EXT-030",
+          "paper_title": "Deep transfer operator learning for partial differential equations under conditional shift",
+          "paper_year": 2022,
+          "paper_journal": "Nature Machine Intelligence",
+          "paper_cited_by_count": 112,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DeepONet transfer learning under conditional shift makes surrogates reusable across related PDE tasks \u2014 supports emulation in scarce-data biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Transfer recipe with hybrid loss is implementable but RKHS embeddings add nontrivial code."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Nature Machine Intelligence paper grounded in conditional-embedding operator theory with multiple PDE demos."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transfer reduces data needs but the underlying DeepONet scale matches, not exceeds, the original."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Diverse transfer-learning scenarios with quantitative comparisons constitute a borrowable validation suite."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.707
+        }
+      ]
+    }
+  }
+}

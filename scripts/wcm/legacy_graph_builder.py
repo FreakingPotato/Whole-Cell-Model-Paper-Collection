@@ -2029,6 +2029,21 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
   .evidence-paper .pdf-pill { color: #34d399; }
   .evidence-paper .nopdf-pill { color: #fbbf24; }
   .evidence-paper .confidence-pill { color: #cbd5e1; padding: 1px 6px; border: 1px solid #334155; border-radius: 999px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .evidence-paper .quality-primary { color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 1px 6px; border-radius: 999px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .evidence-paper .quality-secondary { color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.35); padding: 1px 6px; border-radius: 999px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .evidence-paper .multi-claim-pill { color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.35); padding: 1px 6px; border-radius: 999px; font-size: 10px; }
+  .evidence-rank-pill { display: inline-block; min-width: 22px; text-align: center; color: #64748b; border: 1px solid #334155; padding: 1px 6px; border-radius: 999px; font-size: 10px; margin-right: 8px; vertical-align: middle; }
+  .evidence-rubric { font-family: ui-monospace, monospace; color: #cbd5e1; background: #111827; border: 1px solid #1f2937; padding: 3px 8px; border-radius: 6px; font-size: 10px; margin-top: 4px; display: inline-block; }
+  .modal-rubric-table { margin: 0 0 14px; font-size: 12px; color: #cbd5e1; }
+  .modal-rubric-table .rubric-row { display: grid; grid-template-columns: 130px 28px 1fr; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1f2937; }
+  .modal-rubric-table .rubric-row:last-child { border-bottom: 0; }
+  .modal-rubric-table .rubric-dim { color: #94a3b8; }
+  .modal-rubric-table .rubric-score { color: #f1f5f9; font-family: ui-monospace, monospace; text-align: right; }
+  .modal-rubric-table .rubric-rationale { color: #cbd5e1; font-size: 11px; line-height: 1.45; }
+  .modal-rubric-total { margin-top: 6px; font-family: ui-monospace, monospace; color: #f1f5f9; font-size: 12px; border-top: 1px solid #334155; padding-top: 6px; }
+  .modal-also-claims { margin: 0 0 14px; font-size: 12px; color: #cbd5e1; background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 8px 10px; }
+  .modal-also-claims summary { cursor: pointer; color: #fbbf24; }
+  .modal-also-claims ul { margin: 6px 0 0 18px; padding: 0; color: #94a3b8; font-size: 11px; }
   /* Evidence detail modal */
   #evidence-modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(2, 6, 23, 0.78); backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 24px; }
   #evidence-modal[data-open="true"] { display: flex; }
@@ -2039,6 +2054,11 @@ def write_enhanced_html(graph_data: dict, community_labels: dict[int, str]) -> N
   #evidence-modal .modal-pdf img.evidence-screenshot { width: 100%; height: 100%; object-fit: contain; background: #020617; }
   #evidence-modal .modal-screenshot-caption { position: absolute; top: 8px; left: 12px; background: rgba(15, 23, 42, 0.85); border: 1px solid #334155; color: #cbd5e1; font-size: 11px; padding: 3px 8px; border-radius: 999px; z-index: 4; }
   #evidence-modal .modal-pdf-fallback { color: #cbd5e1; padding: 24px; font-size: 13px; line-height: 1.65; }
+  #evidence-modal .modal-pdf.stack-mode { display: flex; overflow-y: auto; padding: 14px; gap: 14px; flex-direction: column; align-items: stretch; justify-content: flex-start; }
+  #evidence-modal .modal-pdf.stack-mode img.evidence-screenshot { width: 100%; max-height: none; height: auto; display: block; border-radius: 6px; object-fit: contain; }
+  #evidence-modal .screenshot-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 10px; }
+  #evidence-modal .screenshot-caption { display: inline-block; background: rgba(15, 23, 42, 0.85); border: 1px solid #334155; color: #cbd5e1; font-size: 11px; padding: 3px 8px; border-radius: 999px; margin-bottom: 8px; }
+  #evidence-modal .screenshot-sentence { color: #cbd5e1; font-size: 12px; line-height: 1.55; margin: 8px 4px 0; padding: 0 0 0 8px; border-left: 2px solid rgba(56, 189, 248, 0.4); font-style: italic; }
   #evidence-modal .modal-info h3 { margin: 0 0 4px; font-size: 16px; color: #f1f5f9; }
   #evidence-modal .modal-info .modal-citation { color: #7dd3fc; font-size: 13px; margin-bottom: 14px; }
   #evidence-modal .modal-info .modal-callout { background: #111827; border: 1px solid #1f2937; border-left: 3px solid #38bdf8; padding: 10px 12px; border-radius: 8px; font-size: 13px; line-height: 1.6; color: #e5e7eb; margin-bottom: 12px; }
@@ -3002,6 +3022,49 @@ const EVIDENCE_BY_ID = (() => {
   return map;
 })();
 
+// Map paper_id -> Set of claim_ids it appears under, for multi-claim badge.
+const PAPER_CLAIM_INDEX = (() => {
+  const map = {};
+  if (!HYBRID_EVIDENCE || !Array.isArray(HYBRID_EVIDENCE.paradigms)) return map;
+  HYBRID_EVIDENCE.paradigms.forEach(paradigm => {
+    (paradigm.claims || []).forEach(claim => {
+      (claim.evidence_points || []).forEach(point => {
+        if (!point.paper_id) return;
+        if (!map[point.paper_id]) map[point.paper_id] = new Set();
+        map[point.paper_id].add(claim.id);
+      });
+    });
+  });
+  return map;
+})();
+
+const RUBRIC_DIM_LABELS = [
+  ['useful_outcomes', 'Useful outcomes'],
+  ['immediate_benefit', 'Immediate benefit'],
+  ['plausible', 'Plausible'],
+  ['scalable', 'Scalable'],
+  ['how_to_validate', 'How to validate'],
+];
+
+function rubricSummaryPill(point) {
+  if (!point || !point.rubric) return '';
+  const r = point.rubric;
+  const codeMap = { useful_outcomes: 'U', immediate_benefit: 'I', plausible: 'P', scalable: 'S', how_to_validate: 'V' };
+  const parts = [];
+  RUBRIC_DIM_LABELS.forEach(([key]) => {
+    const dim = r[key];
+    if (dim && typeof dim.score !== 'undefined') {
+      parts.push(`${codeMap[key]}:${dim.score}`);
+    }
+  });
+  if (!parts.length) return '';
+  let line = parts.join(' ');
+  if (typeof point.weighted_total === 'number') {
+    line += ` → ${point.weighted_total}`;
+  }
+  return `<div class="evidence-rubric" title="Rubric U=Useful outcomes · I=Immediate benefit · P=Plausible · S=Scalable · V=How to validate">${escapeHtml(line)}</div>`;
+}
+
 let hybridMounted = false;
 function mountHybridSummary() {
   const root = document.getElementById('hybrid-summary');
@@ -3066,16 +3129,43 @@ function renderEvidenceItem(point, claim, paradigm) {
   const hasPdf = paper && paper.pdf_status === 'downloaded' && paper.pdf_href;
   const pdfChip = hasPdf ? `<span class="pdf-pill">📄 PDF available</span>` : `<span class="nopdf-pill">DOI / landing page only</span>`;
   const conf = point.confidence || 'metadata_only';
+
+  // Rank pill (left of row).
+  const rankPill = (typeof point.rank_within_claim !== 'undefined' && point.rank_within_claim !== null)
+    ? `<span class="evidence-rank-pill" title="Rank within claim">#${escapeHtml(String(point.rank_within_claim))}</span>`
+    : '';
+
+  // Claim-match-quality pill.
+  let qualityPill = '';
+  if (point.claim_match_quality === 'primary') {
+    qualityPill = `<span class="quality-primary">primary</span>`;
+  } else if (point.claim_match_quality === 'secondary') {
+    qualityPill = `<span class="quality-secondary">secondary</span>`;
+  }
+
+  // Multi-claim badge — only when this paper appears under >= 2 distinct claims globally.
+  const claimsForPaper = (point.paper_id && PAPER_CLAIM_INDEX[point.paper_id]) ? PAPER_CLAIM_INDEX[point.paper_id] : null;
+  const multiClaimCount = claimsForPaper ? claimsForPaper.size : 0;
+  const multiClaimPill = (multiClaimCount >= 2)
+    ? `<span class="multi-claim-pill" title="This paper supports multiple claims">Matches ${multiClaimCount} claims</span>`
+    : '';
+
+  // Rubric summary pill — separate row.
+  const rubricLine = rubricSummaryPill(point);
+
   return `
     <li class="evidence-item" data-evidence-id="${escapeHtml(point.id)}">
-      <p class="evidence-text">${escapeHtml(point.text)}</p>
+      <p class="evidence-text">${rankPill}${escapeHtml(point.text)}</p>
       <div class="evidence-paper">
         <span class="citation-pill">${escapeHtml(citation)}</span>
         ${journal ? `<span>${escapeHtml(journal)}</span>` : ''}
         ${year ? `<span>${escapeHtml(String(year))}</span>` : ''}
         ${pdfChip}
         <span class="confidence-pill">${escapeHtml(conf)}</span>
+        ${qualityPill}
+        ${multiClaimPill}
       </div>
+      ${rubricLine}
     </li>
   `;
 }
@@ -3114,12 +3204,41 @@ function openEvidenceModal(evidenceId) {
   const pageHash = point.page ? `#page=${point.page}` : '';
   const pdfWithPage = pdfHref ? `${pdfHref}${pageHash}` : '';
 
+  // Rubric breakdown block.
+  let rubricHtml = '';
+  if (point.rubric) {
+    const rows = RUBRIC_DIM_LABELS.map(([key, label]) => {
+      const dim = point.rubric[key];
+      if (!dim || typeof dim.score === 'undefined') return '';
+      const rationale = dim.rationale ? escapeHtml(dim.rationale) : '';
+      return `<div class="rubric-row"><span class="rubric-dim">${escapeHtml(label)}</span><span class="rubric-score">${escapeHtml(String(dim.score))}</span><span class="rubric-rationale">${rationale}</span></div>`;
+    }).join('');
+    const totalLine = (typeof point.weighted_total === 'number')
+      ? `<div class="modal-rubric-total">weighted_total &nbsp; ${escapeHtml(String(point.weighted_total))} / 28</div>`
+      : '';
+    if (rows) {
+      rubricHtml = `<div class="modal-rubric-table">${rows}</div>${totalLine}`;
+    }
+  }
+
+  // "Also matches N claims" disclosure — list other claim_ids this paper appears under.
+  let alsoClaimsHtml = '';
+  if (point.paper_id && PAPER_CLAIM_INDEX[point.paper_id]) {
+    const claims = Array.from(PAPER_CLAIM_INDEX[point.paper_id]).filter(cid => cid !== claim.id);
+    if (claims.length >= 1) {
+      const items = claims.map(cid => `<li>${escapeHtml(cid)}</li>`).join('');
+      alsoClaimsHtml = `<details class="modal-also-claims"><summary>Also matches ${claims.length} other ${claims.length === 1 ? 'claim' : 'claims'}</summary><ul>${items}</ul></details>`;
+    }
+  }
+
   const info = evidenceModal.querySelector('.modal-info');
   info.innerHTML = `
     <h3 id="modal-title">${escapeHtml(paper.title || point.text || 'Evidence')}</h3>
     <div class="modal-citation">${escapeHtml(citation)}${paper.journal ? ' · ' + escapeHtml(paper.journal) : ''}${paper.year ? ' · ' + escapeHtml(String(paper.year)) : ''}</div>
     <div class="modal-callout"><strong style="color:#7dd3fc">${escapeHtml(paradigm.label)} → ${escapeHtml(claim.subtype || '')}</strong><br>${escapeHtml(point.text)}</div>
     ${point.quote ? `<div class="modal-callout"><em>${escapeHtml(point.quote)}</em></div>` : ''}
+    ${rubricHtml}
+    ${alsoClaimsHtml}
     <div class="modal-meta">
       ${point.section ? `<div><strong>Section:</strong> ${escapeHtml(point.section)}</div>` : ''}
       ${point.page ? `<div><strong>Page:</strong> ${escapeHtml(String(point.page))}</div>` : ''}
@@ -3132,7 +3251,30 @@ function openEvidenceModal(evidenceId) {
     </div>
   `;
   const pdfPanel = evidenceModal.querySelector('.modal-pdf');
-  if (point.screenshot_href) {
+  pdfPanel.classList.remove('stack-mode');
+  const screenshotsArr = Array.isArray(point.screenshots) ? point.screenshots : [];
+  if (screenshotsArr.length > 0) {
+    pdfPanel.classList.add('stack-mode');
+    const circled = ['❶','❷','❸','❹','❺','❻','❼','❽','❾'];
+    const cards = screenshotsArr.map((shot, idx) => {
+      if (!shot || !shot.href) return '';
+      const marker = (idx < circled.length) ? circled[idx] : `${idx + 1}.`;
+      const pageLabel = (typeof shot.page !== 'undefined' && shot.page !== null && shot.page !== '')
+        ? `Page ${escapeHtml(String(shot.page))}`
+        : `Image ${idx + 1}`;
+      const sectionHint = shot.section_hint ? ` · ${escapeHtml(shot.section_hint)}` : '';
+      const caption = `<div class="screenshot-caption">${escapeHtml(marker)} ${pageLabel}${sectionHint}</div>`;
+      const lazy = idx === 0 ? '' : ' loading="lazy"';
+      const img = `<img class="evidence-screenshot" src="${escapeHtml(shot.href)}"${lazy} alt="Supporting screenshot ${idx + 1} from ${escapeHtml(citation)}">`;
+      const sentences = Array.isArray(shot.sentences) ? shot.sentences : [];
+      const sentenceHtml = sentences
+        .filter(s => s && s.text)
+        .map(s => `<p class="screenshot-sentence">"${escapeHtml(s.text)}"</p>`)
+        .join('');
+      return `<div class="screenshot-card">${caption}${img}${sentenceHtml}</div>`;
+    }).join('');
+    pdfPanel.innerHTML = cards;
+  } else if (point.screenshot_href) {
     const captionLabel = paper.display_label || paper.label || citation;
     const caption = point.page
       ? `<div class="modal-screenshot-caption">Page ${escapeHtml(String(point.page))} · ${escapeHtml(captionLabel)}</div>`
@@ -3157,6 +3299,7 @@ function closeEvidenceModal() {
   const pdfPanel = evidenceModal.querySelector('.modal-pdf');
   if (pdfPanel) {
     // Drop the iframe so the PDF stops downloading / locking the focus.
+    pdfPanel.classList.remove('stack-mode');
     pdfPanel.innerHTML = '<div class="modal-pdf-fallback">Loading evidence…</div>';
   }
 }
@@ -3205,23 +3348,38 @@ startIdleDrift();
         import shutil
         copied: set[str] = set()
         embedded_evidence = json.loads(json.dumps(hybrid_evidence))
+
+        def _mirror_one(href: str) -> str | None:
+            if not href:
+                return None
+            src_path = ROOT / href
+            if not src_path.is_file():
+                return None
+            dest_path = evidence_target / src_path.name
+            if src_path.name not in copied:
+                try:
+                    shutil.copy2(src_path, dest_path)
+                    copied.add(src_path.name)
+                except OSError:
+                    return None
+            return f"evidence/{src_path.name}"
+
         for paradigm in embedded_evidence.get("paradigms", []) or []:
             for claim in paradigm.get("claims", []) or []:
                 for point in claim.get("evidence_points", []) or []:
-                    href = point.get("screenshot_href")
-                    if not href:
-                        continue
-                    src_path = ROOT / href
-                    if not src_path.is_file():
-                        continue
-                    dest_path = evidence_target / src_path.name
-                    if src_path.name not in copied:
-                        try:
-                            shutil.copy2(src_path, dest_path)
-                            copied.add(src_path.name)
-                        except OSError:
-                            continue
-                    point["screenshot_href"] = f"evidence/{src_path.name}"
+                    # Legacy single-image schema.
+                    legacy_rewritten = _mirror_one(point.get("screenshot_href"))
+                    if legacy_rewritten is not None:
+                        point["screenshot_href"] = legacy_rewritten
+                    # New multi-screenshot schema.
+                    shots = point.get("screenshots")
+                    if isinstance(shots, list):
+                        for shot in shots:
+                            if not isinstance(shot, dict):
+                                continue
+                            new_href = _mirror_one(shot.get("href"))
+                            if new_href is not None:
+                                shot["href"] = new_href
     else:
         embedded_evidence = {}
     html = (
