@@ -1,0 +1,865 @@
+{
+  "ontology_claims": {
+    "gfm-tokenization": {
+      "queries": [
+        {
+          "query": "DNA tokenization k-mer foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "BPE tokenizer DNA genomic",
+          "result_count": 30
+        },
+        {
+          "query": "nucleotide tokenization language model",
+          "result_count": 30
+        },
+        {
+          "query": "genomic foundation model k-mer",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "Sliding Window Interaction Grammar (SWING): a generalized interaction language model for peptide and protein interaction",
+          "year": 2025,
+          "cited": 11,
+          "venue": "Nature Methods"
+        },
+        {
+          "title": "METAGENE-1: Metagenomic Foundation Model for Pandemic Monitoring",
+          "year": 2025,
+          "cited": 4,
+          "venue": "arXiv (Cornell University)"
+        },
+        {
+          "title": "The impact of tokenizer selection in genomic language models",
+          "year": 2025,
+          "cited": 4,
+          "venue": "Bioinformatics"
+        },
+        {
+          "title": "LncRNA-BERT: An RNA Language Model for Classifying Coding and Long Non-Coding RNA",
+          "year": 2025,
+          "cited": 3,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "A comprehensive survey of genome language models in bioinformatics",
+          "year": 2025,
+          "cited": 3,
+          "venue": "Briefings in Bioinformatics"
+        },
+        {
+          "title": "NucEL: Single-Nucleotide ELECTRA-Style Genomic Pre-training for Efficient and Interpretable Representations",
+          "year": 2025,
+          "cited": 2,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "Benchmarking pre-trained genomic language models for RNA sequence-related predictive applications",
+          "year": 2025,
+          "cited": 2,
+          "venue": "Nature Communications"
+        }
+      ],
+      "candidate_count": 7,
+      "kept_count": 5
+    },
+    "gfm-long-context": {
+      "queries": [
+        {
+          "query": "long context DNA Mamba state space",
+          "result_count": 30
+        },
+        {
+          "query": "HyenaDNA Caduceus long range genome",
+          "result_count": 30
+        },
+        {
+          "query": "long-range genomic foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "long context nucleotide transformer",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "Benchmarking DNA foundation models for genomic and genetic tasks",
+          "year": 2025,
+          "cited": 13,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "PlantCAD2: a DNA foundation model for interpreting genomes across flowering plants",
+          "year": 2025,
+          "cited": 6,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "DNALongBench: A Benchmark Suite for Long-Range DNA Prediction Tasks",
+          "year": 2025,
+          "cited": 5,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "The impact of tokenizer selection in genomic language models",
+          "year": 2025,
+          "cited": 4,
+          "venue": "Bioinformatics"
+        },
+        {
+          "title": "Selective State Space Models Outperform Transformers at Predicting RNA-Seq Read Coverage",
+          "year": 2025,
+          "cited": 4,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "mRNABench: A curated benchmark for mature mRNA property and function prediction",
+          "year": 2025,
+          "cited": 3,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "A comprehensive survey of genome language models in bioinformatics",
+          "year": 2025,
+          "cited": 3,
+          "venue": "Briefings in Bioinformatics"
+        },
+        {
+          "title": "MambaCpG: an accurate model for single-cell DNA methylation status imputation using mamba",
+          "year": 2025,
+          "cited": 2,
+          "venue": "Briefings in Bioinformatics"
+        }
+      ],
+      "candidate_count": 8,
+      "kept_count": 5
+    },
+    "gfm-pretraining-objective": {
+      "queries": [
+        {
+          "query": "self-supervised pretraining DNA RNA masked",
+          "result_count": 30
+        },
+        {
+          "query": "autoregressive genomic pretraining objective",
+          "result_count": 30
+        },
+        {
+          "query": "contrastive pretraining DNA sequence",
+          "result_count": 30
+        },
+        {
+          "query": "masked language modeling genomic foundation",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "RiNALMo: general-purpose RNA language models can generalize well on structure prediction tasks",
+          "year": 2025,
+          "cited": 65,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "A clinical benchmark of public self-supervised pathology foundation models",
+          "year": 2025,
+          "cited": 60,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "De novo design of peptide binders to conformationally diverse targets with contrastive language modeling",
+          "year": 2025,
+          "cited": 49,
+          "venue": "Science Advances"
+        },
+        {
+          "title": "CellFM: a large-scale foundation model pre-trained on transcriptomics of 100 million human cells",
+          "year": 2025,
+          "cited": 42,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Target sequence-conditioned design of peptide binders using masked language modeling",
+          "year": 2025,
+          "cited": 28,
+          "venue": "Nature Biotechnology"
+        },
+        {
+          "title": "Helixer: ab initio prediction of primary eukaryotic gene models combining deep learning and a hidden Markov model",
+          "year": 2025,
+          "cited": 21,
+          "venue": "Nature Methods"
+        },
+        {
+          "title": "Biophysics-based protein language models for protein engineering",
+          "year": 2025,
+          "cited": 21,
+          "venue": "Nature Methods"
+        },
+        {
+          "title": "Evaluating the representational power of pre-trained DNA language models for regulatory genomics",
+          "year": 2025,
+          "cited": 20,
+          "venue": "Genome biology"
+        },
+        {
+          "title": "Multimodal learning enables chat-based exploration of single-cell data",
+          "year": 2025,
+          "cited": 20,
+          "venue": "Nature Biotechnology"
+        },
+        {
+          "title": "Benchmarking DNA Sequence Models for Causal Regulatory Variant Prediction in Human Genetics",
+          "year": 2025,
+          "cited": 16,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "Deep learning-driven survival prediction in pan-cancer studies by integrating multimodal histology-genomic data",
+          "year": 2025,
+          "cited": 15,
+          "venue": "Briefings in Bioinformatics"
+        },
+        {
+          "title": "A pretrained transformer model for decoding individual glucose dynamics from continuous glucose monitoring data",
+          "year": 2025,
+          "cited": 14,
+          "venue": "National Science Review"
+        },
+        {
+          "title": "FusOn-pLM: a fusion oncoprotein-specific language model via adjusted rate masking",
+          "year": 2025,
+          "cited": 14,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Benchmarking DNA foundation models for genomic and genetic tasks",
+          "year": 2025,
+          "cited": 13,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Hybrid protein–ligand binding residue prediction with protein language models: does the structure matter?",
+          "year": 2025,
+          "cited": 9,
+          "venue": "Bioinformatics"
+        }
+      ],
+      "candidate_count": 21,
+      "kept_count": 5
+    },
+    "multimodal-shared-embeddings": {
+      "queries": [
+        {
+          "query": "joint embedding text DNA biological sequence",
+          "result_count": 30
+        },
+        {
+          "query": "contrastive multimodal genomic literature",
+          "result_count": 30
+        },
+        {
+          "query": "cross-modal retrieval gene description",
+          "result_count": 30
+        },
+        {
+          "query": "multimodal alignment text genomic",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "Large Language Models in Medical Chatbots: Opportunities, Challenges, and the Need to Address AI Risks",
+          "year": 2025,
+          "cited": 32,
+          "venue": "Information"
+        },
+        {
+          "title": "Whole-genome prediction of bacterial pathogenic capacity on novel bacteria using protein language models, with PathogenF",
+          "year": 2025,
+          "cited": 20,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "Multimodal learning enables chat-based exploration of single-cell data",
+          "year": 2025,
+          "cited": 20,
+          "venue": "Nature Biotechnology"
+        }
+      ],
+      "candidate_count": 3,
+      "kept_count": 3
+    },
+    "multimodal-instruction-tuning": {
+      "queries": [
+        {
+          "query": "instruction tuning genomic large language model",
+          "result_count": 30
+        },
+        {
+          "query": "biological sequence LLM instruction",
+          "result_count": 30
+        },
+        {
+          "query": "DNA RNA instruction following large language model",
+          "result_count": 30
+        },
+        {
+          "query": "ChatNT instruction biological",
+          "result_count": 15
+        }
+      ],
+      "candidates": [
+        {
+          "title": "Benchmarking large language models for biomedical natural language processing applications and recommendations",
+          "year": 2025,
+          "cited": 105,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Development and validation of an autonomous artificial intelligence agent for clinical decision-making in oncology",
+          "year": 2025,
+          "cited": 90,
+          "venue": "Nature Cancer"
+        },
+        {
+          "title": "Biomni: A General-Purpose Biomedical AI Agent",
+          "year": 2025,
+          "cited": 70,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "GeneAgent: self-verification language agent for gene-set analysis using domain databases",
+          "year": 2025,
+          "cited": 33,
+          "venue": "Nature Methods"
+        },
+        {
+          "title": "Large Language Models in Medical Chatbots: Opportunities, Challenges, and the Need to Address AI Risks",
+          "year": 2025,
+          "cited": 32,
+          "venue": "Information"
+        },
+        {
+          "title": "Scaling Large Language Models for Next-Generation Single-Cell Analysis",
+          "year": 2025,
+          "cited": 26,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        }
+      ],
+      "candidate_count": 6,
+      "kept_count": 5
+    },
+    "multimodal-text-conditioned-generation": {
+      "queries": [
+        {
+          "query": "text conditioned DNA RNA sequence generation",
+          "result_count": 30
+        },
+        {
+          "query": "natural language guided genomic design",
+          "result_count": 30
+        },
+        {
+          "query": "text-to-DNA sequence generation",
+          "result_count": 30
+        },
+        {
+          "query": "text-to-protein generation",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "A clinical benchmark of public self-supervised pathology foundation models",
+          "year": 2025,
+          "cited": 60,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "CodonTransformer: a multispecies codon optimizer using context-aware neural networks",
+          "year": 2025,
+          "cited": 44,
+          "venue": "Nature Communications"
+        }
+      ],
+      "candidate_count": 2,
+      "kept_count": 2
+    },
+    "applications-variant-effects": {
+      "queries": [
+        {
+          "query": "variant effect prediction language model",
+          "result_count": 30
+        },
+        {
+          "query": "genomic foundation model variant pathogenicity",
+          "result_count": 30
+        },
+        {
+          "query": "deep learning variant effect prediction",
+          "result_count": 30
+        },
+        {
+          "query": "AlphaMissense variant prediction",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "Genome modeling and design across all domains of life with Evo 2",
+          "year": 2025,
+          "cited": 169,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "AlphaGenome: advancing regulatory variant effect prediction with a unified DNA sequence model",
+          "year": 2025,
+          "cited": 94,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "RiNALMo: general-purpose RNA language models can generalize well on structure prediction tasks",
+          "year": 2025,
+          "cited": 65,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "APOE ε4 carriers share immune-related proteomic changes across neurodegenerative diseases",
+          "year": 2025,
+          "cited": 49,
+          "venue": "Nature Medicine"
+        },
+        {
+          "title": "Proteome-wide model for human disease genetics",
+          "year": 2025,
+          "cited": 14,
+          "venue": "Nature Genetics"
+        },
+        {
+          "title": "PLM-interact: extending protein language models to predict protein-protein interactions",
+          "year": 2025,
+          "cited": 11,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Sliding Window Interaction Grammar (SWING): a generalized interaction language model for peptide and protein interaction",
+          "year": 2025,
+          "cited": 11,
+          "venue": "Nature Methods"
+        },
+        {
+          "title": "DeepMVP: deep learning models trained on high-quality data accurately predict PTM sites and variant-induced alterations",
+          "year": 2025,
+          "cited": 9,
+          "venue": "Nature Methods"
+        },
+        {
+          "title": "PreMode predicts mode-of-action of missense variants by deep graph representation learning of protein sequence and struc",
+          "year": 2025,
+          "cited": 9,
+          "venue": "Nature Communications"
+        }
+      ],
+      "candidate_count": 9,
+      "kept_count": 5
+    },
+    "applications-regulatory-annotation": {
+      "queries": [
+        {
+          "query": "regulatory element annotation deep learning enhancer",
+          "result_count": 30
+        },
+        {
+          "query": "promoter splice site foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "transcription factor binding deep learning",
+          "result_count": 30
+        },
+        {
+          "query": "regulatory genomics foundation model",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "AlphaGenome: advancing regulatory variant effect prediction with a unified DNA sequence model",
+          "year": 2025,
+          "cited": 94,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "A foundation model of transcription across human cell types",
+          "year": 2025,
+          "cited": 89,
+          "venue": "Nature"
+        },
+        {
+          "title": "TRAPT: a multi-stage fused deep learning framework for predicting transcriptional regulators based on large-scale epigen",
+          "year": 2025,
+          "cited": 49,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Multiscale footprints reveal the organization of cis-regulatory elements",
+          "year": 2025,
+          "cited": 44,
+          "venue": "Nature"
+        },
+        {
+          "title": "CodonTransformer: a multispecies codon optimizer using context-aware neural networks",
+          "year": 2025,
+          "cited": 44,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "CellFM: a large-scale foundation model pre-trained on transcriptomics of 100 million human cells",
+          "year": 2025,
+          "cited": 42,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Helixer: ab initio prediction of primary eukaryotic gene models combining deep learning and a hidden Markov model",
+          "year": 2025,
+          "cited": 21,
+          "venue": "Nature Methods"
+        }
+      ],
+      "candidate_count": 7,
+      "kept_count": 5
+    },
+    "applications-drug-discovery": {
+      "queries": [
+        {
+          "query": "drug target discovery language model genomic",
+          "result_count": 30
+        },
+        {
+          "query": "RNA therapeutic design foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "sequence-aware drug discovery LLM",
+          "result_count": 30
+        },
+        {
+          "query": "gene therapy design language model",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "The Global Neurodegeneration Proteomics Consortium: biomarker and drug target discovery for common neurodegenerative dis",
+          "year": 2025,
+          "cited": 67,
+          "venue": "Nature Medicine"
+        },
+        {
+          "title": "RiNALMo: general-purpose RNA language models can generalize well on structure prediction tasks",
+          "year": 2025,
+          "cited": 65,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Artificial intelligence in drug discovery and development: transforming challenges into opportunities",
+          "year": 2025,
+          "cited": 29,
+          "venue": "Discover Pharmaceutical Sciences"
+        },
+        {
+          "title": "Scaling Large Language Models for Next-Generation Single-Cell Analysis",
+          "year": 2025,
+          "cited": 26,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        }
+      ],
+      "candidate_count": 4,
+      "kept_count": 4
+    }
+  },
+  "planning_next_steps": {
+    "unified-cross-modal-pretraining": {
+      "queries": [
+        {
+          "query": "joint multimodal pretraining text DNA protein",
+          "result_count": 30
+        },
+        {
+          "query": "unified foundation model biology protein DNA RNA",
+          "result_count": 30
+        },
+        {
+          "query": "shared representation multimodal biological",
+          "result_count": 30
+        },
+        {
+          "query": "cross-modal foundation model biology protein",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "A multimodal cell census and atlas of the mammalian primary motor cortex",
+          "year": 2021,
+          "cited": 562,
+          "venue": "Nature"
+        },
+        {
+          "title": "Pan-cancer integrative histology-genomic analysis via multimodal deep learning",
+          "year": 2022,
+          "cited": 534,
+          "venue": "Cancer Cell"
+        },
+        {
+          "title": "MuLan-Methyl—multiple transformer-based language models for accurate DNA methylation prediction",
+          "year": 2022,
+          "cited": 46,
+          "venue": "GigaScience"
+        }
+      ],
+      "candidate_count": 3,
+      "kept_count": 3
+    },
+    "whole-genome-multimodal-context": {
+      "queries": [
+        {
+          "query": "whole genome long context foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "distal regulatory enhancer-promoter long range",
+          "result_count": 30
+        },
+        {
+          "query": "long-range chromatin foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "Enformer Borzoi long range genomic",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "Predicting gene expression from histone marks using chromatin deep learning models depends on histone mark function, reg",
+          "year": 2024,
+          "cited": 7,
+          "venue": "Nucleic Acids Research"
+        },
+        {
+          "title": "A comprehensive survey of genome language models in bioinformatics",
+          "year": 2025,
+          "cited": 3,
+          "venue": "Briefings in Bioinformatics"
+        }
+      ],
+      "candidate_count": 2,
+      "kept_count": 2
+    },
+    "causal-mechanism-extraction": {
+      "queries": [
+        {
+          "query": "MAVE saturation mutagenesis foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "MPRA massively parallel reporter foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "Perturb-seq deep learning causal",
+          "result_count": 30
+        },
+        {
+          "query": "causal interpretability genomic foundation",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "Predicting transcriptional outcomes of novel multigene perturbations with GEARS",
+          "year": 2023,
+          "cited": 279,
+          "venue": "Nature Biotechnology"
+        },
+        {
+          "title": "D-SCRIPT translates genome to phenome with sequence-based, structure-aware, genome-scale predictions of protein-protein ",
+          "year": 2021,
+          "cited": 199,
+          "venue": "Cell Systems"
+        },
+        {
+          "title": "Rapid protein stability prediction using deep learning representations",
+          "year": 2023,
+          "cited": 168,
+          "venue": "eLife"
+        },
+        {
+          "title": "Knowledge-primed neural networks enable biologically interpretable deep learning on single-cell sequencing data",
+          "year": 2020,
+          "cited": 133,
+          "venue": "Genome biology"
+        },
+        {
+          "title": "Cell-type-specific prediction of 3D chromatin organization enables high-throughput in silico genetic screening",
+          "year": 2023,
+          "cited": 123,
+          "venue": "Nature Biotechnology"
+        },
+        {
+          "title": "Interpreting cis-regulatory mechanisms from genomic deep neural networks using surrogate models",
+          "year": 2024,
+          "cited": 27,
+          "venue": "Nature Machine Intelligence"
+        },
+        {
+          "title": "Rapid protein stability prediction using deep learning representations",
+          "year": 2022,
+          "cited": 13,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "Interpreting <i>cis</i> -regulatory mechanisms from genomic deep neural networks using surrogate models",
+          "year": 2023,
+          "cited": 11,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        }
+      ],
+      "candidate_count": 8,
+      "kept_count": 5
+    },
+    "clinical-actionability-loop": {
+      "queries": [
+        {
+          "query": "clinical translation variant pathogenicity foundation model",
+          "result_count": 30
+        },
+        {
+          "query": "RNA therapeutic design closed loop deep learning",
+          "result_count": 30
+        },
+        {
+          "query": "prime editing target selection deep learning",
+          "result_count": 30
+        },
+        {
+          "query": "ESM AlphaMissense clinical pathogenicity",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "A deep learning system accurately classifies primary and metastatic cancers using passenger mutation patterns",
+          "year": 2020,
+          "cited": 234,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Zero-shot prediction of mutation effects with multimodal deep representation learning guides protein engineering",
+          "year": 2024,
+          "cited": 57,
+          "venue": "Cell Research"
+        },
+        {
+          "title": "Proteome-wide model for human disease genetics",
+          "year": 2025,
+          "cited": 14,
+          "venue": "Nature Genetics"
+        },
+        {
+          "title": "Fine-tuning Protein Language Models with Deep Mutational Scanning improves Variant Effect Prediction",
+          "year": 2024,
+          "cited": 10,
+          "venue": "arXiv (Cornell University)"
+        },
+        {
+          "title": "PreMode predicts mode-of-action of missense variants by deep graph representation learning of protein sequence and struc",
+          "year": 2025,
+          "cited": 9,
+          "venue": "Nature Communications"
+        },
+        {
+          "title": "Combining evolution and protein language models for an interpretable cancer driver mutation prediction with D2Deep",
+          "year": 2024,
+          "cited": 7,
+          "venue": "Briefings in Bioinformatics"
+        },
+        {
+          "title": "ESM-Effect: An Effective and Efficient Fine-Tuning Framework towards accurate prediction of Mutation’s Functional Effect",
+          "year": 2025,
+          "cited": 4,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "From Likelihood to Fitness: Improving Variant Effect Prediction in Protein and Genome Language Models",
+          "year": 2025,
+          "cited": 4,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)"
+        },
+        {
+          "title": "Generalizable and scalable protein stability prediction with rewired protein generative models",
+          "year": 2025,
+          "cited": 3,
+          "venue": "Nature Communications"
+        }
+      ],
+      "candidate_count": 9,
+      "kept_count": 5
+    },
+    "standardised-multimodal-benchmarks": {
+      "queries": [
+        {
+          "query": "benchmark genomic foundation model evaluation",
+          "result_count": 30
+        },
+        {
+          "query": "leakage evaluation biology language model",
+          "result_count": 30
+        },
+        {
+          "query": "BEND nucleotide benchmark",
+          "result_count": 30
+        },
+        {
+          "query": "GUE long range benchmark DNA",
+          "result_count": 30
+        }
+      ],
+      "candidates": [
+        {
+          "title": "ProteinBERT: a universal deep-learning model of protein sequence and function",
+          "year": 2022,
+          "cited": 936,
+          "venue": "Bioinformatics"
+        },
+        {
+          "title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
+          "year": 2023,
+          "cited": 28,
+          "venue": "arXiv (Cornell University)"
+        }
+      ],
+      "candidate_count": 2,
+      "kept_count": 2
+    }
+  },
+  "expansion_run_at": "2026-05-08T13:30:11.760902+00:00",
+  "new_papers_added": 45,
+  "paper_id_range": {
+    "first": "MMG-076",
+    "last": "MMG-125"
+  },
+  "post_filter_dropped": [
+    "MMG-100",
+    "MMG-105"
+  ],
+  "expansion_2026_run_at": "2026-05-08T13:35:49.437088+00:00",
+  "new_papers_added_2026": 9,
+  "new_papers_added_2026_postfilter": 5
+}

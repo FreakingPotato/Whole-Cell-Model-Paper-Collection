@@ -1,0 +1,286 @@
+{
+  "schema_version": "0.1",
+  "expansion_run_at": "2026-05-08T13:30:11.760694+00:00",
+  "ontology_claims": {
+    "gfm-tokenization": [
+      {
+        "paper_id": "MMG-076",
+        "discovery_score": 66,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-077",
+        "discovery_score": 59,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-078",
+        "discovery_score": 59,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-079",
+        "discovery_score": 58,
+        "discovery_rank": 4
+      },
+      {
+        "paper_id": "MMG-080",
+        "discovery_score": 58,
+        "discovery_rank": 5
+      }
+    ],
+    "gfm-long-context": [
+      {
+        "paper_id": "MMG-081",
+        "discovery_score": 68,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-082",
+        "discovery_score": 61,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-083",
+        "discovery_score": 60,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-084",
+        "discovery_score": 59,
+        "discovery_rank": 4
+      }
+    ],
+    "gfm-pretraining-objective": [
+      {
+        "paper_id": "MMG-085",
+        "discovery_score": 95,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-086",
+        "discovery_score": 95,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-087",
+        "discovery_score": 95,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-088",
+        "discovery_score": 95,
+        "discovery_rank": 4
+      },
+      {
+        "paper_id": "MMG-089",
+        "discovery_score": 83,
+        "discovery_rank": 5
+      }
+    ],
+    "multimodal-shared-embeddings": [
+      {
+        "paper_id": "MMG-090",
+        "discovery_score": 87,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-091",
+        "discovery_score": 75,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-092",
+        "discovery_score": 75,
+        "discovery_rank": 3
+      }
+    ],
+    "multimodal-instruction-tuning": [
+      {
+        "paper_id": "MMG-093",
+        "discovery_score": 95,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-094",
+        "discovery_score": 95,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-095",
+        "discovery_score": 95,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-096",
+        "discovery_score": 88,
+        "discovery_rank": 4
+      },
+      {
+        "paper_id": "MMG-123",
+        "discovery_score": 72,
+        "discovery_rank": 5
+      },
+      {
+        "paper_id": "MMG-124",
+        "discovery_score": 62,
+        "discovery_rank": 6
+      }
+    ],
+    "multimodal-text-conditioned-generation": [
+      {
+        "paper_id": "MMG-097",
+        "discovery_score": 95,
+        "discovery_rank": 1
+      }
+    ],
+    "applications-variant-effects": [
+      {
+        "paper_id": "MMG-098",
+        "discovery_score": 95,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-099",
+        "discovery_score": 95,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-100",
+        "discovery_score": 69,
+        "discovery_rank": 3
+      }
+    ],
+    "applications-regulatory-annotation": [
+      {
+        "paper_id": "MMG-101",
+        "discovery_score": 95,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-102",
+        "discovery_score": 95,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-103",
+        "discovery_score": 95,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-125",
+        "discovery_score": 61,
+        "discovery_rank": 4
+      }
+    ],
+    "applications-drug-discovery": [
+      {
+        "paper_id": "MMG-104",
+        "discovery_score": 84,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-105",
+        "discovery_score": 81,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-121",
+        "discovery_score": 67,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-122",
+        "discovery_score": 66,
+        "discovery_rank": 4
+      }
+    ]
+  },
+  "planning_next_steps": {
+    "unified-cross-modal-pretraining": [
+      {
+        "paper_id": "MMG-106",
+        "discovery_score": 90,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-107",
+        "discovery_score": 90,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-108",
+        "discovery_score": 90,
+        "discovery_rank": 3
+      }
+    ],
+    "whole-genome-multimodal-context": [
+      {
+        "paper_id": "MMG-109",
+        "discovery_score": 57,
+        "discovery_rank": 1
+      }
+    ],
+    "causal-mechanism-extraction": [
+      {
+        "paper_id": "MMG-110",
+        "discovery_score": 90,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-111",
+        "discovery_score": 90,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-112",
+        "discovery_score": 90,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-113",
+        "discovery_score": 90,
+        "discovery_rank": 4
+      },
+      {
+        "paper_id": "MMG-114",
+        "discovery_score": 90,
+        "discovery_rank": 5
+      }
+    ],
+    "clinical-actionability-loop": [
+      {
+        "paper_id": "MMG-115",
+        "discovery_score": 90,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-116",
+        "discovery_score": 90,
+        "discovery_rank": 2
+      },
+      {
+        "paper_id": "MMG-118",
+        "discovery_score": 64,
+        "discovery_rank": 3
+      },
+      {
+        "paper_id": "MMG-117",
+        "discovery_score": 60,
+        "discovery_rank": 4
+      }
+    ],
+    "standardised-multimodal-benchmarks": [
+      {
+        "paper_id": "MMG-119",
+        "discovery_score": 90,
+        "discovery_rank": 1
+      },
+      {
+        "paper_id": "MMG-120",
+        "discovery_score": 78,
+        "discovery_rank": 2
+      }
+    ]
+  }
+}

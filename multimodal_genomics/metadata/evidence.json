@@ -1069,6 +1069,108 @@
               "rank_within_claim": 6,
               "journal_tier": 5,
               "screenshot_count": 0
+            },
+            {
+              "id": "evidence-gfm-long-context-MMG083",
+              "paper_id": "MMG-083",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.911,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "DNALongBench targets five long-range tasks up to 1Mb (3D folding, eQTL, enhancer-target), directly underwriting the long-context claim."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Releases benchmark plus baselines (HyenaDNA, Caduceus variants) that practitioners can drop into their pipeline."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Evaluates long-range vs short-context models head-to-head, lending empirical weight."
+                },
+                "scalable": {
+                  "score": 4,
+                  "rationale": "Tasks span 1-million-bp dependencies, the regime targeted by SSM/Hyena/Mamba architectures."
+                },
+                "how_to_validate": {
+                  "score": 5,
+                  "rationale": "Five canonical long-range tasks with public baselines provide a direct validation protocol."
+                }
+              },
+              "weighted_total": 25.5,
+              "text": "DNALongBench: A Benchmark Suite for Long-Range DN…: DNALongBench targets five long-range tasks up to 1Mb (3D folding, eQTL, enhancer-target), directly underwriting the long-context claim.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 7,
+              "journal_tier": 5,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG083__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "To address this gap, we introduce DNALONGBENCH, a benchmark dataset encompassing five important genomics tasks that consider long-range dependencies up to 1 million base pairs: enhancer-target gene interaction, ex- pression quantitative trait loci, 3D genome organization, regulatory sequence activity, and transcrip- tion initiation signals.",
+                      "match_score": 76.1
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG083__02.png",
+                  "page": 3,
+                  "section_hint": "page 3",
+                  "sentences": [
+                    {
+                      "text": "• We introduce DNALONGBENCH, a benchmark for long-range DNA prediction tasks spanning up to 1 million base pairs (bp) across five distinct tasks.",
+                      "match_score": 76.9
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG083__03.png",
+                  "page": 3,
+                  "section_hint": "page 3",
+                  "sentences": [
+                    {
+                      "text": "As a result, a comprehensive benchmark suite for evaluating a broader range of tasks reliant on long-range dependencies remains ab- sent.",
+                      "match_score": 72.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG083__04.png",
+                  "page": 4,
+                  "section_hint": "page 4",
+                  "sentences": [
+                    {
+                      "text": "In contrast, DNALONGBENCH offers the most extensive range of long-range tasks, supporting sequences up to 1 million base pairs.",
+                      "match_score": 75.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG083__05.png",
+                  "page": 9,
+                  "section_hint": "page 9",
+                  "sentences": [
+                    {
+                      "text": "Additional metrics are provided in Table S1.",
+                      "match_score": 74.5
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 5,
+              "screenshot_strategy": "multi-sentence-multi-page"
             }
           ]
         },
@@ -1211,6 +1313,210 @@
               "screenshot_strategy": "multi-sentence-multi-page"
             },
             {
+              "id": "evidence-gfm-pretraining-objective-MMG085",
+              "paper_id": "MMG-085",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.95,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "RiNALMo uses masked-language-modeling self-supervision on 36M non-coding RNAs and learns implicit RNA structure — direct objective evidence."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Largest open RNA LM (650M params); model and weights are released for downstream reuse."
+                },
+                "plausible": {
+                  "score": 5,
+                  "rationale": "Achieves SOTA on RNA structure prediction including unseen RNA families, lending strong credibility."
+                },
+                "scalable": {
+                  "score": 4,
+                  "rationale": "650M parameters trained on ncRNA scale demonstrates objective-driven scaling."
+                },
+                "how_to_validate": {
+                  "score": 5,
+                  "rationale": "Secondary structure and family generalization tasks provide a clear borrowable validation protocol."
+                }
+              },
+              "weighted_total": 26.6,
+              "text": "RiNALMo: general-purpose RNA language models can…: RiNALMo uses masked-language-modeling self-supervision on 36M non-coding RNAs and learns implicit RNA structure — direct objective evidence.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 3,
+              "journal_tier": 2,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG085__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "Notably, we show that its generalization capabilities overcome the inability of other deep learning methods for secondary structure prediction to generalize on unseen RNA families.",
+                      "match_score": 82.1
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG085__02.png",
+                  "page": 2,
+                  "section_hint": "page 2",
+                  "sentences": [
+                    {
+                      "text": "23 and trained exclusively on 23.7M non-coding RNAs (ncRNAs) from the RNAcentral database24,22 pre-trained an ensemble of LMs ranging from 25M to 400M parameters trained on a much larger dataset of 1B sequences with the architecture analogous to the ESM protein LM13 enhanced by several advanced techniques such as RoPE and fused layer norm.",
+                      "match_score": 79.7
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG085__03.png",
+                  "page": 3,
+                  "section_hint": "page 3",
+                  "sentences": [
+                    {
+                      "text": "An example of a secondary structure can be seen in Fig.",
+                      "match_score": 80.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG085__04.png",
+                  "page": 6,
+                  "section_hint": "page 6",
+                  "sentences": [
+                    {
+                      "text": "RiNALMo’s secondary structure prediction generalization capabilities were also compared to homology-based tools CentroidHomfold51, locARNA52, and CentroidAlifold53.",
+                      "match_score": 79.6
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG085__05.png",
+                  "page": 10,
+                  "section_hint": "page 10",
+                  "sentences": [
+                    {
+                      "text": "Methods RNA language model RiNALMo is an encoder-only Transformer.",
+                      "match_score": 82.1
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 5,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
+              "id": "evidence-gfm-pretraining-objective-MMG088",
+              "paper_id": "MMG-088",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.732,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 3,
+                  "rationale": "CellFM uses a modified RetNet self-supervised objective on 100M cells, illustrating alternative pretraining objectives in genomics-adjacent FMs."
+                },
+                "immediate_benefit": {
+                  "score": 4,
+                  "rationale": "Released model and benchmarks are usable for transcriptomic pretraining-objective comparisons."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Outperforms peer single-cell FMs on cell annotation/perturbation, lending empirical support."
+                },
+                "scalable": {
+                  "score": 4,
+                  "rationale": "800M-parameter model on 100M-cell corpus shows objective-driven scaling at single-cell scale."
+                },
+                "how_to_validate": {
+                  "score": 4,
+                  "rationale": "Cell annotation, perturbation, and gene-function tasks provide validation protocols."
+                }
+              },
+              "weighted_total": 20.5,
+              "text": "CellFM: a large-scale foundation model pre-traine…: Released model and benchmarks are usable for transcriptomic pretraining-objective comparisons.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 4,
+              "journal_tier": 2,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG088__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "Extensive experiments have shown that CellFM outperforms existing models in cell annotation, perturbation prediction, gene function prediction, and gene-gene relationship capturing.",
+                      "match_score": 86.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG088__02.png",
+                  "page": 2,
+                  "section_hint": "page 2",
+                  "sentences": [
+                    {
+                      "text": "Our comprehensive experiments have shown that CellFM outperforms existing models across diverse applications, such as cell annotation, perturbation prediction, and gene function prediction.",
+                      "match_score": 93.5
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG088__03.png",
+                  "page": 4,
+                  "section_hint": "page 4",
+                  "sentences": [
+                    {
+                      "text": "Once pre-trained, CellFM can be applied to multiple single-cell downstream applications, such as gene function prediction, cell type annotation, perturbation effect prediction, and gene network analy- sis (Fig.",
+                      "match_score": 77.1
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG088__04.png",
+                  "page": 4,
+                  "section_hint": "page 4",
+                  "sentences": [
+                    {
+                      "text": "With the human genome comprising ~20,000 protein-encoding genes29, and a sig- niﬁcant portion lacking functional annotations, the accurate predic- tion of gene functions is imperativefor a deeper understanding of their roles within biological systems.",
+                      "match_score": 77.1
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG088__05.png",
+                  "page": 12,
+                  "section_hint": "page 12",
+                  "sentences": [
+                    {
+                      "text": "Through a series of comprehensive experiments, CellFM has demonstrated its effec- tiveness across a range of single-cell tasks including cell type annotation, prediction of responses to perturbations, gene network analysis, and gene function prediction.",
+                      "match_score": 77.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 5,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
               "id": "evidence-gfm-pretraining-objective-MMG002",
               "paper_id": "MMG-018",
               "claim_match_quality": "primary",
@@ -1245,7 +1551,7 @@
               "weighted_total": 22.9,
               "text": "Evaluating Protein Transfer Learning with TAPE: Rigorous comparison with controlled baselines supports the claim that pretraining objectives determine transfer.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 3,
+              "rank_within_claim": 5,
               "journal_tier": 5,
               "screenshot_count": 0
             },
@@ -1284,7 +1590,7 @@
               "weighted_total": 21.8,
               "text": "The Nucleotide Transformer: Building and Evaluati…: 18-task benchmark plus variant prioritization gives a strong borrowable SSL evaluation protocol.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 4,
+              "rank_within_claim": 6,
               "journal_tier": 5,
               "screenshot_count": 0
             },
@@ -1323,7 +1629,7 @@
               "weighted_total": 21.1,
               "text": "Interpretable RNA Foundation Model from Unannotat…: RNA-FM uses MLM SSL on 23M ncRNA sequences; demonstrates downstream gains across structure, regulation, and SARS-CoV-2 prediction.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 5,
+              "rank_within_claim": 7,
               "journal_tier": 5,
               "screenshot_count": 0
             },
@@ -1362,7 +1668,7 @@
               "weighted_total": 22.0,
               "text": "scGPT: Towards Building a Foundation Model for Si…: scGPT preprint version with same generative SSL objective on single-cell data; identical objective-driven gains.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 6,
+              "rank_within_claim": 8,
               "journal_tier": 5,
               "screenshot_count": 0
             },
@@ -1401,7 +1707,7 @@
               "weighted_total": 22.9,
               "text": "HyenaDNA: Long-Range Genomic Sequence Modeling at…: AR objective combined with Hyena scales to 1M tokens — production-suitable for genome-scale SSL.",
               "screenshot_status": "ok",
-              "rank_within_claim": 7,
+              "rank_within_claim": 9,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -1483,6 +1789,100 @@
           "claim": "Shared embedding spaces between natural language and biological sequences enable cross-modal retrieval, sequence-grounded question answering, and unified inference across literature and experimental data.",
           "evidence_points": [
             {
+              "id": "evidence-multimodal-shared-embeddings-MMG092",
+              "paper_id": "MMG-092",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.95,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "CellWhisperer builds a contrastive multimodal embedding of transcriptomes and textual annotations from 1M RNA-seq profiles — direct shared-embedding evidence."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Public CELLxGENE chat integration plus released embeddings are immediately usable."
+                },
+                "plausible": {
+                  "score": 5,
+                  "rationale": "Zero-shot cell-type prediction benchmarks confirm cross-modal retrieval works as claimed."
+                },
+                "scalable": {
+                  "score": 4,
+                  "rationale": "1M-profile contrastive corpus shows the approach scales to large transcriptomic atlases."
+                },
+                "how_to_validate": {
+                  "score": 5,
+                  "rationale": "Zero-shot annotation prediction and embryonic-development meta-analysis provide validation protocols."
+                }
+              },
+              "weighted_total": 26.6,
+              "text": "Multimodal learning enables chat-based exploratio…: CellWhisperer builds a contrastive multimodal embedding of transcriptomes and textual annotations from 1M RNA-seq profiles — direct shared-embedding evidence.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 1,
+              "journal_tier": 1,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG092__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "We establish a multimodal embedding of transcriptomes and their textual annotations, using contrastive learning on 1 million RNA sequencing profiles with AI-curated descriptions.",
+                      "match_score": 85.8
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG092__02.png",
+                  "page": 2,
+                  "section_hint": "page 2",
+                  "sentences": [
+                    {
+                      "text": "This AI-assisted data curation yielded a standardized dataset of 705,430 human transcrip- tomes with matched textual annotations.",
+                      "match_score": 75.8
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG092__03.png",
+                  "page": 5,
+                  "section_hint": "page 5",
+                  "sentences": [
+                    {
+                      "text": "Importantly, CellWhisperer achieved this by training on transcriptomes and their textual annotations, without having seen any expert-curated gene sets during model training.",
+                      "match_score": 78.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG092__04.png",
+                  "page": 10,
+                  "section_hint": "page 10",
+                  "sentences": [
+                    {
+                      "text": "Third, we adapted elements of the CLIP9 and LiT47 architectures for learning multimodal embeddings of transcriptomes and their textual annotations, which constitutes the foundation of the CellWhisperer model and software tool.",
+                      "match_score": 80.1
+                    },
+                    {
+                      "text": "Second, CellWhisperer relies on domain-specific models for its embedding of transcriptomes and text and on an LLM for text generation, thus inheriting their current limitations.",
+                      "match_score": 78.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence-group"
+                }
+              ],
+              "screenshot_count": 4,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
               "id": "evidence-multimodal-shared-embeddings-MMG005",
               "paper_id": "MMG-025",
               "claim_match_quality": "secondary",
@@ -1517,7 +1917,7 @@
               "weighted_total": 17.0,
               "text": "The STRING database in 2023: protein–protein asso…: Mature, peer-reviewed integration of text-mined and experimental evidence; methodology is sound for its stated goal.",
               "screenshot_status": "ok",
-              "rank_within_claim": 1,
+              "rank_within_claim": 2,
               "journal_tier": 3,
               "screenshots": [
                 {
@@ -1611,7 +2011,7 @@
               "weighted_total": 14.2,
               "text": "Beyond the Imitation Game: Quantifying and extrap…: Large, peer-contributed benchmark with rigorous methodology for capability extrapolation.",
               "screenshot_status": "ok",
-              "rank_within_claim": 2,
+              "rank_within_claim": 3,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -1713,7 +2113,7 @@
               "weighted_total": 17.6,
               "text": "Scientific Large Language Models: A Survey on Bio…: Recent comprehensive survey citing established methods; methodology of survey itself is sound.",
               "screenshot_status": "ok",
-              "rank_within_claim": 3,
+              "rank_within_claim": 4,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -1815,7 +2215,7 @@
               "weighted_total": 18.3,
               "text": "A Systematic Study of Joint Representation Learni…: Systematic empirical comparison of joint-representation strategies; sound methodology.",
               "screenshot_status": "ok",
-              "rank_within_claim": 4,
+              "rank_within_claim": 5,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -1901,7 +2301,7 @@
               "weighted_total": 18.3,
               "text": "S-PLM: Structure-aware Protein Language Model via…: Sound contrastive design with downstream validation; methodology is a clear template.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 5,
+              "rank_within_claim": 6,
               "journal_tier": 5,
               "screenshot_count": 0
             },
@@ -1940,7 +2340,7 @@
               "weighted_total": 21.1,
               "text": "Prot2Text: Multimodal Protein's Function Generati…: Prot2Text learns aligned protein-text representations enabling free-text function generation, directly demonstrating cross-modal mapping.",
               "screenshot_status": "ok",
-              "rank_within_claim": 6,
+              "rank_within_claim": 7,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -2522,6 +2922,92 @@
               ],
               "screenshot_count": 4,
               "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
+              "id": "evidence-multimodal-instruction-tuning-MMG095",
+              "paper_id": "MMG-095",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.918,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "Biomni is a general-purpose biomedical AI agent with retrieval-augmented planning and code execution across 25 domains — direct instruction-tuning evidence."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Open-sourced agentic stack with tool catalog ready for immediate adoption."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Evaluated across diverse research tasks but agentic claims need broader external scrutiny."
+                },
+                "scalable": {
+                  "score": 5,
+                  "rationale": "Action-discovery agent harvests tools from tens of thousands of papers, demonstrating scalability."
+                },
+                "how_to_validate": {
+                  "score": 4,
+                  "rationale": "Multi-domain agentic benchmarks plus tool-use logs provide a validation protocol skeleton."
+                }
+              },
+              "weighted_total": 25.7,
+              "text": "Biomni: A General-Purpose Biomedical AI Agent: Biomni is a general-purpose biomedical AI agent with retrieval-augmented planning and code execution across 25 domains — direct instruction-tuning evidence.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 7,
+              "journal_tier": 5,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG095__01.png",
+                  "page": 15,
+                  "section_hint": "page 15",
+                  "sentences": [
+                    {
+                      "text": "Actions necessary to conduct biomedical research were extracted from 2,500 recent bioRxiv publications across 25 biomedical subﬁelds using an AI-driven discovery agent.",
+                      "match_score": 68.1
+                    },
+                    {
+                      "text": "Extracted actions were rigorously validated and curated by human experts, resulting in the integration of 105 biomedical software tools, 150 specialized biological tools (includ- ing wet-lab protocols, AI-driven predictive models, and domain-speciﬁc know-how), and 59 comprehensive biomedical databases.",
+                      "match_score": 68.8
+                    }
+                  ],
+                  "highlight_granularity": "sentence-group"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG095__02.png",
+                  "page": 16,
+                  "section_hint": "page 16",
+                  "sentences": [
+                    {
+                      "text": "Evaluated tasks include variant prioritization and GWAS causal gene detection (genetics and genomics), perturbation screen design (functional genomics, immunology), patient gene prioritiza- tion, rare disease diagnosis (clinical genomics), drug repurposing (pharmacology), microbiome disease-taxa bioinformatics analysis (microbiology), and single-cell RNA-seq cell annotation (single-cell biology).",
+                      "match_score": 70.3
+                    },
+                    {
+                      "text": "Across these diverse scenarios, Biomni consistently outperformed baseline models (Base LLM, ReAct+Code) and specialized environments (Biomni ReAct), highlighting its general- purpose biomedical capabilities and ability to autonomously adapt to new and complex biomedical tasks.",
+                      "match_score": 70.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence-group"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG095__03.png",
+                  "page": 23,
+                  "section_hint": "page 23",
+                  "sentences": [
+                    {
+                      "text": "In parallel, Biomni and general LLM models were evaluated on identical tasks.",
+                      "match_score": 70.6
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 3,
+              "screenshot_strategy": "multi-sentence-multi-page"
             }
           ]
         },
@@ -2530,6 +3016,100 @@
           "subtype": "Text-conditioned sequence generation",
           "claim": "Text-conditioned sequence generation — describing a desired biological function, regulatory context, or therapeutic target in natural language and having the model propose candidate DNA / RNA sequences — turns LLM-style natural-language interfaces into a primitive of biological sequence design.",
           "evidence_points": [
+            {
+              "id": "evidence-multimodal-text-conditioned-generation-MMG097",
+              "paper_id": "MMG-097",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.832,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 4,
+                  "rationale": "CodonTransformer conditions DNA-sequence generation on organism, amino-acid, and codon tokens — a clear text-conditioned sequence-generation system."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Released open model and Colab interface let users generate host-specific DNA from natural-language-style organism specs immediately."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Trained on 1M DNA-protein pairs from 164 organisms; STREAM strategy is novel and credible."
+                },
+                "scalable": {
+                  "score": 4,
+                  "rationale": "Multispecies coverage and customizable model scale to broad host targets."
+                },
+                "how_to_validate": {
+                  "score": 4,
+                  "rationale": "Codon-distribution and cis-regulatory-element metrics provide a clear validation protocol."
+                }
+              },
+              "weighted_total": 23.3,
+              "text": "CodonTransformer: a multispecies codon optimizer…: Released open model and Colab interface let users generate host-specific DNA from natural-language-style organism specs immediately.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 1,
+              "journal_tier": 2,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG097__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "Here, we introduce CodonTransformer, a multispecies deep learning model trained on over 1 million DNA-protein pairs from 164 organisms spanning all domains of life.",
+                      "match_score": 88.9
+                    },
+                    {
+                      "text": "The model demonstrates context-awareness thanks to its Transformers architecture and to our sequence representation strategy that combines organism, amino acid, and codon encodings.",
+                      "match_score": 77.7
+                    }
+                  ],
+                  "highlight_granularity": "sentence-group"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG097__02.png",
+                  "page": 2,
+                  "section_hint": "page 2",
+                  "sentences": [
+                    {
+                      "text": "As the training data, we used a vast collection of ~1 million gene-protein pairs from 164 organisms (“Data availability”) that not only increases the data size and learning universal rules but also enables species-speciﬁc DNA design via a single model.",
+                      "match_score": 82.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG097__03.png",
+                  "page": 8,
+                  "section_hint": "page 8",
+                  "sentences": [
+                    {
+                      "text": "24), generating sequences with more natural-like patterns (Fig.",
+                      "match_score": 77.1
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG097__04.png",
+                  "page": 8,
+                  "section_hint": "page 8",
+                  "sentences": [
+                    {
+                      "text": "Multispecies training also enabled us to increase the size of the training data com- pared to other approaches18,24 and to learn universal underlying rules.",
+                      "match_score": 79.4
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 4,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
             {
               "id": "evidence-multimodal-text-conditioned-generation-MMG002",
               "paper_id": "MMG-046",
@@ -2565,7 +3145,7 @@
               "weighted_total": 22.0,
               "text": "A multimodal conversational agent for DNA, RNA an…: ChatNT handles English questions about DNA/RNA/protein and can be prompted to produce structured answers; sequence-out generation lighter than seq-in QA.",
               "screenshot_status": "ok",
-              "rank_within_claim": 1,
+              "rank_within_claim": 2,
               "journal_tier": 2,
               "screenshots": [
                 {
@@ -2651,7 +3231,7 @@
               "weighted_total": 17.6,
               "text": "Scientific Large Language Models: A Survey on Bio…: Comprehensive recent survey with sound methodology.",
               "screenshot_status": "ok",
-              "rank_within_claim": 2,
+              "rank_within_claim": 3,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -2753,7 +3333,7 @@
               "weighted_total": 24.4,
               "text": "A Text-guided Protein Design Framework: ProteinDT achieves >90% text-guided protein generation accuracy and best zero-shot text-guided editing; direct strong evidence for the claim.",
               "screenshot_status": "ok",
-              "rank_within_claim": 3,
+              "rank_within_claim": 4,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -2855,7 +3435,7 @@
               "weighted_total": 22.0,
               "text": "ChatNT: A Multimodal Conversational Agent for DNA…: Preprint version of ChatNT; demonstrates multimodal conversational handling of DNA/RNA/protein with curated instruction tasks.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 4,
+              "rank_within_claim": 5,
               "journal_tier": 5,
               "screenshot_count": 0
             },
@@ -2894,7 +3474,7 @@
               "weighted_total": 19.0,
               "text": "CARE: a Benchmark Suite for the Classification an…: Explicit OOD splits and dual classification/retrieval tasks form an excellent validation template.",
               "screenshot_status": "ok",
-              "rank_within_claim": 5,
+              "rank_within_claim": 6,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -2980,7 +3560,7 @@
               "weighted_total": 18.5,
               "text": "Multi-modal Transfer Learning between Biological…: Sound encoder-fusion architecture with clear empirical wins on transcript expression.",
               "screenshot_status": "ok",
-              "rank_within_claim": 6,
+              "rank_within_claim": 7,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -3898,6 +4478,84 @@
               "rank_within_claim": 10,
               "journal_tier": 5,
               "screenshot_count": 0
+            },
+            {
+              "id": "evidence-applications-variant-effects-MMG098",
+              "paper_id": "MMG-098",
+              "claim_match_quality": "primary",
+              "confidence": "metadata_only",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.982,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "Evo 2 predicts functional impact of genetic variants — including BRCA1 — without task-specific fine-tuning, central to the variant-effect claim."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Pretrained 7B/40B Evo 2 weights and inference code are released for immediate variant scoring."
+                },
+                "plausible": {
+                  "score": 5,
+                  "rationale": "9.3T-bp training and clinical BRCA1 evaluation provide strong empirical credibility."
+                },
+                "scalable": {
+                  "score": 5,
+                  "rationale": "1M-token context with single-nt resolution scales variant prediction to genome scale."
+                },
+                "how_to_validate": {
+                  "score": 5,
+                  "rationale": "BRCA1 clinical-significance and noncoding pathogenicity benchmarks form validation protocols."
+                }
+              },
+              "weighted_total": 27.5,
+              "text": "Genome modeling and design across all domains of…: Evo 2 predicts functional impact of genetic variants — including BRCA1 — without task-specific fine-tuning, central to the variant-effect claim.",
+              "screenshot_status": "no_pdf",
+              "rank_within_claim": 11,
+              "journal_tier": 5,
+              "screenshot_count": 0
+            },
+            {
+              "id": "evidence-applications-variant-effects-MMG099",
+              "paper_id": "MMG-099",
+              "claim_match_quality": "primary",
+              "confidence": "metadata_only",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.982,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "AlphaGenome predicts regulatory variant effects across 24 of 26 evaluations using a unified 1Mb-context DNA model — direct variant-effect evidence."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Public variant-effect prediction tools released alongside the paper."
+                },
+                "plausible": {
+                  "score": 5,
+                  "rationale": "Matches/exceeds best external models on most evaluations, with TAL1 mechanistic case study."
+                },
+                "scalable": {
+                  "score": 5,
+                  "rationale": "1Mb input context across multiple modalities scales variant scoring to whole-locus regulatory effects."
+                },
+                "how_to_validate": {
+                  "score": 5,
+                  "rationale": "Twenty-six benchmark evaluations plus TAL1 clinical recapitulation provide a validation protocol."
+                }
+              },
+              "weighted_total": 27.5,
+              "text": "AlphaGenome: advancing regulatory variant effect…: AlphaGenome predicts regulatory variant effects across 24 of 26 evaluations using a unified 1Mb-context DNA model — direct variant-effect evidence.",
+              "screenshot_status": "no_pdf",
+              "rank_within_claim": 12,
+              "journal_tier": 5,
+              "screenshot_count": 0
             }
           ]
         },
@@ -4001,6 +4659,92 @@
               "screenshot_strategy": "multi-sentence-multi-page"
             },
             {
+              "id": "evidence-applications-regulatory-annotation-MMG101",
+              "paper_id": "MMG-101",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.957,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "A Nature foundation model of transcription across human cell types delivers cell-type-specific regulatory annotations — direct regulatory-annotation evidence."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Catalogues of gene regulation and TF interactions are released for downstream regulatory annotation."
+                },
+                "plausible": {
+                  "score": 5,
+                  "rationale": "Generalizable, accurate transcription model with cell-type specificity supported by Nature-level review."
+                },
+                "scalable": {
+                  "score": 5,
+                  "rationale": "Foundation model spans many human cell types, scaling regulatory annotation broadly."
+                },
+                "how_to_validate": {
+                  "score": 4,
+                  "rationale": "Provides regulation catalogues and TF-interaction outputs as validation lenses."
+                }
+              },
+              "weighted_total": 26.8,
+              "text": "A foundation model of transcription across human…: A Nature foundation model of transcription across human cell types delivers cell-type-specific regulatory annotations — direct regulatory-annotation evidence.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 2,
+              "journal_tier": 1,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG101__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "Computational models of transcription lack generalizability to accurately extrapolate to unseen cell types and conditions.",
+                      "match_score": 77.4
+                    },
+                    {
+                      "text": "We evaluated its performance in prediction of regulatory activity, inference of regulatory elements and regulators, and identification of physical interactions between transcription factors and found that it outperforms current models4 in predicting lentivirus-based massively parallel reporter assay readout5,6.",
+                      "match_score": 76.0
+                    },
+                    {
+                      "text": "In sum, we provide a generalizable and accurate model for transcription together with catalogues of gene regulation and transcription factor interactions, all with cell type specificity.",
+                      "match_score": 83.0
+                    }
+                  ],
+                  "highlight_granularity": "sentence-group"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG101__02.png",
+                  "page": 8,
+                  "section_hint": "page 8",
+                  "sentences": [
+                    {
+                      "text": "Collectively, GET represents a pioneering approach in cell-type-specific transcriptional modelling, with broad applicability in the identification of regulatory elements, upstream regulators and TF interactions.",
+                      "match_score": 78.5
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG101__03.png",
+                  "page": 16,
+                  "section_hint": "page 16",
+                  "sentences": [
+                    {
+                      "text": "The pAE and pLDDT were stored for downstream analysis.",
+                      "match_score": 77.4
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 3,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
               "id": "evidence-applications-regulatory-annotation-MMG003",
               "paper_id": "MMG-011",
               "claim_match_quality": "primary",
@@ -4035,7 +4779,7 @@
               "weighted_total": 25.1,
               "text": "Effective gene expression prediction from sequenc…: Public model widely used to annotate regulatory potential at any locus and to score MPRA-style perturbations.",
               "screenshot_status": "ok",
-              "rank_within_claim": 2,
+              "rank_within_claim": 3,
               "journal_tier": 2,
               "screenshots": [
                 {
@@ -4121,7 +4865,7 @@
               "weighted_total": 23.1,
               "text": "Nucleotide Transformer: building and evaluating r…: Robust scaling and multi-genome pretraining study.",
               "screenshot_status": "ok",
-              "rank_within_claim": 3,
+              "rank_within_claim": 4,
               "journal_tier": 2,
               "screenshots": [
                 {
@@ -4189,6 +4933,108 @@
               "screenshot_strategy": "multi-sentence-multi-page"
             },
             {
+              "id": "evidence-applications-regulatory-annotation-MMG102",
+              "paper_id": "MMG-102",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.911,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "TRAPT predicts transcriptional regulators by integrating cis-regulatory elements and binding-site epigenomics — direct regulatory-annotation evidence."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Open framework usable on new datasets to identify TRs in disease and cell-fate contexts."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Validated across 570 TR-related datasets versus SOTA baselines."
+                },
+                "scalable": {
+                  "score": 4,
+                  "rationale": "Multi-omics integration scales to new tissues but not to all regulatory element types."
+                },
+                "how_to_validate": {
+                  "score": 5,
+                  "rationale": "570-dataset benchmark and disease/variant case studies serve as validation protocol."
+                }
+              },
+              "weighted_total": 25.5,
+              "text": "TRAPT: a multi-stage fused deep learning framewor…: TRAPT predicts transcriptional regulators by integrating cis-regulatory elements and binding-site epigenomics — direct regulatory-annotation evidence.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 5,
+              "journal_tier": 2,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG102__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "It is challenging to identify regulatory transcriptional regulators (TRs), which control gene expression via regulatory elements and epigenomic signals, in context-speciﬁc studies on the onset and progression of diseases.",
+                      "match_score": 79.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG102__02.png",
+                  "page": 2,
+                  "section_hint": "page 2",
+                  "sentences": [
+                    {
+                      "text": "We designed a multi-stage fusion-based deep learning approach to simultaneously integrate sig- nals from the target gene cis-regulatory elements within the gene sets and the genome-wide binding sites of TRs, with the aim of obtaining the optimal representation of TR activity and predicting the key TRs for gene sets with context-speciﬁc regulation.",
+                      "match_score": 79.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG102__03.png",
+                  "page": 2,
+                  "section_hint": "page 2",
+                  "sentences": [
+                    {
+                      "text": "There is an urgent need to develop approaches that consider the bidirectional regulatory relationships of cis-regulatory elements.",
+                      "match_score": 80.0
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG102__04.png",
+                  "page": 13,
+                  "section_hint": "page 13",
+                  "sentences": [
+                    {
+                      "text": "Using 570 TR-related datasets, TRAPT outperformed state-of-the- art methods in inferring transcription regulators, especially in pre- dicting transcription co-factors and chromatin regulators.",
+                      "match_score": 79.0
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG102__05.png",
+                  "page": 13,
+                  "section_hint": "page 13",
+                  "sentences": [
+                    {
+                      "text": "Based on 570 TR-related datasets from knockout/silencing experiments and multi- ple criteria of evaluation, we found that TRAPT, as a method in the third category, signiﬁcantly outperformed all other methods in pre- dicting the overall ranking of the TRs.",
+                      "match_score": 86.0
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 5,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
               "id": "evidence-applications-regulatory-annotation-MMG006",
               "paper_id": "MMG-013",
               "claim_match_quality": "primary",
@@ -4223,7 +5069,7 @@
               "weighted_total": 21.4,
               "text": "CADD v1.7: using protein language models, regulat…: Genome-wide scores are precomputed and freely served.",
               "screenshot_status": "ok",
-              "rank_within_claim": 4,
+              "rank_within_claim": 6,
               "journal_tier": 3,
               "screenshots": [
                 {
@@ -4325,7 +5171,7 @@
               "weighted_total": 17.6,
               "text": "RNA-protein binding motifs mining with a new hybr…: Hybrid CNN+DBN architecture with motif-assembly post-processing.",
               "screenshot_status": "ok",
-              "rank_within_claim": 5,
+              "rank_within_claim": 7,
               "journal_tier": 3,
               "screenshots": [
                 {
@@ -4427,7 +5273,7 @@
               "weighted_total": 17.6,
               "text": "Predicting RNA–protein binding sites and motifs t…: Architectural innovation supported by ablations across CLIP datasets.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 6,
+              "rank_within_claim": 8,
               "journal_tier": 3,
               "screenshot_count": 0
             },
@@ -4466,7 +5312,7 @@
               "weighted_total": 27.5,
               "text": "Predicting RNA splicing from DNA sequence using P…: Pangolin outperforms SOTA splice-site predictors (incl. SpliceAI) and detects pathogenic LoF variants with high accuracy.",
               "screenshot_status": "ok",
-              "rank_within_claim": 7,
+              "rank_within_claim": 9,
               "journal_tier": 4,
               "screenshots": [
                 {
@@ -4568,7 +5414,7 @@
               "weighted_total": 21.8,
               "text": "Cross-species regulatory sequence activity predic…: Careful cross-species transfer experiments and variant-association evaluation.",
               "screenshot_status": "ok",
-              "rank_within_claim": 8,
+              "rank_within_claim": 10,
               "journal_tier": 4,
               "screenshots": [
                 {
@@ -4737,6 +5583,249 @@
               "screenshot_strategy": "multi-sentence-multi-page"
             },
             {
+              "id": "evidence-applications-drug-discovery-MMG104",
+              "paper_id": "MMG-104",
+              "claim_match_quality": "secondary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.564,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 3,
+                  "rationale": "Reviews AI in drug discovery (ML, DL, NLP) supporting the claim that LLMs accelerate drug R&D pipelines."
+                },
+                "immediate_benefit": {
+                  "score": 3,
+                  "rationale": "Provides a roadmap of opportunities and challenges usable for strategic planning."
+                },
+                "plausible": {
+                  "score": 3,
+                  "rationale": "Descriptive synthesis without new experimental data."
+                },
+                "scalable": {
+                  "score": 3,
+                  "rationale": "Covers a broad range of stages from target ID to clinical trials."
+                },
+                "how_to_validate": {
+                  "score": 2,
+                  "rationale": "No new benchmark; outlines validation directions only."
+                }
+              },
+              "weighted_total": 15.8,
+              "text": "Artificial intelligence in drug discovery and dev…: Reviews AI in drug discovery (ML, DL, NLP) supporting the claim that LLMs accelerate drug R&D pipelines.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 2,
+              "journal_tier": 1,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG104__01.png",
+                  "page": 3,
+                  "section_hint": "page 3",
+                  "sentences": [
+                    {
+                      "text": "1 Overview of Artificial Intelligence and its key components.",
+                      "match_score": 84.0
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG104__02.png",
+                  "page": 5,
+                  "section_hint": "page 5",
+                  "sentences": [
+                    {
+                      "text": "This enables researchers to make informed decisions regarding study modifications, such as adjusting dosing regimens or incorporating new treatment arms, leading to faster and more efficient clinical trials (Fig.",
+                      "match_score": 79.4
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG104__03.png",
+                  "page": 5,
+                  "section_hint": "page 5",
+                  "sentences": [
+                    {
+                      "text": "2 Applications of Artificial Intelligence in Drug Discovery.",
+                      "match_score": 101.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG104__04.png",
+                  "page": 10,
+                  "section_hint": "page 10",
+                  "sentences": [
+                    {
+                      "text": "This approach can significantly accelerate the development of new treatments, reduce development costs, and improve the success rates of clinical trials.",
+                      "match_score": 81.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG104__05.png",
+                  "page": 11,
+                  "section_hint": "page 11",
+                  "sentences": [
+                    {
+                      "text": "ML, DL, NLP, RL and Gen-AI can accelerate target identification, refine drug design, and streamline clinical trials.",
+                      "match_score": 84.6
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 5,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
+              "id": "evidence-applications-drug-discovery-MMG121",
+              "paper_id": "MMG-121",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.754,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 4,
+                  "rationale": "MMELON integrates graph, image and text foundation-model views for molecule-target and property prediction — directly multimodal drug discovery."
+                },
+                "immediate_benefit": {
+                  "score": 4,
+                  "rationale": "Released multi-view framework usable for ADME and GPCR screens."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Validated across 120+ tasks including a GPCR virtual screen with structure-based confirmation."
+                },
+                "scalable": {
+                  "score": 3,
+                  "rationale": "Multi-view late-fusion is extendable but pretraining cost is non-trivial."
+                },
+                "how_to_validate": {
+                  "score": 4,
+                  "rationale": "120+-task suite plus GPCR Alzheimer's-related virtual screen offers validation protocol."
+                }
+              },
+              "weighted_total": 21.1,
+              "text": "Multi‐View Biomedical Foundation Models for Molec…: MMELON integrates graph, image and text foundation-model views for molecule-target and property prediction — directly multimodal drug discovery.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 3,
+              "journal_tier": 1,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG121__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "We develop Multi-view Molecular Embedding with Late Fusion (MMELON), an approach that integrates pre-trained graph, image and text foundation models and may be readily extended to additional views and models.",
+                      "match_score": 79.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG121__02.png",
+                  "page": 9,
+                  "section_hint": "page 9",
+                  "sentences": [
+                    {
+                      "text": "Besides molecule-target and property prediction, this approach can be leveraged for molecule generation and lead optimization as well.",
+                      "match_score": 77.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG121__03.png",
+                  "page": 9,
+                  "section_hint": "page 9",
+                  "sentences": [
+                    {
+                      "text": "Our work introduces a complementary direction in multi- modal molecular foundation modeling by decoupling single- view pretraining from downstream multi-view fusion, enabling robust, interpretable, and application-ready molecular predic- tion at scale.",
+                      "match_score": 78.9
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG121__04.png",
+                  "page": 13,
+                  "section_hint": "page 13",
+                  "sentences": [
+                    {
+                      "text": "Linear and MLP prediction heads were also explored.",
+                      "match_score": 74.9
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG121__05.png",
+                  "page": 14,
+                  "section_hint": "page 14",
+                  "sentences": [
+                    {
+                      "text": "Therefore, an advantage of the multi-view late-fusion model architecture is that the contributions of single views to each task can be readily recovered through the aggregator weights.",
+                      "match_score": 76.2
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 5,
+              "screenshot_strategy": "multi-sentence-multi-page"
+            },
+            {
+              "id": "evidence-applications-drug-discovery-MMG122",
+              "paper_id": "MMG-122",
+              "claim_match_quality": "primary",
+              "confidence": "metadata_only",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.754,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 4,
+                  "rationale": "Predicts small-molecule-RNA interactions without tertiary structures, enabling RNA-targeted drug discovery from sequence alone."
+                },
+                "immediate_benefit": {
+                  "score": 4,
+                  "rationale": "Sequence-only RNA-ligand prediction tool ready for immediate use in RNA-therapeutic pipelines."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Nature Biotechnology venue and emerging-RNA-drug context lend credibility."
+                },
+                "scalable": {
+                  "score": 3,
+                  "rationale": "Sequence-based design scales to RNAs lacking solved structures."
+                },
+                "how_to_validate": {
+                  "score": 4,
+                  "rationale": "RNA-ligand benchmarks form a borrowable validation protocol."
+                }
+              },
+              "weighted_total": 21.1,
+              "text": "Predicting small molecule–RNA interactions withou…: Predicts small-molecule-RNA interactions without tertiary structures, enabling RNA-targeted drug discovery from sequence alone.",
+              "screenshot_status": "no_pdf",
+              "rank_within_claim": 4,
+              "journal_tier": 1,
+              "screenshot_count": 0
+            },
+            {
               "id": "evidence-applications-drug-discovery-MMG003",
               "paper_id": "MMG-021",
               "claim_match_quality": "primary",
@@ -4771,7 +5860,7 @@
               "weighted_total": 23.8,
               "text": "Accurate RNA 3D structure prediction using a lang…: Validated on RNA-Puzzles and CASP15 with cross-family benchmarks.",
               "screenshot_status": "ok",
-              "rank_within_claim": 2,
+              "rank_within_claim": 5,
               "journal_tier": 2,
               "screenshots": [
                 {
@@ -4857,7 +5946,7 @@
               "weighted_total": 22.0,
               "text": "GenerRNA: A generative pre-trained language model…: Generative RNA LM produces de novo sequences with stable secondary structure and demonstrated high target-protein affinity in fine-tuned settings.",
               "screenshot_status": "ok",
-              "rank_within_claim": 3,
+              "rank_within_claim": 6,
               "journal_tier": 5,
               "screenshots": [
                 {
@@ -4959,9 +6048,103 @@
               "weighted_total": 19.4,
               "text": "GeneCompass: Deciphering Universal Gene Regulator…: >100M single-cell pretraining demonstrates scale.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 4,
+              "rank_within_claim": 7,
               "journal_tier": 5,
               "screenshot_count": 0
+            },
+            {
+              "id": "evidence-applications-drug-discovery-MMG105",
+              "paper_id": "MMG-105",
+              "claim_match_quality": "primary",
+              "confidence": "parsed_pdf",
+              "external_reference": true,
+              "discovered_by": "agent-ED",
+              "scored_by": "agent-UNI",
+              "promoted_by": "agent-UNI",
+              "match_score": 0.911,
+              "rubric": {
+                "useful_outcomes": {
+                  "score": 5,
+                  "rationale": "C2S scales 27B LLMs on cell sentences plus literature/metadata to nominate silmitasertib as a context-selective immune drug — direct sequence+literature drug-discovery evidence."
+                },
+                "immediate_benefit": {
+                  "score": 5,
+                  "rationale": "Pre-trained 27B model and dual-context virtual-screen recipe are released for adoption."
+                },
+                "plausible": {
+                  "score": 4,
+                  "rationale": "Experimentally validated silmitasertib hit in human cells lends credibility to the LLM workflow."
+                },
+                "scalable": {
+                  "score": 4,
+                  "rationale": "27B parameters trained on >1B tokens of transcriptomic+text data scales single-cell drug discovery."
+                },
+                "how_to_validate": {
+                  "score": 5,
+                  "rationale": "Perturbation-prediction benchmarks and the validated silmitasertib case form a validation protocol."
+                }
+              },
+              "weighted_total": 25.5,
+              "text": "Scaling Large Language Models for Next-Generation…: C2S scales 27B LLMs on cell sentences plus literature/metadata to nominate silmitasertib as a context-selective immune drug — direct sequence+literature drug-discovery evidence.",
+              "screenshot_status": "ok",
+              "rank_within_claim": 8,
+              "journal_tier": 5,
+              "screenshots": [
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG105__01.png",
+                  "page": 1,
+                  "section_hint": "Abstract / first page",
+                  "sentences": [
+                    {
+                      "text": "This predictive strength enabled a dual-context 10 virtual screen that nominated the kinase inhibitor silmitasertib (CX-4945) as a candidate for context- 11 selective upregulation of antigen presentation.",
+                      "match_score": 76.3
+                    },
+                    {
+                      "text": "Experimental assessment in human cell models unseen 12 during training supported this prediction, demonstrating that C2S-Scale can effectively guide the 13 discovery of context-conditioned biology.",
+                      "match_score": 74.5
+                    }
+                  ],
+                  "highlight_granularity": "sentence-group"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG105__02.png",
+                  "page": 2,
+                  "section_hint": "page 2",
+                  "sentences": [
+                    {
+                      "text": "To demonstrate the platform’s capacity for hypothesis generation, we programmed a dual-context virtual screen designed 46 to prioritize potential context-conditional amplifiers of antigen presentation.",
+                      "match_score": 78.6
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG105__03.png",
+                  "page": 10,
+                  "section_hint": "page 10",
+                  "sentences": [
+                    {
+                      "text": "C2S-Scale employs large language models (LLMs) based on the Transformer architecture [8] to model cell sentences 423 in natural language.",
+                      "match_score": 73.7
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                },
+                {
+                  "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG105__04.png",
+                  "page": 19,
+                  "section_hint": "page 19",
+                  "sentences": [
+                    {
+                      "text": "Perturbation Prediction Model and Delta Sentences For high-throughput virtual screening, we utilized a specialized 880 C2S-Scale perturbation model initialized from a Gemma-3 4B checkpoint [79].",
+                      "match_score": 79.3
+                    }
+                  ],
+                  "highlight_granularity": "sentence"
+                }
+              ],
+              "screenshot_count": 4,
+              "screenshot_strategy": "multi-sentence-multi-page"
             },
             {
               "id": "evidence-applications-drug-discovery-MMG002",
@@ -4998,7 +6181,7 @@
               "weighted_total": 24.0,
               "text": "Signals in the Cells: Multimodal and Contextualiz…: Therapeutics Commons (TDC-2) is directly consumable: datasets, foundation-model tooling, and benchmarks for drug discovery.",
               "screenshot_status": "no_pdf",
-              "rank_within_claim": 5,
+              "rank_within_claim": 9,
               "journal_tier": 5,
               "screenshot_count": 0
             },
@@ -5037,7 +6220,7 @@
               "weighted_total": 20.7,
               "text": "BioNeMo Framework: a modular, high-performance li…: Explicitly designed for hundreds-of-GPU training, demonstrating clinical/industrial scale.",
               "screenshot_status": "ok",
-              "rank_within_claim": 6,
+              "rank_within_claim": 10,
               "journal_tier": 5,
               "screenshots": [
                 {

@@ -1,0 +1,2526 @@
+{
+  "schema_version": "0.1",
+  "topic": "multimodal_genomics_planning",
+  "header": "🧭 Planning: Where the field needs to go next",
+  "description": "Five concrete next steps that recur across the limitations and future-work sections of the existing literature. Each step is grounded in evidence pulled directly from the Discussion / Limitations / Future Work paragraphs of the corpus.",
+  "rendered_at": "2026-05-08T14:11:47Z",
+  "next_steps": [
+    {
+      "id": "unified-cross-modal-pretraining",
+      "title": "Unified cross-modal pretraining",
+      "subtitle": "One model, all modalities",
+      "summary": "Train a single foundation model jointly on text, DNA, RNA, and protein sequences with shared representations and tokenizers — replacing today's pipelines of separately-pretrained unimodal models bolted together at inference time.",
+      "why_now": "Existing multimodal-genomics systems concatenate independent encoders (one for sequence, one for text), then learn alignment. Joint pretraining from the start has been shown to outperform alignment-after-the-fact in vision-language; the same gain is on the table here.",
+      "evidence_points": [
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-081",
+          "paper_id": "MMG-081",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 92.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-081__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We investigated this by re- pretraining HyenaDNA in the roughly identical setting, but on DNA- BERT-2’s multi-species dataset comprising 135 species across 6 taxo- nomic categories.",
+                  "match_score": 78.1
+                },
+                {
+                  "text": "These ﬁndings demonstrate that multi- species pre-training enhances generalizability for diverse genomic tasks and that pre-training data composition should be considered a critical design choice for future DNA foundation models.",
+                  "match_score": 78.1
+                },
+                {
+                  "text": "In summary, while we focused on benchmarking zero-shot embeddings in our current study, our ﬁndings provide several con- crete directions for optimizing ﬁne-tuning approaches to enhance DNA foundation model abilities.",
+                  "match_score": 92.7
+                },
+                {
+                  "text": "Our comparison between DNA foundation models and specialized genomic models (such as Enformer and AlphaGenome in our variant effect tasks) also reveals a fundamental trade-off between versatility and task-speciﬁc optimization.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-081__02.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "To unbiasedly evaluate the foun- dation models, we collected and curated datasets from ﬁve distinct sequence classiﬁcation sources.",
+                  "match_score": 80.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 1
+        },
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-046",
+          "paper_id": "MMG-046",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-046__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "However, our approach could be easily extended to inte- grate encoders from other omics modalities such as RNA43,44,53,54 and protein31,55 language models to work natively with RNA and amino acid sequences.",
+                  "match_score": 84.0
+                },
+                {
+                  "text": "Through our positional tag system that supports multiple sequences, one could simply add an arbitrary number of encoders and train their respective projections to combine different omics and modalities within the same questions.",
+                  "match_score": 84.0
+                },
+                {
+                  "text": "We envision that such an approach could expand even further the capabilities and performance of our model by achieving superior transfer learning across modalities.",
+                  "match_score": 80.9
+                },
+                {
+                  "text": "Similar to the developments in NLP50,56–58 and multimodal models59, we expect new capabilities such as zero-shot performance to emerge through developments on two main fronts: (1) scaling the number of tasks by including examples from diverse biological processes, tissues, individuals and species60,61; and (2) integrating more data modalities, such as RNA and protein sequences, imaging data and health records from individuals.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-046__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Replacing ChatNT’s current English decoder by larger models and/or models fine-tuned using reinforce- ment learning human feedback such as Llama2-chat 70B50 could also help to extend the model capabilities in these directions as well as improve its overall usefulness.",
+                  "match_score": 88.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 2
+        },
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-106",
+          "paper_id": "MMG-106",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-106__01.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "In this scheme, the higher-level classes and subclasses are categorically and concord- antly distinct from each other across modalities, are conserved across species, and probably arise from different developmental programs, such as GABAergic neuron derivatives of different zones of the gangli- onic eminences or the layer-selective glutamatergic neurons derived sequentially from progenitors of the cortical plate.",
+                  "match_score": 84.0
+                },
+                {
+                  "text": "We developed a standardized nomenclature system to track cell types described in different modalities (Supplementary Table 2).",
+                  "match_score": 80.0
+                },
+                {
+                  "text": "At the lower branch levels (types or clusters), however, while certain cell types are highly distinct (for example, Pvalb chandelier cells), distinctions and bounda- ries among many other clusters can be ambiguous and vary among different modalities.",
+                  "match_score": 84.0
+                },
+                {
+                  "text": "In this context, another important finding, consistent with and build- ing on multiple other studies9,11,68,69, is the coexistence of discrete and continuous variations of cell features across modalities at the lower branch level.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-106__02.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "While the higher levels of the hierarchy comprise ~around 25 sub- classes (16 neuronal and 9 non-neuronal) that are identified with remarkable consistency across multiple species and experimental modalities, many finer levels of cell properties do not neatly segregate into discrete and consistent sets of cell types with perfect correspond- ence among data modalities.",
+                  "match_score": 92.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 3
+        },
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-085",
+          "paper_id": "MMG-085",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 90.4,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-085__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "However, RiNALMo outperformed both thermodynamics-based and deep learning methods and showed that RNA language models can generalize well on unseen RNA families.",
+                  "match_score": 76.0
+                },
+                {
+                  "text": "RiNALMo outperforms other general-purpose RNA lan- guage models and language models trained on RNA types speciﬁc for those downstream tasks, such as SpliceBERT26 and UTR-LM30.",
+                  "match_score": 76.0
+                },
+                {
+                  "text": "Multimodal pre-training, including sequence and chemical mapping data, is another direction for improving the representations for structure-related downstream tasks, which we will explore in the future.",
+                  "match_score": 90.4
+                },
+                {
+                  "text": "We showed that by pre-training on a carefully curated RNA dataset and using the most modern Transformer tech- niques, an LM can capture hidden knowledge and important struc- tural information from unlabeled RNA sequences.",
+                  "match_score": 79.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-085__02.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "To implicitly give informa- tion to the model that the sequence was cropped, it does not begin with the [CLS] token nor ends with the [EOS] token unless we crop the beginning or end of the sequence.",
+                  "match_score": 76.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 4
+        },
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-086",
+          "paper_id": "MMG-086",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 89.4,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-086__01.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Foundation Model Inference Compared to pretraining, model inference covers a fraction of the computational expense, yet it is an important consideration for model deployment.",
+                  "match_score": 81.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-086__02.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Efforts to scrape all publicly available data for pretraining foundation models may lead to data contamination and negatively impact the relevance of such benchmark results.",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-086__03.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "As the development of foundation models in pathology pro- gresses, we will continue providing the community with a leader board of publicly available foundation models as well as external models automatically benchmarked by external users.",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-086__04.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "For each foundation model, we followed the embedding instructions provided by the authors in each respective repository.",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-086__05.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Since GMA does not consider the spatial distribution of tiles over the slide in its prediction, it is a simple method to test the expressiveness of the feature space generated by the SSL pretraining.",
+                  "match_score": 89.4
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 5
+        },
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-066",
+          "paper_id": "MMG-066",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 88.2,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-066__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "In our 5 modalities integrated in iDeep, CNN sequence modality outperforms other modalities on most experi- ments.",
+                  "match_score": 88.2
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-066__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Currently we only use the standard CNNs for sequences and similar DBNs for other data modal- ities with only different number of hidden neurons, which should be designed specifically for different input data.",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-066__03.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Multimodal deep learning is able to bet- ter fuse them and achieve better performance on all datasets.",
+                  "match_score": 82.2
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-066__04.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "DBN is able to capture high-level features from indi- vidual modalities, but it cannot interactively learn unified feature representations across them.",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-066__05.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "In addition, it can also learn better features for individual modalities via backpropagation when multiple modalities exist.",
+                  "match_score": 84.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 6
+        },
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-087",
+          "paper_id": "MMG-087",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 88.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-087__01.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Our easy-­to-­use model, coupled with our unique experimental modalities, thus establishes a more modular, CRISPR-­like alternative to protein targeting and opens the door for programmable proteome editing and screening applications.",
+                  "match_score": 88.0
+                },
+                {
+                  "text": "While previous works have used structure-­ based models for binding disordered motifs (48), contrastive learning for predicting protein function (49), and language models for isolating peptidic fragments from interacting protein sequences (37), Pep- PrCLIP represents a novel example of leveraging sequence-­based lan- guage models for fully de novo binder generation.",
+                  "match_score": 76.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-087__02.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "The model is trained such that binding pairs of peptides and proteins have high CLIP scores.",
+                  "match_score": 75.3
+                },
+                {
+                  "text": "Models were trained on a single NVIDIA A100 80 GB GPU via Google CoLab using an Adam optimizer for 56 epochs across the training set using early stopping (monitoring the validation loss on the “strict” dataset) with a patience of 6.",
+                  "match_score": 74.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-087__03.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "ℒr represents the loss on the model’s ability to predict the correct target given a single peptide, while ℒp represents the loss on the model’s ability to predict the correct peptide given a single target.",
+                  "match_score": 76.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 7
+        },
+        {
+          "id": "planning-unified-cross-modal-pretraining-MMG-105",
+          "paper_id": "MMG-105",
+          "next_step_id": "unified-cross-modal-pretraining",
+          "best_score": 88.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-105__01.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We anticipate that higher-capacity models and more diverse training corpora will unlock advanced capabilities, such 337 as the integration of epigenomic, proteomic, and clinical data into a single multimodal model.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-105__02.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "To construct the C2S-Scale pretraining corpus, we assembled over 50 million single-cell transcriptomic profiles from 348 human and mouse tissues gathered from 825 scRNA-seq datasets (dataset links provided in Supplementary Table 349 2).",
+                  "match_score": 84.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-105__03.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "All remaining datasets represented 558 studies that were not a part of the C2S-Scale pretraining corpus, and were train/test split by patient and sample.",
+                  "match_score": 84.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-105__04.png",
+              "page": 15,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The In-Distribution (ID) Test Set comprises 3,065 675 samples derived from 613 scRNA-seq datasets within the C2S-Scale pretraining corpus; while these specific samples 676 were strictly held out from training, the model had been exposed to other cells and abstract samples from these same 677 studies.",
+                  "match_score": 87.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-unified-cross-modal-pretraining-MMG-105__05.png",
+              "page": 18,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "In contrast, we do not make 791 any modifications to the architecture of CondOT [76], which is naturally suited for unseen conditions and trains a 792 unified model for all condition types.",
+                  "match_score": 88.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 8
+        }
+      ]
+    },
+    {
+      "id": "whole-genome-multimodal-context",
+      "title": "Whole-genome multimodal context",
+      "subtitle": "Megabase context for distal regulation",
+      "summary": "Extend joint text+sequence models to multi-megabase contexts so distal regulatory interactions, 3D-genome contacts, and full transcript isoforms can be reasoned about end-to-end alongside the literature that describes them.",
+      "why_now": "HyenaDNA/Mamba/Caduceus push raw sequence context to 1M+ tokens, but their text-conditioning is still anchored at gene-scale snippets. The natural next step is to bring the same context discipline into multimodal training — distal enhancers, splicing networks, and chromatin loops are where the unsolved biology lives.",
+      "evidence_points": [
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-116",
+          "paper_id": "MMG-116",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 93.5,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-116__01.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The sequence decoder, comprising two linear layers with GELU activation and layer normalization, serves to decode the multimodal features (L × K) of a protein into the probability distribution of each token in the alphabet (L × 33).",
+                  "match_score": 78.1
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-116__02.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We masked the coordinates of these points and trained the proposed multimodal network to automatically recover them.",
+                  "match_score": 81.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-116__03.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Architecture of the multimodal deep representation learning model To decipher protein functions at the residual resolution, we develop a multimodal protein representation learning model (~659.3 million para- meters).",
+                  "match_score": 81.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-116__04.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Multimodal context benchmarking We used three benchmarks to investigate whether the sequence context and the structure context of a protein could be captured by ProMEP.",
+                  "match_score": 93.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-116__05.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "To benchmark the ability of the proposed multimodal network to capture local structure context, we used the dataset constructed by Klausen et al.103 as the training and validation set.",
+                  "match_score": 81.3
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 1
+        },
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-011",
+          "paper_id": "MMG-011",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 87.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-011__01.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "In this way, the model can better cap- ture biological phenomena such as enhancers regulating promoters despite a large DNA-sequence distance between the two.",
+                  "match_score": 72.6
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-011__02.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Artful com- bination of these models with our own could improve Enformer’s modeling of insulators and distal regulation.",
+                  "match_score": 87.7
+                },
+                {
+                  "text": "In the future, Enformer could be systematically applied to fine-map existing GWAS studies22, prioritize rare or de novo vari- ants observed for rare disorders37,38, and impute regulatory activ- ity across species to study cis-regulatory evolution2.",
+                  "match_score": 70.0
+                },
+                {
+                  "text": "Furthermore, we have precomputed effect predictions for all frequent variants in the 1000 Genomes dataset and made them openly available.",
+                  "match_score": 70.0
+                },
+                {
+                  "text": "We hope that our model will stimulate an improved understanding of gene-regulatory architecture and facili- tate the development of improved diagnostic tools for diseases of genetic origin.",
+                  "match_score": 71.6
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 2
+        },
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-042",
+          "paper_id": "MMG-042",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 87.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-042__01.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We conduct experiments to study two key components, the quality of the produced multimodal biomedical instruction-following data, and performance of LLaVA-Med.",
+                  "match_score": 78.1
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-042__02.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "To evaluate the performance of LLaVA-Med on biomedical multimodal conversation, we construct an evaluation dataset with 193 novel questions.",
+                  "match_score": 87.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-042__03.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The language-only GPT-4 is considered as the performance upper bound, as the golden captions and inline mentions are fed into GPT-4 as the context, without requiring the model to understand the raw image.",
+                  "match_score": 75.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-042__04.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Since the multimodal GPT-4 is not publicly available, we resort to language-only GPT-4 for comparison.",
+                  "match_score": 74.5
+                },
+                {
+                  "text": "We feed golden captions and inline mentions into GPT-4 as the context, it generates knowledgeable response through re-organizing the information in the conversational manner.",
+                  "match_score": 72.6
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 3
+        },
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-109",
+          "paper_id": "MMG-109",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 86.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-109__01.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "On the other hand, our distal model, Chromo- former ( 17 ), was a transformer-based architecture accounting for distal histone mark levels in a weighted manner based on DNA interaction data.",
+                  "match_score": 77.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-109__02.png",
+              "page": 15,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We observed a con- sistent relationship for active marks, where perturbations to histone mark signals in the gene body had a greater predicted effect than distal regulatory regions.",
+                  "match_score": 80.5
+                },
+                {
+                  "text": "One possible explanation for this was investigated in a recent study ( 51 ) which found that, when predicting expression from DNA sequence, a similar attention model prioritized sequences at the promoter region over distal regulatory regions.",
+                  "match_score": 86.7
+                },
+                {
+                  "text": "We believe the same effect could have contributed to our results whereby the active promoter mark information contributed to expres- sion to a greater degree than distal regulatory regions.",
+                  "match_score": 81.3
+                },
+                {
+                  "text": "A key point of our findings is the marginal return in perfor- mances by: (i) Extending from an intentionally simple local promoter model to an attention based, computationally com- plex model which accounts for distal histone mark levels (Fig- ure 4 C), and (ii) Increasing the number of histone marks in- cluded in the model (Figure 5 B).",
+                  "match_score": 77.9
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 4
+        },
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-123",
+          "paper_id": "MMG-123",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 85.8,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-123__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Compared with existing diagnostic tools used commonly in clinical practice, DeepRare addresses several critical limitations: (1) traditional HPO-based systems typically generate candidate disease lists with- out providing sufficient explanatory context or diagnostic rationale, thereby limiting their clinical applicability; (2) some tools that integrate both HPO phenotypes and genetic data remain highly dependent on genetic testing results, rendering them less suitable for initial patient assessments or first-line screening; (3) recent advances in LLMs have improved clinician usability, but these models are still prone to hallu- cinations that undermine diagnostic reliability.",
+                  "match_score": 85.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-123__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+                  "match_score": 75.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-123__03.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Powered by a LLM, the central host integrates historical context from the memory bank to determine the system’s next actions.",
+                  "match_score": 71.6
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-123__04.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "• UK10K57: a British genomics project providing population-specific variant frequencies for the UK population through whole-genome sequencing and WES of approximately 10,000 people.",
+                  "match_score": 78.1
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-123__05.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "MME and LIRICAL cases are extracted from published literature and verified manually.",
+                  "match_score": 70.9
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 5
+        },
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-059",
+          "paper_id": "MMG-059",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 85.5,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-059__01.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Furthermore, GPN does not rely on whole-genome alignments, which can often have a lower quality in noncoding regions.",
+                  "match_score": 78.1
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-059__02.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Each position in the genome was independently masked and the model distribution over nucleotides was extracted.",
+                  "match_score": 75.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-059__03.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "However, we did not draw genomic windows uniformly from the whole genome, but emphasized certain regions.",
+                  "match_score": 81.3
+                },
+                {
+                  "text": "We set up a masked language modeling task (8), in which 15% of the tokens in a nucleotide sequence were masked and had to be predicted from their context.",
+                  "match_score": 74.2
+                },
+                {
+                  "text": "When comparing tophyloPandphastCons,weexcludedvariantswherethesescoresareundeﬁned (due to the lack of whole-genome alignment).",
+                  "match_score": 85.5
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 6
+        },
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-033",
+          "paper_id": "MMG-033",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 84.5,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-033__01.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "In conclusion, our paper introduces Prot2Text, a pioneering multimodal framework, for the accurate prediction of a pro- tein’s function in free text format, from graph and sequen- tial input.",
+                  "match_score": 74.8
+                },
+                {
+                  "text": "The release of a comprehensive multimodal protein dataset further empowers the scientific community to benchmark and advance the field of protein function prediction in free text format.",
+                  "match_score": 84.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-033__02.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "In total, the training dataset has 48,251 unique function descriptions.",
+                  "match_score": 70.7
+                },
+                {
+                  "text": "The average number of tokens per description is 57.51.",
+                  "match_score": 70.0
+                },
+                {
+                  "text": "Tokenizer The Prot2Text tokenizer is an instance of the GPT-2 tokenizer with two additional tokens.",
+                  "match_score": 68.5
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 7
+        },
+        {
+          "id": "planning-whole-genome-multimodal-context-MMG-049",
+          "paper_id": "MMG-049",
+          "next_step_id": "whole-genome-multimodal-context",
+          "best_score": 84.5,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-049__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The ultimate task in this domain is to perform direct reaction to protein sequence retrieval and vice-versa (as in CLIPZyme [79] and Reactzyme [97]).",
+                  "match_score": 75.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-049__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Gene context is also useful for annotating protein function and could be incorporated into future benchmarks [100].",
+                  "match_score": 78.8
+                },
+                {
+                  "text": "Other tools such as Pika which use multiple types of textual description extend this to learn relations about the enzyme, and could be used in future iterations of CREEP.",
+                  "match_score": 72.6
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-whole-genome-multimodal-context-MMG-049__03.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We also present CREEP, a model which uses multimodal contrastive learning and is one of the first models that can perform the latter task.",
+                  "match_score": 84.5
+                },
+                {
+                  "text": "We believe that we are just seeing the beginning of the widespread adoption of multimodal models for protein functional prediction, and we expect that many researchers will find CARE useful for formulating and evaluating their models.",
+                  "match_score": 74.8
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 8
+        }
+      ]
+    },
+    {
+      "id": "causal-mechanism-extraction",
+      "title": "Causal mechanism extraction",
+      "subtitle": "From correlation to cause",
+      "summary": "Move beyond correlative variant-effect or expression prediction toward extracting causal mechanistic explanations grounded in sequence-function evidence — saturation mutagenesis screens, Massively Parallel Reporter Assays, perturbation panels.",
+      "why_now": "Today's foundation models predict effects but rarely explain mechanism in a falsifiable way. Closing this gap requires multimodal models that consume MAVE / MPRA / Perturb-seq data alongside sequence and literature, and produce causally-interpretable outputs.",
+      "evidence_points": [
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-060",
+          "paper_id": "MMG-060",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 96.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-060__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "The excellent performance of ESM-1v is particularly interesting, not due to its nature as an unsupervised VEP, but because it had no access to a protein-specific multiple sequence alignment like EVE, DeepSequence and EVmutation.",
+                  "match_score": 74.2
+                },
+                {
+                  "text": "We used ESM-1v in a zero-shot setting, where no MSA generation took place, but it is also possible to use the model in a “few-shot” setting, where a protein-specific MSA is provided to assist with protein-specific predictions.",
+                  "match_score": 76.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-060__02.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We selected the dataset with the highest median Spearman’s correlation to all VEP predictions for that protein to help prevent outliers from influencing the choice of set.",
+                  "match_score": 96.0
+                },
+                {
+                  "text": "Spearman’s correlation was calculated using the scipy.stats.- spearmanr() function of the python scipy package.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-060__03.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "For the rank score based on DMS-VEP correlation in Fig 2, for each protein the Spearman’s correlation between each pair of predictors and the DMS data was calculated using only amino acid substitutions shared between the three methods.",
+                  "match_score": 88.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 1
+        },
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-045",
+          "paper_id": "MMG-045",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-045__01.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "General protein language models can have a good correlation with specific functional assays in a zero-shot setting but cannot distinguish different properties of the same protein [64, 7].",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-045__02.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "For notation clarity, in what follows, we use xt to represent the protein sequence data and ˜xt to represent the diffused data at timestep t in the diffusion model.",
+                  "match_score": 78.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-045__03.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "ProteinFacilitator Model The ProteinFacilitator model in ProteinDT aims at mapping a piece of text (a text prompt describing the properties of the target protein) to a protein representation that captures both the semantic information of the text and essential protein sequence patterns.",
+                  "match_score": 76.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-045__04.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "The reverse process ˜xT →˜x0 in the diffusion model corresponds to the protein sequence sam- pling for protein generation in ProteinDiff.",
+                  "match_score": 76.0
+                },
+                {
+                  "text": "We repeat such sampling process for T timesteps, from ˜xT to ˜x0, which yields protein sequence generation.",
+                  "match_score": 73.7
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 2
+        },
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-065",
+          "paper_id": "MMG-065",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-065__01.png",
+              "page": 18,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "SLDP estimates this functional correlation using a generalized least-squares regression, accounting for the population LD structure.",
+                  "match_score": 88.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-065__02.png",
+              "page": 19,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "For each model, we computed the Pear- son correlation of test set predictions and observed experimental data for thousands of datasets from various experiment types.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-065__03.png",
+              "page": 19,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "For each model, we computed the Pearson correlation of test set predictions and observed experimental data for human CAGE, DNase, and ChIP-seq datasets.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-065__04.png",
+              "page": 20,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "For each model, we computed the Pearson correlation of test set predictions and observed experimental data for human DNase datasets.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-065__05.png",
+              "page": 21,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We then computed the statistical correlation between mouse predictions and GTEx summary statistics across 48 tissues using SLDP conditioned on the 64 human PCs for either the CAGE or DNase/ATAC data (Meth- ods).",
+                  "match_score": 88.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 3
+        },
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-069",
+          "paper_id": "MMG-069",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-069__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Importantly, we found a positive correlation between the extent of shifting and the in silico knockout levels (Supplementary information, Fig.",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-069__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "These results proved the effectiveness of the strategy that pre-training a foundation model on multi-species large-scale unlabeled data and subse- quent ﬁne-tuning on limited task-speciﬁc data could make it a promising universal solution to various important biological problems related to gene–cell features.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-069__03.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We calculated the Pearson correlation coefﬁcient (PCC) between two expressed genes (count ≥1) (Supplementary information, Fig.",
+                  "match_score": 92.0
+                },
+                {
+                  "text": "The nonzero-based correlation coefﬁcient calculation avoided unnecessary calculations for zero values, ensuring the practicality and interpretability of the analysis results.",
+                  "match_score": 88.0
+                },
+                {
+                  "text": "Finally, we used the cross-entropy loss with a label smoothing mechanism50 as the training loss and optimized by the Adam.51 In addition, we used the adjusted mutual information to select the best checkpoint, which was consistent with CAME.",
+                  "match_score": 83.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 4
+        },
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-101",
+          "paper_id": "MMG-101",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-101__01.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We found an average Pearson correlation of 0.78 (minimum: 0.73, maximum: 0.84) on fetal astrocytes.",
+                  "match_score": 88.0
+                },
+                {
+                  "text": "This evaluation showed an average Pearson correlation of 0.75 (minimum: 0.68, maximum: 0.81) on leave-out chromosomes.",
+                  "match_score": 88.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-101__02.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We used Pearson correlation, Spearman correlation and R2 to evaluate prediction performance in all settings.",
+                  "match_score": 88.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-101__03.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "During the evaluation stage, we calculated Pearson and Spearman correlations of aCPM only on these knockout peaks with the original observed aCPM.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-101__04.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Pearson correlation was collected at eight epochs for all fine-tuning.",
+                  "match_score": 90.8
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 5
+        },
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-105",
+          "paper_id": "MMG-105",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-105__01.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We validated the effectiveness of silmitasertib in neuroendocrine Merkel cell models 333 and primary tumor models in which the downregulation of antigen presentation machinery is a well-established 334 mechanism of resistance to immunotherapies.",
+                  "match_score": 83.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-105__02.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "For generation tasks such as 383 perturbation prediction, where we generate entire response cells, we set K to the length of the full cell sentence so that 384 the model learns to generate the entire cell.",
+                  "match_score": 80.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-105__03.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The cell sentence transformation into textual sequences retains the underlying biological information by preserving the 394 rank-order of gene expression.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-105__04.png",
+              "page": 16,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "This metric was selected for its superior correlation with human 689 judgment compared to n-gram based metrics like ROUGE or BLEU.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-105__05.png",
+              "page": 18,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "830 Kendall’s τ is then computed between these two ranked lists, yielding a rank-based correlation that is robust to tied 831 ranks and sparse expression.",
+                  "match_score": 84.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 6
+        },
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-109",
+          "paper_id": "MMG-109",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-109__01.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Moreover, one significant association for bipo- lar disorder was detected after multiple testing correction for the non-cell type-specific disease enrichment, highlighting the functional importance to disease of regions where changes in the histone mark activity levels was predicted to have a large effect on expression across cell types.",
+                  "match_score": 76.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-109__02.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Thus, it is possible that the noted lim- ited correlation between transcription and repressive histone marks is a result of this (Figures 1 A and 4 A).",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-109__03.png",
+              "page": 15,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We observed a con- sistent relationship for active marks, where perturbations to histone mark signals in the gene body had a greater predicted effect than distal regulatory regions.",
+                  "match_score": 76.0
+                },
+                {
+                  "text": "Furthermore, we noted that for active genes, the relation- ship between a histone mark’s levels and performance repli- cated known biology: Observing a strong correlation for ac- tive histone marks in highly expressed genes, and conversely for repressive marks in lowly expressed genes (Figure 3 A).",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-109__04.png",
+              "page": 15,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Our analysis highlighted the very high correlation for the in silico perturbations between the different cross-validation fold models ( Supplementary Figure S8 ).",
+                  "match_score": 84.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 7
+        },
+        {
+          "id": "planning-causal-mechanism-extraction-MMG-113",
+          "paper_id": "MMG-113",
+          "next_step_id": "causal-mechanism-extraction",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-113__01.png",
+              "page": 16,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "First, two decades of research into systems biology and regulatory networks have established large databases of signaling pathways and gene-regulatory interactions, built on high-throughput experiments and on manual curation of many individual mechanistic studies.",
+                  "match_score": 82.7
+                },
+                {
+                  "text": "By combining compendia of poten- tial regulatory interactions from public databases with single-cell RNA-seq data for the investigated biological system, deep neural networks may indeed be able to unravel those regulatory mechanisms that are relevant to the biological question of interest.",
+                  "match_score": 79.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-113__02.png",
+              "page": 18,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Moreover, given the broad interest in networks for describing biological mechanisms, we expect that our use of deep learning on biological networks will also be relevant in other areas of biol- ogy and medicine, for example analyzing metabolome/proteome data, biochemical re- action networks, cellular differentiation, or even brain circuits.",
+                  "match_score": 86.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-113__03.png",
+              "page": 28,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Pearson correlations of node weights were calculated using the function cor in R.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-causal-mechanism-extraction-MMG-113__04.png",
+              "page": 31,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We then evaluated their prediction performance using the ROC AUC metric and extracted input feature weights as potential biological interpretations.",
+                  "match_score": 86.7
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 8
+        }
+      ]
+    },
+    {
+      "id": "clinical-actionability-loop",
+      "title": "Clinical actionability loop",
+      "subtitle": "Closing the prediction-to-treatment loop",
+      "summary": "Close the loop from multimodal variant-effect prediction through to candidate therapeutics — RNA-therapeutic design, base/prime editing target selection, drug repurposing — with experimental and clinical validation feeding back into model training.",
+      "why_now": "AlphaMissense, ESM, PrimateAI predict pathogenicity at proteome scale; clinical translation still goes through manual case-by-case interpretation. A genuine multimodal pipeline that proposes a therapeutic + a validation experiment would shorten this gap dramatically.",
+      "evidence_points": [
+        {
+          "id": "planning-clinical-actionability-loop-MMG-104",
+          "paper_id": "MMG-104",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 94.1,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-104__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Regulatory barriers include complex approval pathways, such as the need for extensive clinical trials to validate new uses, despite the drug’s prior approval [108].",
+                  "match_score": 79.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-104__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "AI-powered digital twins simulate virtual patient populations, enabling faster, more precise clinical trials by predicting treatment outcomes and reducing reliance on large control groups [109].",
+                  "match_score": 85.0
+                },
+                {
+                  "text": "This approach can significantly accelerate the development of new treatments, reduce development costs, and improve the success rates of clinical trials.",
+                  "match_score": 80.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-104__03.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "By integrating genomics, transcriptomics, proteomics, metabolomics, and epigenomics data, researchers can uncover novel therapeutic targets and identify clinically actionable biomarkers with unprecedented precision.",
+                  "match_score": 94.1
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-104__04.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "ML, DL, NLP, RL and Gen-AI can accelerate target identification, refine drug design, and streamline clinical trials.",
+                  "match_score": 80.5
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 1
+        },
+        {
+          "id": "planning-clinical-actionability-loop-MMG-094",
+          "paper_id": "MMG-094",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 92.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-094__01.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Regarding the agent, although equipped with a broad array of tools compared to other frameworks17, it remains in an experimental stage, thus limiting clinical applicability.",
+                  "match_score": 92.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-094__02.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "To fully leverage the potential of AI agents in the near future, it will be crucial to integrate them as deeply into routine clinical prac- tice as possible, ideally through direct incorporation into existing clinical information systems for live access to patient data with only minimal workflow disruption for clinicians.",
+                  "match_score": 79.3
+                },
+                {
+                  "text": "However, this first neces- sitates addressing many deployment challenges, including concerns regarding interoperability with existing systems, data privacy laws such as GDPR and HIPAA (in case of cloud-based models), liability and accountability issues and the need for regulatory approvals as medical devices44, which will also require much broader validation studies to show safety and benefits in actual clinical workflows.",
+                  "match_score": 79.3
+                },
+                {
+                  "text": "Lastly, there will be a critical need to educate medical professionals to effectively col- laborate with AI agents while maintaining full authority over the final clinical decision-making.",
+                  "match_score": 77.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-094__03.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Clinical case generation To address the limitations in current biomedical benchmarks, we com- piled a collection of 20 distinct multimodal patient cases, primarily focusing on gastrointestinal oncology, including colorectal, pancre- atic, cholangiocellular and hepatocellular cancers.",
+                  "match_score": 79.3
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 2
+        },
+        {
+          "id": "planning-clinical-actionability-loop-MMG-123",
+          "paper_id": "MMG-123",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 90.4,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-123__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Compared with existing diagnostic tools used commonly in clinical practice, DeepRare addresses several critical limitations: (1) traditional HPO-based systems typically generate candidate disease lists with- out providing sufficient explanatory context or diagnostic rationale, thereby limiting their clinical applicability; (2) some tools that integrate both HPO phenotypes and genetic data remain highly dependent on genetic testing results, rendering them less suitable for initial patient assessments or first-line screening; (3) recent advances in LLMs have improved clinician usability, but these models are still prone to hallu- cinations that undermine diagnostic reliability.",
+                  "match_score": 90.4
+                },
+                {
+                  "text": "The clinical implications of DeepRare extend beyond diagnostic accuracy to address fundamental challenges in rare disease care delivery.",
+                  "match_score": 79.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-123__02.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Specifically, we compute the cosine similarity between the text embeddings of the predicted entity name and all standardized HPO term names.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-123__03.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Clinical evaluation dataset curation In this section, we introduce the curation procedure of the two proposed evaluation datasets from the clinical centres, that is, the MIMIC-IV-Rare and Xinhua Hospital datasets.",
+                  "match_score": 84.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-123__04.png",
+              "page": 15,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The plat- form enables users to input patient demographics, family history and clinical presentations to obtain diagnostic predictions.",
+                  "match_score": 83.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 3
+        },
+        {
+          "id": "planning-clinical-actionability-loop-MMG-028",
+          "paper_id": "MMG-028",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 86.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-028__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Future models can probe for data leakage using the training_on_test_set task.",
+                  "match_score": 73.3
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-028__02.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Both Brier and ECE scores are relatively large (0.2–0.3 Brier score, 0.25–0.45 ECE), indicating poorly calibrated predictions from all models.",
+                  "match_score": 73.2
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-028__03.png",
+              "page": 26,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Limitations that we believe will require new approaches, rather than increased scale alone, include an inability to process information across very long contexts (probed in tasks with the keyword context length), a lack of episodic memory into the training set (not yet directly probed), an inability to engage in recurrent computation before outputting a token (making it impossible, for instance, to perform arithmetic on numbers of arbitrary length), and an inability to ground knowledge across sensory modalities (partially probed in tasks with the keyword visual reasoning).",
+                  "match_score": 86.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-028__04.png",
+              "page": 26,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Despite this broad similarity between model classes, we observed some benefits from a sparse model architecture, with BIG-G sparse models achieving the performance of dense models with roughly twice their effective parameter count on BIG-bench as a whole, and producing multiple choice predictions that were as well calibrated as models about ten times larger (Figures 5, 6).",
+                  "match_score": 77.5
+                },
+                {
+                  "text": "One capability we explore in depth is an improved ability to propose legal chess moves with increasing scale, which suggests that models are learning the rules of chess from transcribed games in their training data (Figure 16).",
+                  "match_score": 75.6
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 4
+        },
+        {
+          "id": "planning-clinical-actionability-loop-MMG-086",
+          "paper_id": "MMG-086",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 86.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-086__01.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "For downstream clinical applications, a benchmark can guide the decision to use one model over another, considering a variety of factors, from perfor- mance on various tasks to computational resource constraints.",
+                  "match_score": 83.0
+                },
+                {
+                  "text": "Importantly, all the data was generated during clinical operations without further cura- tion, representing the variability, both biological and technical, that can be observed under real-world conditions.",
+                  "match_score": 83.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-086__02.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "At the same time we will expand the scope of the tasks included in terms of technical variability and prediction endpoints.",
+                  "match_score": 86.7
+                },
+                {
+                  "text": "We will increase our focus on tasks related to biomarker prediction and treatment response as well as survival analysis tasks.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-086__03.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "These models were pretrained on a clinical dataset compiled at MSHS during normal hospital operation.",
+                  "match_score": 79.3
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 5
+        },
+        {
+          "id": "planning-clinical-actionability-loop-MMG-102",
+          "paper_id": "MMG-102",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 85.6,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-102__01.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "During the prediction of D-RP, we intro- duced VGAE, employing a reparameterization trick to project node representations into a uniform latent distribution form.",
+                  "match_score": 83.8
+                },
+                {
+                  "text": "In the prediction step of the U- RP, the teacher network extracted low-dimensional embedded repre- sentations of complex epigenomic information related to the queried gene set and guided the student network in selecting the optimal epigenetic sample set.",
+                  "match_score": 85.6
+                },
+                {
+                  "text": "To explore the potential advantages of a multi- stage fusion strategy and knowledge distillation for the prediction of TRs, we conducted extensive ablation tests.",
+                  "match_score": 80.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-102__02.png",
+              "page": 16,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The choice of sample size may affect prediction results.",
+                  "match_score": 80.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-102__03.png",
+              "page": 16,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Integrating regulatory potential and predicting transcriptional regulator activity Having obtained the bidirectional regulatory potentials, we con- currently acquired information on the regulatory proﬁle correspond- ing to the genome-wide binding sites of the TRs and the regulatory proﬁle corresponding to the cis-regulatory elements of the queried gene set.",
+                  "match_score": 75.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 6
+        },
+        {
+          "id": "planning-clinical-actionability-loop-MMG-056",
+          "paper_id": "MMG-056",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 83.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-056__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Notably, this is not an inherent limitation of ESM1b or other protein language models, and future research will likely yield algorithms for quantifying prediction uncertainty.",
+                  "match_score": 73.7
+                },
+                {
+                  "text": "Given the results presented in this work, and in line with the performance of language models in protein research19,20,25,57 and general machine learning58,59, protein language modeling stands out as one of the most promising approaches to determine the clinical and biological consequences of genetic variants.",
+                  "match_score": 83.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-056__02.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "As an unsupervised method, ESM1b poses no risk of informa- tion leakage from the training to the test sets in clinical (for example, ClinVar and HGMD) or population genetics (for example, gnomAD) datasets, allowing accurate and unbiased evaluation.",
+                  "match_score": 71.9
+                },
+                {
+                  "text": "Notably, protein language models can provide predic- tions for every possible amino acid sequence and are applicable to all coding variants.",
+                  "match_score": 75.0
+                },
+                {
+                  "text": "Our workflow is unique in its ability to predict variant effects across alternative isoforms, unlike existing methods that can only determine whether a variant is included in an expressed isoform48 but not predict its unique effect in the context of that isoform.",
+                  "match_score": 75.6
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 7
+        },
+        {
+          "id": "planning-clinical-actionability-loop-MMG-069",
+          "paper_id": "MMG-069",
+          "next_step_id": "clinical-actionability-loop",
+          "best_score": 83.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-069__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "In summary, GeneCompass exhibited the capability of cell fate prediction and key regulatory factor identiﬁcation which could be applied to reﬁne the efﬁciency of wet experiments and reveal novel mechanisms.",
+                  "match_score": 72.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-069__02.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "This can open up new avenues for its clinical application, for example, disease target gene discovery, tumor drug screening, and drug toxicity prediction.",
+                  "match_score": 83.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-069__03.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The pipeline consisted of the following steps: ﬁltering cells with less than 200 expressed genes, ﬁltering samples with less than 4 cells, ﬁltering cells with more than 7 expressed protein-coding or miRNA genes, ﬁltering cells with a proportion of mitochondrial genes exceeding 15%, ﬁltering cells with an expressed gene number exceeding three standard deviations from the mean number among all cells in the gene expression matrix for each sample, and dropping genes not in the core gene list.",
+                  "match_score": 70.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-069__04.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "The experimental results were based on ﬁne-tuning these pre-trained models on full-panel multiple downstream tasks by cross-validation.",
+                  "match_score": 72.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-clinical-actionability-loop-MMG-069__05.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Inspired by self-supervised learning in the NLP domain, a masked language modeling strategy8 was employed to randomly mask genes including their IDs, expressions, and prior knowledge during the pre-training.",
+                  "match_score": 72.5
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 8
+        }
+      ]
+    },
+    {
+      "id": "standardised-multimodal-benchmarks",
+      "title": "Standardised multimodal benchmarks",
+      "subtitle": "Versioned, leak-free cross-modality eval",
+      "summary": "Build held-out cross-modality benchmarks (text + DNA + RNA + protein together) with versioned, leak-free splits — analogous to GLUE/SuperGLUE/BIG-Bench for NLP — so progress in multimodal genomic foundation models can be measured fairly across labs.",
+      "why_now": "Each paper today reports its own ad-hoc benchmark. Cross-paper comparisons are unreliable — train/test leakage between e.g. UniProt-derived training sets and downstream protein-function tasks is endemic. A community benchmark with versioned data, leakage audits, and held-out modalities is the prerequisite for any honest claim of 'foundation' progress.",
+      "evidence_points": [
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-124",
+          "paper_id": "MMG-124",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 95.9,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-124__01.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "These domains remain underexplored due to limited standardized datasets and evaluation protocols, yet they offer promising opportuni- ties for agentic systems to support hypothesis generation, phenotype– genotype association, and experimental planning at scale.",
+                  "match_score": 70.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-124__02.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Although there is growing interest in biological AI agents, the field lacks a standardized evaluation framework.",
+                  "match_score": 78.8
+                },
+                {
+                  "text": "Most published systems are demonstrated through qualitative case studies or small-scale benchmarks, without repeatable metrics or open datasets.",
+                  "match_score": 81.8
+                },
+                {
+                  "text": "When proprietary APIs or closed-source models are involved, independent verification becomes particularly challenging, further emphasizing the need for transparent and standardized benchmarks.",
+                  "match_score": 95.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-124__03.png",
+              "page": 14,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Although RAG can partially mitigate this issue, hallucination control remains unstable because most current systems lack multi-level verification or structured result evaluation.",
+                  "match_score": 67.5
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 3,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 1
+        },
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-116",
+          "paper_id": "MMG-116",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 89.8,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-116__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "A key aspect of this work distinguishing ProMEP from existing methods is its underlying multimodal deep representation model.",
+                  "match_score": 78.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-116__02.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Our evaluation demonstrates that ProMEP achieves comparable performance with AlphaMissense on multiple benchmarks.",
+                  "match_score": 89.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-116__03.png",
+              "page": 12,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We masked the coordinates of these points and trained the proposed multimodal network to automatically recover them.",
+                  "match_score": 81.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-116__04.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Benchmarking multimodal representations with function- related datasets We used 15 function-related datasets (see Supplementary information, Table S3) to benchmark the performance of our multimodal deep representation learning model compared to a comprehensive suite of baselines.",
+                  "match_score": 79.4
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-116__05.png",
+              "page": 13,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Multimodal context benchmarking We used three benchmarks to investigate whether the sequence context and the structure context of a protein could be captured by ProMEP.",
+                  "match_score": 84.5
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 2
+        },
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-049",
+          "paper_id": "MMG-049",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 84.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-049__01.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "A major bottleneck we encountered was that many models, including language models, were not available or difficult to use, limiting our ability to include them as benchmarks.",
+                  "match_score": 80.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-049__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "While many models exist to classify enzyme function via EC numbers, there are no standardized benchmarks for evaluation of these models.",
+                  "match_score": 84.7
+                },
+                {
+                  "text": "We also present CREEP, a model which uses multimodal contrastive learning and is one of the first models that can perform the latter task.",
+                  "match_score": 75.9
+                },
+                {
+                  "text": "We encourage developers to integrate their current and future methods or benchmarking results into the CARE Github repository (https://github.com/jsunn-y/CARE/).",
+                  "match_score": 81.8
+                },
+                {
+                  "text": "We believe that we are just seeing the beginning of the widespread adoption of multimodal models for protein functional prediction, and we expect that many researchers will find CARE useful for formulating and evaluating their models.",
+                  "match_score": 75.9
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 2,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 3
+        },
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-120",
+          "paper_id": "MMG-120",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 84.7,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-120__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "With the pre-training data and the tokenization strategy being the key architectural difference, these choices may deserve more attention in future DNA LMs.",
+                  "match_score": 67.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-120__02.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "On the gene finding task, we observe that NT-MS with a simple two-layer CNN shows promising performance compared to the specialized AUGUSTUS, which was found to be the state of the art in a recent benchmark (Scalzitti et al., 2020).",
+                  "match_score": 72.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-120__03.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Since BEND is not inherently tied to an LM objective, our standardized benchmark may also prove useful for evaluating eventual DNA representation models that follow a different paradigm.",
+                  "match_score": 84.7
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-120__04.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "As the curation of a comprehensive benchmark task collection requires experimental ground-truth data to be available, and most published models are trained on human data, we focused BEND on the human genome.",
+                  "match_score": 69.4
+                },
+                {
+                  "text": "In the future, we hope to extend the benchmark to other, diverse organisms, so that generalization power can be tested in a transfer-learning setting, i.e.",
+                  "match_score": 67.2
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 4
+        },
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-041",
+          "paper_id": "MMG-041",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 83.0,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-041__01.png",
+              "page": 30,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We also use self-imposed constraints, like restricting the number of molecules and proteins for this work; without these constraints, we are likely to see considerable performance gains due to much larger corpuses for these modalities.",
+                  "match_score": 70.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-041__02.png",
+              "page": 31,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Corpus Eﬀects vs Prompt Eﬀects In several benchmarks, we show performance gains over existing lan- guage models, but we do not speciﬁcally disentangle the eﬀects of the prompts we included in pre-training versus the core scientiﬁc corpus.",
+                  "match_score": 70.0
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-041__03.png",
+              "page": 31,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Prompt Pre-Training vs Instruction Tuning We opted for the former in this paper, but ideally we would need to explore what the latter could achieve, along the lines of the recent work of Chung et al.",
+                  "match_score": 68.2
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-041__04.png",
+              "page": 31,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "More <work> examples We feel <work> could be a general-purpose reasoning token and we would like to invest more in this direction, including increasing prompt diversity and exploring performance on more benchmarks.",
+                  "match_score": 78.6
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-041__05.png",
+              "page": 32,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We showed that with a working memory token approach, we can achieve strong performance over existing methods on mathematical MMLU and MATH benchmarks.",
+                  "match_score": 83.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 5
+        },
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-046",
+          "paper_id": "MMG-046",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 82.5,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-046__01.png",
+              "page": 9,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Discussion We presented ChatNT, a multimodal conversational agent that can handle DNA, RNA and protein sequences and solve multiple biologically relevant downstream tasks.",
+                  "match_score": 75.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-046__02.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "We envision that such an approach could expand even further the capabilities and performance of our model by achieving superior transfer learning across modalities.",
+                  "match_score": 82.5
+                },
+                {
+                  "text": "This work serves as a proof of concept that it is possible to build multimodal biosequence and English conversational agents that can solve advanced, biologically relevant tasks and is meant to lay a first set of foundations to build future highly capable agents that understand biological sequences and principles.",
+                  "match_score": 78.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-046__03.png",
+              "page": 10,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "ChatNT is a multimodal agent that takes as input one or multiple DNA sequences and an English prompt and returns a dis- tribution over English words that is used to autoregressively produce an answer in English.",
+                  "match_score": 81.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-046__04.png",
+              "page": 11,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We converted the DNA sequence datasets into instructions data- sets as described above for the Nucleotide Transformer benchmark.",
+                  "match_score": 73.6
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 6
+        },
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-028",
+          "paper_id": "MMG-028",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 82.1,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-028__01.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Such short useful lifespans are likely due to the restricted scope of these benchmarks, which prevents them from including tasks that lie far beyond the capabilities of current language models.",
+                  "match_score": 75.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-028__02.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence-group",
+              "sentences": [
+                {
+                  "text": "Motivated by the importance of predicting the potentially transformative effects of large language models, and by the limitations of current benchmarks, we introduce a large-scale, extremely difficult and diverse benchmark.",
+                  "match_score": 82.1
+                },
+                {
+                  "text": "In homage to Alan Turing’s imitation game (Turing, 1950), and because we aim to extract information about model behavior beyond what is available from a binary judgement of whether a model is distinguishable from a human, we call this benchmark the Beyond the Imitation Game benchmark, or BIG-bench.",
+                  "match_score": 75.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-028__03.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "As reflected in the BIG-bench review criteria, benchmark tasks are novel, cover a diverse range of topics and languages, and are not fully solvable by current models.",
+                  "match_score": 75.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-028__04.png",
+              "page": 26,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "BIG-bench is an effort to build a benchmark useful for quantifying and extrapolating these capabilities.",
+                  "match_score": 75.9
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 4,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 7
+        },
+        {
+          "id": "planning-standardised-multimodal-benchmarks-MMG-042",
+          "paper_id": "MMG-042",
+          "next_step_id": "standardised-multimodal-benchmarks",
+          "best_score": 81.8,
+          "screenshots": [
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-042__01.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "We conduct experiments to study two key components, the quality of the produced multimodal biomedical instruction-following data, and performance of LLaVA-Med.",
+                  "match_score": 81.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-042__02.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "To evaluate the performance of LLaVA-Med on biomedical multimodal conversation, we construct an evaluation dataset with 193 novel questions.",
+                  "match_score": 75.9
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-042__03.png",
+              "page": 6,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Stage 1 22.6 25.2 25.8 19.0 24.8 24.7 22.2 23.3 10K 42.4 32.5 46.1 36.7 43.5 34.7 37.5 39.9 60K 53.7 36.9 57.3 39.8 49.8 47.4 52.4 49.4 60K-IM 55.1 36.4 56.2 40.4 52.7 51.8 50.1 50.2 Table 1: Performance comparison of mulitmodal chat instruction-following abilities, measured by the relative score via language GPT-4 evaluation.",
+                  "match_score": 78.8
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-042__04.png",
+              "page": 7,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Since the multimodal GPT-4 is not publicly available, we resort to language-only GPT-4 for comparison.",
+                  "match_score": 74.5
+                }
+              ]
+            },
+            {
+              "href": "multimodal_genomics/assets/evidence/planning-standardised-multimodal-benchmarks-MMG-042__05.png",
+              "page": 8,
+              "section_hint": "Discussion / Future Work",
+              "highlight_granularity": "sentence",
+              "sentences": [
+                {
+                  "text": "Besides, SLAKE includes richer modalities and covers more human body parts than the currently available dataset, including brain, neck, chest, abdomen, and pelvic cavity.",
+                  "match_score": 75.0
+                }
+              ]
+            }
+          ],
+          "screenshot_count": 5,
+          "screenshot_status": "ok",
+          "screenshot_strategy": "planning-future-work",
+          "confidence": "parsed_pdf",
+          "rank_within_next_step": 8
+        }
+      ]
+    }
+  ]
+}

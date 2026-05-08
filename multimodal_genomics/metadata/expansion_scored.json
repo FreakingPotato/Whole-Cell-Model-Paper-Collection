@@ -1,0 +1,1093 @@
+{
+  "schema_version": "0.1",
+  "scored_at": "2026-05-08T13:43:29.525390+00:00",
+  "scored_by": "agent-UNI",
+  "claims": {
+    "gfm-tokenization": {
+      "candidates": [
+        {
+          "paper_id": "MMG-078",
+          "discovery_rank": 3,
+          "discovery_score": 59,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Directly compares character, k-mer (overlapping/non-overlapping), and BPE tokenization across 44 genomic fine-tuning tasks — the central claim."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Released analysis pipeline lets practitioners pick tokenizers per task using the published task suite."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Includes a Mamba SSM head-to-head BPE-vs-character ablation, lending mechanistic credibility to claims."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "44-task evaluation shows the methodology generalizes across genomic settings."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides 44 fine-tuning tasks plus splice/promoter probes as a directly borrowable validation protocol."
+            }
+          },
+          "weighted_total": 26.6,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-077",
+          "discovery_rank": 2,
+          "discovery_score": 59,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "METAGENE-1 explicitly tailors a BPE tokenizer for metagenomic DNA/RNA over 1.5T base pairs, directly testing a tokenization scheme."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Paper reports tokenizer design choices and pretraining loss curves; model release will allow reuse of the tokenizer."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "7B-parameter autoregressive transformer trained on wastewater metagenomes provides credible large-scale evidence."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Tokenizer scales to 1.5 trillion bp corpus with explicit BPE design for genomic sequences."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Pandemic-monitoring downstream tasks (pathogen detection) provide a borrowable tokenizer-evaluation protocol."
+            }
+          },
+          "weighted_total": 24.4,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-080",
+          "discovery_rank": 5,
+          "discovery_score": 58,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Comprehensive survey explicitly assesses tokenization strategies (k-mer, BPE, character) across genome language models."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides a taxonomy and reference table that researchers can immediately use to pick a tokenizer."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Synthesizes existing literature; conclusions are descriptive rather than empirical."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Survey scope spans architectures and species but does not run new experiments."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Catalogues evaluation paradigms (zero-shot/few-shot/fine-tune) that frame tokenizer comparisons."
+            }
+          },
+          "weighted_total": 19.3,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-079",
+          "discovery_rank": 4,
+          "discovery_score": 58,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Proposes a novel sequence-encoding scheme for lncRNA classification, partially supporting the tokenization-matters claim on RNA."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Pretrained checkpoint is released but the contribution is mostly downstream classification rather than tokenizer design."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Cross-species RNAChallenge results lend credibility to the encoding-scheme contribution."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Trained on combined GENCODE/RefSeq/NONCODE sets; scale is moderate compared with DNA FMs."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Coding/non-coding RNA classification benchmark is a useful but narrow tokenizer validation lens."
+            }
+          },
+          "weighted_total": 16.5,
+          "tier": "secondary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-076",
+          "discovery_rank": 1,
+          "discovery_score": 66,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "SWING introduces an interaction-vocabulary tokenization for peptide-protein contacts, only tangentially related to DNA/RNA tokenization claims."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Code is released but vocabulary is amino-acid based, providing limited direct benefit for nucleotide tokenizer choice."
+            },
+            "plausible": {
+              "score": 2,
+              "rationale": "Demonstrated on MHC and PPI tasks but does not study DNA/RNA tokenization biases per se."
+            },
+            "scalable": {
+              "score": 1,
+              "rationale": "Sliding-window construction scales to long protein contexts but not nucleotide context length."
+            },
+            "how_to_validate": {
+              "score": 1,
+              "rationale": "MHC binding benchmarks are not transferable validation tasks for genomic tokenizer choice."
+            }
+          },
+          "weighted_total": 6.6,
+          "tier": "drop",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "gfm-long-context": {
+      "candidates": [
+        {
+          "paper_id": "MMG-083",
+          "discovery_rank": 3,
+          "discovery_score": 60,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "DNALongBench targets five long-range tasks up to 1Mb (3D folding, eQTL, enhancer-target), directly underwriting the long-context claim."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Releases benchmark plus baselines (HyenaDNA, Caduceus variants) that practitioners can drop into their pipeline."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Evaluates long-range vs short-context models head-to-head, lending empirical weight."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Tasks span 1-million-bp dependencies, the regime targeted by SSM/Hyena/Mamba architectures."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Five canonical long-range tasks with public baselines provide a direct validation protocol."
+            }
+          },
+          "weighted_total": 25.5,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-084",
+          "discovery_rank": 4,
+          "discovery_score": 59,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Demonstrates selective state-space models (Mamba) outperform transformers at RNA-seq read coverage prediction, validating long-context SSM architectures."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Code and trained models are public, enabling immediate reuse of striped Mamba architectures."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Striped Mamba+attention combination shows credible gains over Hyena and pure attention baselines."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Long-context Mamba inference scales better than dense attention for read-coverage prediction."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "GTEx eQTL benchmarks plus RNA-seq tasks form a transferable evaluation protocol for SSM claims."
+            }
+          },
+          "weighted_total": 23.5,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-081",
+          "discovery_rank": 1,
+          "discovery_score": 68,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Benchmarks five DNA foundation models including HyenaDNA and Caduceus-Ph, directly evaluating long-context architectures on genomic tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides reproducible task suite letting practitioners compare attention vs SSM/Hyena models immediately."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Empirically grounded comparison across diverse genomic tasks supports claim that architecture matters."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Models evaluated reach genome-scale embeddings but the benchmark itself uses moderate-length tasks."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Releases a unified benchmark spanning sequence classification, expression, variant effects, and TADs."
+            }
+          },
+          "weighted_total": 21.8,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-082",
+          "discovery_rank": 2,
+          "discovery_score": 61,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "PlantCAD2 is a long-context single-nucleotide-resolution DNA language model, demonstrating long-context architecture on plant genomes."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Pretrained checkpoint and benchmarks are released for plant-genomics users."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Outperforms 7B-parameter Evo2 on 10 of 12 zero-shot tasks, supporting long-context architecture claims."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Trained on 65 angiosperm genomes; 676M parameters with single-nt context unlocks distal regulatory modeling."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Cross-species zero-shot evaluations on chromatin and expression provide validation protocol."
+            }
+          },
+          "weighted_total": 20.0,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        }
+      ]
+    },
+    "gfm-pretraining-objective": {
+      "candidates": [
+        {
+          "paper_id": "MMG-085",
+          "discovery_rank": 1,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "RiNALMo uses masked-language-modeling self-supervision on 36M non-coding RNAs and learns implicit RNA structure — direct objective evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Largest open RNA LM (650M params); model and weights are released for downstream reuse."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Achieves SOTA on RNA structure prediction including unseen RNA families, lending strong credibility."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "650M parameters trained on ncRNA scale demonstrates objective-driven scaling."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Secondary structure and family generalization tasks provide a clear borrowable validation protocol."
+            }
+          },
+          "weighted_total": 26.6,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-088",
+          "discovery_rank": 4,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "CellFM uses a modified RetNet self-supervised objective on 100M cells, illustrating alternative pretraining objectives in genomics-adjacent FMs."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Released model and benchmarks are usable for transcriptomic pretraining-objective comparisons."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Outperforms peer single-cell FMs on cell annotation/perturbation, lending empirical support."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "800M-parameter model on 100M-cell corpus shows objective-driven scaling at single-cell scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cell annotation, perturbation, and gene-function tasks provide validation protocols."
+            }
+          },
+          "weighted_total": 20.5,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-089",
+          "discovery_rank": 5,
+          "discovery_score": 83,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "PepMLM fine-tunes ESM-2 with a masked-language-modeling objective conditioned on target sequences, exemplifying objective design but in protein space."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Code/weights released enable direct reuse of the masked conditional objective."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Experimental binding validation supports the objective's effectiveness for sequence design."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Approach scales to arbitrary target proteins but does not address DNA/RNA pretraining."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "AlphaFold-based docking and binding/degradation assays provide validation procedure ideas."
+            }
+          },
+          "weighted_total": 18.3,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-087",
+          "discovery_rank": 3,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Uses contrastive (CLIP-style) language modeling for peptide-target pairs, peripherally informing pretraining-objective design."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "PepPrCLIP pipeline is released but is peptide- not nucleotide-focused."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Wet-lab validation of CLIP-pretraining for binders is credible but in protein space."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Latent perturbation generation scales to many peptide candidates, limited DNA/RNA relevance."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Binder validation assays do not evaluate genomic pretraining objectives."
+            }
+          },
+          "weighted_total": 12.1,
+          "tier": "drop",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "paper_id": "MMG-086",
+          "discovery_rank": 2,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Pathology foundation models evaluated here use SSL on histology images, not DNA/RNA pretraining objectives."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Benchmarks are clinically valuable but not transferable to nucleotide pretraining objectives."
+            },
+            "plausible": {
+              "score": 2,
+              "rationale": "Methodology is sound but the modality is not nucleotide sequence."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Slide-level pretraining at clinical scale is impressive but orthogonal to genomic pretraining."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Pathology endpoints do not validate genomic pretraining-objective claims."
+            }
+          },
+          "weighted_total": 8.2,
+          "tier": "drop",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "multimodal-shared-embeddings": {
+      "candidates": [
+        {
+          "paper_id": "MMG-092",
+          "discovery_rank": 3,
+          "discovery_score": 75,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "CellWhisperer builds a contrastive multimodal embedding of transcriptomes and textual annotations from 1M RNA-seq profiles — direct shared-embedding evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Public CELLxGENE chat integration plus released embeddings are immediately usable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Zero-shot cell-type prediction benchmarks confirm cross-modal retrieval works as claimed."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "1M-profile contrastive corpus shows the approach scales to large transcriptomic atlases."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Zero-shot annotation prediction and embryonic-development meta-analysis provide validation protocols."
+            }
+          },
+          "weighted_total": 26.6,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-091",
+          "discovery_rank": 2,
+          "discovery_score": 75,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Uses protein language models to predict whole-genome pathogenic capacity; embeddings are sequence-only, not text-aligned."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Web server and code provide useful downstream tools but not multimodal text-sequence embeddings."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Empirically validated on novel taxa; the protein LM embedding usage is sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Whole-genome prediction at bacterial scale is reasonable but unimodal."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Pathogenic-capacity benchmarks do not specifically validate text-grounded sequence retrieval."
+            }
+          },
+          "weighted_total": 13.7,
+          "tier": "drop",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "paper_id": "MMG-090",
+          "discovery_rank": 1,
+          "discovery_score": 87,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Reviews medical chatbots and LLM applications; does not propose a shared text-sequence embedding space."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Useful for risk discussion but not directly applicable to embedding-space construction."
+            },
+            "plausible": {
+              "score": 2,
+              "rationale": "Review-level claims, no empirical embedding work."
+            },
+            "scalable": {
+              "score": 1,
+              "rationale": "Discusses scalability of medical LLMs but no nucleotide modality."
+            },
+            "how_to_validate": {
+              "score": 1,
+              "rationale": "No validation protocol relevant to text-sequence embedding alignment."
+            }
+          },
+          "weighted_total": 6.6,
+          "tier": "drop",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "multimodal-instruction-tuning": {
+      "candidates": [
+        {
+          "paper_id": "MMG-095",
+          "discovery_rank": 3,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Biomni is a general-purpose biomedical AI agent with retrieval-augmented planning and code execution across 25 domains — direct instruction-tuning evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open-sourced agentic stack with tool catalog ready for immediate adoption."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Evaluated across diverse research tasks but agentic claims need broader external scrutiny."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Action-discovery agent harvests tools from tens of thousands of papers, demonstrating scalability."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Multi-domain agentic benchmarks plus tool-use logs provide a validation protocol skeleton."
+            }
+          },
+          "weighted_total": 25.7,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-093",
+          "discovery_rank": 1,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Systematically benchmarks zero/few-shot/fine-tuned LLMs on 12 BioNLP tasks, directly informing biomedical instruction-tuning practice."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open benchmark + recommendations let teams immediately calibrate their own instruction-tuned biomedical LLMs."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Compares GPT-4 and LLaMA representatives with traditional fine-tuning, lending strong empirical credibility."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Twelve benchmarks cover six biomedical NLP applications; modest scale of model coverage."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Twelve-benchmark suite plus hallucination/cost analyses gives a directly borrowable evaluation protocol."
+            }
+          },
+          "weighted_total": 23.1,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-096",
+          "discovery_rank": 4,
+          "discovery_score": 88,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "GeneAgent is an instruction-tuned LLM agent that self-verifies gene-set analyses against biological databases — direct instruction-tuning evidence."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Code released; agent runs on existing LLMs and biological DBs, ready for biomedical use."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Outperforms GPT-4 on 1,106 gene sets, with expert review on novel sets confirming benefit."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Single-domain (gene-set analysis) limits scalability claims somewhat."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides 1,106-gene-set benchmark plus expert-review protocol for validation."
+            }
+          },
+          "weighted_total": 22.2,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-094",
+          "discovery_rank": 2,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Builds an autonomous oncology AI agent on GPT-4 with multimodal precision tools and tool-use instruction tuning."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Demonstrated 87.2% decision accuracy with reusable tool-orchestration design."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Validated on 20 realistic multimodal patient cases versus GPT-4 baseline."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Tool-use design is extendable but pilot-scale evaluation limits scalability claims."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides multimodal patient-case benchmark and tool-citation accuracy as validation protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-123",
+          "discovery_rank": 5,
+          "discovery_score": 72,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DeepRare is an LLM-driven agent integrating 40+ tools for rare-disease diagnosis, demonstrating instruction-tuned tool use grounded in HPO terms and genetic data."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Agent and reasoning traces released; plugs into existing clinical workflows."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Evaluated on 9 datasets across continents covering 14 specialties with 95.4% expert-validated reasoning."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Performance scales across heterogeneous clinical inputs but is rare-disease-specific."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Recall@1 metrics on 2,919 diseases plus expert-reviewed reasoning chains form a validation protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-124",
+          "discovery_rank": 6,
+          "discovery_score": 62,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Surveys 100+ biological AI agents, including instruction-tuned tool-use agents — supports claim descriptively."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides a 5D taxonomy that teams can use to position their own instruction-tuned systems."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Synthesis is descriptive rather than experimental."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Covers a broad cross-section of agent designs across biomedical subfields."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Identifies open evaluation challenges but supplies no new benchmark."
+            }
+          },
+          "weighted_total": 16.5,
+          "tier": "secondary",
+          "promotion_status": "skipped_domain_diversity"
+        }
+      ]
+    },
+    "multimodal-text-conditioned-generation": {
+      "candidates": [
+        {
+          "paper_id": "MMG-097",
+          "discovery_rank": 1,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "CodonTransformer conditions DNA-sequence generation on organism, amino-acid, and codon tokens — a clear text-conditioned sequence-generation system."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Released open model and Colab interface let users generate host-specific DNA from natural-language-style organism specs immediately."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Trained on 1M DNA-protein pairs from 164 organisms; STREAM strategy is novel and credible."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Multispecies coverage and customizable model scale to broad host targets."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Codon-distribution and cis-regulatory-element metrics provide a clear validation protocol."
+            }
+          },
+          "weighted_total": 23.3,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        }
+      ]
+    },
+    "applications-variant-effects": {
+      "candidates": [
+        {
+          "paper_id": "MMG-098",
+          "discovery_rank": 1,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Evo 2 predicts functional impact of genetic variants — including BRCA1 — without task-specific fine-tuning, central to the variant-effect claim."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Pretrained 7B/40B Evo 2 weights and inference code are released for immediate variant scoring."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "9.3T-bp training and clinical BRCA1 evaluation provide strong empirical credibility."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "1M-token context with single-nt resolution scales variant prediction to genome scale."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "BRCA1 clinical-significance and noncoding pathogenicity benchmarks form validation protocols."
+            }
+          },
+          "weighted_total": 27.5,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-099",
+          "discovery_rank": 2,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "AlphaGenome predicts regulatory variant effects across 24 of 26 evaluations using a unified 1Mb-context DNA model — direct variant-effect evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Public variant-effect prediction tools released alongside the paper."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Matches/exceeds best external models on most evaluations, with TAL1 mechanistic case study."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "1Mb input context across multiple modalities scales variant scoring to whole-locus regulatory effects."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Twenty-six benchmark evaluations plus TAL1 clinical recapitulation provide a validation protocol."
+            }
+          },
+          "weighted_total": 27.5,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-100",
+          "discovery_rank": 3,
+          "discovery_score": 69,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "popEVE provides proteome-wide calibrated variant deleteriousness scores, including 442 disease genes and 123 novel candidates — strong variant-effect evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Method publication usable for clinical genomics with code release indicated."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Combines evolutionary and population data in a deep generative model with rigorous benchmarking."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales across the full human proteome though limited to missense variants."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Severe developmental disorder cohort and singleton-trio comparisons form validation protocols."
+            }
+          },
+          "weighted_total": 26.6,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        }
+      ]
+    },
+    "applications-regulatory-annotation": {
+      "candidates": [
+        {
+          "paper_id": "MMG-101",
+          "discovery_rank": 1,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "A Nature foundation model of transcription across human cell types delivers cell-type-specific regulatory annotations — direct regulatory-annotation evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Catalogues of gene regulation and TF interactions are released for downstream regulatory annotation."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Generalizable, accurate transcription model with cell-type specificity supported by Nature-level review."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Foundation model spans many human cell types, scaling regulatory annotation broadly."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides regulation catalogues and TF-interaction outputs as validation lenses."
+            }
+          },
+          "weighted_total": 26.8,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-102",
+          "discovery_rank": 2,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "TRAPT predicts transcriptional regulators by integrating cis-regulatory elements and binding-site epigenomics — direct regulatory-annotation evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open framework usable on new datasets to identify TRs in disease and cell-fate contexts."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Validated across 570 TR-related datasets versus SOTA baselines."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Multi-omics integration scales to new tissues but not to all regulatory element types."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "570-dataset benchmark and disease/variant case studies serve as validation protocol."
+            }
+          },
+          "weighted_total": 25.5,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-103",
+          "discovery_rank": 3,
+          "discovery_score": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "PRINT and seq2PRINT infer transcription factor and nucleosome footprints from chromatin accessibility, annotating CREs at multiple scales — direct regulatory annotation."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Public seq2PRINT framework can be applied to bulk and single-cell ATAC-seq data."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Nature paper with single-cell hematopoiesis case studies and aging perturbations."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales across the genome at multiple protein-size scales."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Hematopoiesis and aging case studies plus footprint-recovery validation protocols."
+            }
+          },
+          "weighted_total": 25.3,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        },
+        {
+          "paper_id": "MMG-125",
+          "discovery_rank": 4,
+          "discovery_score": 61,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "ChromBERT learns interpretable transcriptional regulatory network representations from ~1,000 TRs' ChIP-seq — direct regulatory-element annotation."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Foundation model with prompt-based fine-tuning is released for context-specific TRN inference."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Outperforms existing methods on cistrome imputation in a Cell Genomics paper."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Pretraining over ~1,000 TRs scales to wide regulatory coverage."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cistrome imputation and downstream cell-type-specific tasks provide validation lens."
+            }
+          },
+          "weighted_total": 23.5,
+          "tier": "primary",
+          "promotion_status": "skipped_domain_diversity"
+        }
+      ]
+    },
+    "applications-drug-discovery": {
+      "candidates": [
+        {
+          "paper_id": "MMG-105",
+          "discovery_rank": 2,
+          "discovery_score": 81,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "C2S scales 27B LLMs on cell sentences plus literature/metadata to nominate silmitasertib as a context-selective immune drug — direct sequence+literature drug-discovery evidence."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Pre-trained 27B model and dual-context virtual-screen recipe are released for adoption."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Experimentally validated silmitasertib hit in human cells lends credibility to the LLM workflow."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "27B parameters trained on >1B tokens of transcriptomic+text data scales single-cell drug discovery."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Perturbation-prediction benchmarks and the validated silmitasertib case form a validation protocol."
+            }
+          },
+          "weighted_total": 25.5,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-121",
+          "discovery_rank": 3,
+          "discovery_score": 67,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "MMELON integrates graph, image and text foundation-model views for molecule-target and property prediction — directly multimodal drug discovery."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Released multi-view framework usable for ADME and GPCR screens."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Validated across 120+ tasks including a GPCR virtual screen with structure-based confirmation."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Multi-view late-fusion is extendable but pretraining cost is non-trivial."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "120+-task suite plus GPCR Alzheimer's-related virtual screen offers validation protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-122",
+          "discovery_rank": 4,
+          "discovery_score": 66,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Predicts small-molecule-RNA interactions without tertiary structures, enabling RNA-targeted drug discovery from sequence alone."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Sequence-only RNA-ligand prediction tool ready for immediate use in RNA-therapeutic pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Nature Biotechnology venue and emerging-RNA-drug context lend credibility."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Sequence-based design scales to RNAs lacking solved structures."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "RNA-ligand benchmarks form a borrowable validation protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "paper_id": "MMG-104",
+          "discovery_rank": 1,
+          "discovery_score": 84,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Reviews AI in drug discovery (ML, DL, NLP) supporting the claim that LLMs accelerate drug R&D pipelines."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides a roadmap of opportunities and challenges usable for strategic planning."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Descriptive synthesis without new experimental data."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Covers a broad range of stages from target ID to clinical trials."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "No new benchmark; outlines validation directions only."
+            }
+          },
+          "weighted_total": 15.8,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        }
+      ]
+    }
+  }
+}

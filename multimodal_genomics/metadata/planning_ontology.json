@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.1",
+  "topic_id": "multimodal_genomics_planning",
+  "topic_label": "Multimodal NLP × Genomic FMs — Next Steps (Planning)",
+  "header": "🧭 Planning: Where the field needs to go next",
+  "description": "Five concrete next steps that recur across the limitations and future-work sections of the existing literature. Each step is grounded in evidence pulled directly from the Discussion / Limitations / Future Work paragraphs of the corpus.",
+  "next_steps": [
+    {
+      "id": "unified-cross-modal-pretraining",
+      "title": "Unified cross-modal pretraining",
+      "subtitle": "One model, all modalities",
+      "summary": "Train a single foundation model jointly on text, DNA, RNA, and protein sequences with shared representations and tokenizers — replacing today's pipelines of separately-pretrained unimodal models bolted together at inference time.",
+      "why_now": "Existing multimodal-genomics systems concatenate independent encoders (one for sequence, one for text), then learn alignment. Joint pretraining from the start has been shown to outperform alignment-after-the-fact in vision-language; the same gain is on the table here.",
+      "search_terms": "joint multimodal pretraining text DNA RNA protein shared representation foundation model"
+    },
+    {
+      "id": "whole-genome-multimodal-context",
+      "title": "Whole-genome multimodal context",
+      "subtitle": "Megabase context for distal regulation",
+      "summary": "Extend joint text+sequence models to multi-megabase contexts so distal regulatory interactions, 3D-genome contacts, and full transcript isoforms can be reasoned about end-to-end alongside the literature that describes them.",
+      "why_now": "HyenaDNA/Mamba/Caduceus push raw sequence context to 1M+ tokens, but their text-conditioning is still anchored at gene-scale snippets. The natural next step is to bring the same context discipline into multimodal training — distal enhancers, splicing networks, and chromatin loops are where the unsolved biology lives.",
+      "search_terms": "long context multimodal whole genome distal regulatory enhancer-promoter 3D genome"
+    },
+    {
+      "id": "causal-mechanism-extraction",
+      "title": "Causal mechanism extraction",
+      "subtitle": "From correlation to cause",
+      "summary": "Move beyond correlative variant-effect or expression prediction toward extracting causal mechanistic explanations grounded in sequence-function evidence — saturation mutagenesis screens, Massively Parallel Reporter Assays, perturbation panels.",
+      "why_now": "Today's foundation models predict effects but rarely explain mechanism in a falsifiable way. Closing this gap requires multimodal models that consume MAVE / MPRA / Perturb-seq data alongside sequence and literature, and produce causally-interpretable outputs.",
+      "search_terms": "causal mechanism saturation mutagenesis MAVE MPRA Perturb-seq counterfactual variant effect"
+    },
+    {
+      "id": "clinical-actionability-loop",
+      "title": "Clinical actionability loop",
+      "subtitle": "Closing the prediction-to-treatment loop",
+      "summary": "Close the loop from multimodal variant-effect prediction through to candidate therapeutics — RNA-therapeutic design, base/prime editing target selection, drug repurposing — with experimental and clinical validation feeding back into model training.",
+      "why_now": "AlphaMissense, ESM, PrimateAI predict pathogenicity at proteome scale; clinical translation still goes through manual case-by-case interpretation. A genuine multimodal pipeline that proposes a therapeutic + a validation experiment would shorten this gap dramatically.",
+      "search_terms": "clinical translation variant pathogenicity therapeutic design RNA editing closed loop validation feedback"
+    },
+    {
+      "id": "standardised-multimodal-benchmarks",
+      "title": "Standardised multimodal benchmarks",
+      "subtitle": "Versioned, leak-free cross-modality eval",
+      "summary": "Build held-out cross-modality benchmarks (text + DNA + RNA + protein together) with versioned, leak-free splits — analogous to GLUE/SuperGLUE/BIG-Bench for NLP — so progress in multimodal genomic foundation models can be measured fairly across labs.",
+      "why_now": "Each paper today reports its own ad-hoc benchmark. Cross-paper comparisons are unreliable — train/test leakage between e.g. UniProt-derived training sets and downstream protein-function tasks is endemic. A community benchmark with versioned data, leakage audits, and held-out modalities is the prerequisite for any honest claim of 'foundation' progress.",
+      "search_terms": "benchmark evaluation suite multimodal genomic foundation model held out leakage versioned"
+    }
+  ],
+  "evidence_sources": {
+    "preferred_sections": [
+      "Discussion",
+      "Limitations",
+      "Limitations and Future Work",
+      "Future Work",
+      "Future Directions",
+      "Outlook",
+      "Conclusion",
+      "Conclusions and Future Work",
+      "Open Problems",
+      "Challenges"
+    ],
+    "rationale": "Next-step claims are best supported by passages where the paper's authors themselves call out gaps, future directions, or limitations of the current state of the art. The renderer should preferentially highlight from these sections rather than the abstract / methods."
+  },
+  "rubric": {
+    "weights": {
+      "directly_proposes_step": 1.5,
+      "grounded_in_limitation": 1.3,
+      "concrete_next_action": 1.1,
+      "broad_applicability": 0.9,
+      "field_consensus": 0.7
+    },
+    "anchors": {
+      "5": "the paper's discussion / future-work explicitly proposes this next step",
+      "4": "the paper identifies the gap this next step closes, even if not the proposal",
+      "3": "the paper's limitations imply this direction without naming it",
+      "2": "weak / indirect support — adjacent topic only",
+      "1": "tangential",
+      "0": "no relevant content"
+    },
+    "primary_threshold": 14.0,
+    "secondary_threshold": 10.0,
+    "max_total": 28.0
+  },
+  "promotion": {
+    "per_next_step_min_papers": 3,
+    "per_next_step_max_papers": 6,
+    "max_next_steps_per_paper": 3
+  }
+}

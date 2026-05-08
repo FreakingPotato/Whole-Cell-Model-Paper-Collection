@@ -37,6 +37,8 @@ META_DIR = TOPIC_DIR / "metadata"
 ONTOLOGY_FILE = META_DIR / "ontology.json"
 EVIDENCE_FILE = META_DIR / "evidence.json"
 PAPERS_FILE = META_DIR / "papers.json"
+PLANNING_ONTOLOGY_FILE = META_DIR / "planning_ontology.json"
+PLANNING_EVIDENCE_FILE = META_DIR / "planning_evidence.json"
 DEFAULT_OUT = TOPIC_DIR / "index.html"
 
 # Embedded asset path used inside the HTML, relative to the file itself.
@@ -60,6 +62,20 @@ def _registry(papers_payload: dict) -> dict[str, dict]:
     if isinstance(p, list):
         return {x.get("paper_id"): x for x in p if x.get("paper_id")}
     return {}
+
+
+def _embedded_evidence_planning(ev: dict) -> dict:
+    """Same path-rewrite trick as _embedded_evidence, but for the
+    planning_evidence.json structure (next_steps[].evidence_points[]).
+    """
+    out = json.loads(json.dumps(ev or {}))
+    for ns in out.get("next_steps", []) or []:
+        for point in ns.get("evidence_points", []) or []:
+            for s in point.get("screenshots", []) or []:
+                href = s.get("href")
+                if href and "/assets/evidence/" in href:
+                    s["href"] = f"{ASSETS_REL}/{href.split('/assets/evidence/', 1)[1]}"
+    return out
 
 
 def _embedded_evidence(ev: dict, out_dir: Path) -> dict:
@@ -234,6 +250,31 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   /* TSV download button */
   #download-tsv { position: fixed; right: 28px; bottom: 28px; z-index: 9; background: linear-gradient(180deg, #1e293b, #0b1220); color: #e2e8f0; border: 1px solid __PRIMARY__; border-radius: 999px; padding: 11px 18px; font-size: 13px; cursor: pointer; box-shadow: 0 4px 14px rgba(2, 6, 23, 0.45), 0 0 0 1px rgba(34, 211, 238, 0.18); display: inline-flex; align-items: center; gap: 8px; font-family: inherit; }
   #download-tsv:hover { color: #fff; box-shadow: 0 6px 20px rgba(2, 6, 23, 0.55), 0 0 0 1px rgba(34, 211, 238, 0.4); }
+  /* Planning button + panel */
+  #toggle-planning { background: linear-gradient(135deg, #c084fc, #a78bfa); color: #0a0f1c; border: 0; border-radius: 999px; padding: 9px 18px; font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 600; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35); display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; }
+  #toggle-planning:hover { box-shadow: 0 6px 20px rgba(139, 92, 246, 0.55); transform: translateY(-1px); }
+  body[data-view="planning"] #planning-panel { display: block; }
+  body[data-view="planning"] main #root { display: none; }
+  body[data-view="planning"] main .thesis { display: none; }
+  #planning-panel { display: none; }
+  #planning-panel .header { background: linear-gradient(135deg, rgba(192, 132, 252, 0.16), rgba(167, 139, 250, 0.10)); border: 1px solid rgba(167, 139, 250, 0.4); border-radius: 14px; padding: 18px 22px; margin: 18px 0 22px; color: #e9d5ff; }
+  #planning-panel .header h2 { margin: 0; font-size: 19px; color: #f3e8ff; }
+  #planning-panel .header p { margin: 6px 0 0; color: #ddd6fe; font-size: 13px; line-height: 1.6; }
+  #planning-panel .next-step-card { background: #111827; border: 1px solid rgba(167, 139, 250, 0.35); border-radius: 14px; padding: 18px 22px; margin-bottom: 20px; }
+  #planning-panel .next-step-card h3 { margin: 0; font-size: 17px; color: #f3e8ff; display: flex; align-items: baseline; gap: 12px; }
+  #planning-panel .next-step-card .ns-tag { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #c4b5fd; background: rgba(167, 139, 250, 0.15); border: 1px solid rgba(167, 139, 250, 0.4); padding: 2px 8px; border-radius: 999px; font-weight: 500; }
+  #planning-panel .next-step-card .ns-subtitle { color: #c4b5fd; font-size: 12px; margin-top: 2px; }
+  #planning-panel .next-step-card .ns-summary { color: #ddd6fe; font-size: 13px; line-height: 1.6; margin: 10px 0 6px; }
+  #planning-panel .next-step-card .ns-why { color: #94a3b8; font-size: 12px; line-height: 1.55; margin: 0 0 12px; padding: 8px 12px; background: rgba(15, 23, 42, 0.6); border-left: 2px solid rgba(167, 139, 250, 0.4); border-radius: 4px; }
+  #planning-panel .ns-evidence-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  #planning-panel .ns-evidence { background: #0f172a; border: 1px solid #1f2937; border-radius: 10px; padding: 10px 14px; cursor: pointer; transition: border-color 120ms; }
+  #planning-panel .ns-evidence:hover { border-color: #c084fc; }
+  #planning-panel .ns-evidence .ns-quote { color: #e5e7eb; font-size: 13px; line-height: 1.55; margin: 0 0 6px; font-style: italic; }
+  #planning-panel .ns-evidence .ns-meta { font-size: 12px; color: #94a3b8; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  #planning-panel .ns-rank { display: inline-block; min-width: 22px; text-align: center; color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.4); padding: 1px 6px; border-radius: 999px; font-size: 10px; margin-right: 8px; vertical-align: middle; }
+  #planning-panel .ns-paper-pill { color: #c4b5fd; font-weight: 500; }
+  #planning-panel .ns-section-pill { color: #f0abfc; padding: 1px 6px; border: 1px solid rgba(240, 171, 252, 0.3); border-radius: 999px; font-size: 10px; }
+  #planning-panel .ns-stack-pill { color: #34d399; }
   /* Architecture footer */
   footer { padding: 16px 32px; border-top: 1px solid rgba(148, 163, 184, 0.1); color: #64748b; font-size: 11px; text-align: center; }
   footer a { color: #7dd3fc; text-decoration: none; }
@@ -250,9 +291,13 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <span class="topic-pill">__TOPIC_LABEL__</span>
   <h1>__VIEWER_TITLE__</h1>
   <p class="subtitle">__SUBTITLE__</p>
+  <button id="toggle-planning" type="button" title="Show next-step suggestions distilled from the literature's limitations / future-work sections">
+    <span aria-hidden="true">🧭</span> <span id="toggle-planning-label">Planning: next steps</span>
+  </button>
 </header>
 <main>
   <div class="thesis">__THESIS__</div>
+  <div id="planning-panel"></div>
   <div id="root" class="paradigms"></div>
 </main>
 <button id="download-tsv" type="button" title="Download evidence metadata as TSV (Google Sheets / Excel)">
@@ -274,6 +319,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 const ONTOLOGY = __ONTOLOGY__;
 const EVIDENCE = __EVIDENCE__;
 const PAPERS = __PAPERS__;
+const PLANNING_ONTOLOGY = __PLANNING_ONTOLOGY__;
+const PLANNING_EVIDENCE = __PLANNING_EVIDENCE__;
 
 const RUBRIC_LABELS = {
   useful_outcomes: "Useful outcomes",
@@ -594,6 +641,139 @@ function downloadTSV() {
 }
 document.getElementById("download-tsv").addEventListener("click", downloadTSV);
 
+// ---- Planning panel ----
+const PLANNING_BY_ID = (() => {
+  const m = {};
+  if (!PLANNING_EVIDENCE || !Array.isArray(PLANNING_EVIDENCE.next_steps)) return m;
+  PLANNING_EVIDENCE.next_steps.forEach(ns => {
+    (ns.evidence_points || []).forEach(ep => {
+      m[ep.id] = { ns, ep };
+    });
+  });
+  return m;
+})();
+
+function renderPlanningPanel() {
+  const panel = document.getElementById("planning-panel");
+  if (!panel) return;
+  const onto = PLANNING_ONTOLOGY || {};
+  const ev = PLANNING_EVIDENCE || {};
+  if (!Array.isArray(ev.next_steps) || !ev.next_steps.length) {
+    panel.innerHTML = `<div class="header"><h2>${escapeHtml(onto.header || "🧭 Planning: next steps")}</h2><p>No next-step evidence available yet — run <code>scripts/render_planning.py</code> to generate it.</p></div>`;
+    return;
+  }
+  // Build a paper-id → next-step list lookup so we can join evidence with the static ontology copy.
+  const ontologyById = {};
+  for (const ns of (onto.next_steps || [])) ontologyById[ns.id] = ns;
+  const cards = ev.next_steps.map(ns => {
+    const meta = ontologyById[ns.id] || {};
+    const points = ns.evidence_points || [];
+    const items = points.map(ep => {
+      const paper = lookupPaper(ep.paper_id) || {};
+      const citation = paper.display_label || ep.paper_id;
+      const journal = paper.journal || "";
+      const year = paper.year || "";
+      // Pick the highest-scoring sentence as the visible quote.
+      let topQuote = "(no excerpt)";
+      let topPage = "";
+      let nScreens = (ep.screenshots || []).length;
+      let bestScore = 0;
+      for (const s of (ep.screenshots || [])) {
+        for (const sn of (s.sentences || [])) {
+          if ((sn.match_score || 0) > bestScore) {
+            bestScore = sn.match_score || 0;
+            topQuote = sn.text || topQuote;
+            topPage = s.page;
+          }
+        }
+      }
+      const trimmed = topQuote.length > 280 ? topQuote.slice(0, 277).trimEnd() + "…" : topQuote;
+      return `
+        <li class="ns-evidence" data-planning-id="${escapeHtml(ep.id)}">
+          <p class="ns-quote">"${escapeHtml(trimmed)}"</p>
+          <div class="ns-meta">
+            <span class="ns-rank">#${ep.rank_within_next_step || "?"}</span>
+            <span class="ns-paper-pill">${escapeHtml(citation)}</span>
+            ${journal ? `<span>${escapeHtml(journal)}</span>` : ""}
+            ${year ? `<span>${escapeHtml(String(year))}</span>` : ""}
+            ${topPage ? `<span class="ns-section-pill">p${escapeHtml(String(topPage))} · Discussion / Future Work</span>` : ""}
+            ${nScreens ? `<span class="ns-stack-pill">📷 ${nScreens} highlight${nScreens > 1 ? "s" : ""}</span>` : ""}
+          </div>
+        </li>`;
+    }).join("");
+    return `
+      <section class="next-step-card" data-next-step="${escapeHtml(ns.id)}">
+        <h3>${escapeHtml(ns.title || "")}<span class="ns-tag">${escapeHtml(ns.id)}</span></h3>
+        <div class="ns-subtitle">${escapeHtml(ns.subtitle || meta.subtitle || "")}</div>
+        <p class="ns-summary">${escapeHtml(ns.summary || meta.summary || "")}</p>
+        ${meta.why_now ? `<div class="ns-why"><strong>Why now: </strong>${escapeHtml(meta.why_now)}</div>` : ""}
+        <ul class="ns-evidence-list">${items}</ul>
+      </section>`;
+  }).join("");
+  panel.innerHTML = `
+    <div class="header">
+      <h2>${escapeHtml(onto.header || "🧭 Planning: next steps")}</h2>
+      <p>${escapeHtml(ev.description || onto.description || "")}</p>
+    </div>
+    ${cards}
+  `;
+  panel.addEventListener("click", ev => {
+    const item = ev.target.closest(".ns-evidence");
+    if (item) openPlanningModal(item.dataset.planningId);
+  });
+}
+
+function openPlanningModal(planningId) {
+  const r = PLANNING_BY_ID[planningId];
+  if (!r) return;
+  const { ns, ep } = r;
+  const paper = lookupPaper(ep.paper_id) || {};
+  const url = paper.landing_page_url || (paper.doi ? `https://doi.org/${paper.doi}` : "");
+
+  const info = modal.querySelector(".info");
+  info.innerHTML = `
+    <h3 id="modal-title">${escapeHtml(paper.title || "Evidence")}</h3>
+    <div class="citation">${escapeHtml(paper.display_label || "")}${paper.journal ? " · " + escapeHtml(paper.journal) : ""}${paper.year ? " · " + escapeHtml(String(paper.year)) : ""}</div>
+    <div class="callout"><strong style="color:#c084fc">🧭 Planning · ${escapeHtml(ns.title || ns.id)}</strong><br>${escapeHtml(ns.summary || "")}</div>
+    <div class="meta">
+      ${paper.cited_by_count ? `<div><strong>Cited by:</strong> ${formatCitations(paper.cited_by_count)}</div>` : ""}
+      ${paper.doi ? `<div><strong>DOI:</strong> ${escapeHtml(paper.doi)}</div>` : ""}
+      <div><strong>Source:</strong> Discussion / Future Work / Limitations</div>
+      <div><strong>Best score:</strong> ${typeof ep.best_score === "number" ? ep.best_score.toFixed(1) : "?"}</div>
+    </div>
+    <div class="actions">
+      ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Open DOI / landing page ↗</a>` : ""}
+    </div>
+  `;
+  const pdfPanel = modal.querySelector(".pdf");
+  if (Array.isArray(ep.screenshots) && ep.screenshots.length > 0) {
+    pdfPanel.classList.add("stack-mode");
+    const cards = ep.screenshots.map((s, idx) => {
+      const numCircle = idx < 9 ? `&#${10112 + idx};` : `${idx + 1}.`;
+      const caption = s.page
+        ? `<span class="screenshot-caption">${numCircle} Page ${s.page}${s.section_hint ? " · " + escapeHtml(s.section_hint) : ""}</span>`
+        : `<span class="screenshot-caption">${numCircle}</span>`;
+      const sentences = (s.sentences || []).map(sn => `<p class="screenshot-sentence">"${escapeHtml(sn.text || "")}"</p>`).join("");
+      return `<div class="screenshot-card">${caption}<img src="${escapeHtml(s.href || "")}" alt="Future-work passage from ${escapeHtml(paper.title || "")}" loading="${idx === 0 ? "eager" : "lazy"}">${sentences}</div>`;
+    }).join("");
+    pdfPanel.innerHTML = cards;
+  } else {
+    pdfPanel.classList.remove("stack-mode");
+    pdfPanel.innerHTML = `<div class="pdf-fallback"><p><strong>No future-work passage extracted.</strong></p><p>Use the DOI / landing-page link to read the full source.</p></div>`;
+  }
+  modal.setAttribute("data-open", "true");
+}
+
+function togglePlanning() {
+  const isPlanning = document.body.getAttribute("data-view") === "planning";
+  document.body.setAttribute("data-view", isPlanning ? "evidence" : "planning");
+  document.getElementById("toggle-planning-label").textContent =
+    isPlanning ? "Planning: next steps" : "← Back to evidence";
+  if (!isPlanning) renderPlanningPanel();
+}
+
+document.getElementById("toggle-planning").addEventListener("click", togglePlanning);
+
 mount();
 </script>
 </body>
@@ -605,6 +785,8 @@ def build(out_path: Path) -> int:
     ontology = _load_json(ONTOLOGY_FILE)
     evidence = _load_json(EVIDENCE_FILE, default={"paradigms": []})
     papers = _load_json(PAPERS_FILE, default={"papers": {}})
+    planning_ontology = _load_json(PLANNING_ONTOLOGY_FILE, default={"next_steps": []})
+    planning_evidence = _load_json(PLANNING_EVIDENCE_FILE, default={"next_steps": []})
 
     # Prep counts.
     n_papers = len((papers.get("papers") or {}))
@@ -621,6 +803,7 @@ def build(out_path: Path) -> int:
     )
 
     embedded_evidence = _embedded_evidence(evidence, out_path)
+    embedded_planning = _embedded_evidence_planning(planning_evidence)
     _ensure_assets(TOPIC_DIR / "assets" / "evidence", out_path)
 
     viewer = ontology.get("viewer", {}) or {}
@@ -645,6 +828,8 @@ def build(out_path: Path) -> int:
     html = html.replace("__ONTOLOGY__", json.dumps(ontology))
     html = html.replace("__EVIDENCE__", json.dumps(embedded_evidence))
     html = html.replace("__PAPERS__", json.dumps(papers))
+    html = html.replace("__PLANNING_ONTOLOGY__", json.dumps(planning_ontology))
+    html = html.replace("__PLANNING_EVIDENCE__", json.dumps(embedded_planning))
 
     out_path.write_text(html, encoding="utf-8")
     print(f"wrote {out_path}  papers={n_papers} evidence={n_evidence} pngs={n_pngs}")

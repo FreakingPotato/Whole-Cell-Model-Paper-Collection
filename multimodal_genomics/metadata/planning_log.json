@@ -1,0 +1,32 @@
+{
+  "unified-cross-modal-pretraining": {
+    "ok": 65,
+    "not_found": 13,
+    "no_pdf": 0,
+    "kept": 8
+  },
+  "whole-genome-multimodal-context": {
+    "ok": 67,
+    "not_found": 11,
+    "no_pdf": 0,
+    "kept": 8
+  },
+  "causal-mechanism-extraction": {
+    "ok": 67,
+    "not_found": 11,
+    "no_pdf": 0,
+    "kept": 8
+  },
+  "clinical-actionability-loop": {
+    "ok": 66,
+    "not_found": 12,
+    "no_pdf": 0,
+    "kept": 8
+  },
+  "standardised-multimodal-benchmarks": {
+    "ok": 66,
+    "not_found": 12,
+    "no_pdf": 0,
+    "kept": 8
+  }
+}
