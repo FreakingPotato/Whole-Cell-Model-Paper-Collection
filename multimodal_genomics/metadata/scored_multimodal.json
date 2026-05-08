@@ -1,0 +1,983 @@
+{
+  "schema_version": "0.1",
+  "paradigm": "multimodal",
+  "scored_at": "2026-05-08T08:50:26Z",
+  "scored_by": "S2",
+  "claims": {
+    "multimodal-shared-embeddings": {
+      "claim_text": "Shared embedding spaces between natural language and biological sequences enable cross-modal retrieval, sequence-grounded question answering, and unified inference across literature and experimental data.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG033",
+          "paper_id": "MMG-033",
+          "paper_title": "Prot2Text: Multimodal Protein's Function Generation with GNNs and Transformers",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 13,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Prot2Text learns aligned protein-text representations enabling free-text function generation, directly demonstrating cross-modal mapping."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open encoder-decoder recipe pairing GNN protein encoder with LLM text decoder; readily adapted to DNA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Clean empirical methodology with quantitative comparison; well-grounded application of GNN+LLM."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated on SwissProt-scale proteins; scales with encoders but not yet to genome-scale DNA."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "BLEU/ROUGE plus retrieval metrics on text-protein pairs offer a transferable validation protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.7673
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG030",
+          "paper_id": "MMG-030",
+          "paper_title": "A Systematic Study of Joint Representation Learning on Protein Sequences and Structures",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 27,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Joint sequence+structure protein representations show empirical gains; analogous to text-sequence joint learning but text modality absent."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Methods (contrastive joint encoders) directly transferable to text-DNA shared embedding teams."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Systematic empirical comparison of joint-representation strategies; sound methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Protein-scale; technique generalizes but not directly demonstrated at genome+literature scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides benchmark function-prediction tasks and transfer evaluation transferable to multimodal validation."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.6655
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG032",
+          "paper_id": "MMG-032",
+          "paper_title": "S-PLM: Structure-aware Protein Language Model via Contrastive Learning between Sequence and Structure",
+          "paper_year": 2023,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 16,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "S-PLM uses contrastive learning to align protein sequence and structure embeddings; methodology mirrors text-sequence CLIP-style alignment."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open contrastive-alignment recipe directly adaptable for text-DNA shared embeddings today."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound contrastive design with downstream validation; methodology is a clear template."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Protein scale demonstrated; contrastive framework scales but text-corpus pairing not addressed here."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides multi-task downstream benchmarks and zero-shot retrieval analogues that transfer."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.6655
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG029",
+          "paper_id": "MMG-029",
+          "paper_title": "Scientific Large Language Models: A Survey on Biological &amp; Chemical Domains",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 32,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey systematically catalogs scientific LLMs spanning text plus DNA/protein/molecule modalities, including shared-space approaches."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides immediately useful taxonomy and references for teams building text-genomic shared embeddings."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Recent comprehensive survey citing established methods; methodology of survey itself is sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Conceptual mapping covers genome-scale and literature-scale systems but does not itself scale anything."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Aggregates evaluation strategies across cited works that transfer to multimodal embedding validation."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.64
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG025",
+          "paper_id": "MMG-025",
+          "paper_title": "The STRING database in 2023: protein\u2013protein association networks and functional enrichment analyses for any sequenced genome of interest",
+          "paper_year": 2022,
+          "paper_journal": "Nucleic Acids Research",
+          "paper_cited_by_count": 8318,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "STRING aggregates literature-mined and experimental PPIs but does not learn a shared text-sequence embedding space."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "STRING is widely used as a literature-grounded annotation source feeding multimodal pipelines, but provides databases not embeddings."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mature, peer-reviewed integration of text-mined and experimental evidence; methodology is sound for its stated goal."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Operates across all sequenced genomes, demonstrating literature-scale text aggregation paired with sequence identifiers."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides confidence scoring and benchmark networks transferrable as supervision targets, but no embedding-space evaluation."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.6182
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG028",
+          "paper_id": "MMG-028",
+          "paper_title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+          "paper_year": 2022,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 548,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "BIG-bench evaluates LLM capabilities broadly; some bio tasks but no shared sequence-text embedding space."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Provides task suite usable to evaluate text-only LLMs but not embedding-space alignment with sequences."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Large, peer-contributed benchmark with rigorous methodology for capability extrapolation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "204+ tasks across many models; demonstrates literature-scale benchmarking infrastructure."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validation methodology useful as a template but not specific to cross-modal retrieval evaluation."
+            }
+          },
+          "weighted_total": 14.2,
+          "match_score": 0.5164
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG027",
+          "paper_id": "MMG-027",
+          "paper_title": "Mapping single-cell data to reference atlases by transfer learning",
+          "paper_year": 2021,
+          "paper_journal": "Nature Biotechnology",
+          "paper_cited_by_count": 610,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "scArches maps single-cell data to reference atlases via transfer learning; no language modality involvement."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Useful for single-cell embedding alignment but does not provide text-sequence shared embeddings."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Architectural-surgery transfer-learning approach is sound and well validated in single-cell domain."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrated on multi-million cell atlases; scalable embedding architecture but not multimodal with text."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides reference-mapping benchmarks and label-transfer evaluation transferable as a methodology template."
+            }
+          },
+          "weighted_total": 12.9,
+          "match_score": 0.4691
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG026",
+          "paper_id": "MMG-026",
+          "paper_title": "Modeling polypharmacy side effects with graph convolutional networks",
+          "paper_year": 2018,
+          "paper_journal": "Bioinformatics",
+          "paper_cited_by_count": 1345,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Graph-convolutional drug-drug side-effect prediction; lacks any natural-language modality grounding biological sequences."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Useful for graph-based drug interaction tasks but offers no text-sequence shared embedding usable today."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Graph convolution over multimodal molecular graphs is methodologically sound for the side-effect task it tackles."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to large drug-drug graphs but not to genome-scale sequences with literature-scale text."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Provides AUROC validation on side-effect prediction, transferable in spirit but not to text-DNA embeddings."
+            }
+          },
+          "weighted_total": 11.3,
+          "match_score": 0.4109
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG031",
+          "paper_id": "MMG-031",
+          "paper_title": "Are LLMs Ready for Real-World Materials Discovery?",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 21,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Position paper on LLM limits in materials science; no shared text-sequence embeddings demonstrated."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Discusses gaps and frameworks; offers little adoptable methodology for text-genomic embedding teams."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable analysis of LLM failure cases backed by examples; not an empirical contribution."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Discusses scaling concerns conceptually; no concrete scalable method proposed."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Suggests qualitative failure-case probing transferable as a stress-test methodology."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.3382
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG034",
+          "paper_id": "MMG-034",
+          "paper_title": "A Review of Large Language Models and Autonomous Agents in Chemistry",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 12,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Review of LLM agents in chemistry; tangential to text-DNA shared embedding spaces."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Offers tooling references but no concrete shared embedding architecture."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Review methodology is reasonable; no empirical claims of its own."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Discusses scalable agentic frameworks but not embedding scalability in genomics."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Aggregates evaluation patterns from LLM-agent literature transferable indirectly."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.3382
+        }
+      ]
+    },
+    "multimodal-instruction-tuning": {
+      "claim_text": "Instruction tuning lets language models follow user queries that reference DNA / RNA sequences, condition on sequence inputs, and produce structured biological reasoning grounded in the input sequence.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG044",
+          "paper_id": "MMG-044",
+          "paper_title": "GeneGPT: augmenting large language models with domain tools for improved access to biomedical information",
+          "paper_year": 2024,
+          "paper_journal": "Bioinformatics",
+          "paper_cited_by_count": 147,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "GeneGPT instructs Codex to call NCBI APIs and reason over genomic queries, achieving 0.83 on GeneTuring; direct sequence-grounded instruction following."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open code, in-context demonstrations, and decoding algorithm immediately deployable for sequence-aware QA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound use of API-augmented decoding with empirical state-of-the-art results."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Web API access scales across NCBI's literature- and genome-scale resources."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides GeneTuring + GeneHop benchmarks specifically for sequence/genomic instruction validation, directly transferable."
+            }
+          },
+          "weighted_total": 24.0,
+          "match_score": 0.8727
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG039",
+          "paper_id": "MMG-039",
+          "paper_title": "Leveraging large language models for predictive chemistry",
+          "paper_year": 2024,
+          "paper_journal": "Nature Machine Intelligence",
+          "paper_cited_by_count": 308,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Shows fine-tuning GPT-3 to follow chemistry prompts beats specialized ML; direct evidence instruction tuning works on molecular sequences."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides a template recipe for prompt-formatted sequence questions plus fine-tuning, immediately portable to DNA/RNA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Empirically grounded across multiple chemistry tasks with comparison baselines; sound methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated at GPT-3 scale on molecular text; scaling to nucleotide context is plausible but not shown."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides multi-task benchmark protocols comparing instruction-tuned vs specialized models, directly transferable."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.7673
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG042",
+          "paper_id": "MMG-042",
+          "paper_title": "LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 223,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Demonstrates fast visual-instruction tuning for biomedical images; analogous template for sequence-conditioned instruction tuning."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open instruction-tuning recipe (curriculum, GPT-4 generated instructions) directly portable to DNA/RNA modalities."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Curriculum learning + LLaVA architecture is sound and well documented."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Trained in one day with modest compute; methodology scales easily to larger sequence corpora."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Open-ended VQA evaluation paradigm transfers cleanly to sequence-instruction QA validation."
+            }
+          },
+          "weighted_total": 20.5,
+          "match_score": 0.7455
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG036",
+          "paper_id": "MMG-036",
+          "paper_title": "Adapted large language models can outperform medical experts in clinical text summarization",
+          "paper_year": 2024,
+          "paper_journal": "Nature Medicine",
+          "paper_cited_by_count": 611,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Demonstrates instruction-adapted LLMs outperform clinicians at clinical text summarization; sequence inputs absent."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Concrete instruction-tuning recipes (prompt + adapter) with strong physician-evaluated outcomes, adoptable today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous head-to-head clinical reader study with statistical analysis; methodology is exemplary."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales over multiple summarization tasks and large clinical corpora; sequence-input scaling not addressed."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides reader-study and automatic-metric protocols transferable to validating sequence-conditioned instruction tuning."
+            }
+          },
+          "weighted_total": 20.1,
+          "match_score": 0.7309
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG043",
+          "paper_id": "MMG-043",
+          "paper_title": "BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 193,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Open biomedical LLM with strong instruction-following on PubMedQA/MedQA; sequence conditioning not central."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open weights and instruction-tuning code immediately usable; multilingual evaluation included."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mistral-based methodology is sound and reproducibly described."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrated at 7B scale on PubMed Central; recipe scales further."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Standard biomedical QA benchmarks; sequence-grounded reasoning not specifically evaluated."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.72
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG041",
+          "paper_id": "MMG-041",
+          "paper_title": "Galactica: A Large Language Model for Science",
+          "paper_year": 2022,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 258,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Galactica trained on scientific corpora handles protein/SMILES sequences in prompts; partial sequence-conditioned reasoning demonstrated."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open scientific LLM with citation/sequence handling; recipe adaptable, though model checkpoint controversial."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology sound; limitations widely documented around hallucination on factual prompts."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Trained on 100B+ tokens of scientific text; scaling to literature-scale demonstrated."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides scientific QA and reasoning benchmarks usable as evaluation surface for sequence-aware variants."
+            }
+          },
+          "weighted_total": 17.4,
+          "match_score": 0.6327
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG035",
+          "paper_id": "MMG-035",
+          "paper_title": "BioGPT: generative pre-trained transformer for biomedical text generation and mining",
+          "paper_year": 2022,
+          "paper_journal": "Briefings in Bioinformatics",
+          "paper_cited_by_count": 1000,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "BioGPT pretrained on biomedical literature; not instruction-tuned on sequence inputs and lacks DNA/RNA conditioning."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Strong open biomedical LLM checkpoint that teams routinely instruction-tune downstream for sequence-aware tasks."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "GPT-style biomedical pretraining is sound and well validated on text generation/relation extraction."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Trained at literature scale on PubMed; architecture scales to larger sequence-aware variants."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides BC5CDR/KD-DTI/end-to-end benchmarks usable as base evaluation for instruction-tuned descendants."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.6182
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG040",
+          "paper_id": "MMG-040",
+          "paper_title": "BloombergGPT: A Large Language Model for Finance",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 302,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Domain LLM for finance, not biology; instruction-following demonstrated but unrelated to DNA/RNA sequences."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Recipe for domain-specialized LLM training is generally adoptable; cited as architectural blueprint."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "50B-parameter training methodology is well documented and sound."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrates literature-scale text training; transferable scaling lessons."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Validation focuses on financial benchmarks; minimal transfer to sequence-grounded reasoning evaluation."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.5382
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG038",
+          "paper_id": "MMG-038",
+          "paper_title": "Opportunities and challenges for ChatGPT and large language models in biomedicine and health",
+          "paper_year": 2023,
+          "paper_journal": "Briefings in Bioinformatics",
+          "paper_cited_by_count": 331,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Surveys ChatGPT applications in biomedicine; sequence-conditioned instruction tuning only briefly discussed."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Identifies use cases and pitfalls; minimal directly adoptable methodology."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable peer-reviewed survey methodology; opinion-heavy in places."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling considerations; not an engineering contribution."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reviews evaluation frameworks for biomedical LLMs that partially transfer to sequence tasks."
+            }
+          },
+          "weighted_total": 13.7,
+          "match_score": 0.4982
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG037",
+          "paper_id": "MMG-037",
+          "paper_title": "A Comprehensive Overview of Large Language Models",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 354,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Comprehensive overview discusses instruction tuning generally; minimal sequence-conditioning content."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Useful tutorial-style reference for teams new to LLMs but offers no concrete bio-sequence recipe."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Aggregates established LLM techniques accurately; not an empirical contribution."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Surveys scalable methods but does not demonstrate scaling itself."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Catalogs benchmarks but not specific to sequence-grounded instruction following."
+            }
+          },
+          "weighted_total": 13.0,
+          "match_score": 0.4727
+        }
+      ]
+    },
+    "multimodal-text-conditioned-generation": {
+      "claim_text": "Text-conditioned sequence generation \u2014 describing a desired biological function, regulatory context, or therapeutic target in natural language and having the model propose candidate DNA / RNA sequences \u2014 turns LLM-style natural-language interfaces into a primitive of biological sequence design.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG045",
+          "paper_id": "MMG-045",
+          "paper_title": "A Text-guided Protein Design Framework",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 23,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "ProteinDT achieves >90% text-guided protein generation accuracy and best zero-shot text-guided editing; direct strong evidence for the claim."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open code, 441K text-protein dataset (SwissProtCLAP), and three-stage recipe directly portable to DNA/RNA."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Methodology (CLAP alignment + facilitator + decoder) is sound and validated across three challenging tasks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "SwissProt-scale demonstration; framework generalizable but genome-scale text-DNA pairs not yet shown."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Quantitative protocols (accuracy, hit ratio, property prediction) directly transferable to text-conditioned DNA generation."
+            }
+          },
+          "weighted_total": 24.4,
+          "match_score": 0.8873
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG046",
+          "paper_id": "MMG-046",
+          "paper_title": "A multimodal conversational agent for DNA, RNA and protein tasks",
+          "paper_year": 2025,
+          "paper_journal": "Nature Machine Intelligence",
+          "paper_cited_by_count": 18,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "ChatNT handles English questions about DNA/RNA/protein and can be prompted to produce structured answers; sequence-out generation lighter than seq-in QA."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Published, peer-reviewed multimodal conversational agent with curated instruction set; DNA/RNA support immediately useful."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid empirical results on Nucleotide Transformer benchmark; methodology peer-reviewed at NMI."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Built on nucleotide-transformer foundation handling long DNA contexts; scales across species and tissues."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides perplexity calibration and curated instruction tasks transferable as validation protocol."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.8
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG048",
+          "paper_id": "MMG-048",
+          "paper_title": "ChatNT: A Multimodal Conversational Agent for DNA, RNA and Protein Tasks",
+          "paper_year": 2024,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 12,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Preprint version of ChatNT; demonstrates multimodal conversational handling of DNA/RNA/protein with curated instruction tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open methodology and benchmark; widely cited blueprint for text-conditioned biological generation interfaces."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Empirical results match the NMI version; methodology sound though preprint stage."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Same nucleotide-transformer backbone scales across DNA/RNA/protein and species."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Same calibration and instruction benchmark transfers."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.8
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG049",
+          "paper_id": "MMG-049",
+          "paper_title": "CARE: a Benchmark Suite for the Classification and Retrieval of Enzymes",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 7,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides retrieval task linking chemical reactions (text-like) to enzyme EC numbers; partial text-conditioned protein retrieval evidence."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open benchmark suite directly usable to evaluate text-conditioned generation/retrieval models."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Carefully designed train-test splits with OOD evaluation; sound benchmark methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Enzyme-level scale; framework extensible to broader sequence generation tasks."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Explicit OOD splits and dual classification/retrieval tasks form an excellent validation template."
+            }
+          },
+          "weighted_total": 19.0,
+          "match_score": 0.6909
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG050",
+          "paper_id": "MMG-050",
+          "paper_title": "Multi-modal Transfer Learning between Biological Foundation Models",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 6,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "IsoFormer connects DNA/RNA/protein encoders for transcript expression prediction; multimodal but not text-conditioned generation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open model and recipe useful for multimodal genomic teams; lacks text modality input."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound encoder-fusion architecture with clear empirical wins on transcript expression."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Built on Nucleotide-Transformer-class encoders; scales to genome-level inputs."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Differential transcript expression validation transferable indirectly to text-conditioned generation."
+            }
+          },
+          "weighted_total": 18.5,
+          "match_score": 0.6727
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG029",
+          "paper_id": "MMG-029",
+          "paper_title": "Scientific Large Language Models: A Survey on Biological &amp; Chemical Domains",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 32,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey reviews text-conditioned sequence generation systems across protein/molecule/genomic domains; not a primary contribution."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful taxonomy and citations for teams building text-to-sequence generators; no checkpoint released."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Comprehensive recent survey with sound methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling regimes; itself does not scale anything."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Aggregates validation patterns from text-conditioned generative biology that transfer."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.64
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG051",
+          "paper_id": "MMG-051",
+          "paper_title": "Generative artificial intelligence for de novo protein design",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 5,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Reviews generative protein design including text-conditioned approaches; surveys ~20% experimental success rates."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful framework for organizing text-to-sequence design pipelines; no checkpoint."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Recent peer-style review with field-wide perspective; methodology sound for survey."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling issues without empirical demonstration."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Highlights in silico vs experimental metrics, directly relevant to validating text-conditioned DNA/RNA design."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.64
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG052",
+          "paper_id": "MMG-052",
+          "paper_title": "Learning the Language of Protein Structure",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 5,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Tokenizes 3D protein structure for GPT-style generation; demonstrates language-of-structure design but no text conditioning."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "VQ-VAE codebook approach is portable to multimodal pipelines targeting DNA/RNA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound VQ-VAE methodology with reasonable RMSD reconstructions and GPT generation."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Codebook size 4K-64K demonstrates scalability of the discretization approach."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Generation quality and RMSD metrics transfer in spirit to multimodal sequence design validation."
+            }
+          },
+          "weighted_total": 16.1,
+          "match_score": 0.5855
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG053",
+          "paper_id": "MMG-053",
+          "paper_title": "Controllable Protein Design with Language Models",
+          "paper_year": 2022,
+          "paper_journal": "arXiv",
+          "paper_cited_by_count": 0,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Argues for control-tag conditioned protein language models including function/compartment tags; partial text-conditioning evidence."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Position/review paper rather than a released model; conceptual recipe only."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable extrapolation from established CTRL-style conditioning; not empirically validated here."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Conceptually scalable; no empirical scaling demonstration."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Sketches validation strategies but lacks concrete benchmarks."
+            }
+          },
+          "weighted_total": 14.5,
+          "match_score": 0.5273
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG047",
+          "paper_id": "MMG-047",
+          "paper_title": "Large Language Models in Drug Discovery and Development: From Disease Mechanisms to Clinical Trials",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 14,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Reviews LLMs in drug discovery with brief coverage of text-conditioned molecule generation; little on DNA/RNA generation."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Provides reference catalog rather than concrete generation recipes."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable review of an emerging area."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling generally."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Survey-level discussion of evaluation; partial transfer to text-to-sequence validation."
+            }
+          },
+          "weighted_total": 13.7,
+          "match_score": 0.4982
+        }
+      ]
+    }
+  }
+}

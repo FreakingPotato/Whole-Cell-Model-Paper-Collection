@@ -1,0 +1,404 @@
+{
+  "schema_version": "0.1",
+  "topic": "multimodal_genomics",
+  "generated_at": "2026-05-08T08:44:56.414584+00:00",
+  "citation_threshold": 5,
+  "target_per_claim": 10,
+  "by_claim": {
+    "gfm-tokenization": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "DNABERT genomic language model",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Nucleotide Transformer DNA tokenization",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "k-mer DNA language model",
+          "raw": 50
+        },
+        {
+          "source": "s2",
+          "q": "DNABERT k-mer tokenization",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "Nucleotide Transformer genomic",
+          "raw": 30
+        }
+      ],
+      "raw_total": 180,
+      "after_venue": 104,
+      "after_cite": 104,
+      "after_relevance": 23,
+      "kept": 10
+    },
+    "gfm-long-context": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "HyenaDNA long range genome model",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Mamba state space DNA",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Enformer long range regulatory",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "EVO foundation model genome",
+          "raw": 50
+        },
+        {
+          "source": "s2",
+          "q": "HyenaDNA long range DNA",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "Enformer long range regulation",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "Caduceus DNA foundation",
+          "raw": 0
+        }
+      ],
+      "raw_total": 200,
+      "after_venue": 91,
+      "after_cite": 91,
+      "after_relevance": 25,
+      "kept": 10
+    },
+    "gfm-pretraining-objective": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "self-supervised pretraining DNA masked language model",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Geneformer transfer learning network biology",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "scGPT single cell foundation model",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "RNA-FM RNA foundation model",
+          "raw": 50
+        },
+        {
+          "source": "s2",
+          "q": "masked language model DNA self-supervised",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "scGPT single cell foundation",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "RNA-FM RNA foundation model",
+          "raw": 0
+        }
+      ],
+      "raw_total": 200,
+      "after_venue": 113,
+      "after_cite": 113,
+      "after_relevance": 46,
+      "kept": 10
+    },
+    "multimodal-shared-embeddings": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "joint embedding text protein contrastive multimodal",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "contrastive learning text biological sequence",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "ProtST protein language text contrastive",
+          "raw": 42
+        },
+        {
+          "source": "s2",
+          "q": "joint embedding text protein biology",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "ProtST protein text contrastive",
+          "raw": 0
+        }
+      ],
+      "raw_total": 142,
+      "after_venue": 55,
+      "after_cite": 55,
+      "after_relevance": 15,
+      "kept": 10
+    },
+    "multimodal-instruction-tuning": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "BioGPT biomedical generative language",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Med-PaLM medical large language model",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Galactica scientific language model",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "instruction tuning biomedical large language model",
+          "raw": 50
+        },
+        {
+          "source": "s2",
+          "q": "BioGPT biomedical generative",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "Galactica scientific language model",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "Med-PaLM medical",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "instruction tuning biomedical language",
+          "raw": 0
+        }
+      ],
+      "raw_total": 200,
+      "after_venue": 58,
+      "after_cite": 58,
+      "after_relevance": 17,
+      "kept": 10
+    },
+    "multimodal-text-conditioned-generation": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "ProteinDT text protein design",
+          "raw": 12
+        },
+        {
+          "source": "openalex",
+          "q": "natural language protein generation",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "text guided molecule generation",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "ChatNT instruction genomic",
+          "raw": 5
+        },
+        {
+          "source": "s2",
+          "q": "text guided protein design language",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "text conditional molecule generation",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "natural language biological design",
+          "raw": 0
+        },
+        {
+          "source": "arxiv",
+          "q": "text guided protein design",
+          "raw": 30
+        },
+        {
+          "source": "arxiv",
+          "q": "text conditional DNA generation",
+          "raw": 30
+        },
+        {
+          "source": "arxiv",
+          "q": "ProteinDT text protein",
+          "raw": 30
+        }
+      ],
+      "raw_total": 207,
+      "after_venue": 139,
+      "after_cite": 139,
+      "after_relevance": 21,
+      "kept": 10
+    },
+    "applications-variant-effects": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "AlphaMissense variant pathogenicity",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "PrimateAI variant pathogenicity prediction",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "ESM variant pathogenic deep learning",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Enformer variant effect prediction",
+          "raw": 50
+        },
+        {
+          "source": "s2",
+          "q": "AlphaMissense pathogenicity",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "GPN genomic variant",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "Enformer variant prediction",
+          "raw": 0
+        }
+      ],
+      "raw_total": 200,
+      "after_venue": 108,
+      "after_cite": 108,
+      "after_relevance": 36,
+      "kept": 10
+    },
+    "applications-regulatory-annotation": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "Enformer regulatory transcription prediction",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "DeepSEA regulatory deep learning",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "SpliceAI splice site prediction",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Sei regulatory annotation sequence",
+          "raw": 50
+        },
+        {
+          "source": "s2",
+          "q": "Enformer regulatory annotation",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "Sei regulatory genomic",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "SpliceAI splice deep learning",
+          "raw": 30
+        }
+      ],
+      "raw_total": 230,
+      "after_venue": 100,
+      "after_cite": 100,
+      "after_relevance": 43,
+      "kept": 10
+    },
+    "applications-drug-discovery": {
+      "queries": [
+        {
+          "source": "openalex",
+          "q": "drug discovery RNA therapeutic language model",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "molecular generative model drug discovery",
+          "raw": 50
+        },
+        {
+          "source": "openalex",
+          "q": "Geneformer disease drug target",
+          "raw": 50
+        },
+        {
+          "source": "s2",
+          "q": "drug discovery foundation model target",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "molecular generative language drug",
+          "raw": 0
+        },
+        {
+          "source": "s2",
+          "q": "RNA therapeutic design language",
+          "raw": 30
+        }
+      ],
+      "raw_total": 180,
+      "after_venue": 67,
+      "after_cite": 67,
+      "after_relevance": 14,
+      "kept": 10
+    }
+  },
+  "totals": {
+    "unique_papers": 75,
+    "claims": 9
+  }
+}

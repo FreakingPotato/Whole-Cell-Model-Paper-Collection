@@ -1,0 +1,150 @@
+{
+  "schema_version": "0.1",
+  "topic_id": "multimodal_genomics",
+  "topic_label": "Multimodal NLP × Genomic Foundation Models (DNA / RNA)",
+  "thesis": "Combining natural-language models with DNA / RNA foundation models opens a new design space: text grounds biological sequences with literature context, and sequences ground language models with measurable functional reality. We argue that progress in this multimodal direction will be driven by three coordinated strategies — (i) building strong unimodal genomic foundation models that scale long-context nucleotide sequence understanding, (ii) bridging text and sequence modalities through shared embeddings, instruction tuning, and text-conditioned generation, and (iii) deploying the resulting multimodal systems on downstream applications such as variant-effect prediction, regulatory annotation, and sequence-aware drug discovery.",
+  "paradigm_id_prefix": "MMG",
+  "paper_id_prefix": "MMG",
+  "paradigms": [
+    {
+      "id": "gfm",
+      "label": "Genomic Foundation Models (DNA / RNA)",
+      "summary": "Unimodal foundation models for nucleotide sequences are the building blocks of any text-genomic multimodal system. Tokenization choices, long-context architectures, and self-supervised pretraining objectives determine what these models can learn and how well they transfer to downstream tasks.",
+      "claims": [
+        {
+          "id": "gfm-tokenization",
+          "subtype": "Tokenization",
+          "claim": "Tokenization strategy materially affects what genomic foundation models can learn — k-mer, BPE, and single-nucleotide schemes induce distinct biases on context length, motif resolution, and downstream transfer.",
+          "search_terms": "DNA tokenization k-mer BPE nucleotide foundation model"
+        },
+        {
+          "id": "gfm-long-context",
+          "subtype": "Long-context architecture",
+          "claim": "Long-context architectures (state-space models, Hyena, Mamba, sliding-window attention) unlock genome-scale sequence modeling well beyond traditional Transformer context limits, enabling distal regulatory interactions to be learned end-to-end.",
+          "search_terms": "long context genomic state space model Hyena Mamba foundation"
+        },
+        {
+          "id": "gfm-pretraining-objective",
+          "subtype": "Pretraining objective",
+          "claim": "Self-supervised pretraining objectives — masked language modeling, autoregressive generation, span corruption, contrastive learning — determine downstream transfer quality and the kinds of biological structure (motifs, conservation, splicing, 3D contacts) the model captures.",
+          "search_terms": "self-supervised pretraining DNA RNA masked language model autoregressive"
+        }
+      ]
+    },
+    {
+      "id": "multimodal",
+      "label": "Text–Sequence Multimodal Integration",
+      "summary": "Bridging natural-language models and genomic foundation models so each can ground the other. Text supplies literature context and high-level intent; sequences supply measurable functional reality. Three integration patterns: shared embedding spaces, instruction tuning, and text-conditioned sequence generation.",
+      "claims": [
+        {
+          "id": "multimodal-shared-embeddings",
+          "subtype": "Shared embedding spaces",
+          "claim": "Shared embedding spaces between natural language and biological sequences enable cross-modal retrieval, sequence-grounded question answering, and unified inference across literature and experimental data.",
+          "search_terms": "joint embedding text DNA RNA biological sequence multimodal contrastive"
+        },
+        {
+          "id": "multimodal-instruction-tuning",
+          "subtype": "Instruction tuning with biological context",
+          "claim": "Instruction tuning lets language models follow user queries that reference DNA / RNA sequences, condition on sequence inputs, and produce structured biological reasoning grounded in the input sequence.",
+          "search_terms": "instruction tuning genomic biological large language model sequence input"
+        },
+        {
+          "id": "multimodal-text-conditioned-generation",
+          "subtype": "Text-conditioned sequence generation",
+          "claim": "Text-conditioned sequence generation — describing a desired biological function, regulatory context, or therapeutic target in natural language and having the model propose candidate DNA / RNA sequences — turns LLM-style natural-language interfaces into a primitive of biological sequence design.",
+          "search_terms": "text guided sequence generation biological design DNA RNA conditional"
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "label": "Downstream Multimodal Applications",
+      "summary": "What multimodal text-genomic models actually deliver. Three high-leverage downstream targets: variant-effect prediction, regulatory-element annotation with natural-language explanations, and sequence-aware drug / therapeutic discovery.",
+      "claims": [
+        {
+          "id": "applications-variant-effects",
+          "subtype": "Variant-effect prediction",
+          "claim": "Multimodal text-genomic models predict variant pathogenicity and functional effects with the help of text-supervised priors (clinical literature, phenotype descriptions, pathway ontologies) that pure sequence models cannot access.",
+          "search_terms": "variant effect prediction language model genomic clinical pathogenicity"
+        },
+        {
+          "id": "applications-regulatory-annotation",
+          "subtype": "Regulatory-element annotation",
+          "claim": "Joint text-and-sequence models annotate regulatory elements — enhancers, promoters, splice sites, binding sites — with natural-language explanations that go beyond categorical labels.",
+          "search_terms": "regulatory element annotation enhancer promoter splice multimodal explanation"
+        },
+        {
+          "id": "applications-drug-discovery",
+          "subtype": "Sequence-aware drug discovery",
+          "claim": "Multimodal text-genomic models accelerate drug target identification, RNA-therapeutic design, and clinical hypothesis generation by linking the literature corpus to candidate biological sequences in a single generative system.",
+          "search_terms": "drug discovery RNA therapeutic sequence design language model literature"
+        }
+      ]
+    }
+  ],
+  "rubric": {
+    "weights": {
+      "useful_outcomes": 1.5,
+      "immediate_benefit": 1.3,
+      "plausible": 1.1,
+      "scalable": 0.9,
+      "how_to_validate": 0.7
+    },
+    "anchors": {
+      "5": "strong, direct, explicit support",
+      "4": "strong support with slight gap",
+      "3": "moderate / partial support",
+      "2": "weak / indirect support",
+      "1": "tangential",
+      "0": "does not support this claim"
+    },
+    "primary_threshold": 18.0,
+    "secondary_threshold": 14.0,
+    "max_total": 28.0
+  },
+  "discovery": {
+    "candidates_per_claim": 10,
+    "min_citations": 5,
+    "venue_allowlist": [
+      "Nature", "Science", "Cell",
+      "Nature Methods", "Nature Biotechnology", "Nature Machine Intelligence",
+      "Nature Genetics", "Nature Communications", "Nature Computational Science",
+      "Nature Reviews Genetics", "Nature Reviews Drug Discovery",
+      "Cell Systems", "Cell Reports", "Cell Reports Methods",
+      "Science Advances", "Proceedings of the National Academy of Sciences", "PNAS",
+      "Genome Biology", "Genome Research", "Nucleic Acids Research",
+      "NAR Genomics and Bioinformatics", "Bioinformatics", "Briefings in Bioinformatics",
+      "PLoS Computational Biology", "Molecular Systems Biology", "eLife",
+      "Journal of Chemical Information and Modeling",
+      "Journal of Computational Biology", "BMC Bioinformatics",
+      "Journal of Machine Learning Research", "Transactions on Machine Learning Research",
+      "Advances in Neural Information Processing Systems", "NeurIPS Proceedings",
+      "International Conference on Machine Learning", "ICML Proceedings",
+      "International Conference on Learning Representations", "ICLR",
+      "Annual Meeting of the Association for Computational Linguistics", "ACL Proceedings",
+      "Empirical Methods in Natural Language Processing", "EMNLP Proceedings",
+      "Conference on Computer Vision and Pattern Recognition", "CVPR",
+      "AAAI Conference on Artificial Intelligence",
+      "arXiv", "bioRxiv", "medRxiv"
+    ],
+    "preprint_venues": ["arXiv", "bioRxiv", "medRxiv"],
+    "domain_buckets": ["dna-fm", "rna-fm", "multimodal-bio-llm", "single-cell-fm", "protein-fm", "ml-methods", "applications", "interdisciplinary"]
+  },
+  "promotion": {
+    "per_claim_min_papers": 6,
+    "per_claim_max_papers": 10,
+    "max_claims_per_paper": 4,
+    "diversity_filter_threshold": 4
+  },
+  "ranking": {
+    "primary": "journal_tier",
+    "secondary": "cited_by_count",
+    "tertiary": "year"
+  },
+  "viewer": {
+    "title": "Multimodal NLP × Genomic Foundation Models — Knowledge Graph",
+    "subtitle": "Three coordinated strategies for combining language models with DNA / RNA foundation models — discovered, scored, ranked, and evidence-linked.",
+    "primary_color": "#22d3ee",
+    "secondary_color": "#a78bfa"
+  }
+}

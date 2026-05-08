@@ -1,0 +1,1043 @@
+{
+  "schema_version": "0.1",
+  "paradigm": "applications",
+  "scored_at": "2026-05-08T08:51:18Z",
+  "scored_by": "S3",
+  "claims": {
+    "applications-variant-effects": {
+      "claim_text": "Multimodal text-genomic models predict variant pathogenicity and functional effects with the help of text-supervised priors (clinical literature, phenotype descriptions, pathway ontologies) that pure sequence models cannot access.",
+      "candidates": [
+        {
+          "paper_id": "MMG-054",
+          "paper_title": "Accurate proteome-wide missense variant effect prediction with AlphaMissense",
+          "paper_year": 2023,
+          "paper_journal": "Science",
+          "paper_cited_by_count": 1923,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "AlphaMissense delivers state-of-the-art proteome-wide missense pathogenicity, with measurable lifts over single-modality baselines on ClinVar, DMS, and rare-disease panels."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Provides a downloadable database covering all ~71M human missense substitutions, directly usable for clinical/research variant prioritization today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Combines AlphaFold structural context with primate evolutionary frequencies; methodology is well-characterized and validated across multiple independent benchmarks."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Demonstrates clinical-genome-scale inference (proteome-wide release of pre-computed scores)."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Explicit validation across genetic disease panels, deep mutational scanning, cell-essentiality, and held-out clinical labels."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 4,
+          "match_note": "Direct variant-effect application but priors are structure+conservation, not natural-language literature, so multimodal text-genomic framing is partial.",
+          "discovery_rank": 1,
+          "discovery_score": 1923
+        },
+        {
+          "paper_id": "MMG-055",
+          "paper_title": "Language models enable zero-shot prediction of the effects of mutations on protein function",
+          "paper_year": 2021,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 657,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Zero-shot protein LM matches or beats supervised variant-effect predictors across dozens of MAVE/DMS datasets."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Released ESM-1v checkpoints make zero-shot variant scoring trivially deployable in clinical and research pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Methodology is unsupervised and broadly benchmarked; foundational for protein-LM variant-effect work."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Single forward pass yields scores for all substitutions across the proteome."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Validated against deep mutational scanning panels and zero-shot test design."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3,
+          "match_note": "Establishes LM-based variant-effect prediction; uses sequence rather than text priors, so multimodal-text fit is moderate.",
+          "discovery_rank": 3,
+          "discovery_score": 657
+        },
+        {
+          "paper_id": "MMG-056",
+          "paper_title": "Genome-wide prediction of disease variant effects with a deep protein language model",
+          "paper_year": 2023,
+          "paper_journal": "Nature Genetics",
+          "paper_cited_by_count": 423,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "ESM1b outperforms prior tools on ~150K ClinVar/HGMD pathogenicity calls and 28 DMS datasets, including isoform-aware predictions."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Web portal exposes pre-computed predictions for ~450M missense variants, directly consumable by clinicians/researchers."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Large protein LM scaled and benchmarked across multiple independent datasets."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide release demonstrates clinical-scale deployment."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Held-out clinical variants, DMS panels, isoform-resolved annotations."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3,
+          "match_note": "Foundational variant-effect predictor on coding variants; no literature-text supervision but adjacent to multimodal text-genomic application stack.",
+          "discovery_rank": 4,
+          "discovery_score": 423
+        },
+        {
+          "paper_id": "MMG-058",
+          "paper_title": "The landscape of tolerated genetic variation in humans and primates",
+          "paper_year": 2023,
+          "paper_journal": "Science",
+          "paper_cited_by_count": 172,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Uses 233-primate population frequencies as weak labels to classify benign and impute pathogenicity for ~94% of human protein-altering variants with SOTA diagnostic accuracy."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Released variant calls and model offer immediate clinical-diagnostic value."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Combines large-scale primate sequencing with deep learning; well-validated on rare-disease cohorts."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide release demonstrates clinical-scale operation."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Validation on patient cohorts with genetic diseases and held-out clinical labels."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3,
+          "match_note": "Strong variant-effect application but priors are evolutionary (primate freq), not literature text; multimodal text-genomic fit is moderate.",
+          "discovery_rank": 8,
+          "discovery_score": 172
+        },
+        {
+          "paper_id": "MMG-013",
+          "paper_title": "CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions",
+          "paper_year": 2024,
+          "paper_journal": "Nucleic Acids Research",
+          "paper_cited_by_count": 372,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Integrating ESM-1v + regulatory CNN scores measurably improves CADD's variant prioritization across ClinVar/DMS/MPRA benchmarks."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Genome-wide CADD scores and webserver are de facto standards for variant prioritization."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mature feature-stacking framework; new components are well-validated, though weighting choices remain heuristic."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Already provides genome-wide scoring for the human genome."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "ClinVar, ExAC/gnomAD, ProteinGym DMS, saturation MPRA benchmarks all reported."
+            }
+          },
+          "weighted_total": 24.9,
+          "match_score": 3,
+          "match_note": "Integrative variant scorer that combines protein-LM with regulatory CNNs but does not consume literature text; partial fit to text-genomic claim.",
+          "discovery_rank": 5,
+          "discovery_score": 372
+        },
+        {
+          "paper_id": "MMG-002",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 327,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Nucleotide Transformer demonstrates improved variant prioritization vs. single-modality baselines across many genomics tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open checkpoints (50M-2.5B params) usable for variant scoring via embeddings or fine-tuning."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Extensive scaling study across multi-genome corpora with quantitative benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Large-model inference is heavier but tractable for genome-scale workflows."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports diverse downstream genomics benchmarks including variant prioritization."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 3,
+          "match_note": "Genomic FM that supports variant-effect tasks; provides priors from sequence corpora rather than literature text.",
+          "discovery_rank": 6,
+          "discovery_score": 327
+        },
+        {
+          "paper_id": "MMG-011",
+          "paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+          "paper_year": 2021,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 1218,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Enformer improves variant-effect predictions on gene expression for natural variants and MPRA saturation mutagenesis over short-context baselines."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained model and inference code are widely used by downstream variant-prioritization pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Long-range transformer over 100 kb input is rigorously evaluated against multiple expression and chromatin tracks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-scale variant scoring is feasible; inference is heavier than CNN baselines but tractable."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Held-out variants, eQTL replication, MPRA-based saturation mutagenesis benchmarks."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 3,
+          "match_note": "Strong sequence-only variant-effect predictor; no literature/text supervision, so only partial fit to multimodal text-genomic claim.",
+          "discovery_rank": 2,
+          "discovery_score": 1218
+        },
+        {
+          "paper_id": "MMG-059",
+          "paper_title": "DNA language models are powerful predictors of genome-wide variant effects",
+          "paper_year": 2023,
+          "paper_journal": "Proceedings of the National Academy of Sciences",
+          "paper_cited_by_count": 125,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DNA language model GPN is shown to be a powerful unsupervised predictor of genome-wide variant effects in Arabidopsis (and extensible)."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open code and visualization in UCSC Genome Browser allow direct adoption by other species."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Unsupervised LM evaluated against established annotations and effect benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Per-genome training is tractable; inference is genome-wide."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Genome-wide unsupervised scoring with comparison to known functional sites."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 3,
+          "match_note": "DNA LM for variant effects with no text supervision; partially supports the broader multimodal application stack.",
+          "discovery_rank": 9,
+          "discovery_score": 125
+        },
+        {
+          "paper_id": "MMG-060",
+          "paper_title": "Updated benchmarking of variant effect predictors using deep mutational scanning",
+          "paper_year": 2023,
+          "paper_journal": "Molecular Systems Biology",
+          "paper_cited_by_count": 111,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides authoritative ranking of 55 VEPs (incl. ESM-1v, EVE, VARITY) against DMS data; validates multimodal/LM-based predictors but does not itself train one."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Benchmark methodology and rankings are immediately useful for selecting variant-effect tools."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Careful treatment of data circularity; rigorous independent benchmarking."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Benchmark scope is broad (26 proteins) but evaluation is per-protein, not genome-wide."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "The paper itself defines a DMS-based validation strategy that the multimodal application community can reuse."
+            }
+          },
+          "weighted_total": 21.4,
+          "match_score": 3,
+          "match_note": "Benchmark/validation paper rather than a multimodal model; strong support for the claim's validation methodology.",
+          "discovery_rank": 10,
+          "discovery_score": 111
+        },
+        {
+          "paper_id": "MMG-057",
+          "paper_title": "MVP predicts the\u00a0pathogenicity of missense variants by deep learning",
+          "paper_year": 2021,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 207,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "MVP outperforms prior missense pathogenicity tools, particularly in LoF-tolerant genes, with quantitative gains on developmental disorder panels."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Released model usable for missense scoring but pre-LLM tooling lacks modern multimodal interfaces."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Deep residual network with thoughtful gene-stratified training; benchmarked on cancer hotspots and de novo variants."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Designed for genome-scale pathogenicity scoring."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cancer hotspots, congenital heart disease de novo cohorts, conventional ClinVar-style panels."
+            }
+          },
+          "weighted_total": 20.7,
+          "match_score": 2,
+          "match_note": "Conventional sequence-feature deep model; no text/literature integration, so multimodal text-genomic fit is weak.",
+          "discovery_rank": 7,
+          "discovery_score": 207
+        }
+      ]
+    },
+    "applications-regulatory-annotation": {
+      "claim_text": "Joint text-and-sequence models annotate regulatory elements \u2014 enhancers, promoters, splice sites, binding sites \u2014 with natural-language explanations that go beyond categorical labels.",
+      "candidates": [
+        {
+          "paper_id": "MMG-063",
+          "paper_title": "A sequence-based global map of regulatory activity for deciphering human genetics",
+          "paper_year": 2022,
+          "paper_journal": "Nature Genetics",
+          "paper_cited_by_count": 268,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Sei learns a 'vocabulary' of 40 sequence classes capturing diverse regulatory activities and predicts 21,907 chromatin profiles, enabling sequence/variant-level regulatory characterization."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Pretrained Sei resource is directly consumable for variant-to-regulation interpretation."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Validated against tissue-specific expression, eQTLs, and evolutionary constraint."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide regulatory class assignments demonstrated."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Multiple orthogonal datasets (eQTL, expression, conservation) used as validation."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 4,
+          "match_note": "Closest fit to the regulatory-annotation claim \u2014 discrete, interpretable regulatory classes, though descriptors are not free-form text.",
+          "discovery_rank": 6,
+          "discovery_score": 268
+        },
+        {
+          "paper_id": "MMG-064",
+          "paper_title": "Predicting RNA splicing from DNA sequence using Pangolin",
+          "paper_year": 2022,
+          "paper_journal": "Genome biology",
+          "paper_cited_by_count": 255,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Pangolin outperforms SOTA splice-site predictors (incl. SpliceAI) and detects pathogenic LoF variants with high accuracy."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open model directly applied to variant interpretation pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Well-benchmarked on common, rare, and lineage-specific variation."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide splice-site annotation supported."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Multiple held-out variant cohorts and pathogenicity panels."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3,
+          "match_note": "Strong splice-site annotation model; produces categorical scores, not language explanations.",
+          "discovery_rank": 7,
+          "discovery_score": 255
+        },
+        {
+          "paper_id": "MMG-011",
+          "paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+          "paper_year": 2021,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 1218,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Enformer predicts cell-type-specific enhancer-promoter activity and improves regulatory variant interpretation over short-context baselines."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Public model widely used to annotate regulatory potential at any locus and to score MPRA-style perturbations."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Long-range attention rigorously evaluated against thousands of CAGE/ChIP/ATAC tracks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-scale annotation tractable; inference cost is moderate."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Held-out tracks, MPRA saturation mutagenesis, and enhancer-promoter interaction tasks."
+            }
+          },
+          "weighted_total": 25.1,
+          "match_score": 3,
+          "match_note": "Top-tier regulatory annotation model but outputs are categorical/quantitative tracks, not natural-language explanations.",
+          "discovery_rank": 1,
+          "discovery_score": 1218
+        },
+        {
+          "paper_id": "MMG-002",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 327,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "NT is benchmarked on regulatory tasks (chromatin profiles, splice site, promoter detection) with gains over baselines."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Released checkpoints support fine-tuning on regulatory annotation problems."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Robust scaling and multi-genome pretraining study."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-scale regulatory annotation feasible via embeddings."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Quantitative evaluation across multiple regulatory benchmarks."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 3,
+          "match_note": "DNA FM that supports many regulatory tasks but no natural-language annotation interface.",
+          "discovery_rank": 5,
+          "discovery_score": 327
+        },
+        {
+          "paper_id": "MMG-061",
+          "paper_title": "DanQ: a hybrid convolutional and recurrent deep neural network for quantifying the function of DNA sequences",
+          "paper_year": 2016,
+          "paper_journal": "Nucleic Acids Research",
+          "paper_cited_by_count": 938,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DanQ improves regulatory function prediction (TF binding, histone marks, DHS) over CNN-only baselines, often by 50% PR-AUC on selected markers."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open implementation; widely used as a reference architecture for sequence-to-regulation models."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Hybrid CNN+BiLSTM with thorough motif/grammar interpretation analysis."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-wide inference is feasible on standard hardware."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Held-out evaluation across hundreds of ENCODE tracks."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 2,
+          "match_note": "Foundational regulatory-annotation model but outputs are categorical labels; no text/explanation generation.",
+          "discovery_rank": 2,
+          "discovery_score": 938
+        },
+        {
+          "paper_id": "MMG-065",
+          "paper_title": "Cross-species regulatory sequence activity prediction",
+          "paper_year": 2020,
+          "paper_journal": "PLoS Computational Biology",
+          "paper_cited_by_count": 241,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Joint human+mouse training improves regulatory activity prediction and transfer to human variant interpretation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Methodology and code support reuse but pre-LLM tooling."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Careful cross-species transfer experiments and variant-association evaluation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "CNN architecture supports genome-wide inference."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Held-out tracks plus human GWAS variant evaluation."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 2,
+          "match_note": "Cross-species regulatory prediction; no language layer.",
+          "discovery_rank": 8,
+          "discovery_score": 241
+        },
+        {
+          "paper_id": "MMG-013",
+          "paper_title": "CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions",
+          "paper_year": 2024,
+          "paper_journal": "Nucleic Acids Research",
+          "paper_cited_by_count": 372,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Integrates regulatory CNN and protein-LM scores to improve regulatory and coding variant prioritization."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Genome-wide regulatory and coding scores released via established CADD webserver."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Combines mature components with clear ablations."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide scores are precomputed and freely served."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Saturation mutagenesis assays for promoters/enhancers among other benchmarks."
+            }
+          },
+          "weighted_total": 21.4,
+          "match_score": 2,
+          "match_note": "Variant-prioritization tool that includes regulatory CNN component but does not produce language explanations of regulatory elements.",
+          "discovery_rank": 4,
+          "discovery_score": 372
+        },
+        {
+          "paper_id": "MMG-062",
+          "paper_title": "Convolutional neural network architectures for predicting DNA\u2013protein binding",
+          "paper_year": 2016,
+          "paper_journal": "Bioinformatics",
+          "paper_cited_by_count": 543,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Systematic exploration of CNN architectures yields measurable gains for DNA-protein binding prediction over earlier models."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Architectural insights are reusable; cloud framework is provided, but the work is methodological rather than a deployable annotation tool."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous architectural ablations across many TF datasets with bias-controlled benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "CNN architectures are inherently scalable to genome-wide TF prediction."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Carefully constructed benchmark splits controlling for positional and motif-strength bias."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 2,
+          "match_note": "Sequence-only TF binding prediction; supports binding-site annotation but no natural-language layer.",
+          "discovery_rank": 3,
+          "discovery_score": 543
+        },
+        {
+          "paper_id": "MMG-066",
+          "paper_title": "RNA-protein binding motifs mining with a new hybrid deep learning based cross-domain knowledge integration approach",
+          "paper_year": 2017,
+          "paper_journal": "BMC Bioinformatics",
+          "paper_cited_by_count": 222,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Improves RNA-protein binding site prediction by integrating sequence+structure features and assembling motifs."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open framework reusable but pre-LLM."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Hybrid CNN+DBN architecture with motif-assembly post-processing."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "RBP-specific models; scalable per-protein but not whole-genome regulatory annotation."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Standard CLIP-seq benchmarks."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 1,
+          "match_note": "Specialized RBP binding-site predictor; tangential to multimodal text+sequence regulatory annotation.",
+          "discovery_rank": 9,
+          "discovery_score": 222
+        },
+        {
+          "paper_id": "MMG-067",
+          "paper_title": "Predicting RNA\u2013protein binding sites and motifs through combining local and global deep convolutional neural networks",
+          "paper_year": 2018,
+          "paper_journal": "Bioinformatics",
+          "paper_cited_by_count": 199,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Local+global CNN combination improves RNA-protein binding site prediction over single-scope CNNs."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open implementation reusable for RBP analysis."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Architectural innovation supported by ablations across CLIP datasets."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "RBP-by-RBP modeling; genome-scale aggregation feasible."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Standard RBP CLIP benchmarks."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 1,
+          "match_note": "RBP binding-site CNN; no language/multimodal element.",
+          "discovery_rank": 10,
+          "discovery_score": 199
+        }
+      ]
+    },
+    "applications-drug-discovery": {
+      "claim_text": "Multimodal text-genomic models accelerate drug target identification, RNA-therapeutic design, and clinical hypothesis generation by linking the literature corpus to candidate biological sequences in a single generative system.",
+      "candidates": [
+        {
+          "paper_id": "MMG-069",
+          "paper_title": "GeneCompass: deciphering universal gene regulatory mechanisms with a knowledge-informed cross-species foundation model",
+          "paper_year": 2024,
+          "paper_journal": "Cell Research",
+          "paper_cited_by_count": 95,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Cross-species single-cell foundation model improves multiple regulatory/drug-relevant tasks and identifies factors that drive cell-fate transitions, including a stem-cell differentiation experiment."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained foundation model supports fine-tuning for target identification and perturbation tasks."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Validated through both retrospective benchmarks and a wet-lab differentiation experiment."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Trained on >100M single cells; supports genome-scale and pan-cell-type analysis."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Multiple downstream task benchmarks plus an experimental cell-fate perturbation."
+            }
+          },
+          "weighted_total": 24.0,
+          "match_score": 3,
+          "match_note": "Strong gene-regulatory foundation model with drug-relevant downstream tasks; literature-text integration is limited (knowledge-informed but not LLM-conditioned).",
+          "discovery_rank": 3,
+          "discovery_score": 95
+        },
+        {
+          "paper_id": "MMG-074",
+          "paper_title": "Signals in the Cells: Multimodal and Contextualized Machine Learning Foundations for Therapeutics",
+          "paper_year": 2024,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 11,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Releases datasets, models, and benchmarks for drug-target nomination, perturbation response, and protein-peptide interaction with cell-type context."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Therapeutics Commons (TDC-2) is directly consumable: datasets, foundation-model tooling, and benchmarks for drug discovery."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Built on established TDC infrastructure; well-scoped task definitions."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Designed for large-scale ML benchmarking across many therapeutic tasks."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides four explicit benchmark tasks with held-out evaluation."
+            }
+          },
+          "weighted_total": 24.0,
+          "match_score": 4,
+          "match_note": "Strong fit: multimodal contextualized ML for therapeutics with explicit benchmark suite for drug-discovery tasks.",
+          "discovery_rank": 9,
+          "discovery_score": 11
+        },
+        {
+          "paper_id": "MMG-021",
+          "paper_title": "Accurate RNA 3D structure prediction using a language model-based deep learning approach",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 176,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "RNA-LM-based 3D structure predictor outperforms single-modality baselines and is positioned for RNA-targeting drug discovery."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "End-to-end pipeline available for RNA-targeted therapeutic structural modeling."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Validated on RNA-Puzzles and CASP15 with cross-family benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Inference scales to many single-chain RNAs; not yet at full transcriptome RNP scale."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Multiple held-out RNA structure benchmarks, time-censored evaluation, secondary-structure cross-checks."
+            }
+          },
+          "weighted_total": 23.8,
+          "match_score": 3,
+          "match_note": "RNA-LM for structure (drug-target enabling) but not yet integrated with literature text for hypothesis generation.",
+          "discovery_rank": 2,
+          "discovery_score": 176
+        },
+        {
+          "paper_id": "MMG-070",
+          "paper_title": "GenerRNA: A generative pre-trained language model for de novo RNA design",
+          "paper_year": 2024,
+          "paper_journal": "bioRxiv",
+          "paper_cited_by_count": 35,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Generative RNA LM produces de novo sequences with stable secondary structure and demonstrated high target-protein affinity in fine-tuned settings."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open checkpoints and fine-tuning workflow directly usable for RNA-therapeutic design."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "GPT-style RNA generation with structural and binding follow-ups; sample sizes modest."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Generative inference scales to large candidate libraries."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validation via secondary-structure stability metrics and protein-affinity assays."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 4,
+          "match_note": "Direct fit to RNA-therapeutic design portion of the claim; LLM-style sequence generation, though without explicit text conditioning.",
+          "discovery_rank": 4,
+          "discovery_score": 35
+        },
+        {
+          "paper_id": "MMG-075",
+          "paper_title": "BioNeMo Framework: a modular, high-performance library for AI model development in drug discovery",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 11,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Demonstrates training large protein/biology LMs at scale (3B-param BERT pLM in 4.2 days on 256 A100s); enables but does not itself deliver multimodal drug-discovery results."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open-source modular framework directly usable to build drug-discovery foundation models."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Well-engineered framework with concrete pretraining benchmarks."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Explicitly designed for hundreds-of-GPU training, demonstrating clinical/industrial scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Mainly engineering benchmarks; downstream validation deferred to user models."
+            }
+          },
+          "weighted_total": 20.7,
+          "match_score": 3,
+          "match_note": "Infrastructure paper supporting the multimodal text-genomic drug-discovery stack but not a multimodal system itself.",
+          "discovery_rank": 10,
+          "discovery_score": 11
+        },
+        {
+          "paper_id": "MMG-071",
+          "paper_title": "GeneCompass: Deciphering Universal Gene Regulatory Mechanisms with Knowledge-Informed Cross-Species Foundation Model",
+          "paper_year": 2023,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 30,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Same line of work as MMG-069; preprint version with similar drug-target nomination and regulatory benchmarks."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Preprint version; superseded by Cell Research release for production use."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology validated in benchmarks but final venue version is more rigorous."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": ">100M single-cell pretraining demonstrates scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Downstream benchmarks reported; validation strategy parallels journal version."
+            }
+          },
+          "weighted_total": 19.4,
+          "match_score": 3,
+          "match_note": "Preprint of GeneCompass; partial duplicate of MMG-069 \u2014 same multimodal-bio FM angle relevant to drug discovery.",
+          "discovery_rank": 5,
+          "discovery_score": 30
+        },
+        {
+          "paper_id": "MMG-073",
+          "paper_title": "Artificial intelligence-driven circRNA vaccine development: multimodal collaborative optimization and a new paradigm for biomedical applications",
+          "paper_year": 2025,
+          "paper_journal": "Briefings in Bioinformatics",
+          "paper_cited_by_count": 22,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey of AI-driven multimodal circRNA vaccine design; cites measurable improvements in antigen prediction and structure modeling but is review-style."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides a roadmap for circRNA vaccine workflows; does not release a unified system."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Synthesizes existing methods with appropriate caveats on generative-AI hallucination."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Outlines pipelines that scale to vaccine design but no benchmarks of own."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation needs but not a specific validation strategy."
+            }
+          },
+          "weighted_total": 16.5,
+          "match_score": 3,
+          "match_note": "Direct topical fit (RNA-therapeutic + multimodal AI) but a review/perspective rather than a deliverable system.",
+          "discovery_rank": 7,
+          "discovery_score": 22
+        },
+        {
+          "paper_id": "MMG-047",
+          "paper_title": "Large Language Models in Drug Discovery and Development: From Disease Mechanisms to Clinical Trials",
+          "paper_year": 2024,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 14,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Comprehensive review highlights LLM contributions across target-disease linkage, molecule design, efficacy/safety prediction, and clinical trials."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful overview/roadmap for practitioners; no method or release of its own."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Review is grounded but not benchmarked."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling but provides no system."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Mentions evaluation themes but no specific validation strategy."
+            }
+          },
+          "weighted_total": 15.8,
+          "match_score": 4,
+          "match_note": "Direct topical fit to the multimodal text-genomic drug-discovery claim \u2014 covers the literature-to-sequence integration story explicitly.",
+          "discovery_rank": 8,
+          "discovery_score": 14
+        },
+        {
+          "paper_id": "MMG-072",
+          "paper_title": "AI-empowered perturbation proteomics for complex biological systems",
+          "paper_year": 2024,
+          "paper_journal": "Cell Genomics",
+          "paper_cited_by_count": 22,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Perspective on combining perturbation proteomics with foundation models; no end-to-end multimodal text-genomic system delivered."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Frames a PMMP pipeline but no released model or dataset."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Argued conceptually; few benchmarks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Pipeline anticipates large-scale data but is aspirational."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Discusses validation generically rather than providing a concrete strategy."
+            }
+          },
+          "weighted_total": 13.0,
+          "match_score": 2,
+          "match_note": "Perspective rather than a model; weakly supports the drug-discovery claim's multimodal angle.",
+          "discovery_rank": 6,
+          "discovery_score": 22
+        },
+        {
+          "paper_id": "MMG-068",
+          "paper_title": "Deep learning for healthcare: review, opportunities and challenges",
+          "paper_year": 2017,
+          "paper_journal": "Briefings in Bioinformatics",
+          "paper_cited_by_count": 2927,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "General review of deep learning in healthcare; no specific multimodal text-genomic drug-discovery results."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Conceptual orientation rather than a deployable method."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Review is well-cited but not a methodological contribution."
+            },
+            "scalable": {
+              "score": 1,
+              "rationale": "No system is presented."
+            },
+            "how_to_validate": {
+              "score": 1,
+              "rationale": "No validation strategy specific to this claim."
+            }
+          },
+          "weighted_total": 7.7,
+          "match_score": 1,
+          "match_note": "2017 healthcare deep-learning review predates LLM-driven drug discovery; tangential to the multimodal text-genomic drug-discovery claim.",
+          "discovery_rank": 1,
+          "discovery_score": 2927
+        }
+      ]
+    }
+  }
+}

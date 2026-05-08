@@ -1,0 +1,502 @@
+{
+  "MMG-001": {
+    "bytes": 1035190,
+    "n_pages": 9,
+    "notes": "title-words-individual",
+    "pdf_url": "https://europepmc.org/articles/PMC11025658?pdf=render",
+    "saved_to": "pdfs/MMG-001_2021_DNABERT_pre_trained_Bidirectional_Encoder_Representations_from_Transformers_model_for_DNA.pdf",
+    "sha256": "1a724c2b30ce287a13d06f7557a905d38fc53893838c0393d14edc18a75be13d",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-002": {
+    "bytes": 4690509,
+    "n_pages": 20,
+    "notes": "title-words-individual",
+    "pdf_url": "https://www.nature.com/articles/s41592-024-02523-z.pdf",
+    "saved_to": "pdfs/MMG-002_2024_Nucleotide_Transformer_building_and_evaluating_robust_foundation_models_for_human_genomics.pdf",
+    "sha256": "a5510f4b4b0aaf4817140a3b279d69c3a1b163bd986c5282294b9c65c6644b02",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-003": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-004": {
+    "bytes": 2415308,
+    "n_pages": 25,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2306.15794",
+    "saved_to": "pdfs/MMG-004_2023_HyenaDNA_Long_Range_Genomic_Sequence_Modeling_at_Single_Nucleotide_Resolution.pdf",
+    "sha256": "2f471549352ff571ac55faa80c8da453f9bf1ff5b01b6b87fa893457828e798c",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-005": {
+    "bytes": 1749406,
+    "n_pages": 11,
+    "notes": "title-words-individual",
+    "pdf_url": "https://www.nature.com/articles/s42256-024-00836-4.pdf",
+    "saved_to": "pdfs/MMG-005_2024_Multi_purpose_RNA_language_modelling_with_motif_aware_pretraining_and_type_guided_fine_tun.pdf",
+    "sha256": "f159f9ae44906d09d6cec331f6d2c191404a786a57a9ff2f6261333a19f47ee1",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-007": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-010": {
+    "bytes": 2569084,
+    "n_pages": 20,
+    "notes": "title-words-individual",
+    "pdf_url": "https://europepmc.org/articles/PMC11734698?pdf=render",
+    "saved_to": "pdfs/MMG-010_2024_GENA_LM_a_family_of_open_source_foundational_DNA_language_models_for_long_sequences.pdf",
+    "sha256": "668930cb8bae9ddc482c47093afae1861845e656e062a543101a0d8a9c69ebc4",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-011": {
+    "bytes": 19069801,
+    "n_pages": 24,
+    "notes": "title-match",
+    "pdf_url": "https://www.nature.com/articles/s41592-021-01252-x.pdf",
+    "saved_to": "pdfs/MMG-011_2021_Effective_gene_expression_prediction_from_sequence_by_integrating_long_range_interactions.pdf",
+    "sha256": "9b9a0ad0b85d21a2bef00c8a4e2d9f760ad5189bfd6c06c519e666c2ae12c678",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-012": {
+    "bytes": 1168615,
+    "n_pages": 36,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2312.00752",
+    "saved_to": "pdfs/MMG-012_2023_Mamba_Linear_Time_Sequence_Modeling_with_Selective_State_Spaces.pdf",
+    "sha256": "adf70ed1803c85b1899dec3e21f3af0b124411439e8654b840ea65f7b9f52b2e",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-013": {
+    "bytes": 1582069,
+    "n_pages": 12,
+    "notes": "title-words-individual",
+    "pdf_url": "https://europepmc.org/articles/PMC10767851?pdf=render",
+    "saved_to": "pdfs/MMG-013_2024_CADD_v1_7_using_protein_language_models_regulatory_CNNs_and_other_nucleotide_level_scores.pdf",
+    "sha256": "85ab922fb2550826502c04f24d30890f07c38cf1519a2712a7747f4211d81003",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-016": {
+    "bytes": 1897187,
+    "n_pages": 20,
+    "notes": "title-match",
+    "pdf_url": "https://europepmc.org/articles/PMC11512649?pdf=render",
+    "saved_to": "pdfs/MMG-016_2024_Progress_and_opportunities_of_foundation_models_in_bioinformatics.pdf",
+    "sha256": "06838cdcb1a31f4b93a6d696f5d4d652bb3026b3465029411acda44022c0b2d6",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-017": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "no OA URL found (doi=10.1038/s41592-024-02201-0, openalex=https://openalex.org/W4392168151, arxiv=)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-018": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-020": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-021": {
+    "bytes": 5780717,
+    "n_pages": 19,
+    "notes": "title-match",
+    "pdf_url": "https://www.nature.com/articles/s41592-024-02487-0.pdf",
+    "saved_to": "pdfs/MMG-021_2024_Accurate_RNA_3D_structure_prediction_using_a_language_model_based_deep_learning_approach.pdf",
+    "sha256": "2b6f1b106bf42dc83960f0ceca56cabee7c312ec1d7e4309a1025fa0eafc3c67",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-022": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-025": {
+    "bytes": 3339187,
+    "n_pages": 9,
+    "notes": "title-match",
+    "pdf_url": "https://europepmc.org/articles/PMC9825434?pdf=render",
+    "saved_to": "pdfs/MMG-025_2022_The_STRING_database_in_2023_protein_protein_association_networks_and_functional_enrichment.pdf",
+    "sha256": "56625b669fdc087f5e861c9587e526375b507d65d8fc60b581ea0513955f2931",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-028": {
+    "bytes": 3874852,
+    "n_pages": 95,
+    "notes": "title-match",
+    "pdf_url": "https://arxiv.org/pdf/2206.04615",
+    "saved_to": "pdfs/MMG-028_2022_Beyond_the_Imitation_Game_Quantifying_and_extrapolating_the_capabilities_of_language_model.pdf",
+    "sha256": "1a7f7766060a3d152e18d9a2c2844466e877004c97f2c89220bb89bf35b0fa35",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-029": {
+    "bytes": 2839521,
+    "n_pages": 90,
+    "notes": "title-match",
+    "pdf_url": "https://arxiv.org/pdf/2401.14656",
+    "saved_to": "pdfs/MMG-029_2024_Scientific_Large_Language_Models_A_Survey_on_Biological_amp_Chemical_Domains.pdf",
+    "sha256": "86de1dd9b2db2fd87f2a29b56f2b3d59724acb14a3626540a1754bb6f846ea2d",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-030": {
+    "bytes": 2723173,
+    "n_pages": 10,
+    "notes": "title-match",
+    "pdf_url": "https://arxiv.org/pdf/2303.06275",
+    "saved_to": "pdfs/MMG-030_2023_A_Systematic_Study_of_Joint_Representation_Learning_on_Protein_Sequences_and_Structures.pdf",
+    "sha256": "3bc3f0862b9f386705b242ecf7e5caaafb6716ba275fdc13976d43e3c79e1fa5",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-032": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-033": {
+    "bytes": 1469975,
+    "n_pages": 11,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2307.14367",
+    "saved_to": "pdfs/MMG-033_2023_Prot2Text_Multimodal_Protein_s_Function_Generation_with_GNNs_and_Transformers.pdf",
+    "sha256": "99710d013e33cbd9ad878a7b112d397f2df4b3d241c5505ae20bfef8ef460d5f",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-036": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: non-PDF response (content-type=text/html; charset=utf-8); europepmc: HTTP 500 | PMC PDF endpoint returns interstitial / 500 (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-039": {
+    "bytes": 2261799,
+    "n_pages": 12,
+    "notes": "title-match",
+    "pdf_url": "https://www.nature.com/articles/s42256-023-00788-1.pdf",
+    "saved_to": "pdfs/MMG-039_2024_Leveraging_large_language_models_for_predictive_chemistry.pdf",
+    "sha256": "34cf31e197079c84d7d09ca0797b6ea0d57dee57a43a5a4278be7eecdb4bce02",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-041": {
+    "bytes": 3664672,
+    "n_pages": 58,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2211.09085",
+    "saved_to": "pdfs/MMG-041_2022_Galactica_A_Large_Language_Model_for_Science.pdf",
+    "sha256": "612939ed35e76201597bdcc6e2d902e523ebde3c21f24ffa6de689cf28831ec2",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-042": {
+    "bytes": 3706553,
+    "n_pages": 17,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2306.00890",
+    "saved_to": "pdfs/MMG-042_2023_LLaVA_Med_Training_a_Large_Language_and_Vision_Assistant_for_Biomedicine_in_One_Day.pdf",
+    "sha256": "d61d5da1f0ce27df663ded964fe6a793279a0b1e3d0e1d8fce4677239446655f",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-043": {
+    "bytes": 311321,
+    "n_pages": 17,
+    "notes": "title-words-individual",
+    "pdf_url": "https://aclanthology.org/2024.findings-acl.348.pdf",
+    "saved_to": "pdfs/MMG-043_2024_BioMistral_A_Collection_of_Open_Source_Pretrained_Large_Language_Models_for_Medical_Domain.pdf",
+    "sha256": "9cd37d72943ce677705ae866d2a8076a07916741c38558282c614ae8608eef72",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-044": {
+    "bytes": 368010,
+    "n_pages": 16,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2304.09667.pdf",
+    "saved_to": "pdfs/MMG-044_2024_GeneGPT_augmenting_large_language_models_with_domain_tools_for_improved_access_to_biomedic.pdf",
+    "sha256": "1bad39c2a2976aa9102702e4fa6200dcda20741c7a25c9603a2fa1332be06c96",
+    "source": "arxiv",
+    "status": "downloaded"
+  },
+  "MMG-045": {
+    "bytes": 15576173,
+    "n_pages": 31,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2302.04611",
+    "saved_to": "pdfs/MMG-045_2023_A_Text_guided_Protein_Design_Framework.pdf",
+    "sha256": "91e0fb12584a7e1deb8b054817d4fcd8e3a08da1039e23d692e24d91c721f564",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-046": {
+    "bytes": 1929922,
+    "n_pages": 14,
+    "notes": "title-match",
+    "pdf_url": "https://www.nature.com/articles/s42256-025-01047-1.pdf",
+    "saved_to": "pdfs/MMG-046_2025_A_multimodal_conversational_agent_for_DNA_RNA_and_protein_tasks.pdf",
+    "sha256": "05b2a6f45ed228ae808e33bd371b922fff6595f2d80be7e11e0642b085dcdd55",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-048": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-049": {
+    "bytes": 4007154,
+    "n_pages": 27,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2406.15669",
+    "saved_to": "pdfs/MMG-049_2024_CARE_a_Benchmark_Suite_for_the_Classification_and_Retrieval_of_Enzymes.pdf",
+    "sha256": "8c3318169e3fdcbd68c5875167e5b78f1b2e025e5774c09f2dc3f4a0b3fe2bad",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-050": {
+    "bytes": 2890361,
+    "n_pages": 18,
+    "notes": "title-words-individual",
+    "pdf_url": "https://arxiv.org/pdf/2406.14150",
+    "saved_to": "pdfs/MMG-050_2024_Multi_modal_Transfer_Learning_between_Biological_Foundation_Models.pdf",
+    "sha256": "064ef5c75402847208b5fe8b450cd9a5111e7298bd94a04eceec4e4ec9106199",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-054": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "no OA URL found (doi=10.1126/science.adg7492, openalex=https://openalex.org/W4386861232, arxiv=)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-055": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-056": {
+    "bytes": 7953533,
+    "n_pages": 23,
+    "notes": "title-words-individual",
+    "pdf_url": "https://www.nature.com/articles/s41588-023-01465-0.pdf",
+    "saved_to": "pdfs/MMG-056_2023_Genome_wide_prediction_of_disease_variant_effects_with_a_deep_protein_language_model.pdf",
+    "sha256": "d919ce997d2d52437bbcfbb496bb3854802d4cc76d3439a40895a7786485d97c",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-057": {
+    "bytes": 2515074,
+    "n_pages": 9,
+    "notes": "title-match",
+    "pdf_url": "https://www.nature.com/articles/s41467-020-20847-0.pdf",
+    "saved_to": "pdfs/MMG-057_2021_MVP_predicts_the_pathogenicity_of_missense_variants_by_deep_learning.pdf",
+    "sha256": "7d11194894c4e823a31ab03debbddd6318c1d899e6ac85da2facac124cb1faee",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-058": {
+    "bytes": 1792660,
+    "n_pages": 35,
+    "notes": "title-match",
+    "pdf_url": "https://repositori.upf.edu/bitstreams/9184dc20-9947-471e-9c13-7d7b40d2a869/download",
+    "saved_to": "pdfs/MMG-058_2023_The_landscape_of_tolerated_genetic_variation_in_humans_and_primates.pdf",
+    "sha256": "6e328d880870f7be9582ac862e5ea6844b57ba7d9e22d0359fb22fc46f7feefc",
+    "source": "unpaywall_repo",
+    "status": "downloaded"
+  },
+  "MMG-059": {
+    "bytes": 3136815,
+    "n_pages": 9,
+    "notes": "title-match",
+    "pdf_url": "https://europepmc.org/articles/PMC10622914?pdf=render",
+    "saved_to": "pdfs/MMG-059_2023_DNA_language_models_are_powerful_predictors_of_genome_wide_variant_effects.pdf",
+    "sha256": "d84a67e53db4c46e0c0ab653209829f5005032a46afdb0cad423d2a70e42634c",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-060": {
+    "bytes": 1300642,
+    "n_pages": 15,
+    "notes": "title-match",
+    "pdf_url": "https://europepmc.org/articles/PMC10407742?pdf=render",
+    "saved_to": "pdfs/MMG-060_2023_Updated_benchmarking_of_variant_effect_predictors_using_deep_mutational_scanning.pdf",
+    "sha256": "940571c5c61b29e056885ac3ca94cd3cd1042829f3b444a774b9e9cd19cdae36",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-063": {
+    "bytes": 5423818,
+    "n_pages": 14,
+    "notes": "title-words-individual",
+    "pdf_url": "https://www.nature.com/articles/s41588-022-01102-2.pdf",
+    "saved_to": "pdfs/MMG-063_2022_A_sequence_based_global_map_of_regulatory_activity_for_deciphering_human_genetics.pdf",
+    "sha256": "a4aaadcb40fa9c7720e61e624e51e7938c49cac43d9a05159a46c0a7d17f14c7",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-064": {
+    "bytes": 16874411,
+    "n_pages": 18,
+    "notes": "title-match",
+    "pdf_url": "https://genomebiology.biomedcentral.com/counter/pdf/10.1186/s13059-022-02664-4",
+    "saved_to": "pdfs/MMG-064_2022_Predicting_RNA_splicing_from_DNA_sequence_using_Pangolin.pdf",
+    "sha256": "87457f2669a6a14b51f5a1330bd17ef517a37c97e90284273024a439eb5cb37d",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-065": {
+    "bytes": 2389318,
+    "n_pages": 27,
+    "notes": "title-words-individual",
+    "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1008050&type=printable",
+    "saved_to": "pdfs/MMG-065_2020_Cross_species_regulatory_sequence_activity_prediction.pdf",
+    "sha256": "c315870af87379f333b0eb10b12fee7ed092bb96e5f7c3a61d58ac6d061b8a43",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-066": {
+    "bytes": 2163082,
+    "n_pages": 14,
+    "notes": "title-words-individual",
+    "pdf_url": "https://bmcbioinformatics.biomedcentral.com/track/pdf/10.1186/s12859-017-1561-8",
+    "saved_to": "pdfs/MMG-066_2017_RNA_protein_binding_motifs_mining_with_a_new_hybrid_deep_learning_based_cross_domain_knowl.pdf",
+    "sha256": "f4e6ad672708b03b4cff79f52dd06a15e78ee352b3ebba2906b8912112fd3b6d",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-067": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-069": {
+    "bytes": 2065317,
+    "n_pages": 16,
+    "notes": "title-words-individual",
+    "pdf_url": "https://www.nature.com/articles/s41422-024-01034-y.pdf",
+    "saved_to": "pdfs/MMG-069_2024_GeneCompass_deciphering_universal_gene_regulatory_mechanisms_with_a_knowledge_informed_cro.pdf",
+    "sha256": "f992a22fdb2602f157288ba1079ea50199a37db879dbb8bb49d18c544632ed5d",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  },
+  "MMG-070": {
+    "bytes": 2056478,
+    "n_pages": 18,
+    "notes": "title-words-individual",
+    "pdf_url": "https://europepmc.org/articles/PMC11444397?pdf=render",
+    "saved_to": "pdfs/MMG-070_2024_GenerRNA_A_generative_pre_trained_language_model_for_de_novo_RNA_design.pdf",
+    "sha256": "8433aa638150eb8b301a468fbb73c722ced7de23b6f83d77779bf96d46dd37d2",
+    "source": "europepmc",
+    "status": "downloaded"
+  },
+  "MMG-071": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-074": {
+    "bytes": 0,
+    "n_pages": 0,
+    "notes": "openalex_oa: HTTP 403 | OA URL exists but host blocks automated download (scraping protection)",
+    "pdf_url": "",
+    "saved_to": "",
+    "sha256": "",
+    "source": "none",
+    "status": "paywalled"
+  },
+  "MMG-075": {
+    "bytes": 539827,
+    "n_pages": 10,
+    "notes": "title-match",
+    "pdf_url": "https://arxiv.org/pdf/2411.10548",
+    "saved_to": "pdfs/MMG-075_2024_BioNeMo_Framework_a_modular_high_performance_library_for_AI_model_development_in_drug_disc.pdf",
+    "sha256": "0fe93837b931a3c37fd8414d0fb1ea1844dfafa575980faa841c7eaca1fdc6b9",
+    "source": "openalex_oa",
+    "status": "downloaded"
+  }
+}

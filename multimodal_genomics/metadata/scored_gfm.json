@@ -1,0 +1,983 @@
+{
+  "schema_version": "0.1",
+  "paradigm": "gfm",
+  "scored_at": "2026-05-08T00:00:00+00:00",
+  "scored_by": "S1",
+  "claims": {
+    "gfm-tokenization": {
+      "claim_text": "Tokenization strategy materially affects what genomic foundation models can learn \u2014 k-mer, BPE, and single-nucleotide schemes induce distinct biases on context length, motif resolution, and downstream transfer.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG001",
+          "paper_id": "MMG-001",
+          "paper_title": "DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome",
+          "paper_year": 2021,
+          "paper_journal": "Bioinformatics",
+          "paper_cited_by_count": 1169,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DNABERT uses overlapping k-mer tokenization and demonstrates SOTA gains on promoter, splice site, and TF-binding prediction over prior methods."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained DNABERT and code are released; researchers can adopt the k-mer tokenizer scheme today via the published Bioinformatics tooling."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology of k-mer BERT pretraining with downstream fine-tuning is sound and supported by extensive cross-task benchmarks and motif visualizations."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "K-mer tokenization plus quadratic attention scales modestly; cited 512-token windows limit genome-scale use beyond local regulatory regions."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates via fine-tuning on promoter/splice/TF-binding tasks, motif extraction, and cross-organism transfer, providing a borrowable tokenizer-comparison protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG002",
+          "paper_id": "MMG-002",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 327,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Nucleotide Transformer compares 6-mer and BPE-style tokenization across model scales (50M-2.5B), showing tokenizer choice impacts genomic phenotype prediction."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Pretrained NT models, tokenizers, and benchmarks are released on HuggingFace, immediately usable in multimodal genomic pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology grounded in 3,202 human + 850 species genomes with low-data fine-tuning evidence supporting transfer-quality claims."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Up to 2.5B parameters but context limited to ~6-12kb tokens; tokenizer enables longer effective context yet not full-genome scale."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides 18-task benchmark suite spanning regulatory and splice tasks plus variant prioritization \u2014 a directly borrowable validation protocol."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 0.825
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG003",
+          "paper_id": "MMG-003",
+          "paper_title": "The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics",
+          "paper_year": 2023,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 189,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Preprint version of Nucleotide Transformer demonstrates tokenizer/scale effects on molecular phenotype prediction across diverse human and species genomes."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Code and weights released; preprint slightly less polished than Nature Methods version but readily adoptable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Same methodology as published version: rigorous multi-genome pretraining and downstream fine-tuning evidence."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Same scale and context limits as the published NT; tokenizer choice constrains genome-scale modeling."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Same multi-task benchmark and variant-prioritization validation strategy as published version."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 0.779
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG004",
+          "paper_id": "MMG-004",
+          "paper_title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 150,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "HyenaDNA explicitly contrasts single-nucleotide tokenization vs k-mer/BPE, showing single-nt resolution matters for SNP-level effects with measured downstream gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "HyenaDNA is open-sourced with a 1M-token single-nt tokenizer; immediately adoptable for genomic foundation pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Direct demonstration: Hyena's implicit-convolution backbone enables single-nt tokenization; ablations on token granularity strongly support the claim."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Sub-quadratic in length up to 1M tokens; 500x context increase makes single-nt tokenization scalable to chromosome-scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates with Nucleotide Transformer benchmark and species-classification long-context tasks; cross-token-scheme comparisons support the validation strategy."
+            }
+          },
+          "weighted_total": 24.6,
+          "match_score": 0.879
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG005",
+          "paper_id": "MMG-005",
+          "paper_title": "Multi-purpose RNA language modelling with motif-aware pretraining and type-guided fine-tuning",
+          "paper_year": 2024,
+          "paper_journal": "Nature Machine Intelligence",
+          "paper_cited_by_count": 110,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "RNAErnie introduces motif-level masking on top of base/subsequence tokenization, with measured gains (1.8-3.3%) tied to tokenization-aware pretraining choices."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Method is published with clear architecture; some engineering required to integrate motif-tokenization into existing GFM stacks."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid evaluation on 7 datasets/5 tasks supporting the tokenization+motif strategy with consistent gains."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transformer backbone limits context; tokenization scheme adds motif vocab but base scale is moderate."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides RNA-specific multi-task benchmark and ablations on motif tokenization that a multimodal team could borrow."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.707
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG006",
+          "paper_id": "MMG-006",
+          "paper_title": "Genomic language model predicts protein co-regulation and function",
+          "paper_year": 2024,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 85,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "gLM uses protein-token-level inputs in a metagenomic context; tokenization is discussed but is not the central claim of the paper."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "gLM model and code are accessible; tokenization choice is implicit (protein embeddings) rather than a focus."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound methodology for gene-context modeling but tokenization comparisons are not provided."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Metagenomic scaffold scale is moderate; tokenization at protein level reduces sequence length substantially."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Validation via attention/operon analysis; not a tokenization-comparison study."
+            }
+          },
+          "weighted_total": 14.3,
+          "match_score": 0.511
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG007",
+          "paper_id": "MMG-007",
+          "paper_title": "Sequence modeling and design from molecular to genome scale with Evo",
+          "paper_year": 2024,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 81,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Evo uses byte-level single-nucleotide tokenization at 131kb context, demonstrating tokenizer choice matters for whole-genome generation tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Evo weights and code are released, including the byte tokenizer for direct adoption."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "7B-parameter model trained on prokaryotic genomes with strong zero-shot results supports byte-tokenization claim."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Single-nt byte tokenization scales to 131kb context and 650kb generation, suitable for genome-scale multimodal use."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides zero-shot fitness, gene essentiality, and CRISPR-Cas generation tasks as borrowable validation."
+            }
+          },
+          "weighted_total": 22.9,
+          "match_score": 0.818
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG008",
+          "paper_id": "MMG-008",
+          "paper_title": "The EN-TEx resource of multi-tissue personal epigenomes\u00a0&amp; variant-impact models",
+          "paper_year": 2023,
+          "paper_journal": "Cell",
+          "paper_cited_by_count": 78,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "EN-TEx is primarily an epigenome resource; tokenization is not discussed as a core variable."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Resource is publicly available, but it doesn't provide tokenizer guidance for GFMs."
+            },
+            "plausible": {
+              "score": 2,
+              "rationale": "Deep-learning model is mentioned but tokenization details are tangential to the paper's contribution."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Per-tissue datasets and models scale moderately; not a tokenizer scaling study."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Focus is on allele-specific activity prediction validation, not tokenization choice."
+            }
+          },
+          "weighted_total": 9.5,
+          "match_score": 0.339
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG009",
+          "paper_id": "MMG-009",
+          "paper_title": "Self-supervised learning on millions of primary RNA sequences from 72 vertebrates improves sequence-based RNA splicing prediction",
+          "paper_year": 2024,
+          "paper_journal": "Briefings in Bioinformatics",
+          "paper_cited_by_count": 63,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "SpliceBERT uses base-level tokenization; the paper compares per-base vs k-mer choices implicitly through architecture but tokenization is not central."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "SpliceBERT is released; pretraining-on-72-species recipe is reproducible with standard tokenizers."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound method for splice prediction; tokenization choice is justified but not extensively ablated."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Transformer backbone with limited context; multi-species data scales but per-token granularity limits range."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Cross-species splice-site validation provides a borrowable evaluation, partly relevant to tokenization questions."
+            }
+          },
+          "weighted_total": 15.6,
+          "match_score": 0.557
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG010",
+          "paper_id": "MMG-010",
+          "paper_title": "GENA-LM: a family of open-source foundational DNA language models for long sequences",
+          "paper_year": 2024,
+          "paper_journal": "Nucleic Acids Research",
+          "paper_cited_by_count": 57,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "GENA-LM explicitly compares BPE and other tokenization schemes for long-context DNA modeling, with downstream task gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open-source models with multiple tokenizers released on HuggingFace, immediately usable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology supports BPE+recurrent memory for handling 36kb inputs across taxon-specific models."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Recurrent memory mechanism extends sequences beyond 36kb at modest computational cost."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Variety of downstream tasks demonstrated; tokenizer ablation is partial rather than exhaustive."
+            }
+          },
+          "weighted_total": 21.3,
+          "match_score": 0.761
+        }
+      ]
+    },
+    "gfm-long-context": {
+      "claim_text": "Long-context architectures (state-space models, Hyena, Mamba, sliding-window attention) unlock genome-scale sequence modeling well beyond traditional Transformer context limits, enabling distal regulatory interactions to be learned end-to-end.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG011",
+          "paper_id": "MMG-011",
+          "paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+          "paper_year": 2021,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 1218,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Enformer integrates long-range interactions up to 100kb via dilated/sliding attention, with measured gains in expression prediction over short-context CNNs."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Enformer is widely available with code and weights; readily adopted as a long-context genomic backbone today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Strong methodology with extensive expression and enhancer-promoter benchmarks supporting the long-range architectural claim."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Reaches 100kb context but not full-genome; widely used in production multimodal pipelines."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Validated on natural variants, MPRA saturation mutagenesis, and enhancer-promoter calls \u2014 strong borrowable validation suite."
+            }
+          },
+          "weighted_total": 26.6,
+          "match_score": 0.95
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG012",
+          "paper_id": "MMG-012",
+          "paper_title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 983,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Mamba is a general selective-SSM architecture demonstrating linear-time long-context modeling, with explicit genomics benchmarks showing strong performance."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Mamba code is open-source; integrating into genomic stacks is straightforward and underlies subsequent GFMs (Caduceus, Evo)."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous architectural derivation with hardware-aware parallel algorithm and SOTA results across modalities including genomics."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Linear scaling to million-length sequences with 5x throughput vs Transformers; ideal for genome-scale contexts."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Genomics validation is part of broader benchmarks; not a genome-specific validation suite."
+            }
+          },
+          "weighted_total": 23.3,
+          "match_score": 0.832
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG013",
+          "paper_id": "MMG-013",
+          "paper_title": "CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions",
+          "paper_year": 2024,
+          "paper_journal": "Nucleic Acids Research",
+          "paper_cited_by_count": 372,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "CADD v1.7 incorporates regulatory CNN and ESM scores, but does not advance long-context architectures themselves."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "CADD service and scores are publicly accessible but not a long-context architecture per se."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound but combines existing scores rather than establishing new long-context modeling."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "CADD scoring is genome-wide but underlying CNN/protein-LM components are not long-context."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validation via ClinVar/gnomAD/MPRA is strong but does not isolate long-context contributions."
+            }
+          },
+          "weighted_total": 14.1,
+          "match_score": 0.504
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG002",
+          "paper_id": "MMG-002",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 327,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Nucleotide Transformer extends context modestly via tokenization but uses standard attention; long-context is not its primary innovation."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "NT models are immediately usable; effective context up to ~6-12kb fine-tuned via standard transformer infra."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid methodology but the long-context claim is moderate \u2014 relies on tokenizer compression, not an architectural advance."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scale to 2.5B params helps but quadratic attention still limits genome-scale context."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Multi-task benchmark validates long-range gene-expression and chromatin tasks at fine-tuning context."
+            }
+          },
+          "weighted_total": 19.6,
+          "match_score": 0.7
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG014",
+          "paper_id": "MMG-014",
+          "paper_title": "Cell-type-directed design of synthetic enhancers",
+          "paper_year": 2023,
+          "paper_journal": "Nature",
+          "paper_cited_by_count": 152,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Synthetic enhancer design uses CNN-based deep models rather than long-context architectures."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Method is reproducible for enhancer design but doesn't supply a long-context architecture for adoption."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound experimental work but tangential to the long-context architectural claim."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Operates on short enhancer sequences (<2kb); not genome-scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Strong transgenic validation but specific to enhancer design, not long-context modeling."
+            }
+          },
+          "weighted_total": 14.1,
+          "match_score": 0.504
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG004",
+          "paper_id": "MMG-004",
+          "paper_title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 150,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "HyenaDNA explicitly demonstrates 1M-token single-nt context with sub-quadratic Hyena operator, directly proving long-context architectures unlock genome-scale modeling."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "HyenaDNA code and pretrained weights are open and broadly used as a long-context GFM backbone today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Empirical results on long-context benchmarks (chromatin profile, species classification) directly support the architectural claim."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Sub-quadratic scaling, 160x faster training, full global context at single-nt resolution to 1M tokens."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates on Nucleotide Transformer benchmark + species-ID long-context probe; clear borrowable validation strategy."
+            }
+          },
+          "weighted_total": 26.8,
+          "match_score": 0.957
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG006",
+          "paper_id": "MMG-006",
+          "paper_title": "Genomic language model predicts protein co-regulation and function",
+          "paper_year": 2024,
+          "paper_journal": "Nature Communications",
+          "paper_cited_by_count": 85,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "gLM operates on gene-token-level metagenomic scaffolds, achieving long contexts measured in genes rather than nucleotides."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Code is available; extending gLM to nucleotide-level long-context requires additional engineering."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound for protein-level operon learning but not a nucleotide long-context architecture."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Gene-token compression yields long effective contexts but not at single-nucleotide resolution."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Operon and attention-pattern validation; partial relevance to long-context claim."
+            }
+          },
+          "weighted_total": 16.5,
+          "match_score": 0.589
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG007",
+          "paper_id": "MMG-007",
+          "paper_title": "Sequence modeling and design from molecular to genome scale with Evo",
+          "paper_year": 2024,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 81,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Evo achieves 131kb single-nucleotide context using StripedHyena, generating coding sequences up to 650kb \u2014 strong direct support for long-context architectures."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Evo weights and code are released; substantial compute needed but architecture is reusable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "7B-parameter model with strong zero-shot performance on whole-genome tasks supports long-context architectural claim."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Scales to 131kb context at byte resolution and generates 650kb sequences \u2014 production-suitable for genome-scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Zero-shot fitness, gene essentiality, and CRISPR-Cas generation provide borrowable long-context validation tasks."
+            }
+          },
+          "weighted_total": 25.5,
+          "match_score": 0.911
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG015",
+          "paper_id": "MMG-015",
+          "paper_title": "Species-aware DNA language models capture regulatory elements and their evolution",
+          "paper_year": 2024,
+          "paper_journal": "Genome biology",
+          "paper_cited_by_count": 47,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Species-aware DNA LM captures regulatory elements across 800 species using transformer with moderate context."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Species-aware DNA-LM weights are accessible; long-context is not the primary architectural focus."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound methodology focused on conservation, not on long-context architecture per se."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Standard transformer backbone \u2014 long-context is moderate."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "MPRA, motif, and gene-expression validations provide partial coverage of long-context claim."
+            }
+          },
+          "weighted_total": 16.5,
+          "match_score": 0.589
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG016",
+          "paper_id": "MMG-016",
+          "paper_title": "Progress and opportunities of foundation models in bioinformatics",
+          "paper_year": 2024,
+          "paper_journal": "Briefings in Bioinformatics",
+          "paper_cited_by_count": 44,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey on FMs in bioinformatics covers long-context architectures conceptually rather than introducing new evidence."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful orientation document for choosing long-context FM approaches; no new artifacts."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Well-structured review; doesn't advance methodology directly."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scalability of long-context approaches at a high level."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "General validation guidance only; not a concrete reusable protocol."
+            }
+          },
+          "weighted_total": 15.8,
+          "match_score": 0.564
+        }
+      ]
+    },
+    "gfm-pretraining-objective": {
+      "claim_text": "Self-supervised pretraining objectives \u2014 masked language modeling, autoregressive generation, span corruption, contrastive learning \u2014 determine downstream transfer quality and the kinds of biological structure (motifs, conservation, splicing, 3D contacts) the model captures.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG017",
+          "paper_id": "MMG-017",
+          "paper_title": "scGPT: toward building a foundation model for single-cell multi-omics using generative AI",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 944,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "scGPT introduces a generative (autoregressive-style) pretraining objective tailored to single-cell data with strong transfer to multiple downstream tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "scGPT code and weights are widely available, providing a directly adoptable generative pretraining recipe."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology over 33M cells with consistent SOTA gains supports the objective-choice claim."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "100M+ params and 33M-cell training scales appropriately for single-cell foundation models."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cell-type annotation, batch integration, perturbation prediction tasks form a strong borrowable validation suite."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.786
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG018",
+          "paper_id": "MMG-018",
+          "paper_title": "Evaluating Protein Transfer Learning with TAPE",
+          "paper_year": 2019,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 681,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "TAPE benchmarks multiple SSL objectives (MLM, LM, contrastive) on protein tasks, directly demonstrating objective choice impacts transfer quality."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "TAPE benchmark and code are public; objective-comparison framework is directly reusable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous comparison with controlled baselines supports the claim that pretraining objectives determine transfer."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Protein-domain results may not directly translate to genome-scale DNA/RNA contexts."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Five biologically relevant tasks with held-out splits provide an exemplary validation strategy."
+            }
+          },
+          "weighted_total": 22.9,
+          "match_score": 0.818
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG019",
+          "paper_id": "MMG-019",
+          "paper_title": "A foundation model for clinical-grade computational pathology and rare cancers detection",
+          "paper_year": 2024,
+          "paper_journal": "Nature Medicine",
+          "paper_cited_by_count": 340,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Virchow is a histopathology image foundation model; pretraining objective claims do not transfer to DNA/RNA GFMs."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Image-domain artifacts not adoptable for genomic multimodal stacks."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound for pathology but tangential to GFM SSL objectives."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales for pathology; not relevant to genome-scale sequence modeling."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Pathology benchmarks not borrowable for genomic SSL objective evaluation."
+            }
+          },
+          "weighted_total": 10.2,
+          "match_score": 0.364
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG003",
+          "paper_id": "MMG-003",
+          "paper_title": "The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics",
+          "paper_year": 2023,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 189,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Nucleotide Transformer ablates MLM masking strategies and scales across model sizes, demonstrating objective+scale effects on transfer."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained NT recipe is reproducible; MLM-on-DNA configuration is directly adoptable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Comprehensive ablations on objective and scale support the SSL-objective claim."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "MLM-based; scale up to 2.5B params; quadratic attention limits but objective is well-tested."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "18-task benchmark plus variant prioritization gives a strong borrowable SSL evaluation protocol."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 0.779
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG020",
+          "paper_id": "MMG-020",
+          "paper_title": "Interpretable RNA Foundation Model from Unannotated Data for Highly Accurate RNA Structure and Function Predictions",
+          "paper_year": 2022,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 183,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "RNA-FM uses MLM SSL on 23M ncRNA sequences; demonstrates downstream gains across structure, regulation, and SARS-CoV-2 prediction."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "RNA-FM weights and code are available; MLM recipe directly adoptable for RNA tasks."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid SSL methodology with broad downstream evidence supporting the objective claim."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transformer backbone limits context but RNA scale (23M) is substantial."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Multi-task downstream validation including 3D structure and protein-RNA binding."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG021",
+          "paper_id": "MMG-021",
+          "paper_title": "Accurate RNA 3D structure prediction using a language model-based deep learning approach",
+          "paper_year": 2024,
+          "paper_journal": "Nature Methods",
+          "paper_cited_by_count": 176,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "RhoFold+ leverages an RNA LM pretrained on 23.7M sequences via SSL for downstream 3D structure prediction."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "RhoFold+ pipeline and pretrained LM are released; adoptable for RNA structural pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Strong empirical results on RNA-Puzzles and CASP15 support the SSL-pretraining benefit."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transformer+structure module; scale is moderate, not genome-scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cross-family, cross-type, and time-censored validations provide a borrowable evaluation protocol."
+            }
+          },
+          "weighted_total": 19.6,
+          "match_score": 0.7
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG022",
+          "paper_id": "MMG-022",
+          "paper_title": "scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI",
+          "paper_year": 2023,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 172,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "scGPT preprint version with same generative SSL objective on single-cell data; identical objective-driven gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Released code and weights; preprint is functionally equivalent to Nature Methods version."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Same methodology with 33M-cell pretraining and downstream evaluation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Same scale characteristics as published version."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Same comprehensive downstream evaluation suite."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.786
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG004",
+          "paper_id": "MMG-004",
+          "paper_title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+          "paper_year": 2023,
+          "paper_journal": "arXiv (Cornell University)",
+          "paper_cited_by_count": 150,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "HyenaDNA uses next-token autoregressive pretraining at single-nt resolution, showing AR objective scales with long context for downstream gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "HyenaDNA pretraining recipe (AR + Hyena) is open and reusable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Empirical evidence supports AR objective at single-nt resolution as effective for transfer."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "AR objective combined with Hyena scales to 1M tokens \u2014 production-suitable for genome-scale SSL."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Long-context probes and standard genomic benchmarks validate the AR-pretraining choice."
+            }
+          },
+          "weighted_total": 22.9,
+          "match_score": 0.818
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG023",
+          "paper_id": "MMG-023",
+          "paper_title": "Universal Cell Embeddings: A Foundation Model for Cell Biology",
+          "paper_year": 2023,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 146,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "UCE uses self-supervised cross-species cell embedding without explicit objective comparison; demonstrates SSL value on cell biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "UCE artifacts are public; SSL pipeline reproducible but objective ablations limited."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound but objective comparison is not the central focus."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales to 36M cells across 8 species; embedding space transfers without fine-tuning."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Emergent-behavior probes provide partial borrowable validation."
+            }
+          },
+          "weighted_total": 17.4,
+          "match_score": 0.621
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG024",
+          "paper_id": "MMG-024",
+          "paper_title": "Large Scale Foundation Model on Single-cell Transcriptomics",
+          "paper_year": 2023,
+          "paper_journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "paper_cited_by_count": 113,
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "scFoundation 100M-parameter SSL on 50M cells demonstrates pretraining-objective benefit for single-cell downstream tasks."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Model is released; SSL training recipe reproducible at moderate cost."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology supports the objective claim but lacks fine-grained objective ablations."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "100M parameters and 50M-cell training scales well for single-cell SSL."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Multiple downstream tasks (drug response, perturbation) provide partial validation strategy."
+            }
+          },
+          "weighted_total": 17.4,
+          "match_score": 0.621
+        }
+      ]
+    }
+  }
+}

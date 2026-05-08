@@ -1,0 +1,3032 @@
+{
+  "schema_version": "0.2",
+  "topic": "multimodal_genomics",
+  "generated_by": "agent-R",
+  "generated_at": "2026-05-08",
+  "claims": {
+    "applications-drug-discovery": {
+      "paradigm": "applications",
+      "claim_text": "Multimodal text-genomic models accelerate drug target identification, RNA-therapeutic design, and clinical hypothesis generation by linking the literature corpus to candidate biological sequences in a single generative system.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-069",
+          "paper_id": "MMG-069",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "GeneCompass: deciphering universal gene regulatory mechanisms with a knowledge-informed cross-species foundation model",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Cross-species single-cell foundation model improves multiple regulatory/drug-relevant tasks and identifies factors that drive cell-fate transitions, including a stem-cell differentiation experiment."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained foundation model supports fine-tuning for target identification and perturbation tasks."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Validated through both retrospective benchmarks and a wet-lab differentiation experiment."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Trained on >100M single cells; supports genome-scale and pan-cell-type analysis."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Multiple downstream task benchmarks plus an experimental cell-fate perturbation."
+            }
+          },
+          "weighted_total": 24.0,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-074",
+          "paper_id": "MMG-074",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "Signals in the Cells: Multimodal and Contextualized Machine Learning Foundations for Therapeutics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Releases datasets, models, and benchmarks for drug-target nomination, perturbation response, and protein-peptide interaction with cell-type context."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Therapeutics Commons (TDC-2) is directly consumable: datasets, foundation-model tooling, and benchmarks for drug discovery."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Built on established TDC infrastructure; well-scoped task definitions."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Designed for large-scale ML benchmarking across many therapeutic tasks."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides four explicit benchmark tasks with held-out evaluation."
+            }
+          },
+          "weighted_total": 24.0,
+          "match_score": 4.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-021",
+          "paper_id": "MMG-021",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "Accurate RNA 3D structure prediction using a language model-based deep learning approach",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "RNA-LM-based 3D structure predictor outperforms single-modality baselines and is positioned for RNA-targeting drug discovery."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "End-to-end pipeline available for RNA-targeted therapeutic structural modeling."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Validated on RNA-Puzzles and CASP15 with cross-family benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Inference scales to many single-chain RNAs; not yet at full transcriptome RNP scale."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Multiple held-out RNA structure benchmarks, time-censored evaluation, secondary-structure cross-checks."
+            }
+          },
+          "weighted_total": 23.8,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-070",
+          "paper_id": "MMG-070",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "GenerRNA: A generative pre-trained language model for de novo RNA design",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Generative RNA LM produces de novo sequences with stable secondary structure and demonstrated high target-protein affinity in fine-tuned settings."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open checkpoints and fine-tuning workflow directly usable for RNA-therapeutic design."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "GPT-style RNA generation with structural and binding follow-ups; sample sizes modest."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Generative inference scales to large candidate libraries."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validation via secondary-structure stability metrics and protein-affinity assays."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 4.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-075",
+          "paper_id": "MMG-075",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "BioNeMo Framework: a modular, high-performance library for AI model development in drug discovery",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Demonstrates training large protein/biology LMs at scale (3B-param BERT pLM in 4.2 days on 256 A100s); enables but does not itself deliver multimodal drug-discovery results."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open-source modular framework directly usable to build drug-discovery foundation models."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Well-engineered framework with concrete pretraining benchmarks."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Explicitly designed for hundreds-of-GPU training, demonstrating clinical/industrial scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Mainly engineering benchmarks; downstream validation deferred to user models."
+            }
+          },
+          "weighted_total": 20.7,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-071",
+          "paper_id": "MMG-071",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "GeneCompass: Deciphering Universal Gene Regulatory Mechanisms with Knowledge-Informed Cross-Species Foundation Model",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Same line of work as MMG-069; preprint version with similar drug-target nomination and regulatory benchmarks."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Preprint version; superseded by Cell Research release for production use."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology validated in benchmarks but final venue version is more rigorous."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": ">100M single-cell pretraining demonstrates scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Downstream benchmarks reported; validation strategy parallels journal version."
+            }
+          },
+          "weighted_total": 19.4,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-073",
+          "paper_id": "MMG-073",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "Artificial intelligence-driven circRNA vaccine development: multimodal collaborative optimization and a new paradigm for biomedical applications",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey of AI-driven multimodal circRNA vaccine design; cites measurable improvements in antigen prediction and structure modeling but is review-style."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides a roadmap for circRNA vaccine workflows; does not release a unified system."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Synthesizes existing methods with appropriate caveats on generative-AI hallucination."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Outlines pipelines that scale to vaccine design but no benchmarks of own."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Discusses validation needs but not a specific validation strategy."
+            }
+          },
+          "weighted_total": 16.5,
+          "match_score": 3.0,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-047",
+          "paper_id": "MMG-047",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "Large Language Models in Drug Discovery and Development: From Disease Mechanisms to Clinical Trials",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Comprehensive review highlights LLM contributions across target-disease linkage, molecule design, efficacy/safety prediction, and clinical trials."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful overview/roadmap for practitioners; no method or release of its own."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Review is grounded but not benchmarked."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling but provides no system."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Mentions evaluation themes but no specific validation strategy."
+            }
+          },
+          "weighted_total": 15.8,
+          "match_score": 4.0,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-072",
+          "paper_id": "MMG-072",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "AI-empowered perturbation proteomics for complex biological systems",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Perspective on combining perturbation proteomics with foundation models; no end-to-end multimodal text-genomic system delivered."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Frames a PMMP pipeline but no released model or dataset."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Argued conceptually; few benchmarks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Pipeline anticipates large-scale data but is aspirational."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Discusses validation generically rather than providing a concrete strategy."
+            }
+          },
+          "weighted_total": 13.0,
+          "match_score": 2.0,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-applications-drug-discovery-MMG-068",
+          "paper_id": "MMG-068",
+          "claim_ref": "applications-drug-discovery",
+          "paradigm": "applications",
+          "paper_title": "Deep learning for healthcare: review, opportunities and challenges",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "General review of deep learning in healthcare; no specific multimodal text-genomic drug-discovery results."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Conceptual orientation rather than a deployable method."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Review is well-cited but not a methodological contribution."
+            },
+            "scalable": {
+              "score": 1,
+              "rationale": "No system is presented."
+            },
+            "how_to_validate": {
+              "score": 1,
+              "rationale": "No validation strategy specific to this claim."
+            }
+          },
+          "weighted_total": 7.7,
+          "match_score": 1.0,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "applications-regulatory-annotation": {
+      "paradigm": "applications",
+      "claim_text": "Joint text-and-sequence models annotate regulatory elements — enhancers, promoters, splice sites, binding sites — with natural-language explanations that go beyond categorical labels.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-063",
+          "paper_id": "MMG-063",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "A sequence-based global map of regulatory activity for deciphering human genetics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Sei learns a 'vocabulary' of 40 sequence classes capturing diverse regulatory activities and predicts 21,907 chromatin profiles, enabling sequence/variant-level regulatory characterization."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Pretrained Sei resource is directly consumable for variant-to-regulation interpretation."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Validated against tissue-specific expression, eQTLs, and evolutionary constraint."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide regulatory class assignments demonstrated."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Multiple orthogonal datasets (eQTL, expression, conservation) used as validation."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 4.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-064",
+          "paper_id": "MMG-064",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "Predicting RNA splicing from DNA sequence using Pangolin",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Pangolin outperforms SOTA splice-site predictors (incl. SpliceAI) and detects pathogenic LoF variants with high accuracy."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open model directly applied to variant interpretation pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Well-benchmarked on common, rare, and lineage-specific variation."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide splice-site annotation supported."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Multiple held-out variant cohorts and pathogenicity panels."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-011",
+          "paper_id": "MMG-011",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Enformer predicts cell-type-specific enhancer-promoter activity and improves regulatory variant interpretation over short-context baselines."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Public model widely used to annotate regulatory potential at any locus and to score MPRA-style perturbations."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Long-range attention rigorously evaluated against thousands of CAGE/ChIP/ATAC tracks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-scale annotation tractable; inference cost is moderate."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Held-out tracks, MPRA saturation mutagenesis, and enhancer-promoter interaction tasks."
+            }
+          },
+          "weighted_total": 25.1,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-002",
+          "paper_id": "MMG-002",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "NT is benchmarked on regulatory tasks (chromatin profiles, splice site, promoter detection) with gains over baselines."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Released checkpoints support fine-tuning on regulatory annotation problems."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Robust scaling and multi-genome pretraining study."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-scale regulatory annotation feasible via embeddings."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Quantitative evaluation across multiple regulatory benchmarks."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-065",
+          "paper_id": "MMG-065",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "Cross-species regulatory sequence activity prediction",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Joint human+mouse training improves regulatory activity prediction and transfer to human variant interpretation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Methodology and code support reuse but pre-LLM tooling."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Careful cross-species transfer experiments and variant-association evaluation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "CNN architecture supports genome-wide inference."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Held-out tracks plus human GWAS variant evaluation."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 2.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-013",
+          "paper_id": "MMG-013",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Integrates regulatory CNN and protein-LM scores to improve regulatory and coding variant prioritization."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Genome-wide regulatory and coding scores released via established CADD webserver."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Combines mature components with clear ablations."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide scores are precomputed and freely served."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Saturation mutagenesis assays for promoters/enhancers among other benchmarks."
+            }
+          },
+          "weighted_total": 21.4,
+          "match_score": 2.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-066",
+          "paper_id": "MMG-066",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "RNA-protein binding motifs mining with a new hybrid deep learning based cross-domain knowledge integration approach",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Improves RNA-protein binding site prediction by integrating sequence+structure features and assembling motifs."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open framework reusable but pre-LLM."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Hybrid CNN+DBN architecture with motif-assembly post-processing."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "RBP-specific models; scalable per-protein but not whole-genome regulatory annotation."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Standard CLIP-seq benchmarks."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 1.0,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-067",
+          "paper_id": "MMG-067",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "Predicting RNA–protein binding sites and motifs through combining local and global deep convolutional neural networks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Local+global CNN combination improves RNA-protein binding site prediction over single-scope CNNs."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open implementation reusable for RBP analysis."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Architectural innovation supported by ablations across CLIP datasets."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "RBP-by-RBP modeling; genome-scale aggregation feasible."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Standard RBP CLIP benchmarks."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 1.0,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-061",
+          "paper_id": "MMG-061",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "DanQ: a hybrid convolutional and recurrent deep neural network for quantifying the function of DNA sequences",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DanQ improves regulatory function prediction (TF binding, histone marks, DHS) over CNN-only baselines, often by 50% PR-AUC on selected markers."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open implementation; widely used as a reference architecture for sequence-to-regulation models."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Hybrid CNN+BiLSTM with thorough motif/grammar interpretation analysis."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-wide inference is feasible on standard hardware."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Held-out evaluation across hundreds of ENCODE tracks."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 2.0,
+          "tier": "primary",
+          "promotion_status": "dropped_diversity_filter"
+        },
+        {
+          "candidate_id": "candidate-applications-regulatory-annotation-MMG-062",
+          "paper_id": "MMG-062",
+          "claim_ref": "applications-regulatory-annotation",
+          "paradigm": "applications",
+          "paper_title": "Convolutional neural network architectures for predicting DNA–protein binding",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Systematic exploration of CNN architectures yields measurable gains for DNA-protein binding prediction over earlier models."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Architectural insights are reusable; cloud framework is provided, but the work is methodological rather than a deployable annotation tool."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous architectural ablations across many TF datasets with bias-controlled benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "CNN architectures are inherently scalable to genome-wide TF prediction."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Carefully constructed benchmark splits controlling for positional and motif-strength bias."
+            }
+          },
+          "weighted_total": 20.3,
+          "match_score": 2.0,
+          "tier": "primary",
+          "promotion_status": "dropped_diversity_filter"
+        }
+      ]
+    },
+    "applications-variant-effects": {
+      "paradigm": "applications",
+      "claim_text": "Multimodal text-genomic models predict variant pathogenicity and functional effects with the help of text-supervised priors (clinical literature, phenotype descriptions, pathway ontologies) that pure sequence models cannot access.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-054",
+          "paper_id": "MMG-054",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "Accurate proteome-wide missense variant effect prediction with AlphaMissense",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "AlphaMissense delivers state-of-the-art proteome-wide missense pathogenicity, with measurable lifts over single-modality baselines on ClinVar, DMS, and rare-disease panels."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Provides a downloadable database covering all ~71M human missense substitutions, directly usable for clinical/research variant prioritization today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Combines AlphaFold structural context with primate evolutionary frequencies; methodology is well-characterized and validated across multiple independent benchmarks."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Demonstrates clinical-genome-scale inference (proteome-wide release of pre-computed scores)."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Explicit validation across genetic disease panels, deep mutational scanning, cell-essentiality, and held-out clinical labels."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 4.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-055",
+          "paper_id": "MMG-055",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "Language models enable zero-shot prediction of the effects of mutations on protein function",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Zero-shot protein LM matches or beats supervised variant-effect predictors across dozens of MAVE/DMS datasets."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Released ESM-1v checkpoints make zero-shot variant scoring trivially deployable in clinical and research pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Methodology is unsupervised and broadly benchmarked; foundational for protein-LM variant-effect work."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Single forward pass yields scores for all substitutions across the proteome."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Validated against deep mutational scanning panels and zero-shot test design."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-056",
+          "paper_id": "MMG-056",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "Genome-wide prediction of disease variant effects with a deep protein language model",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "ESM1b outperforms prior tools on ~150K ClinVar/HGMD pathogenicity calls and 28 DMS datasets, including isoform-aware predictions."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Web portal exposes pre-computed predictions for ~450M missense variants, directly consumable by clinicians/researchers."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Large protein LM scaled and benchmarked across multiple independent datasets."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide release demonstrates clinical-scale deployment."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Held-out clinical variants, DMS panels, isoform-resolved annotations."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-058",
+          "paper_id": "MMG-058",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "The landscape of tolerated genetic variation in humans and primates",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Uses 233-primate population frequencies as weak labels to classify benign and impute pathogenicity for ~94% of human protein-altering variants with SOTA diagnostic accuracy."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Released variant calls and model offer immediate clinical-diagnostic value."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Combines large-scale primate sequencing with deep learning; well-validated on rare-disease cohorts."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Genome-wide release demonstrates clinical-scale operation."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Validation on patient cohorts with genetic diseases and held-out clinical labels."
+            }
+          },
+          "weighted_total": 27.5,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-013",
+          "paper_id": "MMG-013",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Integrating ESM-1v + regulatory CNN scores measurably improves CADD's variant prioritization across ClinVar/DMS/MPRA benchmarks."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Genome-wide CADD scores and webserver are de facto standards for variant prioritization."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mature feature-stacking framework; new components are well-validated, though weighting choices remain heuristic."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Already provides genome-wide scoring for the human genome."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "ClinVar, ExAC/gnomAD, ProteinGym DMS, saturation MPRA benchmarks all reported."
+            }
+          },
+          "weighted_total": 24.9,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-002",
+          "paper_id": "MMG-002",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Nucleotide Transformer demonstrates improved variant prioritization vs. single-modality baselines across many genomics tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open checkpoints (50M-2.5B params) usable for variant scoring via embeddings or fine-tuning."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Extensive scaling study across multi-genome corpora with quantitative benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Large-model inference is heavier but tractable for genome-scale workflows."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Reports diverse downstream genomics benchmarks including variant prioritization."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-011",
+          "paper_id": "MMG-011",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Enformer improves variant-effect predictions on gene expression for natural variants and MPRA saturation mutagenesis over short-context baselines."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained model and inference code are widely used by downstream variant-prioritization pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Long-range transformer over 100 kb input is rigorously evaluated against multiple expression and chromatin tracks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Genome-scale variant scoring is feasible; inference is heavier than CNN baselines but tractable."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Held-out variants, eQTL replication, MPRA-based saturation mutagenesis benchmarks."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-059",
+          "paper_id": "MMG-059",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "DNA language models are powerful predictors of genome-wide variant effects",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DNA language model GPN is shown to be a powerful unsupervised predictor of genome-wide variant effects in Arabidopsis (and extensible)."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open code and visualization in UCSC Genome Browser allow direct adoption by other species."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Unsupervised LM evaluated against established annotations and effect benchmarks."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Per-genome training is tractable; inference is genome-wide."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Genome-wide unsupervised scoring with comparison to known functional sites."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-060",
+          "paper_id": "MMG-060",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "Updated benchmarking of variant effect predictors using deep mutational scanning",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides authoritative ranking of 55 VEPs (incl. ESM-1v, EVE, VARITY) against DMS data; validates multimodal/LM-based predictors but does not itself train one."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Benchmark methodology and rankings are immediately useful for selecting variant-effect tools."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Careful treatment of data circularity; rigorous independent benchmarking."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Benchmark scope is broad (26 proteins) but evaluation is per-protein, not genome-wide."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "The paper itself defines a DMS-based validation strategy that the multimodal application community can reuse."
+            }
+          },
+          "weighted_total": 21.4,
+          "match_score": 3.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-applications-variant-effects-MMG-057",
+          "paper_id": "MMG-057",
+          "claim_ref": "applications-variant-effects",
+          "paradigm": "applications",
+          "paper_title": "MVP predicts the pathogenicity of missense variants by deep learning",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "MVP outperforms prior missense pathogenicity tools, particularly in LoF-tolerant genes, with quantitative gains on developmental disorder panels."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Released model usable for missense scoring but pre-LLM tooling lacks modern multimodal interfaces."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Deep residual network with thoughtful gene-stratified training; benchmarked on cancer hotspots and de novo variants."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Designed for genome-scale pathogenicity scoring."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cancer hotspots, congenital heart disease de novo cohorts, conventional ClinVar-style panels."
+            }
+          },
+          "weighted_total": 20.7,
+          "match_score": 2.0,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        }
+      ]
+    },
+    "gfm-long-context": {
+      "paradigm": "gfm",
+      "claim_text": "Long-context architectures (state-space models, Hyena, Mamba, sliding-window attention) unlock genome-scale sequence modeling well beyond traditional Transformer context limits, enabling distal regulatory interactions to be learned end-to-end.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG004",
+          "paper_id": "MMG-004",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "HyenaDNA explicitly demonstrates 1M-token single-nt context with sub-quadratic Hyena operator, directly proving long-context architectures unlock genome-scale modeling."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "HyenaDNA code and pretrained weights are open and broadly used as a long-context GFM backbone today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Empirical results on long-context benchmarks (chromatin profile, species classification) directly support the architectural claim."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Sub-quadratic scaling, 160x faster training, full global context at single-nt resolution to 1M tokens."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates on Nucleotide Transformer benchmark + species-ID long-context probe; clear borrowable validation strategy."
+            }
+          },
+          "weighted_total": 26.8,
+          "match_score": 0.957,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG011",
+          "paper_id": "MMG-011",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Enformer integrates long-range interactions up to 100kb via dilated/sliding attention, with measured gains in expression prediction over short-context CNNs."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Enformer is widely available with code and weights; readily adopted as a long-context genomic backbone today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Strong methodology with extensive expression and enhancer-promoter benchmarks supporting the long-range architectural claim."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Reaches 100kb context but not full-genome; widely used in production multimodal pipelines."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Validated on natural variants, MPRA saturation mutagenesis, and enhancer-promoter calls — strong borrowable validation suite."
+            }
+          },
+          "weighted_total": 26.6,
+          "match_score": 0.95,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG007",
+          "paper_id": "MMG-007",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Sequence modeling and design from molecular to genome scale with Evo",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "Evo achieves 131kb single-nucleotide context using StripedHyena, generating coding sequences up to 650kb — strong direct support for long-context architectures."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Evo weights and code are released; substantial compute needed but architecture is reusable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "7B-parameter model with strong zero-shot performance on whole-genome tasks supports long-context architectural claim."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Scales to 131kb context at byte resolution and generates 650kb sequences — production-suitable for genome-scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Zero-shot fitness, gene essentiality, and CRISPR-Cas generation provide borrowable long-context validation tasks."
+            }
+          },
+          "weighted_total": 25.5,
+          "match_score": 0.911,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG012",
+          "paper_id": "MMG-012",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Mamba is a general selective-SSM architecture demonstrating linear-time long-context modeling, with explicit genomics benchmarks showing strong performance."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Mamba code is open-source; integrating into genomic stacks is straightforward and underlies subsequent GFMs (Caduceus, Evo)."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous architectural derivation with hardware-aware parallel algorithm and SOTA results across modalities including genomics."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Linear scaling to million-length sequences with 5x throughput vs Transformers; ideal for genome-scale contexts."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Genomics validation is part of broader benchmarks; not a genome-specific validation suite."
+            }
+          },
+          "weighted_total": 23.3,
+          "match_score": 0.832,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG016",
+          "paper_id": "MMG-016",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Progress and opportunities of foundation models in bioinformatics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey on FMs in bioinformatics covers long-context architectures conceptually rather than introducing new evidence."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful orientation document for choosing long-context FM approaches; no new artifacts."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Well-structured review; doesn't advance methodology directly."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scalability of long-context approaches at a high level."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "General validation guidance only; not a concrete reusable protocol."
+            }
+          },
+          "weighted_total": 15.8,
+          "match_score": 0.564,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG013",
+          "paper_id": "MMG-013",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "CADD v1.7 incorporates regulatory CNN and ESM scores, but does not advance long-context architectures themselves."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "CADD service and scores are publicly accessible but not a long-context architecture per se."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound but combines existing scores rather than establishing new long-context modeling."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "CADD scoring is genome-wide but underlying CNN/protein-LM components are not long-context."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validation via ClinVar/gnomAD/MPRA is strong but does not isolate long-context contributions."
+            }
+          },
+          "weighted_total": 14.1,
+          "match_score": 0.504,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG002",
+          "paper_id": "MMG-002",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Nucleotide Transformer extends context modestly via tokenization but uses standard attention; long-context is not its primary innovation."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "NT models are immediately usable; effective context up to ~6-12kb fine-tuned via standard transformer infra."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid methodology but the long-context claim is moderate — relies on tokenizer compression, not an architectural advance."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scale to 2.5B params helps but quadratic attention still limits genome-scale context."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Multi-task benchmark validates long-range gene-expression and chromatin tasks at fine-tuning context."
+            }
+          },
+          "weighted_total": 19.6,
+          "match_score": 0.7,
+          "tier": "primary",
+          "promotion_status": "dropped_diversity_filter"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG006",
+          "paper_id": "MMG-006",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Genomic language model predicts protein co-regulation and function",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "gLM operates on gene-token-level metagenomic scaffolds, achieving long contexts measured in genes rather than nucleotides."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Code is available; extending gLM to nucleotide-level long-context requires additional engineering."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound for protein-level operon learning but not a nucleotide long-context architecture."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Gene-token compression yields long effective contexts but not at single-nucleotide resolution."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Operon and attention-pattern validation; partial relevance to long-context claim."
+            }
+          },
+          "weighted_total": 16.5,
+          "match_score": 0.589,
+          "tier": "secondary",
+          "promotion_status": "dropped_diversity_filter"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG015",
+          "paper_id": "MMG-015",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Species-aware DNA language models capture regulatory elements and their evolution",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Species-aware DNA LM captures regulatory elements across 800 species using transformer with moderate context."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Species-aware DNA-LM weights are accessible; long-context is not the primary architectural focus."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound methodology focused on conservation, not on long-context architecture per se."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Standard transformer backbone — long-context is moderate."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "MPRA, motif, and gene-expression validations provide partial coverage of long-context claim."
+            }
+          },
+          "weighted_total": 16.5,
+          "match_score": 0.589,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-gfm-long-context-MMG014",
+          "paper_id": "MMG-014",
+          "claim_ref": "gfm-long-context",
+          "paradigm": "gfm",
+          "paper_title": "Cell-type-directed design of synthetic enhancers",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Synthetic enhancer design uses CNN-based deep models rather than long-context architectures."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Method is reproducible for enhancer design but doesn't supply a long-context architecture for adoption."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound experimental work but tangential to the long-context architectural claim."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Operates on short enhancer sequences (<2kb); not genome-scale."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Strong transgenic validation but specific to enhancer design, not long-context modeling."
+            }
+          },
+          "weighted_total": 14.1,
+          "match_score": 0.504,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        }
+      ]
+    },
+    "gfm-pretraining-objective": {
+      "paradigm": "gfm",
+      "claim_text": "Self-supervised pretraining objectives — masked language modeling, autoregressive generation, span corruption, contrastive learning — determine downstream transfer quality and the kinds of biological structure (motifs, conservation, splicing, 3D contacts) the model captures.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG004",
+          "paper_id": "MMG-004",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "HyenaDNA uses next-token autoregressive pretraining at single-nt resolution, showing AR objective scales with long context for downstream gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "HyenaDNA pretraining recipe (AR + Hyena) is open and reusable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Empirical evidence supports AR objective at single-nt resolution as effective for transfer."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "AR objective combined with Hyena scales to 1M tokens — production-suitable for genome-scale SSL."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Long-context probes and standard genomic benchmarks validate the AR-pretraining choice."
+            }
+          },
+          "weighted_total": 22.9,
+          "match_score": 0.818,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG018",
+          "paper_id": "MMG-018",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "Evaluating Protein Transfer Learning with TAPE",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "TAPE benchmarks multiple SSL objectives (MLM, LM, contrastive) on protein tasks, directly demonstrating objective choice impacts transfer quality."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "TAPE benchmark and code are public; objective-comparison framework is directly reusable."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous comparison with controlled baselines supports the claim that pretraining objectives determine transfer."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Protein-domain results may not directly translate to genome-scale DNA/RNA contexts."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Five biologically relevant tasks with held-out splits provide an exemplary validation strategy."
+            }
+          },
+          "weighted_total": 22.9,
+          "match_score": 0.818,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG017",
+          "paper_id": "MMG-017",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "scGPT: toward building a foundation model for single-cell multi-omics using generative AI",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "scGPT introduces a generative (autoregressive-style) pretraining objective tailored to single-cell data with strong transfer to multiple downstream tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "scGPT code and weights are widely available, providing a directly adoptable generative pretraining recipe."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology over 33M cells with consistent SOTA gains supports the objective-choice claim."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "100M+ params and 33M-cell training scales appropriately for single-cell foundation models."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cell-type annotation, batch integration, perturbation prediction tasks form a strong borrowable validation suite."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.786,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG022",
+          "paper_id": "MMG-022",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "scGPT preprint version with same generative SSL objective on single-cell data; identical objective-driven gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Released code and weights; preprint is functionally equivalent to Nature Methods version."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Same methodology with 33M-cell pretraining and downstream evaluation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Same scale characteristics as published version."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Same comprehensive downstream evaluation suite."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.786,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG003",
+          "paper_id": "MMG-003",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Nucleotide Transformer ablates MLM masking strategies and scales across model sizes, demonstrating objective+scale effects on transfer."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained NT recipe is reproducible; MLM-on-DNA configuration is directly adoptable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Comprehensive ablations on objective and scale support the SSL-objective claim."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "MLM-based; scale up to 2.5B params; quadratic attention limits but objective is well-tested."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "18-task benchmark plus variant prioritization gives a strong borrowable SSL evaluation protocol."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 0.779,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG020",
+          "paper_id": "MMG-020",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "Interpretable RNA Foundation Model from Unannotated Data for Highly Accurate RNA Structure and Function Predictions",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "RNA-FM uses MLM SSL on 23M ncRNA sequences; demonstrates downstream gains across structure, regulation, and SARS-CoV-2 prediction."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "RNA-FM weights and code are available; MLM recipe directly adoptable for RNA tasks."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid SSL methodology with broad downstream evidence supporting the objective claim."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transformer backbone limits context but RNA scale (23M) is substantial."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Multi-task downstream validation including 3D structure and protein-RNA binding."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG021",
+          "paper_id": "MMG-021",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "Accurate RNA 3D structure prediction using a language model-based deep learning approach",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "RhoFold+ leverages an RNA LM pretrained on 23.7M sequences via SSL for downstream 3D structure prediction."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "RhoFold+ pipeline and pretrained LM are released; adoptable for RNA structural pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Strong empirical results on RNA-Puzzles and CASP15 support the SSL-pretraining benefit."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transformer+structure module; scale is moderate, not genome-scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Cross-family, cross-type, and time-censored validations provide a borrowable evaluation protocol."
+            }
+          },
+          "weighted_total": 19.6,
+          "match_score": 0.7,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG023",
+          "paper_id": "MMG-023",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "Universal Cell Embeddings: A Foundation Model for Cell Biology",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "UCE uses self-supervised cross-species cell embedding without explicit objective comparison; demonstrates SSL value on cell biology."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "UCE artifacts are public; SSL pipeline reproducible but objective ablations limited."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound but objective comparison is not the central focus."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales to 36M cells across 8 species; embedding space transfers without fine-tuning."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Emergent-behavior probes provide partial borrowable validation."
+            }
+          },
+          "weighted_total": 17.4,
+          "match_score": 0.621,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG024",
+          "paper_id": "MMG-024",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "Large Scale Foundation Model on Single-cell Transcriptomics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "scFoundation 100M-parameter SSL on 50M cells demonstrates pretraining-objective benefit for single-cell downstream tasks."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Model is released; SSL training recipe reproducible at moderate cost."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology supports the objective claim but lacks fine-grained objective ablations."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "100M parameters and 50M-cell training scales well for single-cell SSL."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Multiple downstream tasks (drug response, perturbation) provide partial validation strategy."
+            }
+          },
+          "weighted_total": 17.4,
+          "match_score": 0.621,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-gfm-pretraining-objective-MMG019",
+          "paper_id": "MMG-019",
+          "claim_ref": "gfm-pretraining-objective",
+          "paradigm": "gfm",
+          "paper_title": "A foundation model for clinical-grade computational pathology and rare cancers detection",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Virchow is a histopathology image foundation model; pretraining objective claims do not transfer to DNA/RNA GFMs."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Image-domain artifacts not adoptable for genomic multimodal stacks."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology is sound for pathology but tangential to GFM SSL objectives."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales for pathology; not relevant to genome-scale sequence modeling."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Pathology benchmarks not borrowable for genomic SSL objective evaluation."
+            }
+          },
+          "weighted_total": 10.2,
+          "match_score": 0.364,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "gfm-tokenization": {
+      "paradigm": "gfm",
+      "claim_text": "Tokenization strategy materially affects what genomic foundation models can learn — k-mer, BPE, and single-nucleotide schemes induce distinct biases on context length, motif resolution, and downstream transfer.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG004",
+          "paper_id": "MMG-004",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "HyenaDNA explicitly contrasts single-nucleotide tokenization vs k-mer/BPE, showing single-nt resolution matters for SNP-level effects with measured downstream gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "HyenaDNA is open-sourced with a 1M-token single-nt tokenizer; immediately adoptable for genomic foundation pipelines."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Direct demonstration: Hyena's implicit-convolution backbone enables single-nt tokenization; ablations on token granularity strongly support the claim."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Sub-quadratic in length up to 1M tokens; 500x context increase makes single-nt tokenization scalable to chromosome-scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates with Nucleotide Transformer benchmark and species-classification long-context tasks; cross-token-scheme comparisons support the validation strategy."
+            }
+          },
+          "weighted_total": 24.6,
+          "match_score": 0.879,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG002",
+          "paper_id": "MMG-002",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Nucleotide Transformer compares 6-mer and BPE-style tokenization across model scales (50M-2.5B), showing tokenizer choice impacts genomic phenotype prediction."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Pretrained NT models, tokenizers, and benchmarks are released on HuggingFace, immediately usable in multimodal genomic pipelines."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology grounded in 3,202 human + 850 species genomes with low-data fine-tuning evidence supporting transfer-quality claims."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Up to 2.5B parameters but context limited to ~6-12kb tokens; tokenizer enables longer effective context yet not full-genome scale."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides 18-task benchmark suite spanning regulatory and splice tasks plus variant prioritization — a directly borrowable validation protocol."
+            }
+          },
+          "weighted_total": 23.1,
+          "match_score": 0.825,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG007",
+          "paper_id": "MMG-007",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "Sequence modeling and design from molecular to genome scale with Evo",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Evo uses byte-level single-nucleotide tokenization at 131kb context, demonstrating tokenizer choice matters for whole-genome generation tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Evo weights and code are released, including the byte tokenizer for direct adoption."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "7B-parameter model trained on prokaryotic genomes with strong zero-shot results supports byte-tokenization claim."
+            },
+            "scalable": {
+              "score": 5,
+              "rationale": "Single-nt byte tokenization scales to 131kb context and 650kb generation, suitable for genome-scale multimodal use."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides zero-shot fitness, gene essentiality, and CRISPR-Cas generation tasks as borrowable validation."
+            }
+          },
+          "weighted_total": 22.9,
+          "match_score": 0.818,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG003",
+          "paper_id": "MMG-003",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Preprint version of Nucleotide Transformer demonstrates tokenizer/scale effects on molecular phenotype prediction across diverse human and species genomes."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Code and weights released; preprint slightly less polished than Nature Methods version but readily adoptable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Same methodology as published version: rigorous multi-genome pretraining and downstream fine-tuning evidence."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Same scale and context limits as the published NT; tokenizer choice constrains genome-scale modeling."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Same multi-task benchmark and variant-prioritization validation strategy as published version."
+            }
+          },
+          "weighted_total": 21.8,
+          "match_score": 0.779,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG010",
+          "paper_id": "MMG-010",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "GENA-LM: a family of open-source foundational DNA language models for long sequences",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "GENA-LM explicitly compares BPE and other tokenization schemes for long-context DNA modeling, with downstream task gains."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open-source models with multiple tokenizers released on HuggingFace, immediately usable."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology supports BPE+recurrent memory for handling 36kb inputs across taxon-specific models."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Recurrent memory mechanism extends sequences beyond 36kb at modest computational cost."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Variety of downstream tasks demonstrated; tokenizer ablation is partial rather than exhaustive."
+            }
+          },
+          "weighted_total": 21.3,
+          "match_score": 0.761,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG001",
+          "paper_id": "MMG-001",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "DNABERT uses overlapping k-mer tokenization and demonstrates SOTA gains on promoter, splice site, and TF-binding prediction over prior methods."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Pretrained DNABERT and code are released; researchers can adopt the k-mer tokenizer scheme today via the published Bioinformatics tooling."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Methodology of k-mer BERT pretraining with downstream fine-tuning is sound and supported by extensive cross-task benchmarks and motif visualizations."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "K-mer tokenization plus quadratic attention scales modestly; cited 512-token windows limit genome-scale use beyond local regulatory regions."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Validates via fine-tuning on promoter/splice/TF-binding tasks, motif extraction, and cross-organism transfer, providing a borrowable tokenizer-comparison protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.754,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG005",
+          "paper_id": "MMG-005",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "Multi-purpose RNA language modelling with motif-aware pretraining and type-guided fine-tuning",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "RNAErnie introduces motif-level masking on top of base/subsequence tokenization, with measured gains (1.8-3.3%) tied to tokenization-aware pretraining choices."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Method is published with clear architecture; some engineering required to integrate motif-tokenization into existing GFM stacks."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid evaluation on 7 datasets/5 tasks supporting the tokenization+motif strategy with consistent gains."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Transformer backbone limits context; tokenization scheme adds motif vocab but base scale is moderate."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides RNA-specific multi-task benchmark and ablations on motif tokenization that a multimodal team could borrow."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.707,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG009",
+          "paper_id": "MMG-009",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "Self-supervised learning on millions of primary RNA sequences from 72 vertebrates improves sequence-based RNA splicing prediction",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "SpliceBERT uses base-level tokenization; the paper compares per-base vs k-mer choices implicitly through architecture but tokenization is not central."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "SpliceBERT is released; pretraining-on-72-species recipe is reproducible with standard tokenizers."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound method for splice prediction; tokenization choice is justified but not extensively ablated."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Transformer backbone with limited context; multi-species data scales but per-token granularity limits range."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Cross-species splice-site validation provides a borrowable evaluation, partly relevant to tokenization questions."
+            }
+          },
+          "weighted_total": 15.6,
+          "match_score": 0.557,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG006",
+          "paper_id": "MMG-006",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "Genomic language model predicts protein co-regulation and function",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "gLM uses protein-token-level inputs in a metagenomic context; tokenization is discussed but is not the central claim of the paper."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "gLM model and code are accessible; tokenization choice is implicit (protein embeddings) rather than a focus."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Sound methodology for gene-context modeling but tokenization comparisons are not provided."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Metagenomic scaffold scale is moderate; tokenization at protein level reduces sequence length substantially."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Validation via attention/operon analysis; not a tokenization-comparison study."
+            }
+          },
+          "weighted_total": 14.3,
+          "match_score": 0.511,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-gfm-tokenization-MMG008",
+          "paper_id": "MMG-008",
+          "claim_ref": "gfm-tokenization",
+          "paradigm": "gfm",
+          "paper_title": "The EN-TEx resource of multi-tissue personal epigenomes &amp; variant-impact models",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "EN-TEx is primarily an epigenome resource; tokenization is not discussed as a core variable."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Resource is publicly available, but it doesn't provide tokenizer guidance for GFMs."
+            },
+            "plausible": {
+              "score": 2,
+              "rationale": "Deep-learning model is mentioned but tokenization details are tangential to the paper's contribution."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Per-tissue datasets and models scale moderately; not a tokenizer scaling study."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Focus is on allele-specific activity prediction validation, not tokenization choice."
+            }
+          },
+          "weighted_total": 9.5,
+          "match_score": 0.339,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "multimodal-instruction-tuning": {
+      "paradigm": "multimodal",
+      "claim_text": "Instruction tuning lets language models follow user queries that reference DNA / RNA sequences, condition on sequence inputs, and produce structured biological reasoning grounded in the input sequence.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG044",
+          "paper_id": "MMG-044",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "GeneGPT: augmenting large language models with domain tools for improved access to biomedical information",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "GeneGPT instructs Codex to call NCBI APIs and reason over genomic queries, achieving 0.83 on GeneTuring; direct sequence-grounded instruction following."
+            },
+            "immediate_benefit": {
+              "score": 5,
+              "rationale": "Open code, in-context demonstrations, and decoding algorithm immediately deployable for sequence-aware QA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound use of API-augmented decoding with empirical state-of-the-art results."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Web API access scales across NCBI's literature- and genome-scale resources."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Provides GeneTuring + GeneHop benchmarks specifically for sequence/genomic instruction validation, directly transferable."
+            }
+          },
+          "weighted_total": 24.0,
+          "match_score": 0.873,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG039",
+          "paper_id": "MMG-039",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "Leveraging large language models for predictive chemistry",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Shows fine-tuning GPT-3 to follow chemistry prompts beats specialized ML; direct evidence instruction tuning works on molecular sequences."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Provides a template recipe for prompt-formatted sequence questions plus fine-tuning, immediately portable to DNA/RNA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Empirically grounded across multiple chemistry tasks with comparison baselines; sound methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated at GPT-3 scale on molecular text; scaling to nucleotide context is plausible but not shown."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides multi-task benchmark protocols comparing instruction-tuned vs specialized models, directly transferable."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.767,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG042",
+          "paper_id": "MMG-042",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Demonstrates fast visual-instruction tuning for biomedical images; analogous template for sequence-conditioned instruction tuning."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open instruction-tuning recipe (curriculum, GPT-4 generated instructions) directly portable to DNA/RNA modalities."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Curriculum learning + LLaVA architecture is sound and well documented."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Trained in one day with modest compute; methodology scales easily to larger sequence corpora."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Open-ended VQA evaluation paradigm transfers cleanly to sequence-instruction QA validation."
+            }
+          },
+          "weighted_total": 20.5,
+          "match_score": 0.746,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG036",
+          "paper_id": "MMG-036",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "Adapted large language models can outperform medical experts in clinical text summarization",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Demonstrates instruction-adapted LLMs outperform clinicians at clinical text summarization; sequence inputs absent."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Concrete instruction-tuning recipes (prompt + adapter) with strong physician-evaluated outcomes, adoptable today."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Rigorous head-to-head clinical reader study with statistical analysis; methodology is exemplary."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Scales over multiple summarization tasks and large clinical corpora; sequence-input scaling not addressed."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides reader-study and automatic-metric protocols transferable to validating sequence-conditioned instruction tuning."
+            }
+          },
+          "weighted_total": 20.1,
+          "match_score": 0.731,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG043",
+          "paper_id": "MMG-043",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Open biomedical LLM with strong instruction-following on PubMedQA/MedQA; sequence conditioning not central."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open weights and instruction-tuning code immediately usable; multilingual evaluation included."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mistral-based methodology is sound and reproducibly described."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrated at 7B scale on PubMed Central; recipe scales further."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Standard biomedical QA benchmarks; sequence-grounded reasoning not specifically evaluated."
+            }
+          },
+          "weighted_total": 19.8,
+          "match_score": 0.72,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG041",
+          "paper_id": "MMG-041",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "Galactica: A Large Language Model for Science",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Galactica trained on scientific corpora handles protein/SMILES sequences in prompts; partial sequence-conditioned reasoning demonstrated."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open scientific LLM with citation/sequence handling; recipe adaptable, though model checkpoint controversial."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Methodology sound; limitations widely documented around hallucination on factual prompts."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Trained on 100B+ tokens of scientific text; scaling to literature-scale demonstrated."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides scientific QA and reasoning benchmarks usable as evaluation surface for sequence-aware variants."
+            }
+          },
+          "weighted_total": 17.4,
+          "match_score": 0.633,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG035",
+          "paper_id": "MMG-035",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "BioGPT: generative pre-trained transformer for biomedical text generation and mining",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "BioGPT pretrained on biomedical literature; not instruction-tuned on sequence inputs and lacks DNA/RNA conditioning."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Strong open biomedical LLM checkpoint that teams routinely instruction-tune downstream for sequence-aware tasks."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "GPT-style biomedical pretraining is sound and well validated on text generation/relation extraction."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Trained at literature scale on PubMed; architecture scales to larger sequence-aware variants."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides BC5CDR/KD-DTI/end-to-end benchmarks usable as base evaluation for instruction-tuned descendants."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.618,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG040",
+          "paper_id": "MMG-040",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "BloombergGPT: A Large Language Model for Finance",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Domain LLM for finance, not biology; instruction-following demonstrated but unrelated to DNA/RNA sequences."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Recipe for domain-specialized LLM training is generally adoptable; cited as architectural blueprint."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "50B-parameter training methodology is well documented and sound."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrates literature-scale text training; transferable scaling lessons."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Validation focuses on financial benchmarks; minimal transfer to sequence-grounded reasoning evaluation."
+            }
+          },
+          "weighted_total": 14.8,
+          "match_score": 0.538,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG038",
+          "paper_id": "MMG-038",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "Opportunities and challenges for ChatGPT and large language models in biomedicine and health",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Surveys ChatGPT applications in biomedicine; sequence-conditioned instruction tuning only briefly discussed."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Identifies use cases and pitfalls; minimal directly adoptable methodology."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable peer-reviewed survey methodology; opinion-heavy in places."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling considerations; not an engineering contribution."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Reviews evaluation frameworks for biomedical LLMs that partially transfer to sequence tasks."
+            }
+          },
+          "weighted_total": 13.7,
+          "match_score": 0.498,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-multimodal-instruction-tuning-MMG037",
+          "paper_id": "MMG-037",
+          "claim_ref": "multimodal-instruction-tuning",
+          "paradigm": "multimodal",
+          "paper_title": "A Comprehensive Overview of Large Language Models",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Comprehensive overview discusses instruction tuning generally; minimal sequence-conditioning content."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Useful tutorial-style reference for teams new to LLMs but offers no concrete bio-sequence recipe."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Aggregates established LLM techniques accurately; not an empirical contribution."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Surveys scalable methods but does not demonstrate scaling itself."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Catalogs benchmarks but not specific to sequence-grounded instruction following."
+            }
+          },
+          "weighted_total": 13.0,
+          "match_score": 0.473,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "multimodal-shared-embeddings": {
+      "paradigm": "multimodal",
+      "claim_text": "Shared embedding spaces between natural language and biological sequences enable cross-modal retrieval, sequence-grounded question answering, and unified inference across literature and experimental data.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG033",
+          "paper_id": "MMG-033",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "Prot2Text: Multimodal Protein's Function Generation with GNNs and Transformers",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Prot2Text learns aligned protein-text representations enabling free-text function generation, directly demonstrating cross-modal mapping."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open encoder-decoder recipe pairing GNN protein encoder with LLM text decoder; readily adapted to DNA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Clean empirical methodology with quantitative comparison; well-grounded application of GNN+LLM."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Demonstrated on SwissProt-scale proteins; scales with encoders but not yet to genome-scale DNA."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "BLEU/ROUGE plus retrieval metrics on text-protein pairs offer a transferable validation protocol."
+            }
+          },
+          "weighted_total": 21.1,
+          "match_score": 0.767,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG030",
+          "paper_id": "MMG-030",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "A Systematic Study of Joint Representation Learning on Protein Sequences and Structures",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Joint sequence+structure protein representations show empirical gains; analogous to text-sequence joint learning but text modality absent."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Methods (contrastive joint encoders) directly transferable to text-DNA shared embedding teams."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Systematic empirical comparison of joint-representation strategies; sound methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Protein-scale; technique generalizes but not directly demonstrated at genome+literature scale."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides benchmark function-prediction tasks and transfer evaluation transferable to multimodal validation."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.665,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG032",
+          "paper_id": "MMG-032",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "S-PLM: Structure-aware Protein Language Model via Contrastive Learning between Sequence and Structure",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "S-PLM uses contrastive learning to align protein sequence and structure embeddings; methodology mirrors text-sequence CLIP-style alignment."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open contrastive-alignment recipe directly adaptable for text-DNA shared embeddings today."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound contrastive design with downstream validation; methodology is a clear template."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Protein scale demonstrated; contrastive framework scales but text-corpus pairing not addressed here."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides multi-task downstream benchmarks and zero-shot retrieval analogues that transfer."
+            }
+          },
+          "weighted_total": 18.3,
+          "match_score": 0.665,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG029",
+          "paper_id": "MMG-029",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "Scientific Large Language Models: A Survey on Biological &amp; Chemical Domains",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey systematically catalogs scientific LLMs spanning text plus DNA/protein/molecule modalities, including shared-space approaches."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Provides immediately useful taxonomy and references for teams building text-genomic shared embeddings."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Recent comprehensive survey citing established methods; methodology of survey itself is sound."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Conceptual mapping covers genome-scale and literature-scale systems but does not itself scale anything."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Aggregates evaluation strategies across cited works that transfer to multimodal embedding validation."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.64,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG025",
+          "paper_id": "MMG-025",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "The STRING database in 2023: protein–protein association networks and functional enrichment analyses for any sequenced genome of interest",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "STRING aggregates literature-mined and experimental PPIs but does not learn a shared text-sequence embedding space."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "STRING is widely used as a literature-grounded annotation source feeding multimodal pipelines, but provides databases not embeddings."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Mature, peer-reviewed integration of text-mined and experimental evidence; methodology is sound for its stated goal."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Operates across all sequenced genomes, demonstrating literature-scale text aggregation paired with sequence identifiers."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides confidence scoring and benchmark networks transferrable as supervision targets, but no embedding-space evaluation."
+            }
+          },
+          "weighted_total": 17.0,
+          "match_score": 0.618,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG028",
+          "paper_id": "MMG-028",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "BIG-bench evaluates LLM capabilities broadly; some bio tasks but no shared sequence-text embedding space."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Provides task suite usable to evaluate text-only LLMs but not embedding-space alignment with sequences."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Large, peer-contributed benchmark with rigorous methodology for capability extrapolation."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "204+ tasks across many models; demonstrates literature-scale benchmarking infrastructure."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Validation methodology useful as a template but not specific to cross-modal retrieval evaluation."
+            }
+          },
+          "weighted_total": 14.2,
+          "match_score": 0.516,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG027",
+          "paper_id": "MMG-027",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "Mapping single-cell data to reference atlases by transfer learning",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "scArches maps single-cell data to reference atlases via transfer learning; no language modality involvement."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Useful for single-cell embedding alignment but does not provide text-sequence shared embeddings."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Architectural-surgery transfer-learning approach is sound and well validated in single-cell domain."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Demonstrated on multi-million cell atlases; scalable embedding architecture but not multimodal with text."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Provides reference-mapping benchmarks and label-transfer evaluation transferable as a methodology template."
+            }
+          },
+          "weighted_total": 12.9,
+          "match_score": 0.469,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG026",
+          "paper_id": "MMG-026",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "Modeling polypharmacy side effects with graph convolutional networks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Graph-convolutional drug-drug side-effect prediction; lacks any natural-language modality grounding biological sequences."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Useful for graph-based drug interaction tasks but offers no text-sequence shared embedding usable today."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Graph convolution over multimodal molecular graphs is methodologically sound for the side-effect task it tackles."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Scales to large drug-drug graphs but not to genome-scale sequences with literature-scale text."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Provides AUROC validation on side-effect prediction, transferable in spirit but not to text-DNA embeddings."
+            }
+          },
+          "weighted_total": 11.3,
+          "match_score": 0.411,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG031",
+          "paper_id": "MMG-031",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "Are LLMs Ready for Real-World Materials Discovery?",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Position paper on LLM limits in materials science; no shared text-sequence embeddings demonstrated."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Discusses gaps and frameworks; offers little adoptable methodology for text-genomic embedding teams."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable analysis of LLM failure cases backed by examples; not an empirical contribution."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Discusses scaling concerns conceptually; no concrete scalable method proposed."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Suggests qualitative failure-case probing transferable as a stress-test methodology."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.338,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        },
+        {
+          "candidate_id": "candidate-multimodal-shared-embeddings-MMG034",
+          "paper_id": "MMG-034",
+          "claim_ref": "multimodal-shared-embeddings",
+          "paradigm": "multimodal",
+          "paper_title": "A Review of Large Language Models and Autonomous Agents in Chemistry",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 1,
+              "rationale": "Review of LLM agents in chemistry; tangential to text-DNA shared embedding spaces."
+            },
+            "immediate_benefit": {
+              "score": 1,
+              "rationale": "Offers tooling references but no concrete shared embedding architecture."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Review methodology is reasonable; no empirical claims of its own."
+            },
+            "scalable": {
+              "score": 2,
+              "rationale": "Discusses scalable agentic frameworks but not embedding scalability in genomics."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Aggregates evaluation patterns from LLM-agent literature transferable indirectly."
+            }
+          },
+          "weighted_total": 9.3,
+          "match_score": 0.338,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    },
+    "multimodal-text-conditioned-generation": {
+      "paradigm": "multimodal",
+      "claim_text": "Text-conditioned sequence generation — describing a desired biological function, regulatory context, or therapeutic target in natural language and having the model propose candidate DNA / RNA sequences — turns LLM-style natural-language interfaces into a primitive of biological sequence design.",
+      "candidates": [
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG045",
+          "paper_id": "MMG-045",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "A Text-guided Protein Design Framework",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 5,
+              "rationale": "ProteinDT achieves >90% text-guided protein generation accuracy and best zero-shot text-guided editing; direct strong evidence for the claim."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open code, 441K text-protein dataset (SwissProtCLAP), and three-stage recipe directly portable to DNA/RNA."
+            },
+            "plausible": {
+              "score": 5,
+              "rationale": "Methodology (CLAP alignment + facilitator + decoder) is sound and validated across three challenging tasks."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "SwissProt-scale demonstration; framework generalizable but genome-scale text-DNA pairs not yet shown."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Quantitative protocols (accuracy, hit ratio, property prediction) directly transferable to text-conditioned DNA generation."
+            }
+          },
+          "weighted_total": 24.4,
+          "match_score": 0.887,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG046",
+          "paper_id": "MMG-046",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "A multimodal conversational agent for DNA, RNA and protein tasks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "ChatNT handles English questions about DNA/RNA/protein and can be prompted to produce structured answers; sequence-out generation lighter than seq-in QA."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Published, peer-reviewed multimodal conversational agent with curated instruction set; DNA/RNA support immediately useful."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Solid empirical results on Nucleotide Transformer benchmark; methodology peer-reviewed at NMI."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Built on nucleotide-transformer foundation handling long DNA contexts; scales across species and tissues."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Provides perplexity calibration and curated instruction tasks transferable as validation protocol."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.8,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG048",
+          "paper_id": "MMG-048",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "ChatNT: A Multimodal Conversational Agent for DNA, RNA and Protein Tasks",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 4,
+              "rationale": "Preprint version of ChatNT; demonstrates multimodal conversational handling of DNA/RNA/protein with curated instruction tasks."
+            },
+            "immediate_benefit": {
+              "score": 4,
+              "rationale": "Open methodology and benchmark; widely cited blueprint for text-conditioned biological generation interfaces."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Empirical results match the NMI version; methodology sound though preprint stage."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Same nucleotide-transformer backbone scales across DNA/RNA/protein and species."
+            },
+            "how_to_validate": {
+              "score": 4,
+              "rationale": "Same calibration and instruction benchmark transfers."
+            }
+          },
+          "weighted_total": 22.0,
+          "match_score": 0.8,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG049",
+          "paper_id": "MMG-049",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "CARE: a Benchmark Suite for the Classification and Retrieval of Enzymes",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Provides retrieval task linking chemical reactions (text-like) to enzyme EC numbers; partial text-conditioned protein retrieval evidence."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open benchmark suite directly usable to evaluate text-conditioned generation/retrieval models."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Carefully designed train-test splits with OOD evaluation; sound benchmark methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Enzyme-level scale; framework extensible to broader sequence generation tasks."
+            },
+            "how_to_validate": {
+              "score": 5,
+              "rationale": "Explicit OOD splits and dual classification/retrieval tasks form an excellent validation template."
+            }
+          },
+          "weighted_total": 19.0,
+          "match_score": 0.691,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG050",
+          "paper_id": "MMG-050",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "Multi-modal Transfer Learning between Biological Foundation Models",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "IsoFormer connects DNA/RNA/protein encoders for transcript expression prediction; multimodal but not text-conditioned generation."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Open model and recipe useful for multimodal genomic teams; lacks text modality input."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound encoder-fusion architecture with clear empirical wins on transcript expression."
+            },
+            "scalable": {
+              "score": 4,
+              "rationale": "Built on Nucleotide-Transformer-class encoders; scales to genome-level inputs."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Differential transcript expression validation transferable indirectly to text-conditioned generation."
+            }
+          },
+          "weighted_total": 18.5,
+          "match_score": 0.673,
+          "tier": "primary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG029",
+          "paper_id": "MMG-029",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "Scientific Large Language Models: A Survey on Biological &amp; Chemical Domains",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Survey reviews text-conditioned sequence generation systems across protein/molecule/genomic domains; not a primary contribution."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful taxonomy and citations for teams building text-to-sequence generators; no checkpoint released."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Comprehensive recent survey with sound methodology."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling regimes; itself does not scale anything."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Aggregates validation patterns from text-conditioned generative biology that transfer."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.64,
+          "tier": "secondary",
+          "promotion_status": "promoted"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG051",
+          "paper_id": "MMG-051",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "Generative artificial intelligence for de novo protein design",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Reviews generative protein design including text-conditioned approaches; surveys ~20% experimental success rates."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "Useful framework for organizing text-to-sequence design pipelines; no checkpoint."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Recent peer-style review with field-wide perspective; methodology sound for survey."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling issues without empirical demonstration."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Highlights in silico vs experimental metrics, directly relevant to validating text-conditioned DNA/RNA design."
+            }
+          },
+          "weighted_total": 17.6,
+          "match_score": 0.64,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG052",
+          "paper_id": "MMG-052",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "Learning the Language of Protein Structure",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Tokenizes 3D protein structure for GPT-style generation; demonstrates language-of-structure design but no text conditioning."
+            },
+            "immediate_benefit": {
+              "score": 3,
+              "rationale": "VQ-VAE codebook approach is portable to multimodal pipelines targeting DNA/RNA."
+            },
+            "plausible": {
+              "score": 4,
+              "rationale": "Sound VQ-VAE methodology with reasonable RMSD reconstructions and GPT generation."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Codebook size 4K-64K demonstrates scalability of the discretization approach."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Generation quality and RMSD metrics transfer in spirit to multimodal sequence design validation."
+            }
+          },
+          "weighted_total": 16.1,
+          "match_score": 0.586,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG053",
+          "paper_id": "MMG-053",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "Controllable Protein Design with Language Models",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 3,
+              "rationale": "Argues for control-tag conditioned protein language models including function/compartment tags; partial text-conditioning evidence."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Position/review paper rather than a released model; conceptual recipe only."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable extrapolation from established CTRL-style conditioning; not empirically validated here."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Conceptually scalable; no empirical scaling demonstration."
+            },
+            "how_to_validate": {
+              "score": 2,
+              "rationale": "Sketches validation strategies but lacks concrete benchmarks."
+            }
+          },
+          "weighted_total": 14.5,
+          "match_score": 0.527,
+          "tier": "secondary",
+          "promotion_status": "dropped_per_claim_cap"
+        },
+        {
+          "candidate_id": "candidate-multimodal-text-conditioned-generation-MMG047",
+          "paper_id": "MMG-047",
+          "claim_ref": "multimodal-text-conditioned-generation",
+          "paradigm": "multimodal",
+          "paper_title": "Large Language Models in Drug Discovery and Development: From Disease Mechanisms to Clinical Trials",
+          "rubric": {
+            "useful_outcomes": {
+              "score": 2,
+              "rationale": "Reviews LLMs in drug discovery with brief coverage of text-conditioned molecule generation; little on DNA/RNA generation."
+            },
+            "immediate_benefit": {
+              "score": 2,
+              "rationale": "Provides reference catalog rather than concrete generation recipes."
+            },
+            "plausible": {
+              "score": 3,
+              "rationale": "Reasonable review of an emerging area."
+            },
+            "scalable": {
+              "score": 3,
+              "rationale": "Discusses scaling generally."
+            },
+            "how_to_validate": {
+              "score": 3,
+              "rationale": "Survey-level discussion of evaluation; partial transfer to text-to-sequence validation."
+            }
+          },
+          "weighted_total": 13.7,
+          "match_score": 0.498,
+          "tier": "dropped",
+          "promotion_status": "dropped_below_threshold"
+        }
+      ]
+    }
+  }
+}

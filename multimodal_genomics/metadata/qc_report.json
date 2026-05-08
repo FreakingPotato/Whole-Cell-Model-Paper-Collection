@@ -1,0 +1,1783 @@
+{
+  "schema_version": "0.1",
+  "topic": "multimodal_genomics",
+  "checked_at": "2026-05-08T09:22:46Z",
+  "checker": "agent-QC",
+  "summary": {
+    "total_evidence_points": 46,
+    "total_screenshots": 194,
+    "ok": 182,
+    "reference": 0,
+    "header": 1,
+    "fragment": 1,
+    "off_topic": 9,
+    "borderline": 1
+  },
+  "screenshots": [
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG002",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG002__01.png",
+      "page": 2,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG002",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG002__02.png",
+      "page": 2,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG002",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG002__03.png",
+      "page": 4,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG002",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG002__04.png",
+      "page": 10,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG007",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG007__01.png",
+      "page": 1,
+      "paper_id": "MMG-005",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG007",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG007__02.png",
+      "page": 3,
+      "paper_id": "MMG-005",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG007",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG007__03.png",
+      "page": 7,
+      "paper_id": "MMG-005",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG007",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG007__04.png",
+      "page": 8,
+      "paper_id": "MMG-005",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG006",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG006__01.png",
+      "page": 1,
+      "paper_id": "MMG-001",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG006",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG006__02.png",
+      "page": 3,
+      "paper_id": "MMG-001",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-010",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG005__02.png",
+      "page": 3,
+      "paper_id": "MMG-010",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG005__03.png",
+      "page": 17,
+      "paper_id": "MMG-010",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG001__01.png",
+      "page": 1,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG001__02.png",
+      "page": 3,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG001__03.png",
+      "page": 3,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-tokenization-MMG001",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-tokenization-MMG001__04.png",
+      "page": 6,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG002",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG002__01.png",
+      "page": 1,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG002",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG002__02.png",
+      "page": 2,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG002",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG002__03.png",
+      "page": 5,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG002",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG002__04.png",
+      "page": 8,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG006",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG006__01.png",
+      "page": 2,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG006",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG006__02.png",
+      "page": 3,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG006",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG006__03.png",
+      "page": 4,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG006",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG006__04.png",
+      "page": 5,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-016",
+      "verdict": "off_topic",
+      "reason": "Survey scope statement (FMs in bioinformatics broadly) \u2014 does not specifically support long-context-architecture claim."
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG005__02.png",
+      "page": 5,
+      "paper_id": "MMG-016",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG005__03.png",
+      "page": 11,
+      "paper_id": "MMG-016",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG005",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG005__04.png",
+      "page": 12,
+      "paper_id": "MMG-016",
+      "verdict": "off_topic",
+      "reason": "Body sentence about FMs in biological structure construction \u2014 focuses on structure prediction, not long-context architectures."
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG004",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG004__01.png",
+      "page": 1,
+      "paper_id": "MMG-012",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG004",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG004__02.png",
+      "page": 2,
+      "paper_id": "MMG-012",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG004",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG004__03.png",
+      "page": 9,
+      "paper_id": "MMG-012",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG004",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG004__04.png",
+      "page": 14,
+      "paper_id": "MMG-012",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG004",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG004__05.png",
+      "page": 17,
+      "paper_id": "MMG-012",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG001__01.png",
+      "page": 3,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG001__02.png",
+      "page": 3,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG001__03.png",
+      "page": 4,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG001",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG001__04.png",
+      "page": 7,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-long-context-MMG001",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-long-context-MMG001__05.png",
+      "page": 7,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "Body sentence describing benchmarking against Nucleotide Transformer with inline citation; HyenaDNA paper compares its long-context architecture against NT."
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG007",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG007__01.png",
+      "page": 1,
+      "paper_id": "MMG-021",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG007",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG007__02.png",
+      "page": 3,
+      "paper_id": "MMG-021",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG007",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG007__03.png",
+      "page": 3,
+      "paper_id": "MMG-021",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG007",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG007__04.png",
+      "page": 10,
+      "paper_id": "MMG-021",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG001__01.png",
+      "page": 2,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "Figure 1.1 caption sentence stating HyenaDNA is trained with next-token prediction \u2014 directly supports the autoregressive pretraining-objective claim."
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG001__02.png",
+      "page": 3,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG001__03.png",
+      "page": 7,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG001",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG001__04.png",
+      "page": 8,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-gfm-pretraining-objective-MMG001",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-gfm-pretraining-objective-MMG001__05.png",
+      "page": 10,
+      "paper_id": "MMG-004",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-025",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG005__02.png",
+      "page": 2,
+      "paper_id": "MMG-025",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG005__03.png",
+      "page": 4,
+      "paper_id": "MMG-025",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG005",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG005__04.png",
+      "page": 5,
+      "paper_id": "MMG-025",
+      "verdict": "off_topic",
+      "reason": "Figure 3 caption sentence about retrieving experimental evidence from public databases \u2014 not about shared text-sequence embedding spaces."
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG006",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG006__01.png",
+      "page": 6,
+      "paper_id": "MMG-028",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG006",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG006__02.png",
+      "page": 7,
+      "paper_id": "MMG-028",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG006",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG006__03.png",
+      "page": 17,
+      "paper_id": "MMG-028",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG006",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG006__04.png",
+      "page": 25,
+      "paper_id": "MMG-028",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG006",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG006__05.png",
+      "page": 26,
+      "paper_id": "MMG-028",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG004",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG004__01.png",
+      "page": 4,
+      "paper_id": "MMG-029",
+      "verdict": "off_topic",
+      "reason": "Survey scope statement about chemical/biological languages \u2014 not specifically about shared embedding spaces between text and biological sequences."
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG004",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG004__02.png",
+      "page": 17,
+      "paper_id": "MMG-029",
+      "verdict": "off_topic",
+      "reason": "Bullet describing SciInstruct, a scientific instruction tuning dataset \u2014 relevant to instruction tuning, not shared embedding spaces."
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG004",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG004__03.png",
+      "page": 18,
+      "paper_id": "MMG-029",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG004",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG004__04.png",
+      "page": 22,
+      "paper_id": "MMG-029",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG004",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG004__05.png",
+      "page": 35,
+      "paper_id": "MMG-029",
+      "verdict": "off_topic",
+      "reason": "Body sentence about protein 3D structure integration efforts \u2014 not about text-sequence shared embedding spaces."
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG002",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG002__01.png",
+      "page": 1,
+      "paper_id": "MMG-030",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG002",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG002__02.png",
+      "page": 2,
+      "paper_id": "MMG-030",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG002",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG002__03.png",
+      "page": 4,
+      "paper_id": "MMG-030",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG002",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG002__04.png",
+      "page": 7,
+      "paper_id": "MMG-030",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG001__01.png",
+      "page": 1,
+      "paper_id": "MMG-033",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG001__02.png",
+      "page": 4,
+      "paper_id": "MMG-033",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-shared-embeddings-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-shared-embeddings-MMG001__03.png",
+      "page": 5,
+      "paper_id": "MMG-033",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG002",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG002__01.png",
+      "page": 1,
+      "paper_id": "MMG-039",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG002",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG002__02.png",
+      "page": 3,
+      "paper_id": "MMG-039",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG002",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG002__03.png",
+      "page": 3,
+      "paper_id": "MMG-039",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG002",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG002__04.png",
+      "page": 6,
+      "paper_id": "MMG-039",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG001__01.png",
+      "page": 1,
+      "paper_id": "MMG-044",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG001__02.png",
+      "page": 2,
+      "paper_id": "MMG-044",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG001__03.png",
+      "page": 2,
+      "paper_id": "MMG-044",
+      "verdict": "ok",
+      "reason": "Body sentence introducing GeneGPT, an LLM augmented with NCBI Web APIs to follow biomedical instructions \u2014 direct support for instruction-tuning-with-biological-context."
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG001",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG001__04.png",
+      "page": 3,
+      "paper_id": "MMG-044",
+      "verdict": "ok",
+      "reason": "Body sentence inside an Instruction: list item describing the GeneGPT prompt (task + API usage demos) \u2014 supports instruction-tuning prompt design."
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG001",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG001__05.png",
+      "page": 4,
+      "paper_id": "MMG-044",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG006",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG006__01.png",
+      "page": 1,
+      "paper_id": "MMG-041",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG006",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG006__02.png",
+      "page": 2,
+      "paper_id": "MMG-041",
+      "verdict": "borderline",
+      "reason": "Body sentence describing Galactica's training corpus; relevant to scientific LLMs but does not directly assert instruction tuning behavior."
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG006",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG006__03.png",
+      "page": 13,
+      "paper_id": "MMG-041",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG006",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG006__04.png",
+      "page": 13,
+      "paper_id": "MMG-041",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG006",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG006__05.png",
+      "page": 29,
+      "paper_id": "MMG-041",
+      "verdict": "off_topic",
+      "reason": "Body sentence about Galactica's reduced bias from scientific corpus \u2014 about safety/bias, not instruction tuning capability."
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG003",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG003__01.png",
+      "page": 1,
+      "paper_id": "MMG-042",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG003",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG003__02.png",
+      "page": 2,
+      "paper_id": "MMG-042",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG003",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG003__03.png",
+      "page": 2,
+      "paper_id": "MMG-042",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG003",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG003__04.png",
+      "page": 3,
+      "paper_id": "MMG-042",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-043",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG005__02.png",
+      "page": 4,
+      "paper_id": "MMG-043",
+      "verdict": "ok",
+      "reason": "Body sentence describing medical evaluation datasets (medical school exams, PubMedQA-style content) for instruction-tuned medical LLMs."
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG005__03.png",
+      "page": 5,
+      "paper_id": "MMG-043",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-instruction-tuning-MMG005",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-instruction-tuning-MMG005__04.png",
+      "page": 8,
+      "paper_id": "MMG-043",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG002",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG002__01.png",
+      "page": 1,
+      "paper_id": "MMG-046",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG002",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG002__02.png",
+      "page": 4,
+      "paper_id": "MMG-046",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG002",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG002__03.png",
+      "page": 9,
+      "paper_id": "MMG-046",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG006",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG006__01.png",
+      "page": 3,
+      "paper_id": "MMG-029",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG006",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG006__02.png",
+      "page": 13,
+      "paper_id": "MMG-029",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG006",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG006__03.png",
+      "page": 17,
+      "paper_id": "MMG-029",
+      "verdict": "off_topic",
+      "reason": "Bullet describing SciInstruct (a scientific instruction tuning dataset) \u2014 relevant to instruction tuning, not text-conditioned sequence generation."
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG006",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG006__04.png",
+      "page": 18,
+      "paper_id": "MMG-029",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG006",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG006__05.png",
+      "page": 22,
+      "paper_id": "MMG-029",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG001__01.png",
+      "page": 1,
+      "paper_id": "MMG-045",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG001__02.png",
+      "page": 4,
+      "paper_id": "MMG-045",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG001__03.png",
+      "page": 5,
+      "paper_id": "MMG-045",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG001",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG001__04.png",
+      "page": 7,
+      "paper_id": "MMG-045",
+      "verdict": "fragment",
+      "reason": "Recorded sentence is just 'The property prediction results are in Table 3.' \u2014 a table pointer fragment; surrounding visual highlight contains more substantive ProteinCLAP discussion but JSON sentence is fragmentary."
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG001",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG001__05.png",
+      "page": 9,
+      "paper_id": "MMG-045",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG004",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG004__01.png",
+      "page": 1,
+      "paper_id": "MMG-049",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG004",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG004__02.png",
+      "page": 2,
+      "paper_id": "MMG-049",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG004",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG004__03.png",
+      "page": 3,
+      "paper_id": "MMG-049",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-050",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG005__02.png",
+      "page": 2,
+      "paper_id": "MMG-050",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG005__03.png",
+      "page": 2,
+      "paper_id": "MMG-050",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG005",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG005__04.png",
+      "page": 3,
+      "paper_id": "MMG-050",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-multimodal-text-conditioned-generation-MMG005",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-multimodal-text-conditioned-generation-MMG005__05.png",
+      "page": 4,
+      "paper_id": "MMG-050",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG003",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG003__01.png",
+      "page": 1,
+      "paper_id": "MMG-056",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG003",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG003__02.png",
+      "page": 3,
+      "paper_id": "MMG-056",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG003",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG003__03.png",
+      "page": 3,
+      "paper_id": "MMG-056",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG003",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG003__04.png",
+      "page": 3,
+      "paper_id": "MMG-056",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG004",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG004__01.png",
+      "page": 2,
+      "paper_id": "MMG-058",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG004",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG004__02.png",
+      "page": 9,
+      "paper_id": "MMG-058",
+      "verdict": "ok",
+      "reason": "Body sentence describing DDD/ASD/CHD trio-sequencing cohorts and de novo missense mutations \u2014 direct support for variant-effect prediction evaluation."
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG004",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG004__03.png",
+      "page": 9,
+      "paper_id": "MMG-058",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG004",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG004__04.png",
+      "page": 11,
+      "paper_id": "MMG-058",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG007",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG007__01.png",
+      "page": 1,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG007",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG007__02.png",
+      "page": 1,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG007",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG007__03.png",
+      "page": 4,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG007",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG007__04.png",
+      "page": 5,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG006",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG006__01.png",
+      "page": 1,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG006",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG006__02.png",
+      "page": 2,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG006",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG006__03.png",
+      "page": 2,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG006",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG006__04.png",
+      "page": 5,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG010",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG010__01.png",
+      "page": 2,
+      "paper_id": "MMG-057",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG010",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG010__02.png",
+      "page": 2,
+      "paper_id": "MMG-057",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG010",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG010__03.png",
+      "page": 4,
+      "paper_id": "MMG-057",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG010",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG010__04.png",
+      "page": 4,
+      "paper_id": "MMG-057",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG010",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG010__05.png",
+      "page": 6,
+      "paper_id": "MMG-057",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG008",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG008__01.png",
+      "page": 1,
+      "paper_id": "MMG-059",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG008",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG008__02.png",
+      "page": 2,
+      "paper_id": "MMG-059",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG008",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG008__03.png",
+      "page": 7,
+      "paper_id": "MMG-059",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG008",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG008__04.png",
+      "page": 7,
+      "paper_id": "MMG-059",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG005__02.png",
+      "page": 2,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG005__03.png",
+      "page": 8,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG005",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG005__04.png",
+      "page": 9,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG005",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG005__05.png",
+      "page": 9,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG009",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG009__01.png",
+      "page": 1,
+      "paper_id": "MMG-060",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG009",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG009__02.png",
+      "page": 9,
+      "paper_id": "MMG-060",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-variant-effects-MMG009",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-variant-effects-MMG009__03.png",
+      "page": 9,
+      "paper_id": "MMG-060",
+      "verdict": "ok",
+      "reason": "Body sentence discussing data circularity in supervised VEPs \u2014 direct support for the variant-effect-prediction methodology claim."
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG001__01.png",
+      "page": 1,
+      "paper_id": "MMG-063",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG001__02.png",
+      "page": 2,
+      "paper_id": "MMG-063",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG001__03.png",
+      "page": 5,
+      "paper_id": "MMG-063",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG001",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG001__04.png",
+      "page": 9,
+      "paper_id": "MMG-063",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG003",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG003__01.png",
+      "page": 1,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG003",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG003__02.png",
+      "page": 2,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG003",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG003__03.png",
+      "page": 5,
+      "paper_id": "MMG-011",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG004",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG004__01.png",
+      "page": 2,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG004",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG004__02.png",
+      "page": 5,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG004",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG004__03.png",
+      "page": 8,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG004",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG004__04.png",
+      "page": 9,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG004",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG004__05.png",
+      "page": 9,
+      "paper_id": "MMG-002",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG006",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG006__01.png",
+      "page": 1,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG006",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG006__02.png",
+      "page": 3,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG006",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG006__03.png",
+      "page": 5,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG006",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG006__04.png",
+      "page": 6,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG006",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG006__05.png",
+      "page": 8,
+      "paper_id": "MMG-013",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG007",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG007__01.png",
+      "page": 2,
+      "paper_id": "MMG-066",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG007",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG007__02.png",
+      "page": 3,
+      "paper_id": "MMG-066",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG007",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG007__03.png",
+      "page": 10,
+      "paper_id": "MMG-066",
+      "verdict": "header",
+      "reason": "Recorded text '6 The identified binding motifs by iDeep.' is a Figure 6 caption header (renderer dropped 'Fig.' prefix), not body text."
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG007",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG007__04.png",
+      "page": 10,
+      "paper_id": "MMG-066",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG007",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG007__05.png",
+      "page": 11,
+      "paper_id": "MMG-066",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG002",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG002__01.png",
+      "page": 1,
+      "paper_id": "MMG-064",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG002",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG002__02.png",
+      "page": 1,
+      "paper_id": "MMG-064",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG002",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG002__03.png",
+      "page": 2,
+      "paper_id": "MMG-064",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG002",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG002__04.png",
+      "page": 7,
+      "paper_id": "MMG-064",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG002",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG002__05.png",
+      "page": 14,
+      "paper_id": "MMG-064",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-065",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG005__02.png",
+      "page": 2,
+      "paper_id": "MMG-065",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG005__03.png",
+      "page": 3,
+      "paper_id": "MMG-065",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG005",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG005__04.png",
+      "page": 8,
+      "paper_id": "MMG-065",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-regulatory-annotation-MMG005",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-regulatory-annotation-MMG005__05.png",
+      "page": 14,
+      "paper_id": "MMG-065",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG001",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG001__01.png",
+      "page": 1,
+      "paper_id": "MMG-069",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG001",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG001__02.png",
+      "page": 2,
+      "paper_id": "MMG-069",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG001",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG001__03.png",
+      "page": 3,
+      "paper_id": "MMG-069",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG001",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG001__04.png",
+      "page": 12,
+      "paper_id": "MMG-069",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG003",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG003__01.png",
+      "page": 1,
+      "paper_id": "MMG-021",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG003",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG003__02.png",
+      "page": 2,
+      "paper_id": "MMG-021",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG003",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG003__03.png",
+      "page": 10,
+      "paper_id": "MMG-021",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG004",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG004__01.png",
+      "page": 1,
+      "paper_id": "MMG-070",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG004",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG004__02.png",
+      "page": 3,
+      "paper_id": "MMG-070",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG004",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG004__03.png",
+      "page": 6,
+      "paper_id": "MMG-070",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG004",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG004__04.png",
+      "page": 9,
+      "paper_id": "MMG-070",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG004",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG004__05.png",
+      "page": 11,
+      "paper_id": "MMG-070",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG005",
+      "screenshot_idx": 1,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG005__01.png",
+      "page": 1,
+      "paper_id": "MMG-075",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG005",
+      "screenshot_idx": 2,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG005__02.png",
+      "page": 2,
+      "paper_id": "MMG-075",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG005",
+      "screenshot_idx": 3,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG005__03.png",
+      "page": 3,
+      "paper_id": "MMG-075",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG005",
+      "screenshot_idx": 4,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG005__04.png",
+      "page": 3,
+      "paper_id": "MMG-075",
+      "verdict": "ok",
+      "reason": "body sentence with on-topic keywords"
+    },
+    {
+      "evidence_id": "evidence-applications-drug-discovery-MMG005",
+      "screenshot_idx": 5,
+      "href": "multimodal_genomics/assets/evidence/evidence-applications-drug-discovery-MMG005__05.png",
+      "page": 4,
+      "paper_id": "MMG-075",
+      "verdict": "off_topic",
+      "reason": "Body sentence about BioNeMo Framework GPU training throughput / scaling \u2014 not directly about sequence-aware drug discovery."
+    }
+  ],
+  "evidence_to_remediate": [
+    "evidence-applications-drug-discovery-MMG005",
+    "evidence-applications-regulatory-annotation-MMG007",
+    "evidence-gfm-long-context-MMG005",
+    "evidence-multimodal-instruction-tuning-MMG006",
+    "evidence-multimodal-shared-embeddings-MMG004",
+    "evidence-multimodal-shared-embeddings-MMG005",
+    "evidence-multimodal-text-conditioned-generation-MMG001",
+    "evidence-multimodal-text-conditioned-generation-MMG006"
+  ],
+  "papers_with_issues": [
+    "MMG-016",
+    "MMG-025",
+    "MMG-029",
+    "MMG-041",
+    "MMG-045",
+    "MMG-066",
+    "MMG-075"
+  ]
+}

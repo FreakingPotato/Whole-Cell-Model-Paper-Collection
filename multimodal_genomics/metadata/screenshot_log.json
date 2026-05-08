@@ -1,0 +1,2422 @@
+{
+  "evidence-gfm-tokenization-MMG002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      2,
+      4,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 2,
+        "png_bytes": 200173,
+        "scores": [
+          71.9,
+          72.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 175573,
+        "scores": [
+          70.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 119208,
+        "scores": [
+          72.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 134214,
+        "scores": [
+          73.6
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-tokenization-MMG007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3,
+      7,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 186745,
+        "scores": [
+          73.8,
+          73.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 145965,
+        "scores": [
+          74.2
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 137000,
+        "scores": [
+          73.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 129688,
+        "scores": [
+          73.6
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-tokenization-MMG006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 2,
+    "pages": [
+      1,
+      3
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 4,
+        "png_bytes": 153266,
+        "scores": [
+          74.9,
+          71.0,
+          71.6,
+          69.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 125936,
+        "scores": [
+          71.6
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-tokenization-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      3,
+      17
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 117579,
+        "scores": [
+          76.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 103027,
+        "scores": [
+          74.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 17,
+        "n_sentences": 3,
+        "png_bytes": 173210,
+        "scores": [
+          74.7,
+          74.5,
+          75.8
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-tokenization-MMG004": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-003"
+  },
+  "evidence-gfm-tokenization-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 106666,
+        "scores": [
+          73.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 2,
+        "png_bytes": 82879,
+        "scores": [
+          74.9,
+          78.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 68100,
+        "scores": [
+          73.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 69604,
+        "scores": [
+          71.7
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-tokenization-MMG003": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-007"
+  },
+  "evidence-gfm-long-context-MMG002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      5,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 97550,
+        "scores": [
+          73.2,
+          76.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 112637,
+        "scores": [
+          73.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 180079,
+        "scores": [
+          81.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 179267,
+        "scores": [
+          72.6
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-long-context-MMG006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 106665,
+        "scores": [
+          71.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 121642,
+        "scores": [
+          74.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 114294,
+        "scores": [
+          71.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 5,
+        "n_sentences": 2,
+        "png_bytes": 119557,
+        "scores": [
+          74.3,
+          71.0
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-long-context-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      4,
+      5,
+      11,
+      12
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 113144,
+        "scores": [
+          72.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 2,
+        "png_bytes": 203585,
+        "scores": [
+          72.6,
+          79.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 164164,
+        "scores": [
+          72.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 12,
+        "n_sentences": 1,
+        "png_bytes": 119593,
+        "scores": [
+          72.2
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-long-context-MMG004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      9,
+      14,
+      17
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 86841,
+        "scores": [
+          78.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 88332,
+        "scores": [
+          74.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 60399,
+        "scores": [
+          75.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 75727,
+        "scores": [
+          74.3
+        ]
+      },
+      {
+        "group": 5,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 63002,
+        "scores": [
+          73.8
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-long-context-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      3,
+      4,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 58171,
+        "scores": [
+          72.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 91001,
+        "scores": [
+          73.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 68765,
+        "scores": [
+          77.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 68336,
+        "scores": [
+          75.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 88586,
+        "scores": [
+          73.7
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-long-context-MMG003": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-007"
+  },
+  "evidence-gfm-pretraining-objective-MMG003": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-017"
+  },
+  "evidence-gfm-pretraining-objective-MMG007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 132273,
+        "scores": [
+          82.5,
+          78.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 142820,
+        "scores": [
+          79.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 152325,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 166350,
+        "scores": [
+          81.3
+        ]
+      }
+    ]
+  },
+  "evidence-gfm-pretraining-objective-MMG002": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-018"
+  },
+  "evidence-gfm-pretraining-objective-MMG005": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-003"
+  },
+  "evidence-gfm-pretraining-objective-MMG006": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-020"
+  },
+  "evidence-gfm-pretraining-objective-MMG004": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-022"
+  },
+  "evidence-gfm-pretraining-objective-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      3,
+      7,
+      8,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 58491,
+        "scores": [
+          75.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 67898,
+        "scores": [
+          72.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 80647,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 55813,
+        "scores": [
+          73.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 107370,
+        "scores": [
+          73.4
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-shared-embeddings-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 152751,
+        "scores": [
+          70.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 100848,
+        "scores": [
+          71.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 2,
+        "png_bytes": 74391,
+        "scores": [
+          71.5,
+          71.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 122101,
+        "scores": [
+          77.4
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-shared-embeddings-MMG006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      6,
+      7,
+      17,
+      25,
+      26
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 65245,
+        "scores": [
+          71.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 99528,
+        "scores": [
+          74.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 17,
+        "n_sentences": 1,
+        "png_bytes": 58989,
+        "scores": [
+          73.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 25,
+        "n_sentences": 1,
+        "png_bytes": 78796,
+        "scores": [
+          77.5
+        ]
+      },
+      {
+        "group": 5,
+        "page": 26,
+        "n_sentences": 1,
+        "png_bytes": 64348,
+        "scores": [
+          72.3
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-shared-embeddings-MMG004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      4,
+      15,
+      21,
+      22,
+      36
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 46795,
+        "scores": [
+          68.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 15,
+        "n_sentences": 1,
+        "png_bytes": 80504,
+        "scores": [
+          71.7
+        ]
+      },
+      {
+        "group": 3,
+        "page": 21,
+        "n_sentences": 1,
+        "png_bytes": 76336,
+        "scores": [
+          68.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 22,
+        "n_sentences": 1,
+        "png_bytes": 59732,
+        "scores": [
+          75.3
+        ]
+      },
+      {
+        "group": 5,
+        "page": 36,
+        "n_sentences": 1,
+        "png_bytes": 97349,
+        "scores": [
+          69.5
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-shared-embeddings-MMG002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      4,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 3,
+        "png_bytes": 204452,
+        "scores": [
+          74.0,
+          72.3,
+          72.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 144201,
+        "scores": [
+          75.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 121344,
+        "scores": [
+          72.7
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-shared-embeddings-MMG003": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-032"
+  },
+  "evidence-multimodal-shared-embeddings-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      4,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 144282,
+        "scores": [
+          73.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 2,
+        "png_bytes": 130882,
+        "scores": [
+          74.0,
+          76.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 2,
+        "png_bytes": 136515,
+        "scores": [
+          74.1,
+          75.5
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-instruction-tuning-MMG004": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-036"
+  },
+  "evidence-multimodal-instruction-tuning-MMG002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 153305,
+        "scores": [
+          71.2,
+          70.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 162699,
+        "scores": [
+          68.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 140928,
+        "scores": [
+          69.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 154810,
+        "scores": [
+          69.5
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-instruction-tuning-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 155154,
+        "scores": [
+          75.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 99631,
+        "scores": [
+          83.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 107020,
+        "scores": [
+          73.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 106132,
+        "scores": [
+          70.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 126255,
+        "scores": [
+          71.4
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-instruction-tuning-MMG006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      13,
+      29
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 79717,
+        "scores": [
+          76.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 84030,
+        "scores": [
+          73.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 13,
+        "n_sentences": 1,
+        "png_bytes": 72006,
+        "scores": [
+          73.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 13,
+        "n_sentences": 1,
+        "png_bytes": 61323,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 5,
+        "page": 29,
+        "n_sentences": 1,
+        "png_bytes": 25353,
+        "scores": [
+          75.3
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-instruction-tuning-MMG003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 108221,
+        "scores": [
+          72.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 93768,
+        "scores": [
+          72.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 2,
+        "png_bytes": 162732,
+        "scores": [
+          74.3,
+          72.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 58235,
+        "scores": [
+          73.9
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-instruction-tuning-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      4,
+      5,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 115131,
+        "scores": [
+          73.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 130770,
+        "scores": [
+          72.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 115992,
+        "scores": [
+          73.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 2,
+        "png_bytes": 172151,
+        "scores": [
+          77.4,
+          72.1
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-text-conditioned-generation-MMG002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      4,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 128122,
+        "scores": [
+          78.2,
+          81.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 2,
+        "png_bytes": 155241,
+        "scores": [
+          77.4,
+          81.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 154158,
+        "scores": [
+          80.3
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-text-conditioned-generation-MMG006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      4,
+      5,
+      22,
+      32,
+      36
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 46795,
+        "scores": [
+          71.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 64679,
+        "scores": [
+          69.9
+        ]
+      },
+      {
+        "group": 3,
+        "page": 22,
+        "n_sentences": 1,
+        "png_bytes": 59732,
+        "scores": [
+          73.8
+        ]
+      },
+      {
+        "group": 4,
+        "page": 32,
+        "n_sentences": 1,
+        "png_bytes": 73903,
+        "scores": [
+          70.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 36,
+        "n_sentences": 1,
+        "png_bytes": 62807,
+        "scores": [
+          69.0
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-text-conditioned-generation-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      4,
+      5,
+      7,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 77138,
+        "scores": [
+          81.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 52358,
+        "scores": [
+          76.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 64113,
+        "scores": [
+          82.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 116434,
+        "scores": [
+          88.1
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 85570,
+        "scores": [
+          79.2
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-text-conditioned-generation-MMG003": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-048"
+  },
+  "evidence-multimodal-text-conditioned-generation-MMG004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 3,
+        "png_bytes": 143990,
+        "scores": [
+          76.1,
+          84.7,
+          80.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 110650,
+        "scores": [
+          76.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 77687,
+        "scores": [
+          80.6
+        ]
+      }
+    ]
+  },
+  "evidence-multimodal-text-conditioned-generation-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 81518,
+        "scores": [
+          77.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 90495,
+        "scores": [
+          76.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 79033,
+        "scores": [
+          76.5
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 70886,
+        "scores": [
+          76.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 77648,
+        "scores": [
+          78.0
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG001": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-054"
+  },
+  "evidence-applications-variant-effects-MMG003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      3
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 130499,
+        "scores": [
+          75.3,
+          75.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 137475,
+        "scores": [
+          75.0
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 164229,
+        "scores": [
+          75.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 148069,
+        "scores": [
+          76.7
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      2,
+      9,
+      11
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 2,
+        "png_bytes": 123608,
+        "scores": [
+          75.2,
+          82.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 63272,
+        "scores": [
+          78.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 96953,
+        "scores": [
+          75.6
+        ]
+      },
+      {
+        "group": 4,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 60829,
+        "scores": [
+          74.4
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      4,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 90028,
+        "scores": [
+          96.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 131017,
+        "scores": [
+          72.7
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 97721,
+        "scores": [
+          72.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 5,
+        "n_sentences": 2,
+        "png_bytes": 189123,
+        "scores": [
+          76.1,
+          74.1
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 74955,
+        "scores": [
+          72.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 156331,
+        "scores": [
+          73.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 204057,
+        "scores": [
+          74.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 5,
+        "n_sentences": 2,
+        "png_bytes": 173010,
+        "scores": [
+          76.9,
+          72.5
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG010": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      4,
+      6
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 121514,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 152435,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 92559,
+        "scores": [
+          78.7
+        ]
+      },
+      {
+        "group": 4,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 138720,
+        "scores": [
+          78.3
+        ]
+      },
+      {
+        "group": 5,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 115615,
+        "scores": [
+          82.5
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG008": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      7
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 141851,
+        "scores": [
+          79.5
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 2,
+        "png_bytes": 156693,
+        "scores": [
+          77.3,
+          80.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 120528,
+        "scores": [
+          83.3
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 129524,
+        "scores": [
+          77.6
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      8,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 82307,
+        "scores": [
+          81.9
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 123263,
+        "scores": [
+          83.3
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 145832,
+        "scores": [
+          80.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 115363,
+        "scores": [
+          85.5
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 98003,
+        "scores": [
+          80.7
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG009": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 3,
+        "png_bytes": 193751,
+        "scores": [
+          78.7,
+          75.1,
+          84.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 147147,
+        "scores": [
+          74.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 159480,
+        "scores": [
+          74.8
+        ]
+      }
+    ]
+  },
+  "evidence-applications-variant-effects-MMG002": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-055"
+  },
+  "evidence-applications-regulatory-annotation-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      5,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 2,
+        "png_bytes": 103858,
+        "scores": [
+          85.6,
+          83.0
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 125339,
+        "scores": [
+          81.7
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 125441,
+        "scores": [
+          95.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 119179,
+        "scores": [
+          81.8
+        ]
+      }
+    ]
+  },
+  "evidence-applications-regulatory-annotation-MMG003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      2,
+      5
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 3,
+        "png_bytes": 99513,
+        "scores": [
+          73.4,
+          77.0,
+          78.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 107518,
+        "scores": [
+          76.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 180079,
+        "scores": [
+          84.0
+        ]
+      }
+    ]
+  },
+  "evidence-applications-regulatory-annotation-MMG004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      5,
+      8,
+      9
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 184220,
+        "scores": [
+          77.4
+        ]
+      },
+      {
+        "group": 2,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 164935,
+        "scores": [
+          75.1
+        ]
+      },
+      {
+        "group": 3,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 164947,
+        "scores": [
+          76.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 156990,
+        "scores": [
+          75.3
+        ]
+      },
+      {
+        "group": 5,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 136857,
+        "scores": [
+          77.7
+        ]
+      }
+    ]
+  },
+  "evidence-applications-regulatory-annotation-MMG006": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      3,
+      5,
+      6,
+      8
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 109107,
+        "scores": [
+          88.8
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 138261,
+        "scores": [
+          79.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 5,
+        "n_sentences": 1,
+        "png_bytes": 141072,
+        "scores": [
+          86.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 152282,
+        "scores": [
+          82.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 108292,
+        "scores": [
+          79.5
+        ]
+      }
+    ]
+  },
+  "evidence-applications-regulatory-annotation-MMG007": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      2,
+      3,
+      10,
+      11
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 107046,
+        "scores": [
+          86.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 139732,
+        "scores": [
+          76.4
+        ]
+      },
+      {
+        "group": 3,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 134877,
+        "scores": [
+          80.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 140574,
+        "scores": [
+          78.6
+        ]
+      },
+      {
+        "group": 5,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 98045,
+        "scores": [
+          75.6
+        ]
+      }
+    ]
+  },
+  "evidence-applications-regulatory-annotation-MMG008": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-067"
+  },
+  "evidence-applications-regulatory-annotation-MMG002": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      7,
+      14
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 84984,
+        "scores": [
+          98.7
+        ]
+      },
+      {
+        "group": 2,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 82599,
+        "scores": [
+          78.6
+        ]
+      },
+      {
+        "group": 3,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 73093,
+        "scores": [
+          80.9
+        ]
+      },
+      {
+        "group": 4,
+        "page": 7,
+        "n_sentences": 1,
+        "png_bytes": 81209,
+        "scores": [
+          80.7
+        ]
+      },
+      {
+        "group": 5,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 132990,
+        "scores": [
+          82.2
+        ]
+      }
+    ]
+  },
+  "evidence-applications-regulatory-annotation-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      3,
+      8,
+      14
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 93137,
+        "scores": [
+          76.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 65903,
+        "scores": [
+          78.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 71083,
+        "scores": [
+          78.2
+        ]
+      },
+      {
+        "group": 4,
+        "page": 8,
+        "n_sentences": 1,
+        "png_bytes": 82395,
+        "scores": [
+          82.9
+        ]
+      },
+      {
+        "group": 5,
+        "page": 14,
+        "n_sentences": 1,
+        "png_bytes": 88929,
+        "scores": [
+          76.7
+        ]
+      }
+    ]
+  },
+  "evidence-applications-drug-discovery-MMG001": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 4,
+    "pages": [
+      1,
+      2,
+      3,
+      12
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 95928,
+        "scores": [
+          81.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 154468,
+        "scores": [
+          78.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 2,
+        "png_bytes": 105210,
+        "scores": [
+          77.1,
+          85.0
+        ]
+      },
+      {
+        "group": 4,
+        "page": 12,
+        "n_sentences": 1,
+        "png_bytes": 112638,
+        "scores": [
+          80.3
+        ]
+      }
+    ]
+  },
+  "evidence-applications-drug-discovery-MMG003": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 3,
+    "pages": [
+      1,
+      2,
+      10
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 3,
+        "png_bytes": 192590,
+        "scores": [
+          77.4,
+          84.1,
+          83.1
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 152338,
+        "scores": [
+          78.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 10,
+        "n_sentences": 1,
+        "png_bytes": 92754,
+        "scores": [
+          81.6
+        ]
+      }
+    ]
+  },
+  "evidence-applications-drug-discovery-MMG004": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      3,
+      6,
+      9,
+      11
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 91924,
+        "scores": [
+          80.2
+        ]
+      },
+      {
+        "group": 2,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 83298,
+        "scores": [
+          76.8
+        ]
+      },
+      {
+        "group": 3,
+        "page": 6,
+        "n_sentences": 1,
+        "png_bytes": 58454,
+        "scores": [
+          81.1
+        ]
+      },
+      {
+        "group": 4,
+        "page": 9,
+        "n_sentences": 1,
+        "png_bytes": 75200,
+        "scores": [
+          79.2
+        ]
+      },
+      {
+        "group": 5,
+        "page": 11,
+        "n_sentences": 1,
+        "png_bytes": 73810,
+        "scores": [
+          78.6
+        ]
+      }
+    ]
+  },
+  "evidence-applications-drug-discovery-MMG006": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-071"
+  },
+  "evidence-applications-drug-discovery-MMG002": {
+    "status": "no_pdf",
+    "notes": "no PDF for MMG-074"
+  },
+  "evidence-applications-drug-discovery-MMG005": {
+    "status": "ok",
+    "strategy": "multi-sentence-multi-page",
+    "screenshots": 5,
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "groups": [
+      {
+        "group": 1,
+        "page": 1,
+        "n_sentences": 1,
+        "png_bytes": 91020,
+        "scores": [
+          75.6
+        ]
+      },
+      {
+        "group": 2,
+        "page": 2,
+        "n_sentences": 1,
+        "png_bytes": 78438,
+        "scores": [
+          75.5
+        ]
+      },
+      {
+        "group": 3,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 49747,
+        "scores": [
+          76.4
+        ]
+      },
+      {
+        "group": 4,
+        "page": 3,
+        "n_sentences": 1,
+        "png_bytes": 62728,
+        "scores": [
+          74.0
+        ]
+      },
+      {
+        "group": 5,
+        "page": 4,
+        "n_sentences": 1,
+        "png_bytes": 95330,
+        "scores": [
+          74.7
+        ]
+      }
+    ]
+  }
+}
