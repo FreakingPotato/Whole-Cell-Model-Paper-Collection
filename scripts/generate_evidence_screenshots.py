@@ -125,6 +125,46 @@ def _rare_keywords(text: str) -> list[str]:
     return list(out)
 
 
+_PAPER_REGISTRY_CACHE: dict[str, dict] | None = None
+
+
+def _paper_registry() -> dict[str, dict]:
+    """Lazy-load and merge the WCM and EXT paper registries (paper_id -> record)."""
+    global _PAPER_REGISTRY_CACHE
+    if _PAPER_REGISTRY_CACHE is not None:
+        return _PAPER_REGISTRY_CACHE
+    out: dict[str, dict] = {}
+    for path, key in (
+        (ROOT / "metadata" / "wcm_paper_metadata.json", "papers"),
+        (ROOT / "metadata" / "hybrid_external_papers.json", "papers"),
+    ):
+        if not path.is_file():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        papers = data.get(key)
+        if isinstance(papers, dict):
+            for pid, rec in papers.items():
+                if isinstance(rec, dict) and pid:
+                    out[pid] = rec
+        elif isinstance(papers, list):
+            for rec in papers:
+                if isinstance(rec, dict) and rec.get("paper_id"):
+                    out[rec["paper_id"]] = rec
+    _PAPER_REGISTRY_CACHE = out
+    return out
+
+
+def _paper_title_for(paper_id: str | None) -> str | None:
+    if not paper_id:
+        return None
+    rec = _paper_registry().get(paper_id) or {}
+    title = rec.get("title")
+    return title if isinstance(title, str) and title.strip() else None
+
+
 def _find_pdf(paper_id: str) -> Path | None:
     if not PDF_DIR.is_dir():
         return None
@@ -179,32 +219,80 @@ def _section_hint_for_page(page_idx: int) -> str:
 
 _REFERENCES_HEADING_RE = re.compile(
     r"^\s*(?:references|bibliography|literature\s+cited|works\s+cited|"
-    r"reference\s+list|cited\s+literature)\s*$",
+    r"reference\s+list|cited\s+literature|references\s+and\s+notes|"
+    r"reference\s+list\s+and\s+notes)\s*$",
     re.IGNORECASE,
 )
+# Cutoff sections: any heading matched here truncates the document for
+# scoring purposes. Acknowledgements / Author Contributions / Funding /
+# Data Availability typically follow Methods/Results, and pure metadata
+# like "Conflicts of interest" never makes claim-supporting evidence.
+_BACK_MATTER_HEADING_RE = re.compile(
+    r"^\s*(?:references|bibliography|literature\s+cited|works\s+cited|"
+    r"reference\s+list|cited\s+literature|references\s+and\s+notes|"
+    r"acknowledg(?:e?ment[s]?|ements?)|"
+    r"authors?'?s?\s+contribution[s]?|"
+    r"contributor\s+roles?|credit\s+author\s+statement|"
+    r"author\s+roles?|author(?:s'?)?\s+disclosure[s]?|"
+    r"competing\s+interest[s]?|conflicts?\s+of\s+interest[s]?|"
+    r"declarations?\s+of\s+interest[s]?|disclosures?(?:\s+statement)?|"
+    r"funding(?:\s+(?:information|sources?|statement))?|"
+    r"financial\s+(?:support|disclosure[s]?)|"
+    r"grant\s+(?:information|support)|"
+    r"data\s+availability(?:\s+statement)?|data\s+access\s+statement|"
+    r"code\s+availability(?:\s+statement)?|"
+    r"materials?\s+availability(?:\s+statement)?|"
+    r"supplementary\s+(?:materials?|information|figures?|notes?|methods?|data)|"
+    r"extended\s+data(?:\s+(?:figures?|tables?))?|"
+    r"reporting\s+summary|"
+    r"about\s+the\s+authors?|"
+    r"author\s+information|author\s+affiliations?|"
+    r"corresponding\s+author|"
+    r"reviewers?(?:'\s*comments)?|"
+    r"editor(?:'s|s')?\s+evaluation|"
+    r"peer\s+review(?:\s+(?:file|history))?|"
+    r"review\s+history|"
+    r"ethic[s]?\s+(?:approval|statement)|"
+    r"informed\s+consent|"
+    r"open\s+access(?:\s+statement)?|"
+    r"licensing|copyright|rights\s+and\s+permissions|"
+    r"keywords?|abbreviations?|nomenclature|glossary|notation|"
+    r"orcid\s+i?ds?|orcid)"
+    r"\s*\.?\s*$",
+    re.IGNORECASE,
+)
+# Optional digit prefix like "5.", "[5]", "5)"
+_HEADING_PREFIX_RE = re.compile(r"^\s*(?:\[\d+\]|\d+\.|\d+\))\s*")
 
 
 def _find_references_cutoff(
     doc: fitz.Document,
 ) -> tuple[int, float] | None:
-    """Find the page index + y-top of the references heading.
+    """Return ``(page_idx, y_top)`` of the FIRST back-matter heading we trust.
 
-    Returns ``(page_idx, y_top)`` of the line whose text matches a heading
-    like "References" / "Bibliography". Sentences at or after that position
-    must be excluded so we never highlight bibliography entries that happen
-    to keyword-match the claim. Returns ``None`` if no heading is found —
-    in which case we conservatively keep all sentences (the per-line
-    ``_looks_like_reference_line`` heuristic still applies as a safety net).
+    A "back-matter heading" is References / Bibliography / Acknowledgements /
+    Author Contributions / Funding / Data Availability / Supplementary etc.
+    Once we hit any of these, everything after is excluded.
 
-    Heuristic: the heading is typically a short, lone line (≤ 40 chars), in
-    its own block, on a page in the *back* of the document. We only accept a
-    match if it sits past the 40 % mark of the document, so that an
-    abstract that mentions the word "references" doesn't trip us up.
+    Heuristic, robust against three common typesetting variants:
+
+      1. Standalone-line heading. The original detector. Walk every line
+         after the 30 % mark, normalize (strip leading numbers, lowercase),
+         and check against ``_BACK_MATTER_HEADING_RE``.
+      2. Heading-as-block. Some PDFs render "REFERENCES" as a block with no
+         body underneath because the references all live in their own blocks
+         below. Same regex still matches because we strip whitespace.
+      3. Span-level largest-font heading. When the heading is part of a
+         bigger block (rare but happens), look at *the largest font size on
+         the page* and only treat that line as a candidate.
+
+    To minimize false positives, the heading is only accepted if its line
+    bbox is ≤ 60 chars long. Past 60 chars it's almost certainly body text.
     """
     n_pages = len(doc)
     if n_pages == 0:
         return None
-    earliest_eligible_page = max(0, int(n_pages * 0.40))
+    earliest_eligible_page = max(0, int(n_pages * 0.30))
     for page_idx in range(earliest_eligible_page, n_pages):
         page = doc.load_page(page_idx)
         try:
@@ -218,12 +306,114 @@ def _find_references_cutoff(
             for line in lines:
                 spans = line.get("spans") or []
                 line_text = "".join(span.get("text", "") for span in spans).strip()
-                if not line_text or len(line_text) > 40:
+                if not line_text or len(line_text) > 60:
                     continue
-                if _REFERENCES_HEADING_RE.match(line_text):
+                # Strip numbering prefix like "5. References" / "[5] References".
+                stripped = _HEADING_PREFIX_RE.sub("", line_text)
+                if _BACK_MATTER_HEADING_RE.match(stripped):
                     bbox = line.get("bbox") or (0, 0, 0, 0)
                     return page_idx, float(bbox[1])
     return None
+
+
+# ---------------------------------------------------------------------------
+# Block-level reference detection. Catches papers (e.g. EXT-061 Med-PaLM)
+# whose bibliography format is "Title-only" lines with no author/year markers
+# — these slip past _looks_like_reference_line because individual lines look
+# innocent. We work at the block level: if a block has high "reference
+# density" — many short title-like fragments, lots of years, multi-author
+# patterns — we drop the entire block before scoring.
+# ---------------------------------------------------------------------------
+
+# Shared helpers — reuse the existing ref-line patterns.
+_REFBLOCK_AUTHOR_TOKEN = re.compile(r"\b[A-Z][A-Za-zÀ-ſ\-]+,?\s[A-Z]\.[A-Z]?\.?")
+_REFBLOCK_YEAR = re.compile(r"\b(?:19|20)\d{2}\b")
+_REFBLOCK_DOI = re.compile(r"\b10\.\d{4,}/[^\s,;]+", re.IGNORECASE)
+_REFBLOCK_VOL_ISSUE = re.compile(r"\b\d{1,3}\s*\(\s*\d{1,4}\s*\)")
+_REFBLOCK_PAGE_RANGE = re.compile(r"\b\d{1,4}\s*[-–]\s*\d{1,4}\b")
+_REFBLOCK_ET_AL = re.compile(r"\bet\s+al\.?\b", re.IGNORECASE)
+_REFBLOCK_ARXIV = re.compile(r"\barxiv\s*[:.]?\s*\d{4}\.\d{4,5}\b", re.IGNORECASE)
+_REFBLOCK_PMID = re.compile(r"\b(?:PMID|PMC)\s*:?\s*\d+", re.IGNORECASE)
+# "Title-only" reference: a short line ending with a period, ≤ 12 words,
+# title-cased (most words start uppercase), no verb-like internal structure.
+_TITLE_LINE_RE = re.compile(
+    r"^\s*[A-Z][A-Za-z0-9\-:,\s]*[a-z][A-Za-z0-9\-:,\s]*\s*\.\s*$"
+)
+
+
+def _looks_like_title_only_line(text: str) -> bool:
+    """A 'title-only' reference fragment: short, declarative-titlecase, no verbs."""
+    s = text.strip()
+    if not s.endswith("."):
+        return False
+    if len(s) > 110:
+        return False
+    words = s[:-1].split()
+    if not (3 <= len(words) <= 14):
+        return False
+    # Must start with capital letter.
+    if not s[:1].isupper():
+        return False
+    # Heuristic: title-only lines mostly avoid verbs like is/are/was/can/will
+    # in the middle. Body sentences nearly always have at least one of them.
+    body_verbs = {
+        "is", "are", "was", "were", "can", "could", "will", "would", "may",
+        "might", "must", "shall", "should", "do", "does", "did", "has",
+        "have", "had",
+    }
+    middle = [w.lower().rstrip(",") for w in words[1:-1]]
+    if any(v in body_verbs for v in middle):
+        return False
+    return True
+
+
+def _block_looks_like_reference_block(block_text: str, sentences: list[str] | None = None) -> bool:
+    """Decide whether a *whole text block* is part of the bibliography.
+
+    Returns True when the block has the structural fingerprints of a
+    references section: many years, many author tokens, DOIs, page ranges,
+    or title-only fragments. We are deliberately strict to avoid dropping
+    legitimate body text that just happens to mention years.
+    """
+    if not block_text:
+        return False
+    n_authors = len(_REFBLOCK_AUTHOR_TOKEN.findall(block_text))
+    n_years = len(_REFBLOCK_YEAR.findall(block_text))
+    n_dois = len(_REFBLOCK_DOI.findall(block_text))
+    n_vols = len(_REFBLOCK_VOL_ISSUE.findall(block_text))
+    n_pages = len(_REFBLOCK_PAGE_RANGE.findall(block_text))
+    n_etal = len(_REFBLOCK_ET_AL.findall(block_text))
+    n_arxiv = len(_REFBLOCK_ARXIV.findall(block_text))
+    n_pmids = len(_REFBLOCK_PMID.findall(block_text))
+
+    # Strong direct signals — any one of these screams "references":
+    if n_dois >= 2 or n_arxiv >= 2 or n_pmids >= 2:
+        return True
+    if n_etal >= 2 and n_years >= 2:
+        return True
+    # 3+ author tokens AND year/vol/page evidence.
+    if n_authors >= 3 and (n_years >= 2 or n_vols >= 1 or n_pages >= 2):
+        return True
+
+    # Title-only-line cluster (the EXT-061 / Med-PaLM bug).
+    if sentences is not None and len(sentences) >= 3:
+        title_only = sum(1 for s in sentences if _looks_like_title_only_line(s))
+        # If a clear majority of sentences look like titles, it's a ref block.
+        if title_only >= 3 and title_only >= max(2, len(sentences) // 2):
+            return True
+
+    return False
+
+
+def _build_page_heights(doc: fitz.Document) -> dict[int, float]:
+    """Map page_idx → page height (used by the top-band running-header detector)."""
+    out: dict[int, float] = {}
+    for i in range(len(doc)):
+        try:
+            out[i] = float(doc.load_page(i).rect.height)
+        except Exception:
+            continue
+    return out
 
 
 def _build_sentence_corpus(doc: fitz.Document) -> tuple[list[Sentence], int]:
@@ -281,6 +471,12 @@ def _build_sentence_corpus(doc: fitz.Document) -> tuple[list[Sentence], int]:
                 sents = sent_tokenize(block_text)
             except Exception:
                 # Tokenizer corrupted? skip the block.
+                continue
+
+            # Drop the ENTIRE block when it has bibliographical fingerprints.
+            # Catches title-only Nature-style numbered references that would
+            # otherwise pass _looks_like_reference_line one at a time.
+            if _block_looks_like_reference_block(collapsed, sents):
                 continue
 
             # Map each sentence back to its character span in block_text and
@@ -367,6 +563,121 @@ def _looks_like_reference_line(text: str) -> bool:
 
 REFLINE_PENALTY = 30.0
 HEADER_PENALTY = 25.0
+TITLE_LINE_PENALTY = 35.0
+CITATION_PREFIX_PENALTY = 40.0
+PAPER_TITLE_PENALTY = 50.0       # bumped — page-1 title pages were leaking
+FRAGMENT_PENALTY = 50.0
+CAPTION_PENALTY = 35.0
+RUNNING_HEADER_PENALTY = 45.0
+PAGE_ONE_TITLE_PENALTY = 60.0    # extra penalty for page-1 cover-page titles
+
+
+# Sentences that look like figure/table caption opens, not body argument.
+# Examples: "Fig. 4 | Schematic of …", "Table 3: Mean …", "(B) Box plots …",
+# "b, Geographic context for …", "Figure 2 shows …" (last one is borderline OK
+# but commonly mid-block continuation we'd rather de-prioritise).
+_CAPTION_OPENER_RE = re.compile(
+    r"^\s*(?:fig(?:ure)?\.?\s*\d+|figs?\.\s*\d+|"
+    r"tab(?:le)?\.?\s*\d+|tabs?\.\s*\d+|"
+    r"scheme\s+\d+|chart\s+\d+|panel\s+\d+|"
+    r"extended\s+data\s+(?:fig|table)|"
+    r"supp(?:lementary)?\s+(?:fig|figure|table|tab)\s*\d*|"
+    r"\([a-z0-9]\)|"          # "(b) Box plots…", "(8) is called PCS."
+    r"[a-z],\s|"              # "b, Geographic context for…"
+    r"\d+\s*\|\s*[A-Z]|"      # "2 | Benchmarking AMNs…"  (Nature panel labels)
+    r"[a-z]\s*\|\s*[A-Z])",   # "b | Receptor distribution…"
+    re.IGNORECASE,
+)
+# Subsection-number / lettered openers tokenized as sentences:
+# "C. Simulation-Based Inference…", "3.2.2 PINNs for…", "II. Background…"
+_SUBSECTION_OPENER_RE = re.compile(
+    r"^\s*(?:[A-Z]\.\s+[A-Z]|"            # "C. Foo …"
+    r"\d+(?:\.\d+){1,3}\s+[A-Z]|"          # "3.2.2 PINNs"
+    r"[IVX]{1,4}\.\s+[A-Z])",              # "II. Background"
+)
+
+
+def _looks_like_section_opener(text: str) -> bool:
+    return bool(_SUBSECTION_OPENER_RE.match(text.strip()))
+
+
+_TERMINAL_PUNCT_RE = re.compile(r"[\.\?!][\"\)\]]?\s*$")
+# Words a body sentence rarely ENDS on. If a "sentence" ends with one of
+# these, the segmenter probably ran out of mid-clause text.
+_DANGLING_TAIL_RE = re.compile(
+    r"\b(?:of|in|on|at|by|for|from|with|as|to|the|a|an|and|or|but|that|"
+    r"which|when|where|while|so|because|via|using|under|over|between|"
+    r"among|than|then|via|where|whereas|whether|whose|who|whom|"
+    r"where|where|is|are|was|were|be|been|being|has|have|had|having|"
+    r"can|could|will|would|may|might|must|should|shall|do|does|did)\s*$",
+    re.IGNORECASE,
+)
+# "Mid-equation" style sentences often have lots of single Greek letters,
+# subscripts, or compact math glyphs.
+_MATH_DENSE_RE = re.compile(r"[∑∏∇∂∫θφλμσΣΦΛΩαβγδ←→⇒≈≤≥]")
+
+
+def _looks_like_fragment(text: str) -> bool:
+    """Heuristic: catches sentence-tokenizer fragments that are not real
+    sentences. The renderer should never highlight these.
+
+    Triggers:
+      * starts with lowercase (continuation of prior line)
+      * doesn't end with terminal punctuation
+      * ends with a dangling preposition / conjunction / aux verb
+      * has high math-glyph density and is short (likely an equation slice)
+    """
+    s = text.strip()
+    if not s:
+        return True
+    if len(s) < 30:
+        # Too short to be a self-contained body sentence.
+        return True
+    first = s[:1]
+    if first.isalpha() and first.islower():
+        # Lowercase opener → almost always a continuation, not a sentence.
+        return True
+    if not _TERMINAL_PUNCT_RE.search(s):
+        return True
+    if _DANGLING_TAIL_RE.search(s):
+        return True
+    if _MATH_DENSE_RE.search(s) and len(s) < 90:
+        return True
+    return False
+
+
+def _looks_like_caption(text: str) -> bool:
+    s = text.strip()
+    return bool(_CAPTION_OPENER_RE.match(s))
+
+# Front-matter / running-header artefacts that are not real body sentences.
+_FRONT_MATTER_PREFIX_RE = re.compile(
+    r"^\s*(?:research\s+article|article|review|brief\s+communication|"
+    r"perspective|letter|news\s+(?:and|&)\s+views|news\s+feature|comment|"
+    r"correspondence|matters\s+arising|technical\s+note|method|protocol|"
+    r"editorial|news|original\s+research|short\s+communication|"
+    r"insight|primer|review\s+article|primer:?)\b",
+    re.IGNORECASE,
+)
+_CITATION_PREFIX_RE = re.compile(
+    r"^\s*(?:citation\s*[:\-–]|cite\s+as\s*[:\-–]|to\s+cite\s+this\s+article\s*[:\-–]|"
+    r"received\s*[:\-–]|published\s*[:\-–]|accepted\s*[:\-–]|"
+    r"corresponding\s+author|please\s+cite\s+this\s+article)",
+    re.IGNORECASE,
+)
+_DOI_URL_HEADER_RE = re.compile(r"\bhttps?://(?:doi\.org|dx\.doi\.org)/", re.IGNORECASE)
+
+
+def _looks_like_front_matter_header(text: str) -> bool:
+    s = text.strip()
+    if _FRONT_MATTER_PREFIX_RE.match(s):
+        return True
+    if _CITATION_PREFIX_RE.match(s):
+        return True
+    # "Article https://doi.org/..." running-header style.
+    if s.startswith("Article ") and _DOI_URL_HEADER_RE.search(s):
+        return True
+    return False
 
 
 def _score_sentence(sent_text: str, claim_lower: str, keywords: list[str]) -> float:
@@ -378,60 +689,169 @@ def _score_sentence(sent_text: str, claim_lower: str, keywords: list[str]) -> fl
         score += KEYWORD_BOOST
     if _looks_like_reference_line(sent_text):
         score -= REFLINE_PENALTY
+    if _looks_like_front_matter_header(sent_text):
+        score -= CITATION_PREFIX_PENALTY
+    if _looks_like_title_only_line(sent_text):
+        score -= TITLE_LINE_PENALTY
+    if _looks_like_fragment(sent_text):
+        score -= FRAGMENT_PENALTY
+    if _looks_like_caption(sent_text):
+        score -= CAPTION_PENALTY
+    if _looks_like_section_opener(sent_text):
+        score -= CAPTION_PENALTY
     return score
 
 
 def _detect_repeated_headers(sentences: list[Sentence]) -> set[str]:
-    """A 'running header' = a short normalized sentence that appears verbatim on
-    >=2 pages, typically near the top. Return the set of normalized strings to
-    penalise.
+    """Find verbatim sentences appearing on ≥ 2 pages — running headers /
+    journal banners / paper-title repeated at the top or bottom of each page.
     """
     from collections import defaultdict
     by_norm: dict[str, set[int]] = defaultdict(set)
     for s in sentences:
         norm = _collapse_ws(s.text).lower()
-        if len(norm) < 30 or len(norm) > 220:
+        # Looser bounds than before: short banners (≥ 15 chars) and longer
+        # title-and-journal banners (≤ 280 chars) both qualify.
+        if len(norm) < 15 or len(norm) > 280:
             continue
         by_norm[norm].add(s.page)
     return {norm for norm, pages in by_norm.items() if len(pages) >= 2}
+
+
+def _detect_top_band_repeats(sentences: list[Sentence], page_heights: dict[int, float]) -> set[str]:
+    """A second running-header detector: any normalized text whose top-y on
+    each occurrence sits in the **top 12 % of the page**. Catches journal
+    banners that span 2+ lines (so the verbatim-equality detector misses them
+    because each line has slightly different content).
+    """
+    from collections import defaultdict
+    candidates: dict[str, list[tuple[int, float]]] = defaultdict(list)
+    for s in sentences:
+        ph = page_heights.get(s.page)
+        if not ph:
+            continue
+        top = min(b[1] for b in s.line_bboxes) if s.line_bboxes else 0.0
+        if top > 0.12 * ph:
+            continue
+        norm = _collapse_ws(s.text).lower()
+        if len(norm) < 12:
+            continue
+        candidates[norm].append((s.page, top))
+    return {norm for norm, hits in candidates.items() if len({p for p, _ in hits}) >= 2}
+
+
+def _build_query_pool(
+    claim_text: str,
+    quote_text: str | None,
+    extra_queries: list[str] | None = None,
+) -> list[str]:
+    """Build the pool of query strings to score sentences against.
+
+    Sentences are scored against the MAX similarity to any non-empty query.
+    The pool always contains the claim text. When the curator supplied a
+    ``quote``, that's added too — verbatim signals are the strongest match
+    we can hope for. Rubric rationales (per-dimension explanations of *why*
+    this paper supports this claim) bring much richer claim-specific
+    keywords than the synthesized one-line ``text`` field, so they're
+    layered in here.
+    """
+    pool: list[str] = []
+    seen: set[str] = set()
+
+    def _add(s: str | None) -> None:
+        if not s:
+            return
+        cleaned = _collapse_ws(s).strip()
+        if not cleaned:
+            return
+        key = cleaned.lower()
+        if key in seen:
+            return
+        seen.add(key)
+        pool.append(cleaned)
+
+    _add(quote_text)
+    _add(claim_text)
+    for q in (extra_queries or []):
+        _add(q)
+    return pool
 
 
 def _select_top_sentences(
     sentences: list[Sentence],
     claim_text: str,
     quote_text: str | None,
+    extra_queries: list[str] | None = None,
+    paper_title: str | None = None,
+    page_heights: dict[int, float] | None = None,
 ) -> list[tuple[Sentence, float]]:
-    keywords = _rare_keywords((claim_text or "") + " " + (quote_text or ""))
-    eq_text = (quote_text or claim_text or "").strip()
-    if not eq_text:
+    queries = _build_query_pool(claim_text, quote_text, extra_queries)
+    if not queries:
         return []
-    eq_lower = _collapse_ws(eq_text).lower()
+    # Build per-query keyword sets up-front so we don't recompute per
+    # sentence. The aggregate keyword set is the union — gives any sentence
+    # that mentions a rare term in *any* query a bonus.
+    keywords = _rare_keywords(" ".join(queries))
+    queries_lower = [q.lower() for q in queries]
+    paper_title_norm = (
+        _collapse_ws(paper_title or "").lower().rstrip(" .") or None
+    )
 
     repeated_headers = _detect_repeated_headers(sentences)
+    top_band_repeats = (
+        _detect_top_band_repeats(sentences, page_heights)
+        if page_heights else set()
+    )
 
     scored: list[tuple[Sentence, float]] = []
     for s in sentences:
-        sc = _score_sentence(s.text, eq_lower, keywords)
-        if _collapse_ws(s.text).lower() in repeated_headers:
-            sc -= HEADER_PENALTY
-        if sc < SENTENCE_SCORE_THRESHOLD:
+        # MAX score across all queries — most permissive, most precise.
+        best = 0.0
+        for ql in queries_lower:
+            sc = _score_sentence(s.text, ql, keywords)
+            if sc > best:
+                best = sc
+        sn = _collapse_ws(s.text).lower().rstrip(" .")
+        if sn in repeated_headers:
+            best -= HEADER_PENALTY
+        if sn in top_band_repeats:
+            best -= RUNNING_HEADER_PENALTY
+        # Penalise the paper's own title (front-page header / running banner)
+        # — it's metadata noise, not body argument.
+        if paper_title_norm:
+            # Loose match: longest-common-substring or fuzz partial_ratio,
+            # because the rendered text may have stylistic differences
+            # (capitalisation, hyphenation, line wrapping) vs the registry.
+            ratio = fuzz.partial_ratio(paper_title_norm, sn)
+            if sn == paper_title_norm or ratio >= 90:
+                best -= PAPER_TITLE_PENALTY
+                if s.page == 0:
+                    # Page 1 cover-page title — extra suppression.
+                    best -= PAGE_ONE_TITLE_PENALTY
+        if best < SENTENCE_SCORE_THRESHOLD:
             continue
-        scored.append((s, sc))
+        scored.append((s, best))
     scored.sort(key=lambda t: t[1], reverse=True)
     return scored[:TOP_N_SENTENCES]
 
 
-def _max_score_anywhere(sentences: list[Sentence], claim_text: str, quote_text: str | None) -> float:
-    keywords = _rare_keywords((claim_text or "") + " " + (quote_text or ""))
-    eq_text = (quote_text or claim_text or "").strip()
-    if not eq_text:
+def _max_score_anywhere(
+    sentences: list[Sentence],
+    claim_text: str,
+    quote_text: str | None,
+    extra_queries: list[str] | None = None,
+) -> float:
+    queries = _build_query_pool(claim_text, quote_text, extra_queries)
+    if not queries:
         return 0.0
-    eq_lower = _collapse_ws(eq_text).lower()
+    keywords = _rare_keywords(" ".join(queries))
+    queries_lower = [q.lower() for q in queries]
     best = 0.0
     for s in sentences:
-        sc = _score_sentence(s.text, eq_lower, keywords)
-        if sc > best:
-            best = sc
+        for ql in queries_lower:
+            sc = _score_sentence(s.text, ql, keywords)
+            if sc > best:
+                best = sc
     return best
 
 
@@ -649,10 +1069,27 @@ def _block_fallback(
 # ---------------------------------------------------------------------------
 
 def _iter_evidence(data: dict[str, Any]):
+    """Yield each evidence point with its parent claim's claim-text stamped on
+    a transient ``_parent_claim_text`` key. The renderer reads this to use
+    the claim text as one of the matching queries — much closer to the
+    real argument than the synthesised one-liner ``text`` field. The
+    transient key is stripped before serialisation in ``_strip_transient_fields``.
+    """
+    for paradigm in data.get("paradigms", []):
+        for claim in paradigm.get("claims", []) or []:
+            parent_claim_text = claim.get("claim") or ""
+            for ep in claim.get("evidence_points", []) or []:
+                if parent_claim_text:
+                    ep["_parent_claim_text"] = parent_claim_text
+                yield ep
+
+
+def _strip_transient_fields(data: dict[str, Any]) -> None:
+    """Remove any ``_parent_claim_text`` keys before saving back to disk."""
     for paradigm in data.get("paradigms", []):
         for claim in paradigm.get("claims", []) or []:
             for ep in claim.get("evidence_points", []) or []:
-                yield ep
+                ep.pop("_parent_claim_text", None)
 
 
 def _strip_legacy_screenshot_fields(ep: dict) -> None:
@@ -737,13 +1174,40 @@ def _process_one(ep: dict, force: bool, log: dict) -> str:
 
         claim_text = ep.get("text") or ""
         quote_text = ep.get("quote") or None
+        # Layer in the parent claim's actual claim text + every rubric
+        # rationale as additional scoring queries. The rationales are the
+        # richest claim-specific signal we have (they were written by the
+        # paradigm scorer agents pointing AT the supporting evidence) and
+        # consistently produce more on-topic sentence selections than the
+        # one-line synthesised ``text`` field alone.
+        extra_queries: list[str] = []
+        parent_claim = (
+            ep.get("_parent_claim_text")
+            if isinstance(ep, dict) and ep.get("_parent_claim_text")
+            else None
+        )
+        if parent_claim:
+            extra_queries.append(parent_claim)
+        rubric = ep.get("rubric") or {}
+        if isinstance(rubric, dict):
+            for dim_name in (
+                "useful_outcomes", "immediate_benefit", "plausible",
+                "scalable", "how_to_validate",
+            ):
+                d = rubric.get(dim_name)
+                if isinstance(d, dict) and d.get("rationale"):
+                    extra_queries.append(str(d["rationale"]))
 
-        top_scored = _select_top_sentences(sentences, claim_text, quote_text)
+        top_scored = _select_top_sentences(
+            sentences, claim_text, quote_text, extra_queries=extra_queries,
+            paper_title=_paper_title_for(paper_id),
+            page_heights=_build_page_heights(doc),
+        )
 
         # If nothing meets the sentence threshold, decide between
         # block-fallback and not_found by looking at the global max score.
         if not top_scored:
-            global_best = _max_score_anywhere(sentences, claim_text, quote_text)
+            global_best = _max_score_anywhere(sentences, claim_text, quote_text, extra_queries=extra_queries)
             if global_best < BLOCK_FALLBACK_FLOOR:
                 log[eid] = {
                     "status": "not_found",
@@ -970,6 +1434,7 @@ def main() -> int:
         )
         print(per_evidence_summary[-1])
 
+    _strip_transient_fields(data)
     EVIDENCE_FILE.write_text(
         json.dumps(data, indent=2, ensure_ascii=False, sort_keys=False) + "\n",
         encoding="utf-8",

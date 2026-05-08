@@ -1,0 +1,3251 @@
+{
+  "schema_version": "0.1",
+  "checked_at": "2026-05-08T06:27:17.495608+00:00",
+  "checker": "agent-QC2",
+  "summary": {
+    "total_evidence_points": 82,
+    "total_evidence_points_all": 82,
+    "total_screenshots": 356,
+    "ok": 343,
+    "reference": 0,
+    "header": 1,
+    "fragment": 12,
+    "off_topic": 0,
+    "borderline": 0,
+    "missing_png_files": 0
+  },
+  "screenshots": [
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT003__01.png",
+      "page": 3,
+      "paper_id": "EXT-002",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT003__02.png",
+      "page": 3,
+      "paper_id": "EXT-002",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT003__03.png",
+      "page": 4,
+      "paper_id": "EXT-002",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT003__04.png",
+      "page": 5,
+      "paper_id": "EXT-002",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT003__05.png",
+      "page": 6,
+      "paper_id": "EXT-002",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT004__01.png",
+      "page": 1,
+      "paper_id": "EXT-004",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT004__02.png",
+      "page": 2,
+      "paper_id": "EXT-004",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT004__03.png",
+      "page": 6,
+      "paper_id": "EXT-004",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT004__04.png",
+      "page": 6,
+      "paper_id": "EXT-004",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT004",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT004__05.png",
+      "page": 7,
+      "paper_id": "EXT-004",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-001__01.png",
+      "page": 4,
+      "paper_id": "WCM-046",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-001__02.png",
+      "page": 5,
+      "paper_id": "WCM-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-001__03.png",
+      "page": 6,
+      "paper_id": "WCM-046",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-001__04.png",
+      "page": 6,
+      "paper_id": "WCM-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-001__05.png",
+      "page": 6,
+      "paper_id": "WCM-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT002__01.png",
+      "page": 3,
+      "paper_id": "EXT-005",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT002__02.png",
+      "page": 4,
+      "paper_id": "EXT-005",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT002__03.png",
+      "page": 22,
+      "paper_id": "EXT-005",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT002__04.png",
+      "page": 24,
+      "paper_id": "EXT-005",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT005__01.png",
+      "page": 1,
+      "paper_id": "EXT-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT005__02.png",
+      "page": 1,
+      "paper_id": "EXT-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT005__03.png",
+      "page": 6,
+      "paper_id": "EXT-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT005",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT005__04.png",
+      "page": 8,
+      "paper_id": "EXT-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT005",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT005__05.png",
+      "page": 15,
+      "paper_id": "EXT-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT006__01.png",
+      "page": 2,
+      "paper_id": "EXT-007",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT006__02.png",
+      "page": 2,
+      "paper_id": "EXT-007",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT006__03.png",
+      "page": 3,
+      "paper_id": "EXT-007",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT006__04.png",
+      "page": 3,
+      "paper_id": "EXT-007",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT006",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT006__05.png",
+      "page": 3,
+      "paper_id": "EXT-007",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-002__01.png",
+      "page": 1,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-002__02.png",
+      "page": 5,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-002__03.png",
+      "page": 12,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-002__04.png",
+      "page": 14,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-002__05.png",
+      "page": 20,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT001__01.png",
+      "page": 3,
+      "paper_id": "EXT-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT001__02.png",
+      "page": 7,
+      "paper_id": "EXT-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT001__03.png",
+      "page": 8,
+      "paper_id": "EXT-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT001__04.png",
+      "page": 9,
+      "paper_id": "EXT-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-closure-EXT001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-closure-EXT001__05.png",
+      "page": 16,
+      "paper_id": "EXT-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT002__01.png",
+      "page": 2,
+      "paper_id": "EXT-012",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT002__02.png",
+      "page": 2,
+      "paper_id": "EXT-012",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT002__03.png",
+      "page": 3,
+      "paper_id": "EXT-012",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT002__04.png",
+      "page": 9,
+      "paper_id": "EXT-012",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT002__05.png",
+      "page": 12,
+      "paper_id": "EXT-012",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-001__01.png",
+      "page": 3,
+      "paper_id": "WCM-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-001__02.png",
+      "page": 6,
+      "paper_id": "WCM-046",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-001__03.png",
+      "page": 6,
+      "paper_id": "WCM-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-001__04.png",
+      "page": 12,
+      "paper_id": "WCM-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-001__05.png",
+      "page": 13,
+      "paper_id": "WCM-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT001__01.png",
+      "page": 1,
+      "paper_id": "EXT-011",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT001__02.png",
+      "page": 2,
+      "paper_id": "EXT-011",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT001__03.png",
+      "page": 7,
+      "paper_id": "EXT-011",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT001__04.png",
+      "page": 17,
+      "paper_id": "EXT-011",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT001__05.png",
+      "page": 19,
+      "paper_id": "EXT-011",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT005__01.png",
+      "page": 4,
+      "paper_id": "EXT-013",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT005__02.png",
+      "page": 7,
+      "paper_id": "EXT-013",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT005__03.png",
+      "page": 14,
+      "paper_id": "EXT-013",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT005",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT005__04.png",
+      "page": 17,
+      "paper_id": "EXT-013",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT007",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT007__01.png",
+      "page": 1,
+      "paper_id": "EXT-015",
+      "verdict": "header",
+      "reason": "Paper title, running-header banner, or author-contributions style line."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT006__01.png",
+      "page": 2,
+      "paper_id": "EXT-017",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT006__02.png",
+      "page": 2,
+      "paper_id": "EXT-017",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT006__03.png",
+      "page": 2,
+      "paper_id": "EXT-017",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT006__04.png",
+      "page": 3,
+      "paper_id": "EXT-017",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT006",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT006__05.png",
+      "page": 5,
+      "paper_id": "EXT-017",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-020",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT003__02.png",
+      "page": 4,
+      "paper_id": "EXT-020",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT003__03.png",
+      "page": 8,
+      "paper_id": "EXT-020",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT003__04.png",
+      "page": 9,
+      "paper_id": "EXT-020",
+      "verdict": "fragment",
+      "reason": "Incomplete sentence (no verb, ends mid-clause, equation lead-in, lowercase opening, or <=6 words)."
+    },
+    {
+      "evidence_id": "hybrid-embedded-constraint-EXT003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-constraint-EXT003__05.png",
+      "page": 22,
+      "paper_id": "EXT-020",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-003__01.png",
+      "page": 2,
+      "paper_id": "WCM-001",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-003__02.png",
+      "page": 7,
+      "paper_id": "WCM-001",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-003__03.png",
+      "page": 10,
+      "paper_id": "WCM-001",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-003__04.png",
+      "page": 12,
+      "paper_id": "WCM-001",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-003__05.png",
+      "page": 14,
+      "paper_id": "WCM-001",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT001__01.png",
+      "page": 1,
+      "paper_id": "EXT-021",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT001__02.png",
+      "page": 1,
+      "paper_id": "EXT-021",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT001__03.png",
+      "page": 3,
+      "paper_id": "EXT-021",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT001__04.png",
+      "page": 4,
+      "paper_id": "EXT-021",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT001__05.png",
+      "page": 13,
+      "paper_id": "EXT-021",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT002__01.png",
+      "page": 1,
+      "paper_id": "EXT-023",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT002__02.png",
+      "page": 2,
+      "paper_id": "EXT-023",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT002__03.png",
+      "page": 5,
+      "paper_id": "EXT-023",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT002__04.png",
+      "page": 5,
+      "paper_id": "EXT-023",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT002__05.png",
+      "page": 6,
+      "paper_id": "EXT-023",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-024",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT003__02.png",
+      "page": 3,
+      "paper_id": "EXT-024",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT003__03.png",
+      "page": 11,
+      "paper_id": "EXT-024",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT003__04.png",
+      "page": 13,
+      "paper_id": "EXT-024",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT006__01.png",
+      "page": 1,
+      "paper_id": "EXT-030",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT006__02.png",
+      "page": 3,
+      "paper_id": "EXT-030",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT006__03.png",
+      "page": 4,
+      "paper_id": "EXT-030",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT006__04.png",
+      "page": 17,
+      "paper_id": "EXT-030",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT007",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT007__01.png",
+      "page": 3,
+      "paper_id": "EXT-025",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT007",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT007__02.png",
+      "page": 6,
+      "paper_id": "EXT-025",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT007",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT007__03.png",
+      "page": 8,
+      "paper_id": "EXT-025",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT007",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT007__04.png",
+      "page": 17,
+      "paper_id": "EXT-025",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT007",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT007__05.png",
+      "page": 21,
+      "paper_id": "EXT-025",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT008",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT008__01.png",
+      "page": 1,
+      "paper_id": "EXT-027",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT008",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT008__02.png",
+      "page": 15,
+      "paper_id": "EXT-027",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT008",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT008__03.png",
+      "page": 25,
+      "paper_id": "EXT-027",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT008",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT008__04.png",
+      "page": 31,
+      "paper_id": "EXT-027",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT005__01.png",
+      "page": 1,
+      "paper_id": "EXT-028",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT005__02.png",
+      "page": 2,
+      "paper_id": "EXT-028",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT005__03.png",
+      "page": 4,
+      "paper_id": "EXT-028",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT005",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT005__04.png",
+      "page": 6,
+      "paper_id": "EXT-028",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT005",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT005__05.png",
+      "page": 9,
+      "paper_id": "EXT-028",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT004__01.png",
+      "page": 2,
+      "paper_id": "EXT-029",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT004__02.png",
+      "page": 3,
+      "paper_id": "EXT-029",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT004__03.png",
+      "page": 10,
+      "paper_id": "EXT-029",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-EXT004__04.png",
+      "page": 17,
+      "paper_id": "EXT-029",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-001__01.png",
+      "page": 1,
+      "paper_id": "WCM-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-001__02.png",
+      "page": 1,
+      "paper_id": "WCM-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-001__03.png",
+      "page": 2,
+      "paper_id": "WCM-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-embedded-emulation-001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-embedded-emulation-001__04.png",
+      "page": 6,
+      "paper_id": "WCM-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-001__01.png",
+      "page": 1,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-001__02.png",
+      "page": 3,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-001__03.png",
+      "page": 3,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-001__04.png",
+      "page": 3,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-001__05.png",
+      "page": 4,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT004__01.png",
+      "page": 1,
+      "paper_id": "EXT-031",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT004__02.png",
+      "page": 1,
+      "paper_id": "EXT-031",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT004__03.png",
+      "page": 3,
+      "paper_id": "EXT-031",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT004__04.png",
+      "page": 4,
+      "paper_id": "EXT-031",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT004",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT004__05.png",
+      "page": 5,
+      "paper_id": "EXT-031",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT005__01.png",
+      "page": 1,
+      "paper_id": "EXT-032",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT005__02.png",
+      "page": 2,
+      "paper_id": "EXT-032",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT005__03.png",
+      "page": 4,
+      "paper_id": "EXT-032",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT005",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT005__04.png",
+      "page": 5,
+      "paper_id": "EXT-032",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT005",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT005__05.png",
+      "page": 5,
+      "paper_id": "EXT-032",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT002__01.png",
+      "page": 1,
+      "paper_id": "EXT-033",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT002__02.png",
+      "page": 2,
+      "paper_id": "EXT-033",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT002__03.png",
+      "page": 2,
+      "paper_id": "EXT-033",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT002__04.png",
+      "page": 4,
+      "paper_id": "EXT-033",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-034",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT003__02.png",
+      "page": 2,
+      "paper_id": "EXT-034",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT003__03.png",
+      "page": 5,
+      "paper_id": "EXT-034",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT001__01.png",
+      "page": 1,
+      "paper_id": "EXT-035",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT001__02.png",
+      "page": 2,
+      "paper_id": "EXT-035",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT001__03.png",
+      "page": 5,
+      "paper_id": "EXT-035",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT009",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT009__01.png",
+      "page": 1,
+      "paper_id": "EXT-036",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT009",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT009__02.png",
+      "page": 3,
+      "paper_id": "EXT-036",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT009",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT009__03.png",
+      "page": 4,
+      "paper_id": "EXT-036",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT010",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT010__01.png",
+      "page": 1,
+      "paper_id": "EXT-037",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT010",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT010__02.png",
+      "page": 1,
+      "paper_id": "EXT-037",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT010",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT010__03.png",
+      "page": 2,
+      "paper_id": "EXT-037",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT010",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT010__04.png",
+      "page": 2,
+      "paper_id": "EXT-037",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT010",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT010__05.png",
+      "page": 5,
+      "paper_id": "EXT-037",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT008",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT008__01.png",
+      "page": 1,
+      "paper_id": "EXT-038",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT008",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT008__02.png",
+      "page": 2,
+      "paper_id": "EXT-038",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT008",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT008__03.png",
+      "page": 14,
+      "paper_id": "EXT-038",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT006__01.png",
+      "page": 1,
+      "paper_id": "EXT-039",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT006__02.png",
+      "page": 2,
+      "paper_id": "EXT-039",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT006__03.png",
+      "page": 4,
+      "paper_id": "EXT-039",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT007",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT007__01.png",
+      "page": 1,
+      "paper_id": "EXT-040",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT007",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT007__02.png",
+      "page": 2,
+      "paper_id": "EXT-040",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-EXT007",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-EXT007__03.png",
+      "page": 6,
+      "paper_id": "EXT-040",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-002__01.png",
+      "page": 1,
+      "paper_id": "WCM-045",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-curation-002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-curation-002__02.png",
+      "page": 3,
+      "paper_id": "WCM-045",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-001__01.png",
+      "page": 1,
+      "paper_id": "WCM-044",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-001__02.png",
+      "page": 2,
+      "paper_id": "WCM-044",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-001__03.png",
+      "page": 2,
+      "paper_id": "WCM-044",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-001__04.png",
+      "page": 3,
+      "paper_id": "WCM-044",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT007",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT007__01.png",
+      "page": 1,
+      "paper_id": "EXT-048",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT007",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT007__02.png",
+      "page": 2,
+      "paper_id": "EXT-048",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT007",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT007__03.png",
+      "page": 4,
+      "paper_id": "EXT-048",
+      "verdict": "fragment",
+      "reason": "Incomplete sentence (no verb, ends mid-clause, equation lead-in, lowercase opening, or <=6 words)."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT007",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT007__04.png",
+      "page": 7,
+      "paper_id": "EXT-048",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT007",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT007__05.png",
+      "page": 7,
+      "paper_id": "EXT-048",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT006__01.png",
+      "page": 1,
+      "paper_id": "EXT-043",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT006__02.png",
+      "page": 2,
+      "paper_id": "EXT-043",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT006__03.png",
+      "page": 2,
+      "paper_id": "EXT-043",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT006__04.png",
+      "page": 8,
+      "paper_id": "EXT-043",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT006",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT006__05.png",
+      "page": 10,
+      "paper_id": "EXT-043",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT003__02.png",
+      "page": 2,
+      "paper_id": "EXT-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT003__03.png",
+      "page": 3,
+      "paper_id": "EXT-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT003__04.png",
+      "page": 5,
+      "paper_id": "EXT-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT003__05.png",
+      "page": 11,
+      "paper_id": "EXT-046",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT004__01.png",
+      "page": 1,
+      "paper_id": "EXT-041",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT004__02.png",
+      "page": 6,
+      "paper_id": "EXT-041",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT004__03.png",
+      "page": 7,
+      "paper_id": "EXT-041",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT004__04.png",
+      "page": 8,
+      "paper_id": "EXT-041",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT005__01.png",
+      "page": 1,
+      "paper_id": "EXT-042",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT005__02.png",
+      "page": 3,
+      "paper_id": "EXT-042",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT005__03.png",
+      "page": 16,
+      "paper_id": "EXT-042",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT005",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT005__04.png",
+      "page": 21,
+      "paper_id": "EXT-042",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-002__01.png",
+      "page": 12,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-002__02.png",
+      "page": 20,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-002__03.png",
+      "page": 20,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-002__04.png",
+      "page": 22,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-002__05.png",
+      "page": 25,
+      "paper_id": "WCM-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT002__01.png",
+      "page": 1,
+      "paper_id": "EXT-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT002__02.png",
+      "page": 4,
+      "paper_id": "EXT-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT002__03.png",
+      "page": 6,
+      "paper_id": "EXT-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT002__04.png",
+      "page": 14,
+      "paper_id": "EXT-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT002__05.png",
+      "page": 19,
+      "paper_id": "EXT-047",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT001__01.png",
+      "page": 1,
+      "paper_id": "EXT-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT001__02.png",
+      "page": 2,
+      "paper_id": "EXT-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT001__03.png",
+      "page": 2,
+      "paper_id": "EXT-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT001__04.png",
+      "page": 3,
+      "paper_id": "EXT-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-inference-EXT001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-inference-EXT001__05.png",
+      "page": 24,
+      "paper_id": "EXT-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-002__01.png",
+      "page": 6,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-002__02.png",
+      "page": 7,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-002__03.png",
+      "page": 8,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-002__04.png",
+      "page": 9,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-002__05.png",
+      "page": 9,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT004__01.png",
+      "page": 1,
+      "paper_id": "EXT-056",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT004__02.png",
+      "page": 1,
+      "paper_id": "EXT-056",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT004__03.png",
+      "page": 2,
+      "paper_id": "EXT-056",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT004__04.png",
+      "page": 8,
+      "paper_id": "EXT-056",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT002__01.png",
+      "page": 1,
+      "paper_id": "EXT-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT002__02.png",
+      "page": 2,
+      "paper_id": "EXT-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT002__03.png",
+      "page": 2,
+      "paper_id": "EXT-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT005__01.png",
+      "page": 1,
+      "paper_id": "EXT-052",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT005__02.png",
+      "page": 3,
+      "paper_id": "EXT-052",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT005__03.png",
+      "page": 5,
+      "paper_id": "EXT-052",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT006__01.png",
+      "page": 1,
+      "paper_id": "EXT-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT006__02.png",
+      "page": 3,
+      "paper_id": "EXT-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT006__03.png",
+      "page": 5,
+      "paper_id": "EXT-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT006__04.png",
+      "page": 6,
+      "paper_id": "EXT-053",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-055",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT003__02.png",
+      "page": 2,
+      "paper_id": "EXT-055",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT003__03.png",
+      "page": 10,
+      "paper_id": "EXT-055",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT003__04.png",
+      "page": 10,
+      "paper_id": "EXT-055",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-001__01.png",
+      "page": 19,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-001__02.png",
+      "page": 29,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-001__03.png",
+      "page": 30,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-001__04.png",
+      "page": 30,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-001",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-001__05.png",
+      "page": 30,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT007",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT007__01.png",
+      "page": 3,
+      "paper_id": "EXT-054",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT007",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT007__02.png",
+      "page": 4,
+      "paper_id": "EXT-054",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT007",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT007__03.png",
+      "page": 5,
+      "paper_id": "EXT-054",
+      "verdict": "fragment",
+      "reason": "Incomplete sentence (no verb, ends mid-clause, equation lead-in, lowercase opening, or <=6 words)."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT007",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT007__04.png",
+      "page": 7,
+      "paper_id": "EXT-054",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT007",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT007__05.png",
+      "page": 9,
+      "paper_id": "EXT-054",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT008",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT008__01.png",
+      "page": 1,
+      "paper_id": "EXT-058",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT008",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT008__02.png",
+      "page": 2,
+      "paper_id": "EXT-058",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT008",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT008__03.png",
+      "page": 2,
+      "paper_id": "EXT-058",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT008",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT008__04.png",
+      "page": 13,
+      "paper_id": "EXT-058",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT008",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT008__05.png",
+      "page": 21,
+      "paper_id": "EXT-058",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT001__01.png",
+      "page": 1,
+      "paper_id": "EXT-057",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT001__02.png",
+      "page": 13,
+      "paper_id": "EXT-057",
+      "verdict": "fragment",
+      "reason": "Incomplete sentence (no verb, ends mid-clause, equation lead-in, lowercase opening, or <=6 words)."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT001__03.png",
+      "page": 16,
+      "paper_id": "EXT-057",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-pipeline-structural-learning-EXT001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-pipeline-structural-learning-EXT001__04.png",
+      "page": 28,
+      "paper_id": "EXT-057",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT006__01.png",
+      "page": 1,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT006__02.png",
+      "page": 2,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT006__03.png",
+      "page": 6,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT006__04.png",
+      "page": 7,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT006",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT006__05.png",
+      "page": 14,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT002__01.png",
+      "page": 1,
+      "paper_id": "EXT-066",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT002__02.png",
+      "page": 2,
+      "paper_id": "EXT-066",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT002__03.png",
+      "page": 6,
+      "paper_id": "EXT-066",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT001__01.png",
+      "page": 1,
+      "paper_id": "EXT-063",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT001__02.png",
+      "page": 2,
+      "paper_id": "EXT-063",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT001__03.png",
+      "page": 4,
+      "paper_id": "EXT-063",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT001__04.png",
+      "page": 6,
+      "paper_id": "EXT-063",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT005__01.png",
+      "page": 3,
+      "paper_id": "EXT-064",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT005__02.png",
+      "page": 3,
+      "paper_id": "EXT-064",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT005__03.png",
+      "page": 6,
+      "paper_id": "EXT-064",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT005",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT005__04.png",
+      "page": 7,
+      "paper_id": "EXT-064",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT005",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT005__05.png",
+      "page": 7,
+      "paper_id": "EXT-064",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-003__01.png",
+      "page": 3,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-003__02.png",
+      "page": 15,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-003__03.png",
+      "page": 29,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-003__04.png",
+      "page": 30,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-003__05.png",
+      "page": 30,
+      "paper_id": "WCM-008",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT004__01.png",
+      "page": 1,
+      "paper_id": "EXT-065",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT004__02.png",
+      "page": 2,
+      "paper_id": "EXT-065",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT004__03.png",
+      "page": 10,
+      "paper_id": "EXT-065",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT004__04.png",
+      "page": 11,
+      "paper_id": "EXT-065",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-002__01.png",
+      "page": 7,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-002__02.png",
+      "page": 18,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-002__03.png",
+      "page": 20,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-002__04.png",
+      "page": 20,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-002__05.png",
+      "page": 21,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-070",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT003__02.png",
+      "page": 2,
+      "paper_id": "EXT-070",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT003__03.png",
+      "page": 5,
+      "paper_id": "EXT-070",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-matched-predictions-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-matched-predictions-EXT003__04.png",
+      "page": 10,
+      "paper_id": "EXT-070",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT001__01.png",
+      "page": 2,
+      "paper_id": "EXT-072",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT001__02.png",
+      "page": 3,
+      "paper_id": "EXT-072",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT001__03.png",
+      "page": 14,
+      "paper_id": "EXT-072",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-002__01.png",
+      "page": 3,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-002__02.png",
+      "page": 4,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-002__03.png",
+      "page": 4,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-002__04.png",
+      "page": 8,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-002__05.png",
+      "page": 10,
+      "paper_id": "WCM-006",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT002__01.png",
+      "page": 2,
+      "paper_id": "EXT-073",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT002__02.png",
+      "page": 4,
+      "paper_id": "EXT-073",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT002__03.png",
+      "page": 7,
+      "paper_id": "EXT-073",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT002__04.png",
+      "page": 9,
+      "paper_id": "EXT-073",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT002__05.png",
+      "page": 11,
+      "paper_id": "EXT-073",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT006__01.png",
+      "page": 2,
+      "paper_id": "EXT-075",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT006__02.png",
+      "page": 3,
+      "paper_id": "EXT-075",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT006__03.png",
+      "page": 4,
+      "paper_id": "EXT-075",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT006__04.png",
+      "page": 12,
+      "paper_id": "EXT-075",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT006",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT006__05.png",
+      "page": 12,
+      "paper_id": "EXT-075",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT007",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT007__01.png",
+      "page": 1,
+      "paper_id": "EXT-076",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT007",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT007__02.png",
+      "page": 3,
+      "paper_id": "EXT-076",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT007",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT007__03.png",
+      "page": 5,
+      "paper_id": "EXT-076",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT007",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT007__04.png",
+      "page": 10,
+      "paper_id": "EXT-076",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-071",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT003__02.png",
+      "page": 7,
+      "paper_id": "EXT-071",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT003__03.png",
+      "page": 7,
+      "paper_id": "EXT-071",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT003__04.png",
+      "page": 17,
+      "paper_id": "EXT-071",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT003__05.png",
+      "page": 24,
+      "paper_id": "EXT-071",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT004__01.png",
+      "page": 2,
+      "paper_id": "EXT-077",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT004__02.png",
+      "page": 5,
+      "paper_id": "EXT-077",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT004__03.png",
+      "page": 10,
+      "paper_id": "EXT-077",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT004__04.png",
+      "page": 12,
+      "paper_id": "EXT-077",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT004",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT004__05.png",
+      "page": 15,
+      "paper_id": "EXT-077",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT005",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT005__01.png",
+      "page": 1,
+      "paper_id": "EXT-078",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT005",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT005__02.png",
+      "page": 3,
+      "paper_id": "EXT-078",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT005",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT005__03.png",
+      "page": 3,
+      "paper_id": "EXT-078",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT005",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT005__04.png",
+      "page": 7,
+      "paper_id": "EXT-078",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT008",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT008__01.png",
+      "page": 1,
+      "paper_id": "EXT-080",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT008",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT008__02.png",
+      "page": 2,
+      "paper_id": "EXT-080",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT008",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT008__03.png",
+      "page": 4,
+      "paper_id": "EXT-080",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-agreement-disagreement-EXT008",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-agreement-disagreement-EXT008__04.png",
+      "page": 9,
+      "paper_id": "EXT-080",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT006",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT006__01.png",
+      "page": 2,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT006",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT006__02.png",
+      "page": 3,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT006",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT006__03.png",
+      "page": 6,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT006",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT006__04.png",
+      "page": 7,
+      "paper_id": "EXT-061",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT004",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT004__01.png",
+      "page": 1,
+      "paper_id": "EXT-083",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT004",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT004__02.png",
+      "page": 1,
+      "paper_id": "EXT-083",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT004",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT004__03.png",
+      "page": 3,
+      "paper_id": "EXT-083",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT004",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT004__04.png",
+      "page": 4,
+      "paper_id": "EXT-083",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT004",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT004__05.png",
+      "page": 5,
+      "paper_id": "EXT-083",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT007",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT007__01.png",
+      "page": 1,
+      "paper_id": "EXT-084",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT007",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT007__02.png",
+      "page": 2,
+      "paper_id": "EXT-084",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT007",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT007__03.png",
+      "page": 3,
+      "paper_id": "EXT-084",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT007",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT007__04.png",
+      "page": 10,
+      "paper_id": "EXT-084",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT008",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT008__01.png",
+      "page": 1,
+      "paper_id": "EXT-085",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT008",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT008__02.png",
+      "page": 2,
+      "paper_id": "EXT-085",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT008",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT008__03.png",
+      "page": 5,
+      "paper_id": "EXT-085",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT002__01.png",
+      "page": 1,
+      "paper_id": "EXT-089",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT002__02.png",
+      "page": 7,
+      "paper_id": "EXT-089",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT002__03.png",
+      "page": 7,
+      "paper_id": "EXT-089",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT002__04.png",
+      "page": 11,
+      "paper_id": "EXT-089",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT002",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT002__05.png",
+      "page": 12,
+      "paper_id": "EXT-089",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT003__01.png",
+      "page": 1,
+      "paper_id": "EXT-081",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT003__02.png",
+      "page": 2,
+      "paper_id": "EXT-081",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT003__03.png",
+      "page": 2,
+      "paper_id": "EXT-081",
+      "verdict": "fragment",
+      "reason": "Figure/table caption opener ('Fig. 4 | Title', '(A) ...', or 'Table N: ...')."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT003__04.png",
+      "page": 5,
+      "paper_id": "EXT-081",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-models-EXT003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-models-EXT003__05.png",
+      "page": 6,
+      "paper_id": "EXT-081",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-001",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-001__01.png",
+      "page": 5,
+      "paper_id": "WCM-050",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-001",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-001__02.png",
+      "page": 8,
+      "paper_id": "WCM-050",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-001",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-001__03.png",
+      "page": 12,
+      "paper_id": "WCM-050",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-001",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-001__04.png",
+      "page": 15,
+      "paper_id": "WCM-050",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-003",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-003__01.png",
+      "page": 3,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-003",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-003__02.png",
+      "page": 9,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-003",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-003__03.png",
+      "page": 21,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-003",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-003__04.png",
+      "page": 22,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-003",
+      "screenshot_idx": 5,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-003__05.png",
+      "page": 24,
+      "paper_id": "WCM-051",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-002",
+      "screenshot_idx": 1,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-002__01.png",
+      "page": 5,
+      "paper_id": "WCM-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-002",
+      "screenshot_idx": 2,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-002__02.png",
+      "page": 7,
+      "paper_id": "WCM-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-002",
+      "screenshot_idx": 3,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-002__03.png",
+      "page": 8,
+      "paper_id": "WCM-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    },
+    {
+      "evidence_id": "hybrid-parallel-foundation-002",
+      "screenshot_idx": 4,
+      "href": "docs/assets/evidence/hybrid-parallel-foundation-002__04.png",
+      "page": 8,
+      "paper_id": "WCM-049",
+      "verdict": "ok",
+      "reason": "Complete body sentence."
+    }
+  ],
+  "evidence_to_remediate": [
+    "hybrid-embedded-closure-001",
+    "hybrid-embedded-constraint-001",
+    "hybrid-embedded-constraint-EXT003",
+    "hybrid-embedded-constraint-EXT007",
+    "hybrid-parallel-agreement-disagreement-EXT002",
+    "hybrid-parallel-foundation-models-EXT002",
+    "hybrid-parallel-foundation-models-EXT003",
+    "hybrid-parallel-foundation-models-EXT004",
+    "hybrid-pipeline-inference-EXT007",
+    "hybrid-pipeline-structural-learning-EXT001",
+    "hybrid-pipeline-structural-learning-EXT005",
+    "hybrid-pipeline-structural-learning-EXT007"
+  ],
+  "papers_with_issues": [
+    "EXT-015",
+    "EXT-020",
+    "EXT-048",
+    "EXT-052",
+    "EXT-054",
+    "EXT-057",
+    "EXT-073",
+    "EXT-081",
+    "EXT-083",
+    "EXT-089",
+    "WCM-046"
+  ],
+  "missing_png": []
+}
